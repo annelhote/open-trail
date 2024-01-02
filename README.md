@@ -2,23 +2,24 @@
 
 ## A ouvrir
 
-* Calendrier prévisionnel (ie. OpenCalendar)
-* Matériel de randonnée dans le sac à dos
-* Tracé GPX (ie. OpenTrack)
-* MYOG Sac à dos (ie. OpenBackpack)
-* Site web via Github Pages (ie. OpenSource)
-* Images / Photos
-* POI (touristiques, eau, ravitaillement, bivouac ...) (ie. OpenMap)
-* Liste des hébergements, bivouac (ie. OpenCouch ?)
+- Calendrier prévisionnel (ie. OpenCalendar)
+- Matériel de randonnée dans le sac à dos
+- Tracé GPX (ie. OpenTrack)
+- MYOG Sac à dos (ie. OpenBackpack)
+- Site web via Github Pages (ie. OpenSource)
+- Images / Photos
+- POI (attractions touristiques, point d'eau, ravitaillement / réapprovisionnement, bivouac, sommets à proximités, zones protégées, itinéraires alternatifs  ...) (ie. OpenMap)
+- Liste des hébergements, bivouac, abris, refuges (ie. OpenCouch ?)
+- Podcasts ?
+- Bookmarks
+- RSS
 
 
 ## Contact
 
-* email
-* Mastodon
-* Github issues
-
-Expérience du PCT en 2017 https://pereetfillesurlepct.wordpress.com/ https://fr.wikipedia.org/wiki/Pacific_Crest_Trail
+- email
+- Mastodon
+- Github issues
 
 
 ## Tracés GPX
@@ -28,20 +29,20 @@ GPX en accès libre sur le site hexatrek https://www.hexatrek.com/
 
 Site web de référence
 
-* Site officiel de la Fédération Française de la Randonnée Pédestre Le site de la Randonnée Itinérante https://www.mongr.fr/ (export GPX réservé aux membres du site)
-* https://www.gr-infos.com/
-* visu-gpx (téléchargement libre et gratuit) https://www.visugpx.com/
-* Site d'édition d'un GPX
-* gpx studio https://gpx.studio/
-  * merge traces
-  * raccourcir traces
-  * ajouter des markers / pin / POI
-* BRouter-Web https://brouter.de/brouter-web/
-  * Trouver un itinéraire entre 2 points
-* umap
-* https://fr.wikiloc.com
-* https://www.hikamp.com (GPX téléchargeable pour les inscrits)
-* https://mapstogpx.com/
+- Site officiel de la Fédération Française de la Randonnée Pédestre Le site de la Randonnée Itinérante https://www.mongr.fr/ (export GPX réservé aux membres du site)
+- https://www.gr-infos.com/
+- visu-gpx (téléchargement libre et gratuit) https://www.visugpx.com/
+- Site d'édition d'un GPX
+- gpx studio https://gpx.studio/
+  - merge traces
+  - raccourcir traces
+  - ajouter des markers / pin / POI
+- BRouter-Web https://brouter.de/brouter-web/
+  - Trouver un itinéraire entre 2 points
+- umap
+- https://fr.wikiloc.com
+- https://www.hikamp.com (GPX téléchargeable pour les inscrits)
+- https://mapstogpx.com/
 
 
 ## Equipement
@@ -85,9 +86,9 @@ wordpress2book
 
 ## ToDo
 
-website
-Comment coudre son sac à dos ?
-Acheter un pot
-Liste des villes traversées + date prévisionnelle + gare la plus proche
-Explicatif du sac à dos
-Pourquoi l'OpenTrail ?
+- website
+- Comment coudre son sac à dos ?
+- Acheter un pot
+- Liste des villes traversées + date prévisionnelle + gare la plus proche
+- Explicatif du sac à dos
+- Pourquoi l'OpenTrail ?
