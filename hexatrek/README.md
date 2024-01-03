@@ -1,9 +1,9 @@
 # Hexatrek
 
-Distance : 3 034 km
-Dénivelé + : 138 000 m
-Durée : 3 à 5 mois
-Période : été 2025
+Distance: 3 034 km
+Dénivelé+: 138 000 m
+Durée: 3 à 5 mois
+Période: été 2025
 
 https://fr.wikipedia.org/wiki/Hexatrek
 https://www.hexatrek.com/

@@ -2,10 +2,10 @@
 
 Valence TGV -> Le Poët-Sigillat
 
-Distance : 201 km
-Dénivelé + : 9 512 m
-Durée : 10 jours
-Période : été 2024
+Distance: 201 km
+Dénivelé+: 9 512 m
+Durée: 10 jours
+Période: été 2024
 
 https://umap.openstreetmap.fr/en/map/le-poet-sigillat_1004840
 

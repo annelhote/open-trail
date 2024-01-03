@@ -2,17 +2,18 @@
 
 ## A ouvrir
 
-- Calendrier prévisionnel (ie. OpenCalendar)
-- Matériel de randonnée dans le sac à dos
-- Tracé GPX (ie. OpenTrack)
-- MYOG Sac à dos (ie. OpenBackpack)
-- Site web via Github Pages (ie. OpenSource)
-- Images / Photos
-- POI (attractions touristiques, point d'eau, ravitaillement / réapprovisionnement, bivouac, sommets à proximités, zones protégées, itinéraires alternatifs  ...) (ie. OpenMap)
-- Liste des hébergements, bivouac, abris, refuges (ie. OpenCouch ?)
-- Podcasts ?
-- Bookmarks
-- RSS
+1. RoadMap ?
+2. Site web via Github Pages (ie. OpenSource)
+3. Tracé GPX (ie. OpenTrack)
+4. Matériel de randonnée dans le sac à dos
+5. Calendrier prévisionnel (ie. OpenCalendar)
+6. POI (attractions touristiques, point d'eau, ravitaillement / réapprovisionnement, bivouac, sommets à proximités, zones protégées, itinéraires alternatifs  ...) (ie. OpenMap)
+7. MYOG Sac à dos (ie. OpenBackpack)
+8. Liste des hébergements, bivouac, abris, refuges (ie. OpenCouch ?)
+9. RSS
+10. Bookmarks
+11. Podcasts ?
+12. Images / Photos
 
 
 ## Contact
