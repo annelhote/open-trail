@@ -14,6 +14,7 @@
 10. Bookmarks
 11. Podcasts ?
 12. Images / Photos
+13. Menu / Courses
 
 
 ## Contact
@@ -93,3 +94,98 @@ wordpress2book
 - Liste des villes traversées + date prévisionnelle + gare la plus proche
 - Explicatif du sac à dos
 - Pourquoi l'OpenTrail ?
+
+
+## Trails
+
+### Hexatrek
+
+Distance: 3 034 km
+Dénivelé+: 138 000 m
+Durée: 3 à 5 mois
+Période: été 2025
+
+https://fr.wikipedia.org/wiki/Hexatrek
+https://www.hexatrek.com/
+
+
+#### Départ
+
+Dans le sens Nord-Sud, nous conseillons de partir après le 15 Mai et avant le 1 Juillet. Les accumulations de neige dans les alpes sont encore très présentes jusqu'à début juillet.Un départ avant le 1 juin vous expose à des difficultés d'enneigement dès votre arrivée dans les alpes.
+
+#### Durée
+
+À rythme de 25km par jour avec un jour de repos par semaine, le trek prendra en moyenne 120 jours (4 mois) à réaliser en totalité. Les retours d'expériences de ces précédentes années indiquent une durée comprise entre 90 et 150 jours.
+
+#### Lieux de passage
+
+Départ de Strasbourg
+Savernes
+Passage par Vallon-Pont-D'arc
+
+
+### Le Poët-Sigillat
+
+Valence TGV -> Le Poët-Sigillat
+
+Distance: 201 km
+Dénivelé+: 9 512 m
+Durée: 10 jours
+Période: été 2024
+
+https://umap.openstreetmap.fr/en/map/le-poet-sigillat_1004840
+
+- km 5 Alixan Supermarché Spar https://www.openstreetmap.org/node/2429403830
+- km 10 Distributeur de lait
+- km 85 Châtillons en Diois jour 4 Carrefour Express https://www.google.fr/maps/place/Carrefour+Express/@44.7106346,5.4792016,13z/data=!4m10!1m2!2m1!1ssupermarket!3m6!1s0x12cac544ddcabc3f:0xb7612d47c388ab61!8m2!3d44.6944759!4d5.48793!15sCgtzdXBlcm1hcmtldFoNIgtzdXBlcm1hcmtldJIBC3N1cGVybWFya2V04AEA!16s%2Fg%2F11sw__vl6m?hl=en&entry=ttu
+- km 180 Villeperdrix Hébergement
+
+
+### Pacific Crest Trail
+
+Distance: 4 240 km ou 2 653 mi
+Dénivelé+: 128 284 m ou 420 880 ft
+Durée: 4 à 6 mois
+Période: Avril à septembre 2017
+
+https://fr.wikipedia.org/wiki/Pacific_Crest_Trail
+https://www.pcta.org/
+
+
+#### Livres
+
+- Wild de Cheryl Strayed: https://www.librairiesindependantes.com/product/9782264062208/
+- Americana Ou Comment J'Ai Renoncé À Mon Rêve Américain de Luke Healy: https://www.librairiesindependantes.com/product/9782203211933/
+
+
+#### Films
+
+- Wild de Jean-Marc Vallée: https://www.imdb.com/title/tt2305051/
+
+#### Feedbacks
+
+Voici ce qu'il y avait dans mon sac à dos en 2017
+- Sac à dos Décathlon 60 L.
+- Batterie externe (achetée en cours de chemin, indispensable)
+- Camelbag de 3L. de la marque Platypus
+- Filtre Sawyer format familial (acheté en cours de chemin pour remplacer un mauvais choix)
+- Bâtons de marche Black Diamond (acheté en cours de chemin)
+- Pantalon de rando Décathlon premier prix (quelques coutures reprises en cours de chemin)
+- Kit de couture minimaliste
+- Bear canister (acheté en cours de chemin)
+- 2 buffs
+- Liseuse (avec beaucoup de livres dessus)
+- Adaptateur USB USA (acheté sur place)
+- Câble USB (micro-USB et USB-C)
+- Lunettes de soleil
+- Crème solaire
+- Crème antimoustique
+- Paire de chaussure Salomon (au total 3 paires de chaussures auront été nécessaire au cours du chemin)
+- Food bag
+- ...
+
+Filtre à eau
+
+
+- Entraînement physique : préparation à un marathon qui a eu lieu début avril 2017
+- Blog : https://pereetfillesurlepct.wordpress.com/
