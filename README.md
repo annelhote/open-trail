@@ -179,7 +179,7 @@ Voici ce qu'il y avait dans mon sac à dos en 2017
 - Câble USB (micro-USB et USB-C)
 - Lunettes de soleil
 - Crème solaire
-- Crème antimoustique
+- Crème anti-moustique
 - Paire de chaussure Salomon (au total 3 paires de chaussures auront été nécessaire au cours du chemin)
 - Food bag
 - ...
@@ -189,3 +189,15 @@ Filtre à eau
 
 - Entraînement physique : préparation à un marathon qui a eu lieu début avril 2017
 - Blog : https://pereetfillesurlepct.wordpress.com/
+
+
+## Website
+
+https://create-react-app.dev/docs/getting-started/
+`npx create-react-app open-trail`
+
+https://www.npmjs.com/package/maplibre-gl
+`npm i maplibre-gl`
+
+Exemple
+https://codesandbox.io/p/sandbox/react-qm5t04?file=%2Fsrc%2Findex.js%3A13%2C1
