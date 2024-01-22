@@ -1,6 +1,6 @@
 {
   "name": "open-trail",
-  "homepage": "https://github.com/annelhote/open-trail/",
+  "homepage": "./open-trail/",
   "version": "0.0.1",
   "private": true,
   "dependencies": {

@@ -1,4 +1,4 @@
-# open-trail
+# Open Trail
 
 ## A ouvrir
 
