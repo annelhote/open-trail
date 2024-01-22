@@ -201,6 +201,14 @@ https://www.npmjs.com/package/maplibre-gl
 `npm i maplibre-gl`
 
 Exemple
+* Display Mapbox
 https://codesandbox.io/p/sandbox/react-qm5t04?file=%2Fsrc%2Findex.js%3A13%2C1
+* Display Line on Mapbox
 https://docs.mapbox.com/mapbox-gl-js/example/zoomto-linestring/
+https://maplibre.org/maplibre-gl-js/docs/examples/geojson-line/
 https://visgl.github.io/react-map-gl/examples/geojson
+* Display GPX file
+https://codesandbox.io/p/sandbox/react-display-a-single-gpx-track-on-a-leaflet-map-kw7f2
+https://www.manuelkruisz.com/blog/posts/gpx-maps-react
+* Use d3
+https://www.influxdata.com/blog/guide-d3js-react/
