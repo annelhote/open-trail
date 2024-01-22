@@ -20,10 +20,6 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
-env:
-  DEPLOYMENT_URL: https://dataesr.github.io/catalog/
-  MM_NOTIFICATION_CHANNEL: bots
-
 jobs:
   # Single deploy job since we're just deploying
   deploy:
