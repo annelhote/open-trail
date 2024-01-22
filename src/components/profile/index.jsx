@@ -35,7 +35,8 @@ const Profile = ({ gpx }) => {
     // add the Line
     var valueLine = d3.line()
       .x((d) => { return x(d.date); })
-      .y((d) => { return y(d.value); });
+      .y((d) => { return y(d.value); })
+      .curve(d3.curveCardinal);
     svg.append("path")
       .data([data])
       .attr("class", "line")
@@ -47,6 +48,7 @@ const Profile = ({ gpx }) => {
 
   useEffect(() => {
     createGraph();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
