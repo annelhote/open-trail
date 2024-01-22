@@ -84,6 +84,7 @@ App pour suivre son tracé (iOS, Android)
 Planificateur de périple // Retro planning
 Que mettre dans son sac à dos (avec plusieurs niveaux de poids / confort, nombre de jours de marche)
 wordpress2book
+Catalogue de randonnées, par durée, région, difficultés ...
 
 
 ## ToDo

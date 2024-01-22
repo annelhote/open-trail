@@ -1,5 +1,6 @@
 {
   "name": "open-trail",
+  "homepage": "https://github.com/annelhote/open-trail/",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
@@ -13,6 +14,9 @@
     "react-map-gl": "^7.1.7",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
   "scripts": {
     "start": "react-scripts start",
