@@ -9,7 +9,7 @@ const data = [
   { x: 4, y: 30 },
 ];
 
-const LineChart = () => {
+const Chart = () => {
   const svgRef = useRef();
   useEffect(() => {
     const svg = select(svgRef.current);
@@ -44,4 +44,4 @@ const LineChart = () => {
   );
 };
 
-export default LineChart;
+export default Chart;
