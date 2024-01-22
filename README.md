@@ -210,5 +210,5 @@ https://visgl.github.io/react-map-gl/examples/geojson
 * Display GPX file
 https://codesandbox.io/p/sandbox/react-display-a-single-gpx-track-on-a-leaflet-map-kw7f2
 https://www.manuelkruisz.com/blog/posts/gpx-maps-react
-* Use d3
-https://www.influxdata.com/blog/guide-d3js-react/
+* Display linechart in d3
+https://betterprogramming.pub/react-d3-plotting-a-line-chart-with-tooltips-ed41a4c31f4f
