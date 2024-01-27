@@ -97,6 +97,7 @@ function Map({ gpx }) {
       .catch(error => {
         console.log("error", error);
       });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -109,7 +110,6 @@ function Map({ gpx }) {
       }}
       mapLib={maplibregl}
       mapStyle={STYLE}
-      style={{ height: "500px" }}
     >
       <Source
         id="LineString"

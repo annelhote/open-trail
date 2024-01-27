@@ -12,11 +12,11 @@ const Overview = ({ gpx }) => {
   }, [distance, gpx]);
 
   return (
-    <div>
+    <div className='overview'>
       <h1>
         Valence -> Le Poët-Sigillat
       </h1>
-      <div className='overview'>
+      <div className='subtitle'>
         <span className='space-right'>
           <b>{distance}</b> km
         </span>

@@ -12,7 +12,7 @@ const Profile = ({ gpx }) => {
 
     // set the dimensions and margins of the graph
     var margin = { top: 20, right: 20, bottom: 50, left: 70 },
-      width = 746 - margin.left - margin.right,
+      width = 925 - margin.left - margin.right,
       height = 200 - margin.top - margin.bottom;
     // append the svg object to the body of the page
     var svg = d3.select('.svg')

@@ -6,8 +6,6 @@ import Overview from './components/overview';
 import Profile from './components/profile';
 import gpxFile from './data/le-poet-sigillat.gpx';
 
-import './index.css';
-
 export default function App() {
   const [gpx, setGpx] = useState(null);
 
@@ -25,7 +23,7 @@ export default function App() {
   return (
     <>
       {gpx && (
-        <div style={{ width: "40%", margin: "auto" }}>
+        <div className='open-trail'>
           <Overview gpx={gpx} />
           <Map gpx={gpx} />
           <Profile gpx={gpx} />
