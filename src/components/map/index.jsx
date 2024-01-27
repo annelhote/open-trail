@@ -39,6 +39,9 @@ const STYLE = {
 
 function Map({ gpx }) {
   const [features, setFeatures] = useState([]);
+  const oneKmInDegree = 0.0089982311916;
+  const point = gpx.tracks[0].points[0];
+  const bbox = [point.lat - oneKmInDegree, point.lon - oneKmInDegree, point.lat + oneKmInDegree, point.lon + oneKmInDegree];
 
   const getPointIcon = (amenity) => {
     let icon = 'marker_11';
@@ -70,7 +73,7 @@ function Map({ gpx }) {
 
   useEffect(() => {
     const query = `
-      [timeout:25][out:json][bbox:44.989387797074784,4.955606247791736,44.99931182955835,4.999551560291735];
+      [timeout:25][out:json][bbox:${bbox}];
       (
         nwr["amenity"~"cafe|drinking_water|restaurant|toilets|water_point"];
         nwr["tourism"~"camp_site|hotel"];
