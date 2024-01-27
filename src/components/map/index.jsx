@@ -1,9 +1,9 @@
 import axios from 'axios';
 import maplibregl from 'maplibre-gl';
 import React, { useEffect, useState } from 'react';
-import { default as ReactMapGL, Layer, Marker, Source } from 'react-map-gl';
+import { default as ReactMapGL, Layer, Source } from 'react-map-gl';
 
-import { lineLayer } from '../../layers.ts';
+import { lineLayer, pointLayer } from '../../layers.ts';
 
 const STYLE = {
   version: 8,
@@ -17,13 +17,14 @@ const STYLE = {
       ],
       tileSize: 256
     },
-    'osm': {
+    osm: {
       type: 'vector',
       tiles: [
         'https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf'
       ],
     }
   },
+  sprite: 'https://demotiles.maplibre.org/styles/osm-bright-gl-style/sprite',
   layers: [
     {
       id: 'osm-tiles',
@@ -37,21 +38,57 @@ const STYLE = {
 };
 
 function Map({ gpx }) {
-  const [markers, setMarkers] = useState([]);
+  const [features, setFeatures] = useState([]);
+
+  const getPointIcon = (amenity) => {
+    let icon = 'marker_11';
+    switch (amenity) {
+      case 'cafe':
+        icon = 'beer_11';
+        break;
+      case 'camp_site':
+        icon = 'campsite_11';
+        break;
+      case 'drinking_water':
+      case 'water_point':
+        icon = 'drinking_water_11';
+        break;
+      case 'hotel':
+        icon = 'lodging_11';
+        break;
+      case 'restaurant':
+        icon = 'restaurant_11';
+        break;
+      case 'toilets':
+        icon = 'toilet_11';
+        break;
+      default:
+        break;
+    }
+    return icon;
+  }
 
   useEffect(() => {
     const query = `
       [timeout:25][out:json][bbox:44.989387797074784,4.955606247791736,44.99931182955835,4.999551560291735];
-      nwr["amenity"~"restaurant|drinking_water"];
+      (
+        nwr["amenity"~"cafe|drinking_water|restaurant|toilets|water_point"];
+        nwr["tourism"~"camp_site|hotel"];
+      );
       out center;
     `;
     axios.get(`https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`)
       .then((response) => {
-        setMarkers(response.data.elements.map((element) => ({
-          lat: element?.lat ?? element?.center?.lat,
-          lon: element?.lon ?? element?.center?.lon,
-          name: element?.tags?.name ?? '',
-          type: element?.tags?.amenity ?? '',
+        setFeatures(response.data.elements.map((element) => ({
+          type: 'Feature',
+          properties: {
+            description: element?.tags?.name ?? '',
+            icon: getPointIcon(element?.tags?.amenity ?? element?.tags?.tourism ?? '')
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [element?.lon ?? element?.center?.lon, element?.lat ?? element?.center?.lat]
+          }
         })));
       })
       .catch(error => {
@@ -78,7 +115,16 @@ function Map({ gpx }) {
       >
         <Layer {...lineLayer} />
       </Source>
-      {markers.map((marker) => <Marker latitude={marker.lat} longitude={marker.lon} />)}
+      <Source
+        id="places"
+        type="geojson"
+        data={{
+          type: "FeatureCollection",
+          features,
+        }}
+      >
+        <Layer {...pointLayer} />
+      </Source>
     </ReactMapGL>
   )
 }
