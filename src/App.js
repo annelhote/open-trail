@@ -1,7 +1,7 @@
 import gpxParser from 'gpxparser';
 import React, { useEffect, useState } from 'react';
 
-import Map from './components/my_map';
+import Map from './components/map';
 import Overview from './components/overview';
 import Profile from './components/profile';
 import gpxFile from './data/le-poet-sigillat.gpx';

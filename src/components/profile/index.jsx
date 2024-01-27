@@ -15,21 +15,21 @@ const Profile = ({ gpx }) => {
       width = 746 - margin.left - margin.right,
       height = 200 - margin.top - margin.bottom;
     // append the svg object to the body of the page
-    var svg = d3.select(".svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-      .attr("transform", `translate(${margin.left},     ${margin.top})`);
+    var svg = d3.select('.svg')
+      .attr('width', width + margin.left + margin.right)
+      .attr('height', height + margin.top + margin.bottom)
+      .append('g')
+      .attr('transform', `translate(${margin.left},     ${margin.top})`);
 
     // Add X axis and Y axis
     var x = d3.scaleLinear().range([0, width]);
     var y = d3.scaleLinear().range([height, 0]);
     x.domain(d3.extent(data, (d) => { return d.date; }));
     y.domain([0, d3.max(data, (d) => { return d.value; })]);
-    svg.append("g")
-      .attr("transform", `translate(0, ${height})`)
+    svg.append('g')
+      .attr('transform', `translate(0, ${height})`)
       .call(d3.axisBottom(x).tickFormat((d) => `${d} km`));
-    svg.append("g")
+    svg.append('g')
       .call(d3.axisLeft(y));
 
     // add the Line
@@ -37,13 +37,13 @@ const Profile = ({ gpx }) => {
       .x((d) => { return x(d.date); })
       .y((d) => { return y(d.value); })
       .curve(d3.curveCardinal);
-    svg.append("path")
+    svg.append('path')
       .data([data])
-      .attr("class", "line")
-      .attr("fill", "#d0d1d0")
-      .attr("stroke", "#d0d1d0")
-      .attr("stroke-width", 1.5)
-      .attr("d", valueLine)
+      .attr('class', 'line')
+      .attr('fill', '#e4e5e6')
+      .attr('stroke', '#e4e5e6')
+      .attr('stroke-width', 1.5)
+      .attr('d', valueLine)
   }
 
   useEffect(() => {

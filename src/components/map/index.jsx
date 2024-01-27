@@ -1,6 +1,6 @@
 import axios from 'axios';
 import maplibregl from 'maplibre-gl';
-import Map, { Layer, Marker, Source } from 'react-map-gl';
+import { default as ReactMapGL, Layer, Marker, Source } from 'react-map-gl';
 
 import { lineLayer } from '../../layers.ts';
 
@@ -36,14 +36,14 @@ const STYLE = {
   ]
 };
 
-function makeOverpassQuery(qstrg) {
-  const overpassQuery = `
-    node(3470507586);   // starting here...
-    complete(100) { nwr[amenity=pub](around:500); };
-    out center;
-  `;
-  return overpassQuery;
-}
+// function makeOverpassQuery(qstrg) {
+//   const overpassQuery = `
+//     node(3470507586);   // starting here...
+//     complete(100) { nwr[amenity=pub](around:500); };
+//     out center;
+//   `;
+//   return overpassQuery;
+// }
 
 const latlons = [];
 // node(3470507586);
@@ -69,6 +69,8 @@ const latlons = [];
 // double longitudeMin = longitude-(longitudeD);
 
 // (latitudeMin,longitudeMin,latitudeMax,longitudeMax)
+const point = { lat: '44.9918299', lon: '4.9789472' };
+console.log(point);
 const query = `
   [out:json];
   node(44.98284655416309,4.966244641623936,45.00081324583691,4.991649758376065);
@@ -78,7 +80,7 @@ const query = `
 axios.get(`https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`)
   .then((response) => {
     // Handle the response data here
-    const restaurants = response.data.elements.filter(node => node.tags && node.tags.name);
+    // const restaurants = response.data.elements.filter(node => node.tags && node.tags.name);
     response.data.elements.forEach(restaurant => {
       const rname = restaurant.tags.name ? restaurant.tags.name : undefined;
       latlons.push([[restaurant.lat, restaurant.lon], rname]);
@@ -89,9 +91,9 @@ axios.get(`https://overpass-api.de/api/interpreter?data=${encodeURIComponent(que
     console.log("error", error);
   });
 
-function MyMap({ gpx }) {
+function Map({ gpx }) {
   return (
-    <Map
+    <ReactMapGL
       id="map"
       initialViewState={{
         latitude: 44.6937849,
@@ -110,8 +112,8 @@ function MyMap({ gpx }) {
         <Layer {...lineLayer} />
       </Source>
       <Marker longitude={12.550343} latitude={55.665957} />
-    </Map>
+    </ReactMapGL>
   )
 }
 
-export default MyMap;
+export default Map;
