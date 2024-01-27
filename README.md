@@ -219,3 +219,5 @@ https://betterprogramming.pub/react-d3-plotting-a-line-chart-with-tooltips-ed41a
 https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Pub_tour_in_Dublin
 * Distance between points
 https://en.wikipedia.org/wiki/Haversine_formula
+* Amenities
+https://wiki.openstreetmap.org/wiki/Key:amenity#Sustenance

@@ -19,7 +19,7 @@ const Profile = ({ gpx }) => {
       .attr('width', width + margin.left + margin.right)
       .attr('height', height + margin.top + margin.bottom)
       .append('g')
-      .attr('transform', `translate(${margin.left},     ${margin.top})`);
+      .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
     // Add X axis and Y axis
     var x = d3.scaleLinear().range([0, width]);
