@@ -1,7 +1,7 @@
 import gpxParser from 'gpxparser';
 import React, { useEffect, useState } from 'react';
 
-import MyMap from './components/my_map';
+import Map from './components/my_map';
 import Overview from './components/overview';
 import Profile from './components/profile';
 import gpxFile from './data/le-poet-sigillat.gpx';
@@ -25,9 +25,9 @@ export default function App() {
   return (
     <>
       {gpx && (
-        <div>
+        <div style={{ width: "40%", margin: "auto" }}>
           <Overview gpx={gpx} />
-          <MyMap gpx={gpx} />
+          <Map gpx={gpx} />
           <Profile gpx={gpx} />
         </div>
     )}

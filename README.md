@@ -41,9 +41,9 @@ Site web de référence
   - ajouter des markers / pin / POI
 - BRouter-Web https://brouter.de/brouter-web/
   - Trouver un itinéraire entre 2 points
-- umap
-- https://fr.wikiloc.com
-- https://www.hikamp.com (GPX téléchargeable pour les inscrits)
+- umap https://umap.openstreetmap.fr/fr/
+- WikiLoac https://fr.wikiloc.com
+- Hikamp https://www.hikamp.com (GPX téléchargeable pour les inscrits)
 - https://mapstogpx.com/
 
 
@@ -75,8 +75,11 @@ Quelle machine à coudre ?
 ## Numérique
 
 Liste des sites web de références
+
 Liste des outils pour visualiser / éditer un GPX
+
 App pour suivre son tracé (iOS, Android)
+
 
 
 ## Services
@@ -84,7 +87,7 @@ App pour suivre son tracé (iOS, Android)
 Planificateur de périple // Retro planning
 Que mettre dans son sac à dos (avec plusieurs niveaux de poids / confort, nombre de jours de marche)
 wordpress2book
-Catalogue de randonnées, par durée, région, difficultés ...
+Catalogue de randonnées avec recherche par durée, région, niveau de difficulté, dénivelé ...
 
 
 ## ToDo
@@ -212,3 +215,5 @@ https://codesandbox.io/p/sandbox/react-display-a-single-gpx-track-on-a-leaflet-m
 https://www.manuelkruisz.com/blog/posts/gpx-maps-react
 * Display linechart in d3
 https://betterprogramming.pub/react-d3-plotting-a-line-chart-with-tooltips-ed41a4c31f4f
+* OverPass
+https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Pub_tour_in_Dublin

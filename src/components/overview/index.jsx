@@ -12,8 +12,23 @@ const Overview = ({ gpx }) => {
   }, [distance, gpx]);
 
   return (
-    <div style={{ width: "50%", margin: "auto" }}>
-      {distance} km // {elevation} D+ // {duration} days
+    <div>
+      <h1>
+        Valence -> Le Poët-Sigillat
+      </h1>
+      <div className='overview'>
+        <span className='space-right'>
+          <b>{distance}</b> km
+        </span>
+        /
+        <span className='space-right space-left'>
+          <b>{elevation}</b> m D+
+        </span>
+        /
+        <span className='space-right space-left'>
+          <b>{duration}</b> days
+        </span>
+      </div>
     </div>
   );
 };
