@@ -15,12 +15,15 @@ body {
 
   #map {
     height: 500px !important;
+
+    .popup {
+      color: #27272a;
+    }
   }
 
   .overview {
     .subtitle {
       padding: 20px 0;
-      text-align: right;
     }
 
     span.space-left {

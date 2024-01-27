@@ -13,18 +13,3 @@ export const lineLayer: LayerProps = {
     'line-width': 3
   }
 }
-
-export const pointLayer: LayerProps = {
-  id: 'points',
-  type: 'symbol',
-  source: 'point',
-  layout: {
-    'icon-image': '{icon}',
-    'icon-size': 1,
-  },
-  paint: {
-    'icon-color': '#27272a',
-    'icon-halo-color': '#ffffff',
-    'icon-halo-width': 2,
-  },
-}

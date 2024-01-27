@@ -1,9 +1,9 @@
 import axios from 'axios';
 import maplibregl from 'maplibre-gl';
 import React, { useEffect, useState } from 'react';
-import { default as ReactMapGL, Layer, Source } from 'react-map-gl';
+import { default as ReactMapGL, Layer, Source, Marker } from 'react-map-gl';
 
-import { lineLayer, pointLayer } from '../../layers.ts';
+import { lineLayer } from '../../layers.ts';
 
 const STYLE = {
   version: 8,
@@ -24,7 +24,6 @@ const STYLE = {
       ],
     }
   },
-  sprite: 'https://demotiles.maplibre.org/styles/osm-bright-gl-style/sprite',
   layers: [
     {
       id: 'osm-tiles',
@@ -59,27 +58,27 @@ const chunkArray = (array, chunkSize) => {
   return chunks;
 }
 
-const getPointIcon = (amenity) => {
+const getMarkerColorByType = (amenity) => {
   let icon = 'marker_11';
   switch (amenity) {
     case 'cafe':
-      icon = 'beer_11';
+      icon = '#996600';
       break;
     case 'camp_site':
-      icon = 'campsite_11';
+      icon = '#006633';
       break;
     case 'drinking_water':
     case 'water_point':
-      icon = 'drinking_water_11';
+      icon = '#0099ff';
       break;
     case 'hotel':
-      icon = 'lodging_11';
+      icon = '#f2df16';
       break;
     case 'restaurant':
-      icon = 'restaurant_11';
+      icon = '#f21629';
       break;
     case 'toilets':
-      icon = 'toilet_11';
+      icon = '#f3802e';
       break;
     default:
       break;
@@ -100,7 +99,7 @@ const getDataFromOverpass = (bbox) => {
 }
 
 function Map({ gpx }) {
-  const [features, setFeatures] = useState([]);
+  const [markers, setMarkers] = useState([]);
 
   const coordinatesDataCount = gpx.tracks[0].points.length;
   const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
@@ -113,16 +112,15 @@ function Map({ gpx }) {
     Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
       .then((responses) => {
         const response = responses.map((response) => response.data.elements).flat();
-        setFeatures(response.map((element) => ({
-          type: 'Feature',
-          properties: {
-            description: element?.tags?.name ?? '',
-            icon: getPointIcon(element?.tags?.amenity ?? element?.tags?.tourism ?? '')
-          },
-          geometry: {
-            type: 'Point',
-            coordinates: [element?.lon ?? element?.center?.lon, element?.lat ?? element?.center?.lat]
-          }
+        setMarkers(response.map((item) => ({
+          email: item?.tags?.email,
+          id: item?.id,
+          lat: item?.lat ?? item?.center?.lat,
+          lon: item?.lon ?? item?.center?.lon,
+          name: item?.tags?.name,
+          phone: item?.tags?.phone ?? item?.tags?.['contact:phone'],
+          type: item?.tags?.amenity ?? item?.tags?.tourism ?? '',
+          website: item?.tags?.website,
         })));
       })
       .catch(error => {
@@ -131,7 +129,7 @@ function Map({ gpx }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  if (features.length === 0) {
+  if (markers.length === 0) {
     return (
       <div>
         Loading ...
@@ -157,16 +155,27 @@ function Map({ gpx }) {
       >
         <Layer {...lineLayer} />
       </Source>
-      <Source
-        id="places"
-        type="geojson"
-        data={{
-          type: "FeatureCollection",
-          features,
-        }}
-      >
-        <Layer {...pointLayer} />
-      </Source>
+      {markers.map((marker, index) => (
+        <Marker
+          color={getMarkerColorByType(marker.type)}
+          key={index}
+          latitude={marker.lat}
+          longitude={marker.lon}
+          popup={new maplibregl.Popup({ className: 'popup' }).setHTML(`
+            <div className='popup'>
+              <h3>${marker.name}</h3>
+              <div>
+                <ul>
+                  <li>${marker.type}</li>
+                  <li>${marker.phone}</li>
+                  <li>${marker.email}</li>
+                  <li>${marker.website}</li>
+                </ul>
+              </div>
+            </div>
+          `)}
+        />
+      ))}
     </ReactMapGL>
   )
 }
