@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 import Map from './components/map';
 import Overview from './components/overview';
+import Planner from './components/planner';
 import Profile from './components/profile';
 import gpxFile from './data/le-poet-sigillat.gpx';
 
@@ -27,6 +28,7 @@ export default function App() {
           <Overview gpx={gpx} />
           <Map gpx={gpx} />
           <Profile gpx={gpx} />
+          <Planner gpx={gpx} />
         </div>
     )}
     </>

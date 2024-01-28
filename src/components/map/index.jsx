@@ -61,18 +61,31 @@ const chunkArray = (array, chunkSize) => {
 const getMarkerColorByType = (amenity) => {
   let icon = 'marker_11';
   switch (amenity) {
+    case 'alpine_hut':
+    case 'apartment':
+    case 'camp_site':
+    case 'chalet':
+    case 'guest_house':
+    case 'hostel':
+    case 'hotel':
+    case 'motel':
+    case 'wilderness_hut':
+      icon = '#f2df16';
+      break;
     case 'cafe':
       icon = '#996600';
       break;
-    case 'camp_site':
+    case 'deli':
+    case 'department_store':
+    case 'food':
+    case 'general':
+    case 'mall':
+    case 'supermarket':
       icon = '#006633';
       break;
     case 'drinking_water':
     case 'water_point':
       icon = '#0099ff';
-      break;
-    case 'hotel':
-      icon = '#f2df16';
       break;
     case 'restaurant':
       icon = '#f21629';
@@ -91,7 +104,8 @@ const getDataFromOverpass = (bbox) => {
     [out:json][timeout:500];
     (
       nwr["amenity"~"cafe|drinking_water|restaurant|toilets|water_point"](around:1000,${bbox});
-      nwr["tourism"~"camp_site|hotel"](around:1000,${bbox});
+      nwr["tourism"~"alpine_hut|apartment|camp_site|chalet|guest_house|hostel|hotel|motel|wilderness_hut"](around:1000,${bbox});
+      nwr["shop"~"deli|department_store|food|general|mall|supermarket"](around:1000,${bbox});
     );
     out center;
   `;
@@ -105,7 +119,7 @@ function Map({ gpx }) {
   const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
   const pathSamplingPeriod = Math.floor(coordinatesDataCount / targetPathDataCount);
   const downSampledCoordinates = downSampleArray(gpx.tracks[0].points, pathSamplingPeriod);
-  let chunks = chunkArray(downSampledCoordinates, 100);
+  let chunks = chunkArray(downSampledCoordinates, 20);
   chunks = chunks.map((chunk) => chunk.map((item) => [item.lat, item.lon]).flat());
   
   useEffect(() => {
@@ -149,16 +163,16 @@ function Map({ gpx }) {
       mapStyle={STYLE}
     >
       <Source
+        data={gpx.toGeoJSON()}
         id="LineString"
         type="geojson"
-        data={gpx.toGeoJSON()}
       >
         <Layer {...lineLayer} />
       </Source>
       {markers.map((marker, index) => (
         <Marker
           color={getMarkerColorByType(marker.type)}
-          key={index}
+          key={`marker-${index}`}
           latitude={marker.lat}
           longitude={marker.lon}
           popup={new maplibregl.Popup({ className: 'popup' }).setHTML(`
