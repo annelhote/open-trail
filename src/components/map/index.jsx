@@ -14,10 +14,7 @@ import maplibregl from 'maplibre-gl';
 import React, { useEffect, useState } from 'react';
 import { default as ReactMapGL, Layer, Source, Marker } from 'react-map-gl';
 
-
-import { lineLayer } from '../../layers.ts';
-
-const STYLE = {
+const mapStyle = {
   version: 8,
   sources: {
     'raster-tiles': {
@@ -133,6 +130,7 @@ const getDataFromOverpass = (bbox) => {
 }
 
 function Map({ gpx }) {
+  const [coordinates, setCoordinates] = useState();
   const [markers, setMarkers] = useState([]);
 
   const coordinatesDataCount = gpx.tracks[0].points.length;
@@ -166,7 +164,7 @@ function Map({ gpx }) {
   if (markers.length === 0) {
     return (
       <div>
-        Loading ...
+        Loading data ...
       </div>
     )
   }
@@ -179,22 +177,41 @@ function Map({ gpx }) {
         longitude: 5.36890464,
         zoom: 8
       }}
+      interactiveLayerIds={["path"]}
       mapLib={maplibregl}
-      mapStyle={STYLE}
+      mapStyle={mapStyle}
+      onMouseLeave={() => setCoordinates()}
+      onMouseEnter={(e) => setCoordinates([e.lngLat.lng, e.lngLat.lat])}
     >
       <Source
         data={gpx.toGeoJSON()}
-        id="LineString"
         type="geojson"
       >
-        <Layer {...lineLayer} />
+        <Layer
+          id="path"
+          layout={{ "line-join": "round", "line-cap": "round" }}
+          paint={{ "line-color": '#10a4e5', "line-width": 3 }}
+          type="line"
+        />
       </Source>
-      {markers.map((marker, index) => (
-        <Marker
-          key={`marker-${index}`}
-          latitude={marker.lat}
-          longitude={marker.lon}
-          popup={new maplibregl.Popup({ className: 'popup' }).setHTML(`
+      {coordinates && (
+        <Source
+          data={{ coordinates, type: "Point" }}
+          type="geojson"
+        >
+          <Layer
+            paint={{ "circle-color": "red" }}
+            type="circle"
+          />
+        </Source>
+      )}
+      {
+        markers.map((marker, index) => (
+          <Marker
+            key={`marker-${index}`}
+            latitude={marker.lat}
+            longitude={marker.lon}
+            popup={new maplibregl.Popup({ className: 'popup' }).setHTML(`
             <div className='popup'>
               <h3>${marker.name}</h3>
               <div>
@@ -207,14 +224,15 @@ function Map({ gpx }) {
               </div>
             </div>
           `)}
-        >
-          <span className="fa-stack fa-2x">
-            <FontAwesomeIcon icon={faLocationPin} color={getMarkerFromType(marker.type).color} className="fa-regular fa-stack-2x" />
-            <FontAwesomeIcon icon={getMarkerFromType(marker.type).icon} color="#e4e5e6" className="fa-stack-1x" style={{ position: "absolute", bottom: "15px" }} transform="shrink-4" />
-          </span>
-        </Marker>
-      ))}
-    </ReactMapGL>
+          >
+            <span className="fa-stack fa-2x">
+              <FontAwesomeIcon icon={faLocationPin} color={getMarkerFromType(marker.type).color} className="fa-regular fa-stack-2x" />
+              <FontAwesomeIcon icon={getMarkerFromType(marker.type).icon} color="#e4e5e6" className="fa-stack-1x" style={{ position: "absolute", bottom: "15px" }} transform="shrink-4" />
+            </span>
+          </Marker>
+        ))
+      }
+    </ReactMapGL >
   )
 }
 
