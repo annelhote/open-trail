@@ -1,7 +1,19 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faCartShopping,
+  faCoffee,
+  faFaucetDrip,
+  faHouse,
+  faLocationPin,
+  faQuestion,
+  faRestroom,
+  faUtensils,
+} from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 import maplibregl from 'maplibre-gl';
 import React, { useEffect, useState } from 'react';
 import { default as ReactMapGL, Layer, Source, Marker } from 'react-map-gl';
+
 
 import { lineLayer } from '../../layers.ts';
 
@@ -58,9 +70,10 @@ const chunkArray = (array, chunkSize) => {
   return chunks;
 }
 
-const getMarkerColorByType = (amenity) => {
-  let icon = 'marker_11';
-  switch (amenity) {
+const getMarkerFromType = (type) => {
+  let color = '#e4e5e6'
+  let icon = faQuestion;
+  switch (type) {
     case 'alpine_hut':
     case 'apartment':
     case 'camp_site':
@@ -69,11 +82,14 @@ const getMarkerColorByType = (amenity) => {
     case 'hostel':
     case 'hotel':
     case 'motel':
+    case 'shelter':
     case 'wilderness_hut':
-      icon = '#f2df16';
+      color = '#f2df16';
+      icon = faHouse;
       break;
     case 'cafe':
-      icon = '#996600';
+      color = '#996600';
+      icon = faCoffee;
       break;
     case 'deli':
     case 'department_store':
@@ -81,22 +97,26 @@ const getMarkerColorByType = (amenity) => {
     case 'general':
     case 'mall':
     case 'supermarket':
-      icon = '#006633';
+      color = '#006633';
+      icon = faCartShopping;
       break;
     case 'drinking_water':
     case 'water_point':
-      icon = '#0099ff';
+      color = '#0099ff';
+      icon = faFaucetDrip;
       break;
     case 'restaurant':
-      icon = '#f21629';
+      color = '#f21629';
+      icon = faUtensils;
       break;
     case 'toilets':
-      icon = '#f3802e';
+      color = '#f3802e';
+      icon = faRestroom;
       break;
     default:
       break;
   }
-  return icon;
+  return { color, icon };
 }
 
 const getDataFromOverpass = (bbox) => {
@@ -121,7 +141,7 @@ function Map({ gpx }) {
   const downSampledCoordinates = downSampleArray(gpx.tracks[0].points, pathSamplingPeriod);
   let chunks = chunkArray(downSampledCoordinates, 20);
   chunks = chunks.map((chunk) => chunk.map((item) => [item.lat, item.lon]).flat());
-  
+
   useEffect(() => {
     Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
       .then((responses) => {
@@ -171,7 +191,6 @@ function Map({ gpx }) {
       </Source>
       {markers.map((marker, index) => (
         <Marker
-          color={getMarkerColorByType(marker.type)}
           key={`marker-${index}`}
           latitude={marker.lat}
           longitude={marker.lon}
@@ -188,7 +207,12 @@ function Map({ gpx }) {
               </div>
             </div>
           `)}
-        />
+        >
+          <span className="fa-stack fa-2x">
+            <FontAwesomeIcon icon={faLocationPin} color={getMarkerFromType(marker.type).color} className="fa-regular fa-stack-2x" />
+            <FontAwesomeIcon icon={getMarkerFromType(marker.type).icon} color="#e4e5e6" className="fa-stack-1x" style={{ position: "absolute", bottom: "15px" }} transform="shrink-4" />
+          </span>
+        </Marker>
       ))}
     </ReactMapGL>
   )
