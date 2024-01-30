@@ -8,7 +8,8 @@ import Profile from './components/profile';
 import gpxFile from './data/le-poet-sigillat.gpx';
 
 export default function App() {
-  const [gpx, setGpx] = useState(null);
+  const [coordinates, setCoordinates] = useState();
+  const [gpx, setGpx] = useState();
 
   useEffect(() => {
     fetch(gpxFile)
@@ -26,8 +27,11 @@ export default function App() {
       {gpx && (
         <div className='open-trail'>
           <Overview gpx={gpx} />
-          <Map gpx={gpx} />
-          <Profile gpx={gpx} />
+          <div>
+            {coordinates?.lat ?? 0} / {coordinates?.lng ?? 0}
+          </div>
+          <Map gpx={gpx} coordinates={coordinates} setCoordinates={setCoordinates} />
+          <Profile gpx={gpx} coordinates={coordinates} />
           <Planner gpx={gpx} />
         </div>
     )}

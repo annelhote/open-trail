@@ -16,12 +16,6 @@ const mapStyle = {
         'https://c.tile.openstreetmap.org/{z}/{x}/{y}.png'
       ],
       tileSize: 256
-    },
-    osm: {
-      type: 'vector',
-      tiles: [
-        'https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf'
-      ],
     }
   },
   layers: [
@@ -29,7 +23,6 @@ const mapStyle = {
       id: 'osm-tiles',
       type: 'raster',
       source: 'raster-tiles',
-      // source: 'osm',
       minzoom: 0,
       maxzoom: 19
     }
@@ -71,8 +64,7 @@ const getDataFromOverpass = (bbox) => {
   return axios.get(`https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`);
 }
 
-function Map({ gpx }) {
-  const [coordinates, setCoordinates] = useState();
+function Map({ coordinates, gpx, setCoordinates }) {
   const [markers, setMarkers] = useState([]);
   const [selectedMarker, setSelectedMarker] = useState();
 
@@ -97,12 +89,12 @@ function Map({ gpx }) {
           lon: item?.lon ?? item?.center?.lon,
           name: item?.tags?.name,
           phone: item?.tags?.phone ?? item?.tags?.['contact:phone'],
-          type: item?.tags?.amenity ?? item?.tags?.tourism ?? '',
+          type: item?.tags?.amenity ?? item?.tags?.tourism ?? item?.tags?.shop ?? '',
           website: item?.tags?.website,
         })));
       })
-      .catch(error => {
-        console.log("error", error);
+      .catch((error) => {
+        console.log('error', error);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -127,7 +119,7 @@ function Map({ gpx }) {
       mapLib={maplibregl}
       mapStyle={mapStyle}
       onMouseLeave={() => setCoordinates()}
-      onMouseEnter={(e) => setCoordinates([e.lngLat.lng, e.lngLat.lat])}
+      onMouseEnter={(e) => setCoordinates(e.lngLat)}
     >
       <Source
         data={gpx.toGeoJSON()}
@@ -146,7 +138,7 @@ function Map({ gpx }) {
           type="geojson"
         >
           <Layer
-            paint={{ "circle-color": "red" }}
+            paint={{ "circle-color": "red", "circle-radius": 7 }}
             type="circle"
           />
         </Source>

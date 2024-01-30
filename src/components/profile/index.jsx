@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import React, { useEffect } from 'react';
 
-const Profile = ({ gpx }) => {
+const Profile = ({ coordinates, gpx }) => {
   const createGraph = async () => {
     const points = gpx.tracks[0].points;
     const data = [];
@@ -10,11 +10,13 @@ const Profile = ({ gpx }) => {
       data.push({ distance: Math.floor(item / 1000), elevation: points[index].ele })
     });
 
-    // set the dimensions and margins of the graph
+    // const closest = (array, needle) => array.reduce((prev, curr) => Math.abs(curr - needle) < Math.abs(prev - needle) ? curr : prev);
+
+    // Set the dimensions and margins of the graph
     const margin = { top: 20, right: 20, bottom: 50, left: 70 };
     const width = 925 - margin.left - margin.right;
     const height = 200 - margin.top - margin.bottom;
-    // append the svg object to the body of the page
+    // Append the svg object to the body of the page
     const svg = d3.select('.svg')
       .attr('width', width + margin.left + margin.right)
       .attr('height', height + margin.top + margin.bottom)
@@ -32,7 +34,7 @@ const Profile = ({ gpx }) => {
     svg.append('g')
       .call(d3.axisLeft(y));
 
-    // add the Line
+    // Add the profile line
     const elevationLine = d3.line()
       .x((d) => x(d.distance))
       .y((d) => y(d.elevation))
@@ -44,12 +46,27 @@ const Profile = ({ gpx }) => {
       .attr('stroke', '#e4e5e6')
       .attr('stroke-width', 1.5)
       .attr('d', elevationLine)
+
+    // Red point
+    // if (coordinates) {
+    //   console.log(coordinates);
+    //   console.log(points);
+    //   const startPoint = points[0];
+    //   const dist = gpx.calculDistance([startPoint, { lat: coordinates.lat, lon: coordinates.lng }]);
+    //   const redIndex = data.findIndex((item) => item.distance === closest(cumulDistances, dist) / 1000);
+    //   const redPoint = data[redIndex];
+    //   svg.append('circle')
+    //     .attr('fill', 'red')
+    //     .attr('cx', x(redPoint.distance))
+    //     .attr('cy', y(redPoint.elevation))
+    //     .attr('r', 7);
+    // }
   }
 
   useEffect(() => {
     createGraph();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [coordinates]);
 
   return (
     <svg className='svg'></svg>
