@@ -11,6 +11,7 @@ const Profile = ({ coordinates, gpx }) => {
     const margin = { top: 20, right: 20, bottom: 50, left: 70 };
     const width = 925 - margin.left - margin.right;
     const height = 200 - margin.top - margin.bottom;
+    d3.select('.svg').selectAll('g').remove();
     // Append the svg object to the body of the page
     const svg = d3.select('.svg')
       .attr('width', width + margin.left + margin.right)
@@ -37,7 +38,7 @@ const Profile = ({ coordinates, gpx }) => {
     svg.append('path')
       .data([data])
       .attr('class', 'line')
-      .attr('fill', '#e4e5e6')
+      .attr('fill', 'transparent')
       .attr('stroke', '#e4e5e6')
       .attr('stroke-width', 1.5)
       .attr('d', elevationLine)
