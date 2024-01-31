@@ -28,7 +28,7 @@ export default function App() {
         <div className='open-trail'>
           <Overview gpx={gpx} />
           <div>
-            {coordinates?.lat ?? 0} / {coordinates?.lng ?? 0}
+            {coordinates?.lat ?? 0} / {coordinates?.lon ?? 0}
           </div>
           <Map gpx={gpx} coordinates={coordinates} setCoordinates={setCoordinates} />
           <Profile gpx={gpx} coordinates={coordinates} />

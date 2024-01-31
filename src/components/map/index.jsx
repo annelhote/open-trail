@@ -119,7 +119,7 @@ function Map({ coordinates, gpx, setCoordinates }) {
       mapLib={maplibregl}
       mapStyle={mapStyle}
       onMouseLeave={() => setCoordinates()}
-      onMouseEnter={(e) => setCoordinates(e.lngLat)}
+      onMouseEnter={(e) => setCoordinates({ lat: e.lngLat.lat, lon: e.lngLat.lng })}
     >
       <Source
         data={gpx.toGeoJSON()}

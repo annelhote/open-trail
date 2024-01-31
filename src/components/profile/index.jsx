@@ -4,13 +4,8 @@ import React, { useEffect } from 'react';
 const Profile = ({ coordinates, gpx }) => {
   const createGraph = async () => {
     const points = gpx.tracks[0].points;
-    const data = [];
     const cumulDistances = [0, ...gpx.calculDistance(gpx.tracks[0].points).cumul.slice(0, -1)];
-    cumulDistances.forEach((item, index) => {
-      data.push({ distance: Math.floor(item / 1000), elevation: points[index].ele })
-    });
-
-    // const closest = (array, needle) => array.reduce((prev, curr) => Math.abs(curr - needle) < Math.abs(prev - needle) ? curr : prev);
+    const data = cumulDistances.map((item, index) => ({ distance: Math.floor(item / 1000), elevation: points[index].ele }));
 
     // Set the dimensions and margins of the graph
     const margin = { top: 20, right: 20, bottom: 50, left: 70 };
@@ -48,19 +43,18 @@ const Profile = ({ coordinates, gpx }) => {
       .attr('d', elevationLine)
 
     // Red point
-    // if (coordinates) {
-    //   console.log(coordinates);
-    //   console.log(points);
-    //   const startPoint = points[0];
-    //   const dist = gpx.calculDistance([startPoint, { lat: coordinates.lat, lon: coordinates.lng }]);
-    //   const redIndex = data.findIndex((item) => item.distance === closest(cumulDistances, dist) / 1000);
-    //   const redPoint = data[redIndex];
-    //   svg.append('circle')
-    //     .attr('fill', 'red')
-    //     .attr('cx', x(redPoint.distance))
-    //     .attr('cy', y(redPoint.elevation))
-    //     .attr('r', 7);
-    // }
+    if (coordinates) {
+      const closestPoint = points.reduce(
+        (accumulator, currentValue, index) => gpx.calcDistanceBetween(currentValue, coordinates) < accumulator.distance ? { distance: gpx.calcDistanceBetween(currentValue, coordinates), point: currentValue, index } : accumulator,
+        { distance: gpx.tracks[0].distance.total, point: points[points.length - 1], index: points.length - 1 },
+      );
+      const redPoint = data[closestPoint.index];
+      svg.append('circle')
+        .attr('fill', 'red')
+        .attr('cx', x(redPoint.distance))
+        .attr('cy', y(redPoint.elevation))
+        .attr('r', 7);
+    }
   }
 
   useEffect(() => {
