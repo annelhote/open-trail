@@ -72,11 +72,14 @@ export default function App() {
         .then((responses) => {
           const response = responses.map((response) => response.data.elements).flat();
           setMarkers(response.map((item) => ({
+            addrHousenumber: item?.tags?.['addr:housenumber'],
+            addrStreet: item?.tags?.['addr:street'],
             email: item?.tags?.email,
             id: item?.id,
             lat: item?.lat ?? item?.center?.lat,
             lon: item?.lon ?? item?.center?.lon,
             name: item?.tags?.name,
+            note: item?.tags?.note,
             phone: item?.tags?.phone ?? item?.tags?.['contact:phone'],
             type: item?.tags?.amenity ?? item?.tags?.tourism ?? item?.tags?.shop ?? '',
             website: item?.tags?.website,
