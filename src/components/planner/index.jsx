@@ -26,6 +26,7 @@ const Planner = ({ gpx, markers }) => {
             <th>Téléphone</th>
             <th>Adresse email</th>
             <th>Site internet</th>
+            <th>OpenStreetMap lien</th>
           </tr>
         </thead>
         <tbody>
@@ -42,6 +43,11 @@ const Planner = ({ gpx, markers }) => {
               <td>
                 <a href={marker.website} target="_blank" rel="noreferrer">
                   {marker.website}
+                </a>
+              </td>
+              <td>
+                <a href={`https://www.openstreetmap.org/${marker.osmType}/${marker.id}`} target="_blank" rel="noreferrer">
+                  {marker.id}
                 </a>
               </td>
             </tr>

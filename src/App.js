@@ -71,6 +71,7 @@ export default function App() {
       Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
         .then((responses) => {
           const response = responses.map((response) => response.data.elements).flat();
+          console.log(response);
           setMarkers(response.map((item) => ({
             addrHousenumber: item?.tags?.['addr:housenumber'],
             addrStreet: item?.tags?.['addr:street'],
@@ -80,6 +81,7 @@ export default function App() {
             lon: item?.lon ?? item?.center?.lon,
             name: item?.tags?.name,
             note: item?.tags?.note,
+            osmType: item?.type,
             phone: item?.tags?.phone ?? item?.tags?.['contact:phone'],
             type: item?.tags?.amenity ?? item?.tags?.tourism ?? item?.tags?.shop ?? '',
             website: item?.tags?.website,
