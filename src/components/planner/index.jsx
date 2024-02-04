@@ -1,4 +1,4 @@
-const Planner = ({ gpx, markers }) => {
+const Planner = ({ gpx, markers, meta }) => {
   const points = gpx.tracks[0].points;
   const cumulDistances = [0, ...gpx.calculDistance(gpx.tracks[0].points).cumul.slice(0, -1)];
   const data = cumulDistances.map((item, index) => ({ distance: Math.floor(item / 1000), elevation: points[index].ele }));
@@ -30,9 +30,9 @@ const Planner = ({ gpx, markers }) => {
           </tr>
         </thead>
         <tbody>
-          {markers.map((marker) => (
-            <tr>
-              <td>{Math.ceil(marker.distance / 20) === 0 ? 1 : Math.ceil(marker.distance / 20)}</td>
+          {markers.map((marker, index) => (
+            <tr key={index}>
+              <td>{Math.ceil(marker.distance / meta.kmPerDay) === 0 ? 1 : Math.ceil(marker.distance / meta.kmPerDay)}</td>
               <td>{marker.name}</td>
               <td>{marker.distance} km</td>
               <td>{marker.type}</td>

@@ -28,19 +28,11 @@ const mapStyle = {
   ]
 };
 
-function Map({ coordinates, gpx, markers, setCoordinates }) {
+function Map({ coordinates, gpx, markers, selectedFilters, setCoordinates }) {
   const [selectedMarker, setSelectedMarker] = useState();
 
   const closePopup = () => setSelectedMarker();
   const openPopup = (index) => setSelectedMarker(index);
-
-  if (markers.length === 0) {
-    return (
-      <div>
-        Loading data ...
-      </div>
-    )
-  }
 
   return (
     <ReactMapGL
@@ -87,7 +79,7 @@ function Map({ coordinates, gpx, markers, setCoordinates }) {
         />
       }
       {
-        markers.map((marker, index) => (
+        markers.filter((marker) => selectedFilters.includes(marker.type)).map((marker, index) => (
           <CustomMarker
             key={`marker-${index}`}
             index={index}

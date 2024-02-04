@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const Overview = ({ gpx }) => {
+const Overview = ({ gpx, meta }) => {
   const [distance, setDistance] = useState(0);
   const [duration, setDuration] = useState(0);
   const [elevation, setElevation] = useState(0);
@@ -8,13 +8,13 @@ const Overview = ({ gpx }) => {
   useEffect(() => {
     setDistance(Math.floor(gpx.tracks[0].distance.total / 1000));
     setElevation(Math.floor((gpx.calcElevation(gpx.tracks[0].points)).pos));
-    setDuration(Math.ceil(distance / 20));
-  }, [distance, gpx]);
+    setDuration(Math.ceil(distance / meta.kmPerDay));
+  }, [distance, gpx, meta]);
 
   return (
     <div className='overview'>
       <h1>
-        Valence -> Le Poët-Sigillat
+        {meta.name}
       </h1>
       <div className='subtitle'>
         <span className='space-right'>
