@@ -17,34 +17,13 @@ import Overview from './components/overview';
 import Planner from './components/planner';
 import Profile from './components/profile';
 import gpxLePoetSigillat from './data/le-poet-sigillat.gpx';
+import { capitalize, chunkArray, downSampleArray } from './utils';
 
 const meta = {
   gpx: gpxLePoetSigillat,
   kmPerDay: 20,
   activity: 'hiking',
   name: 'Valence -> Le Poët-Sigillat',
-}
-
-const downSampleArray = (input, period) => {
-  if (period < 1 || period % 1 !== 0) {
-    throw new TypeError('Period must be an integer greater than or equal to 1')
-  }
-  if (period === 1) {
-    return [...input]
-  }
-  const output = []
-  for (let i = 0; i < input.length; i += period) {
-    output.push(input[i])
-  }
-  return output
-}
-
-const chunkArray = (array, chunkSize) => {
-  const chunks = [];
-  for (let i = 0; i < array.length; i += chunkSize) {
-    chunks.push(array.slice(i, i + chunkSize));
-  }
-  return chunks;
 }
 
 const getDataFromOverpass = (bbox) => {
@@ -175,7 +154,7 @@ export default function App() {
   }, [gpx])
 
   useEffect(() => {
-    setFilters([...new Set(markers.map((item) => item?.type ?? 'unknown'))]);
+    setFilters([...new Set(markers.map((item) => item?.type ?? 'unknown'))].sort());
   }, [markers]);
 
   useEffect(() => {
@@ -198,9 +177,9 @@ export default function App() {
           <FormGroup row>
             {filters.map((item, index) => (
               <FormControlLabel
-                control={<Checkbox checked={selectedFilters.includes(item)} />}
+                control={<Checkbox checked={selectedFilters.includes(item)} style={{ color: markers.find((marker) => marker.type === item).color }} />}
                 key={index}
-                label={item.replace('_', ' ')}
+                label={capitalize(item.replace('_', ' '))}
                 name={item}
                 onChange={(event) => selectedFilters.includes(event.target.name) ? setSelectedFilters(selectedFilters.filter((item) => item !== event.target.name)) : setSelectedFilters([...selectedFilters, event.target.name])}
               />
@@ -208,7 +187,7 @@ export default function App() {
           </FormGroup>
           <Map gpx={gpx} coordinates={coordinates} markers={markers} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
           <Profile gpx={gpx} coordinates={coordinates} />
-          <Planner gpx={gpx} markers={markers} meta={meta} />
+          <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
         </div>
       )}
     </>
