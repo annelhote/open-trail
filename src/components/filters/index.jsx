@@ -1,7 +1,8 @@
-import { Box, Checkbox, FormControlLabel, Grid } from '@mui/material';
+import { Box, Checkbox, FormControlLabel, Grid, TextField } from '@mui/material';
+
 import { capitalize } from '../../utils';
 
-const Filters = ({ filters, markers, onChange, selectedFilters }) => {
+const Filters = ({ filters, markers, meta, onChange, selectedFilters, setMeta }) => {
   return (
     <Grid className="filters" container item xs={12}>
       {Object.keys(filters).map((category) => (
@@ -10,7 +11,7 @@ const Filters = ({ filters, markers, onChange, selectedFilters }) => {
             control={
               <Checkbox
                 checked={selectedFilters.includes(category)}
-                indeterminate={filters[category].data.some((r)=> selectedFilters.includes(r)) && !filters[category].data.every((r)=> selectedFilters.includes(r))}
+                indeterminate={filters[category].data.some((r) => selectedFilters.includes(r)) && !filters[category].data.every((r) => selectedFilters.includes(r))}
                 name={category}
                 onChange={onChange}
                 style={{ color: filters[category].color }}
@@ -31,6 +32,29 @@ const Filters = ({ filters, markers, onChange, selectedFilters }) => {
           </Box>
         </Grid>
       ))}
+
+      <Grid item xs={3}>
+        <Box
+          component="form"
+          sx={{
+            '& .MuiTextField-root': { m: 1, width: '25ch' },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <TextField
+            id="filled-number"
+            InputLabelProps={{
+              shrink: true,
+            }}
+            label="Number"
+            onChange={(event) => setMeta({ ...meta, kmPerDay: event.target.value })}
+            type="number"
+            value={meta.kmPerDay}
+            variant="filled"
+          />
+        </Box>
+      </Grid>
     </Grid>
   );
 };

@@ -20,14 +20,6 @@ import Profile from './components/profile';
 import gpxLePoetSigillat from './data/le-poet-sigillat.gpx';
 import { chunkArray, downSampleArray } from './utils';
 
-const meta = {
-  activity: 'hiking',
-  gpx: gpxLePoetSigillat,
-  id: 'le-poet-sigillat',
-  kmPerDay: 20,
-  name: 'Valence -> Le Poët-Sigillat',
-}
-
 const getDataFromOverpass = (bbox) => {
   const query = `
     [out:json][timeout:500];
@@ -103,6 +95,13 @@ export default function App() {
   const [coordinates, setCoordinates] = useState();
   const [gpx, setGpx] = useState();
   const [markers, setMarkers] = useState([]);
+  const [meta, setMeta] = useState({
+    activity: 'hiking',
+    gpx: gpxLePoetSigillat,
+    id: 'le-poet-sigillat',
+    kmPerDay: 20,
+    name: 'Valence -> Le Poët-Sigillat',
+  });
   const [filters, setFilters] = useState({});
   const [selectedFilters, setSelectedFilters] = useState([]);
 
@@ -204,7 +203,7 @@ export default function App() {
         <Box className='open-trail' sx={{ flexGrow: 0.75 }}>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             <Overview gpx={gpx} meta={meta} />
-            <Filters filters={filters} markers={markers} onChange={onChange} selectedFilters={selectedFilters} />
+            <Filters filters={filters} markers={markers} meta={meta} onChange={onChange} selectedFilters={selectedFilters} setMeta={setMeta} />
             <Map gpx={gpx} coordinates={coordinates} markers={markers} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
             <Profile gpx={gpx} coordinates={coordinates} />
             <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
