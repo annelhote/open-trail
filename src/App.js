@@ -6,8 +6,8 @@ import {
   faQuestion,
   faRestroom,
   faUtensils,
-} from '@fortawesome/free-solid-svg-icons'
-import { Checkbox, FormControlLabel, FormGroup } from '@mui/material';
+} from '@fortawesome/free-solid-svg-icons';
+import { Box, Checkbox, FormControlLabel, FormGroup, Grid } from '@mui/material';
 import axios from 'axios';
 import gpxParser from 'gpxparser';
 import React, { useEffect, useState } from 'react';
@@ -20,9 +20,10 @@ import gpxLePoetSigillat from './data/le-poet-sigillat.gpx';
 import { capitalize, chunkArray, downSampleArray } from './utils';
 
 const meta = {
-  gpx: gpxLePoetSigillat,
-  kmPerDay: 20,
   activity: 'hiking',
+  gpx: gpxLePoetSigillat,
+  id: 'le-poet-sigillat',
+  kmPerDay: 20,
   name: 'Valence -> Le Poët-Sigillat',
 }
 
@@ -172,23 +173,25 @@ export default function App() {
   return (
     <>
       {gpx && (
-        <div className='open-trail'>
-          <Overview gpx={gpx} meta={meta} />
-          <FormGroup row>
-            {filters.map((item, index) => (
-              <FormControlLabel
-                control={<Checkbox checked={selectedFilters.includes(item)} style={{ color: markers.find((marker) => marker.type === item).color }} />}
-                key={index}
-                label={capitalize(item.replace('_', ' '))}
-                name={item}
-                onChange={(event) => selectedFilters.includes(event.target.name) ? setSelectedFilters(selectedFilters.filter((item) => item !== event.target.name)) : setSelectedFilters([...selectedFilters, event.target.name])}
-              />
-            ))}
-          </FormGroup>
-          <Map gpx={gpx} coordinates={coordinates} markers={markers} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
-          <Profile gpx={gpx} coordinates={coordinates} />
-          <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
-        </div>
+        <Box className='open-trail' sx={{ flexGrow: 0.75 }}>
+          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            <Overview gpx={gpx} meta={meta} />
+            <FormGroup row>
+              {filters.map((item, index) => (
+                <FormControlLabel
+                  control={<Checkbox checked={selectedFilters.includes(item)} style={{ color: markers.find((marker) => marker.type === item).color }} />}
+                  key={index}
+                  label={capitalize(item.replace('_', ' '))}
+                  name={item}
+                  onChange={(event) => selectedFilters.includes(event.target.name) ? setSelectedFilters(selectedFilters.filter((item) => item !== event.target.name)) : setSelectedFilters([...selectedFilters, event.target.name])}
+                />
+              ))}
+            </FormGroup>
+            <Map gpx={gpx} coordinates={coordinates} markers={markers} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
+            <Profile gpx={gpx} coordinates={coordinates} />
+            <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
+          </Grid>
+        </Box>
       )}
     </>
   );

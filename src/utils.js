@@ -8,6 +8,15 @@ const chunkArray = (array, chunkSize) => {
   return chunks;
 }
 
+const downloadGpx = ({ gpx, meta }) => {
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(gpx.xmlSource)], { type: 'text/csv;charset=utf-8' }));
+  link.setAttribute('download', `${meta.id}.gpx`);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 const downSampleArray = (input, period) => {
   if (period < 1 || period % 1 !== 0) {
     throw new TypeError('Period must be an integer greater than or equal to 1')
@@ -23,7 +32,8 @@ const downSampleArray = (input, period) => {
 }
 
 export {
-	capitalize,
-	chunkArray,
-	downSampleArray
+  capitalize,
+  chunkArray,
+  downloadGpx,
+  downSampleArray,
 }
