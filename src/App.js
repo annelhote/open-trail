@@ -7,17 +7,18 @@ import {
   faRestroom,
   faUtensils,
 } from '@fortawesome/free-solid-svg-icons';
-import { Box, Checkbox, FormControlLabel, FormGroup, Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import axios from 'axios';
 import gpxParser from 'gpxparser';
 import React, { useEffect, useState } from 'react';
 
+import Filters from './components/filters';
 import Map from './components/map';
 import Overview from './components/overview';
 import Planner from './components/planner';
 import Profile from './components/profile';
 import gpxLePoetSigillat from './data/le-poet-sigillat.gpx';
-import { capitalize, chunkArray, downSampleArray } from './utils';
+import { chunkArray, downSampleArray } from './utils';
 
 const meta = {
   activity: 'hiking',
@@ -56,12 +57,12 @@ const getMarkerFromType = (type) => {
     case 'motel':
     case 'shelter':
     case 'wilderness_hut':
-      category = 'accommodation';
+      category = 'Hébergement';
       color = '#f2df16';
       icon = faHouse;
       break;
     case 'cafe':
-      category = 'water';
+      category = 'Eau';
       color = '#996600';
       icon = faCoffee;
       break;
@@ -71,24 +72,24 @@ const getMarkerFromType = (type) => {
     case 'general':
     case 'mall':
     case 'supermarket':
-      category = 'food';
+      category = 'Alimentation';
       color = '#006633';
       icon = faCartShopping;
       break;
     case 'cemetery':
     case 'drinking_water':
     case 'water_point':
-      category = 'water';
+      category = 'Eau';
       color = '#0099ff';
       icon = faFaucetDrip;
       break;
     case 'restaurant':
-      category = 'food';
+      category = 'Alimentation';
       color = '#f21629';
       icon = faUtensils;
       break;
     case 'toilets':
-      category = 'water';
+      category = 'Eau';
       color = '#f3802e';
       icon = faRestroom;
       break;
@@ -102,8 +103,26 @@ export default function App() {
   const [coordinates, setCoordinates] = useState();
   const [gpx, setGpx] = useState();
   const [markers, setMarkers] = useState([]);
-  const [filters, setFilters] = useState([]);
+  const [filters, setFilters] = useState({});
   const [selectedFilters, setSelectedFilters] = useState([]);
+
+  const onChange = (event) => {
+    const eventName = event.target.name;
+    const isCategory = Object.keys(filters).includes(eventName);
+    if (selectedFilters.includes(eventName)) {
+      let excluded = [eventName];
+      if (isCategory) {
+        excluded = [...excluded, filters[eventName].data];
+      }
+      setSelectedFilters(selectedFilters.filter((item) => !excluded.includes(item)));
+    } else {
+      let added = [eventName];
+      if (isCategory) {
+        added = [...added, ...filters[eventName].data];
+      }
+      setSelectedFilters([...selectedFilters, ...added]);
+    }
+  }
 
   useEffect(() => {
     fetch(meta?.gpx)
@@ -155,11 +174,20 @@ export default function App() {
   }, [gpx])
 
   useEffect(() => {
-    setFilters([...new Set(markers.map((item) => item?.type ?? 'unknown'))].sort());
+    const filtersTmp = {};
+    markers.forEach((marker) => {
+      if (!Object.keys(filtersTmp).includes(marker.category)) filtersTmp[marker.category] = { color: marker.color, data: [] };
+      if (!filtersTmp[marker.category].data.includes(marker.type)) filtersTmp[marker.category].data.push(marker.type);
+    })
+    setFilters(filtersTmp);
   }, [markers]);
 
   useEffect(() => {
-    setSelectedFilters(filters);
+    let selectedFiltersTmp = Object.keys(filters);
+    selectedFiltersTmp.forEach((item) => {
+      selectedFiltersTmp = [...selectedFiltersTmp, ...filters[item].data];
+    })
+    setSelectedFilters(selectedFiltersTmp);
   }, [filters]);
 
   if (markers.length === 0) {
@@ -176,19 +204,7 @@ export default function App() {
         <Box className='open-trail' sx={{ flexGrow: 0.75 }}>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             <Overview gpx={gpx} meta={meta} />
-            <Grid className="filters" item xs={12}>
-              <FormGroup row>
-                {filters.map((item, index) => (
-                  <FormControlLabel
-                    control={<Checkbox checked={selectedFilters.includes(item)} style={{ color: markers.find((marker) => marker.type === item).color }} />}
-                    key={index}
-                    label={capitalize(item.replace('_', ' '))}
-                    name={item}
-                    onChange={(event) => selectedFilters.includes(event.target.name) ? setSelectedFilters(selectedFilters.filter((item) => item !== event.target.name)) : setSelectedFilters([...selectedFilters, event.target.name])}
-                  />
-                ))}
-              </FormGroup>
-            </Grid>
+            <Filters filters={filters} markers={markers} onChange={onChange} selectedFilters={selectedFilters} />
             <Map gpx={gpx} coordinates={coordinates} markers={markers} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
             <Profile gpx={gpx} coordinates={coordinates} />
             <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
