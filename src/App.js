@@ -132,7 +132,7 @@ export default function App() {
         setGpx(newGpx);
       })
       .catch((e) => console.error(e));
-  }, []);
+  }, [meta?.gpx]);
 
   useEffect(() => {
     if (gpx) {
