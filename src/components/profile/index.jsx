@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material';
 import * as d3 from 'd3';
 import React, { useEffect } from 'react';
 
@@ -64,7 +65,9 @@ const Profile = ({ coordinates, gpx }) => {
   }, [coordinates]);
 
   return (
-    <svg className='svg'></svg>
+    <Grid className="profile" item xs={12}>
+      <svg className="svg"></svg>
+    </Grid>
   );
 };
 

@@ -17,26 +17,26 @@ const Overview = ({ gpx, meta }) => {
   }, [distance, gpx, meta]);
 
   return (
-    <Grid className='overview' container item xs={12}>
+    <Grid className="overview" container item xs={12}>
       <h1>
         {meta.name}
       </h1>
-      <Grid className='subtitle' item xs={10}>
-        <span className='space-right'>
+      <Grid className="subtitle" item xs={10}>
+        <span className="space-right">
           <b>{distance}</b> km
         </span>
         /
-        <span className='space-right space-left'>
+        <span className="space-right space-left">
           <b>{elevation}</b> m D+
         </span>
         /
-        <span className='space-right space-left'>
+        <span className="space-right space-left">
           <b>{duration}</b> days
         </span>
       </Grid>
       <Grid item xs={2}>
-        <Stack direction='row' justifyContent='flex-end'>
-          <Button component='label'  onClick={() => downloadGpx({ gpx, meta })} startIcon={<FontAwesomeIcon icon={faFileArrowDown} />} variant='outlined'>
+        <Stack direction="row" justifyContent="flex-end">
+          <Button component="label" onClick={() => downloadGpx({ gpx, meta })} startIcon={<FontAwesomeIcon icon={faFileArrowDown} />} variant="outlined">
             Download GPX file
           </Button>
         </Stack>

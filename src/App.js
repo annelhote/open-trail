@@ -176,17 +176,19 @@ export default function App() {
         <Box className='open-trail' sx={{ flexGrow: 0.75 }}>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             <Overview gpx={gpx} meta={meta} />
-            <FormGroup row>
-              {filters.map((item, index) => (
-                <FormControlLabel
-                  control={<Checkbox checked={selectedFilters.includes(item)} style={{ color: markers.find((marker) => marker.type === item).color }} />}
-                  key={index}
-                  label={capitalize(item.replace('_', ' '))}
-                  name={item}
-                  onChange={(event) => selectedFilters.includes(event.target.name) ? setSelectedFilters(selectedFilters.filter((item) => item !== event.target.name)) : setSelectedFilters([...selectedFilters, event.target.name])}
-                />
-              ))}
-            </FormGroup>
+            <Grid className="filters" item xs={12}>
+              <FormGroup row>
+                {filters.map((item, index) => (
+                  <FormControlLabel
+                    control={<Checkbox checked={selectedFilters.includes(item)} style={{ color: markers.find((marker) => marker.type === item).color }} />}
+                    key={index}
+                    label={capitalize(item.replace('_', ' '))}
+                    name={item}
+                    onChange={(event) => selectedFilters.includes(event.target.name) ? setSelectedFilters(selectedFilters.filter((item) => item !== event.target.name)) : setSelectedFilters([...selectedFilters, event.target.name])}
+                  />
+                ))}
+              </FormGroup>
+            </Grid>
             <Map gpx={gpx} coordinates={coordinates} markers={markers} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
             <Profile gpx={gpx} coordinates={coordinates} />
             <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
