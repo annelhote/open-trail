@@ -189,24 +189,24 @@ export default function App() {
     setSelectedFilters(selectedFiltersTmp);
   }, [filters]);
 
-  if (markers.length === 0) {
-    return (
-      <div>
-        Loading data ...
-      </div>
-    )
-  }
-
   return (
     <>
       {gpx && (
         <Box className='open-trail' sx={{ flexGrow: 0.75 }}>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             <Overview gpx={gpx} meta={meta} />
-            <Filters filters={filters} markers={markers} meta={meta} onChange={onChange} selectedFilters={selectedFilters} setMeta={setMeta} />
-            <Map gpx={gpx} coordinates={coordinates} markers={markers} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
-            <Profile gpx={gpx} coordinates={coordinates} />
-            <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
+            {(markers.length === 0) ? (
+              <div>
+                Loading data ...
+              </div>
+            ) : (
+              <>
+                <Filters filters={filters} markers={markers} meta={meta} onChange={onChange} selectedFilters={selectedFilters} setMeta={setMeta} />
+                <Map gpx={gpx} coordinates={coordinates} markers={markers} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
+                <Profile gpx={gpx} coordinates={coordinates} />
+                <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
+              </>
+            )}
           </Grid>
         </Box>
       )}
