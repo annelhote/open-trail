@@ -15,8 +15,8 @@ const Profile = ({ coordinates, gpx }) => {
     d3.select('.svg').selectAll('g').remove();
     // Append the svg object to the body of the page
     const svg = d3.select('.svg')
-      .attr('width', width + margin.left + margin.right)
-      .attr('height', height + margin.top + margin.bottom)
+      .attr('preserveAspectRatio', 'xMinYMin meet')
+      .attr('viewBox', '0 0 925 200')
       .append('g')
       .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
@@ -55,7 +55,7 @@ const Profile = ({ coordinates, gpx }) => {
         .attr('fill', 'red')
         .attr('cx', x(redPoint.distance))
         .attr('cy', y(redPoint.elevation))
-        .attr('r', 7);
+        .attr('r', 5);
     }
   }
 

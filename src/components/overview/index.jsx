@@ -31,7 +31,7 @@ const Overview = ({ gpx, meta }) => {
         </span>
         /
         <span className="space-right space-left">
-          <b>{duration}</b> days
+          <b>{duration}</b> jours
         </span>
       </Grid>
       <Grid item xs={2}>

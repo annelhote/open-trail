@@ -17,14 +17,15 @@ const Filters = ({ filters, markers, meta, onChange, selectedFilters, setMeta })
                 style={{ color: filters[category].color }}
               />
             }
-            label={`${category} (${filters[category].data.length})`}
+            label={`${capitalize(category)} (${filters[category].data.length})`}
           />
+
           <Box sx={{ display: 'flex', flexDirection: 'column', ml: 3 }}>
             {filters[category].data.sort().map((item, index) => (
               <FormControlLabel
                 control={<Checkbox checked={selectedFilters.includes(item)} style={{ color: markers.find((marker) => marker.type === item).color }} />}
                 key={`${category}-${index}`}
-                label={capitalize(item.replace('_', ' '))}
+                label={capitalize(markers.find((marker) => marker.type === item).label)}
                 name={item}
                 onChange={onChange}
               />
@@ -47,7 +48,7 @@ const Filters = ({ filters, markers, meta, onChange, selectedFilters, setMeta })
             InputLabelProps={{
               shrink: true,
             }}
-            label="Number"
+            label="Kilomètres parcourus par jour"
             onChange={(event) => setMeta({ ...meta, kmPerDay: event.target.value })}
             type="number"
             value={meta.kmPerDay}
