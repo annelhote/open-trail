@@ -53,7 +53,7 @@ const Planner = ({ gpx, markers, meta, selectedFilters }) => {
               <StyledTableCell>Téléphone</StyledTableCell>
               <StyledTableCell>Adresse email</StyledTableCell>
               <StyledTableCell>Site internet</StyledTableCell>
-              <StyledTableCell>OpenStreetMap lien</StyledTableCell>
+              <StyledTableCell>Lien OSM</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>

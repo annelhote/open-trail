@@ -5,7 +5,7 @@ import gpxParser from 'gpxparser';
 import React, { useEffect, useState } from 'react';
 
 import Filters from './components/filters';
-import Map from './components/map';
+import MyMap from './components/map';
 import Overview from './components/overview';
 import Planner from './components/planner';
 import Profile from './components/profile';
@@ -88,6 +88,9 @@ export default function App() {
               ...getMarkerFromType(type),
             }
           });
+          // Remove duplicates
+          markersTmp = [...new Map(markersTmp.map(v => [v.id, v])).values()];
+          // Add custom markers
           markersTmp = [...markersTmp, ...meta?.markers ?? []];
           setMarkers(markersTmp);
         })
@@ -100,7 +103,6 @@ export default function App() {
 
   useEffect(() => {
     const filtersTmp = {};
-    console.log(markers);
     markers.forEach((marker) => {
       if (!Object.keys(filtersTmp).includes(marker.category)) filtersTmp[marker.category] = { color: marker.color, data: [] };
       if (!filtersTmp[marker.category].data.includes(marker.type)) filtersTmp[marker.category].data.push(marker.type);
@@ -130,7 +132,7 @@ export default function App() {
             ) : (
               <>
                 <Filters filters={filters} markers={markers} meta={meta} onChange={onChange} selectedFilters={selectedFilters} setMeta={setMeta} />
-                <Map gpx={gpx} coordinates={coordinates} markers={markers} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
+                <MyMap gpx={gpx} coordinates={coordinates} markers={markers} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
                 <Profile gpx={gpx} coordinates={coordinates} />
                 <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
               </>

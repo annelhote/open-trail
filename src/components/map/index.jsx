@@ -29,7 +29,7 @@ const mapStyle = {
   ]
 };
 
-function Map({ coordinates, gpx, markers, selectedFilters, setCoordinates }) {
+const Map = ({ coordinates, gpx, markers, selectedFilters, setCoordinates }) => {
   const [selectedMarker, setSelectedMarker] = useState();
 
   const closePopup = () => setSelectedMarker();
