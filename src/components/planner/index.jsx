@@ -41,7 +41,7 @@ const Planner = ({ gpx, markers, meta, selectedFilters }) => {
   return (
     <Grid className="planner" item xs={12}>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} size="small" aria-label="a planner table">
+        <Table size="small" aria-label="a planner table">
           <TableHead>
             <TableRow>
               <StyledTableCell>Jour</StyledTableCell>
@@ -61,7 +61,7 @@ const Planner = ({ gpx, markers, meta, selectedFilters }) => {
               <StyledTableRow key={index}>
                 <StyledTableCell>{Math.ceil(marker.distance / meta.kmPerDay) === 0 ? 1 : Math.ceil(marker.distance / meta.kmPerDay)}</StyledTableCell>
                 <StyledTableCell>{marker.name}</StyledTableCell>
-                <StyledTableCell>{marker.distance} km</StyledTableCell>
+                <StyledTableCell>km {marker.distance}</StyledTableCell>
                 <StyledTableCell>{capitalize(marker.label)}</StyledTableCell>
                 <StyledTableCell>{marker.lat}</StyledTableCell>
                 <StyledTableCell>{marker.lon}</StyledTableCell>

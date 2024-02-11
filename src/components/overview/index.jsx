@@ -17,29 +17,37 @@ const Overview = ({ gpx, meta }) => {
   }, [distance, gpx, meta]);
 
   return (
-    <Grid className="overview" container item xs={12}>
-      <h1>
-        {meta.name}
-      </h1>
-      <Grid className="subtitle" item xs={10}>
-        <span className="space-right">
-          <b>{distance}</b> km
-        </span>
-        /
-        <span className="space-right space-left">
-          <b>{elevation}</b> m D+
-        </span>
-        /
-        <span className="space-right space-left">
-          <b>{duration}</b> jours
-        </span>
+    <Grid className='overview' container item>
+      <Grid item>
+        <h1>
+          {meta.name}
+        </h1>
       </Grid>
-      <Grid item xs={2}>
-        <Stack direction="row" justifyContent="flex-end">
-          <Button component="label" onClick={() => downloadGpx({ gpx, meta })} startIcon={<FontAwesomeIcon icon={faFileArrowDown} />} variant="outlined">
-            Download GPX file
-          </Button>
-        </Stack>
+      <Grid container item>
+        <Grid item xs={12} sm={1}>
+          <b>{distance}</b> km
+        </Grid>
+        <Grid item xs={12} sm={1} sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
+          <b>{elevation}</b> m D+
+        </Grid>
+        <Grid item xs={12} sm={1} sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
+          <b>{duration}</b> jours
+        </Grid>
+        <Grid item xs={12} sm={8}>
+          <Stack direction='row' sx={{ justifyContent: { xs: 'flex-start', sm: 'flex-end' } }}>
+            <Button
+              component='label'
+              onClick={() => downloadGpx({ gpx, meta })}
+              startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
+              sx={{
+                '& .MuiTextField-root': { width: '100%' },
+              }}
+              variant='outlined'
+            >
+              Download GPX file
+            </Button>
+          </Stack>
+        </Grid>
       </Grid>
     </Grid>
   );

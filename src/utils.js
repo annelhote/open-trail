@@ -72,7 +72,7 @@ const getMarkerFromType = (type) => {
     },
     cafe: {
       category: 'eau',
-      color: '#996600',
+      color: '#0099ff',
       icon: faCoffee,
       label: 'café',
     },
@@ -117,6 +117,12 @@ const getMarkerFromType = (type) => {
       color: '#f2df16',
       icon: faHouse,
       label: 'abri',
+    },
+    friend: {
+      category: 'hébergement',
+      color: '#f2df16',
+      icon: faHouse,
+      label: 'ami',
     },
     wilderness_hut: {
       category: 'hébergement',
@@ -180,13 +186,13 @@ const getMarkerFromType = (type) => {
     },
     restaurant: {
       category: 'alimentation',
-      color: '#f21629',
+      color: '#006633',
       icon: faUtensils,
       label: 'restaurant',
     },
     toilets: {
       category: 'eau',
-      color: '#f3802e',
+      color: '#0099ff',
       icon: faRestroom,
       label: 'toilettes',
     }

@@ -2,6 +2,6 @@
   "activity": "hiking",
   "id": "le-poet-sigillat",
   "kmPerDay": 20,
-  "markers": [{ "label": "Arrivée", "lat": 44.3692526, "lon": 5.3170387, "name": "Arrivée", "type": "end" }],
+  "markers": [{ "label": "Arrivée", "lat": 44.3692526, "lon": 5.3170387, "name": "Arrivée", "type": "friend" }],
   "name": "Valence -> Le Poët-Sigillat"
 }

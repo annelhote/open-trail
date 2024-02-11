@@ -6,7 +6,7 @@ const Filters = ({ filters, markers, meta, onChange, selectedFilters, setMeta })
   return (
     <Grid className="filters" container item xs={12}>
       {Object.keys(filters).map((category) => (
-        <Grid item key={category} xs={3}>
+        <Grid item key={category} xs={12} md={3}>
           <FormControlLabel
             control={
               <Checkbox
@@ -34,20 +34,17 @@ const Filters = ({ filters, markers, meta, onChange, selectedFilters, setMeta })
         </Grid>
       ))}
 
-      <Grid item xs={3}>
+      <Grid item xs={12} sm={3}>
         <Box
-          component="form"
-          sx={{
-            '& .MuiTextField-root': { m: 1, width: '25ch' },
-          }}
-          noValidate
           autoComplete="off"
+          component="form"
+          noValidate
+          sx={{
+            '& .MuiTextField-root': { width: '100%' },
+          }}
         >
           <TextField
             id="filled-number"
-            InputLabelProps={{
-              shrink: true,
-            }}
             label="Kilomètres parcourus par jour"
             onChange={(event) => setMeta({ ...meta, kmPerDay: event.target.value })}
             type="number"

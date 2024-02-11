@@ -16,10 +16,13 @@ import { chunkArray, downSampleArray, getDataFromOverpass, getMarkerFromType } f
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
+    primary: {
+      main: '#fff',
+    },
   },
 });
 
-export default function App() {
+const App = () => {
   const [coordinates, setCoordinates] = useState();
   const [gpx, setGpx] = useState();
   const [markers, setMarkers] = useState([]);
@@ -91,7 +94,7 @@ export default function App() {
           // Remove duplicates
           markersTmp = [...new Map(markersTmp.map(v => [v.id, v])).values()];
           // Add custom markers
-          markersTmp = [...markersTmp, ...meta?.markers ?? []];
+          markersTmp = [...markersTmp, ...(meta?.markers ?? []).map((marker) => ({ ...marker, ...getMarkerFromType(marker.type) }))];
           setMarkers(markersTmp);
         })
         .catch((error) => {
@@ -106,7 +109,7 @@ export default function App() {
     markers.forEach((marker) => {
       if (!Object.keys(filtersTmp).includes(marker.category)) filtersTmp[marker.category] = { color: marker.color, data: [] };
       if (!filtersTmp[marker.category].data.includes(marker.type)) filtersTmp[marker.category].data.push(marker.type);
-    })
+    });
     setFilters(filtersTmp);
   }, [markers]);
 
@@ -126,9 +129,9 @@ export default function App() {
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             <Overview gpx={gpx} meta={meta} />
             {(markers.length === 0) ? (
-              <div>
-                Loading data ...
-              </div>
+              <Grid item xs={12}>
+                Chargement des données ...
+              </Grid>
             ) : (
               <>
                 <Filters filters={filters} markers={markers} meta={meta} onChange={onChange} selectedFilters={selectedFilters} setMeta={setMeta} />
@@ -143,3 +146,5 @@ export default function App() {
     </ThemeProvider>
   );
 }
+
+export default App;
