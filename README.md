@@ -29,7 +29,7 @@
 Application Locus Map sur le store Andoid Play
 GPX en accès libre sur le site hexatrek https://www.hexatrek.com/
 
-Site web de référence
+Sites web de référence
 
 - Site officiel de la Fédération Française de la Randonnée Pédestre Le site de la Randonnée Itinérante https://www.mongr.fr/ (export GPX réservé aux membres du site)
 - https://www.gr-infos.com/
@@ -71,6 +71,13 @@ Sites de références
 Fournitures / Matériaux
 
 Quelle machine à coudre ?
+
+### Besoins
+
+- Poche latérale pour gourde d'eau
+- Poche bretelle pour smartphone
+- Cerveau détachable
+
 
 
 ## Numérique
