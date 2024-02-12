@@ -39,9 +39,9 @@ const Planner = ({ gpx, markers, meta, selectedFilters }) => {
   }).sort((a, b) => a.distance - b.distance);
 
   return (
-    <Grid className="planner" item xs={12}>
+    <Grid className='planner' container>
       <TableContainer component={Paper}>
-        <Table size="small" aria-label="a planner table">
+        <Table aria-label='a planner table' size='small' style={{ width: '100%' }}>
           <TableHead>
             <TableRow>
               <StyledTableCell>Jour</StyledTableCell>
@@ -68,12 +68,12 @@ const Planner = ({ gpx, markers, meta, selectedFilters }) => {
                 <StyledTableCell>{marker?.phone}</StyledTableCell>
                 <StyledTableCell>{marker.email}</StyledTableCell>
                 <StyledTableCell>
-                  <a href={marker.website} target="_blank" rel="noreferrer">
+                  <a href={marker.website} target='_blank' rel='noreferrer'>
                     {marker.website}
                   </a>
                 </StyledTableCell>
                 <StyledTableCell>
-                  <a href={`https://www.openstreetmap.org/${marker.osmType}/${marker.id}`} target="_blank" rel="noreferrer">
+                  <a href={`https://www.openstreetmap.org/${marker.osmType}/${marker.id}`} target='_blank' rel='noreferrer'>
                     {marker.id}
                   </a>
                 </StyledTableCell>

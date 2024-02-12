@@ -28,10 +28,10 @@ const CustomPopup = ({ marker, closePopup }) => {
         <h3>{marker.name}</h3>
         <div>
           <ul>
-            {marker?.type && (<li>{marker.type}</li>)}
-            {marker?.phone && (<li>{marker.phone}</li>)}
-            {marker?.email && (<li>{marker.email}</li>)}
-            {marker?.website && (<li>{marker.website}</li>)}
+            {marker?.type && (<li>Type: {marker.type}</li>)}
+            {marker?.phone && (<li>Téléphone: {marker.phone}</li>)}
+            {marker?.email && (<li>Email: {marker.email}</li>)}
+            {marker?.website && (<li>Site internet: {marker.website}</li>)}
           </ul>
         </div>
       </div>

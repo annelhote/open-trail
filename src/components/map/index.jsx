@@ -29,7 +29,7 @@ const mapStyle = {
   ]
 };
 
-const Map = ({ coordinates, gpx, markers, selectedFilters, setCoordinates }) => {
+const Map = ({ coordinates, gpx, markers, meta, selectedFilters, setCoordinates }) => {
   const [selectedMarker, setSelectedMarker] = useState();
 
   const closePopup = () => setSelectedMarker();
@@ -39,11 +39,7 @@ const Map = ({ coordinates, gpx, markers, selectedFilters, setCoordinates }) => 
     <Grid className="map" item xs={12}>
       <ReactMapGL
         id="map"
-        initialViewState={{
-          latitude: 44.6937849,
-          longitude: 5.36890464,
-          zoom: 8
-        }}
+        initialViewState={meta.initialViewState}
         interactiveLayerIds={["path"]}
         mapLib={maplibregl}
         mapStyle={mapStyle}

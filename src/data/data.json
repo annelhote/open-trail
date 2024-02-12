@@ -1,0 +1,26 @@
+{
+  "le-poet-sigillat": {
+    "activity": "hiking",
+    "id": "le-poet-sigillat",
+    "initialViewState": {
+      "latitude": 44.6937849,
+      "longitude": 5.36890464,
+      "zoom": 8
+    },
+    "kmPerDay": 20,
+    "markers": [{ "label": "Arrivée", "lat": 44.3692526, "lon": 5.3170387, "name": "Arrivée", "type": "friend" }],
+    "name": "Valence -> Le Poët-Sigillat"
+  },
+  "picos-de-europa": {
+    "activity": "hiking",
+    "id": "picos-de-europa",
+    "initialViewState": {
+      "latitude": 43.190296,
+      "longitude": -4.9346512,
+      "zoom": 10
+    },
+    "kmPerDay": 20,
+    "name": "Pico de Europa",
+    "website": "https://elanillodepicos.com/"
+  }
+}

@@ -42,9 +42,10 @@ Site web de référence
 - BRouter-Web https://brouter.de/brouter-web/
   - Trouver un itinéraire entre 2 points
 - umap https://umap.openstreetmap.fr/fr/
-- WikiLoac https://fr.wikiloc.com
+- WikiLoc https://fr.wikiloc.com téléchargement avec un compte
 - Hikamp https://www.hikamp.com (GPX téléchargeable pour les inscrits)
 - https://mapstogpx.com/
+- https://www.visorando.com/
 
 
 ## Equipement

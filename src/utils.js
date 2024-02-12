@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 
-const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+const capitalize = (string) => !string ? '' : string.charAt(0).toUpperCase() + string.slice(1);
 
 const chunkArray = (array, chunkSize) => {
   const chunks = [];
@@ -69,6 +69,12 @@ const getMarkerFromType = (type) => {
       color: '#f2df16',
       icon: faHouse,
       label: 'appartement',
+    },
+    bar: {
+      category: 'eau',
+      color: '#0099ff',
+      icon: faCoffee,
+      label: 'bar',
     },
     cafe: {
       category: 'eau',

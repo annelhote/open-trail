@@ -19,9 +19,9 @@ const Overview = ({ gpx, meta }) => {
   return (
     <Grid className='overview' container item>
       <Grid item>
-        <h1>
+        <h2>
           {meta.name}
-        </h1>
+        </h2>
       </Grid>
       <Grid container item>
         <Grid item xs={12} sm={1}>

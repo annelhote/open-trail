@@ -3,15 +3,17 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import gpxParser from 'gpxparser';
 import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
-import Filters from './components/filters';
-import MyMap from './components/map';
-import Overview from './components/overview';
-import Planner from './components/planner';
-import Profile from './components/profile';
-import gpxLePoetSigillat from './data/le-poet-sigillat.gpx';
-import lalilou from './data/le-poet-sigillat.json';
-import { chunkArray, downSampleArray, getDataFromOverpass, getMarkerFromType } from './utils';
+import Filters from '../components/filters';
+import MyMap from '../components/map';
+import Overview from '../components/overview';
+import Planner from '../components/planner';
+import Profile from '../components/profile';
+import gpxLePoetSigillat from '../data/le-poet-sigillat.gpx';
+import gpxPicosDeEuropa from '../data/picos-de-europa.gpx';
+import data from '../data/data.json';
+import { chunkArray, downSampleArray, getDataFromOverpass, getMarkerFromType } from '../utils';
 
 const darkTheme = createTheme({
   palette: {
@@ -22,15 +24,21 @@ const darkTheme = createTheme({
   },
 });
 
-const App = () => {
+const Trail = () => {
+  const params = useParams();
+
   const [coordinates, setCoordinates] = useState();
   const [gpx, setGpx] = useState();
   const [markers, setMarkers] = useState([]);
-  const [meta, setMeta] = useState(lalilou);
+  const [meta, setMeta] = useState(data?.[params?.trailId] ?? {});
   const [filters, setFilters] = useState({});
   const [selectedFilters, setSelectedFilters] = useState([]);
 
-  meta.gpx = gpxLePoetSigillat
+  const gpxes = {
+    'le-poet-sigillat': gpxLePoetSigillat,
+    'picos-de-europa': gpxPicosDeEuropa,
+  }
+  meta.gpx = gpxes[params?.trailId];
 
   const onChange = (event) => {
     const eventName = event.target.name;
@@ -124,9 +132,15 @@ const App = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
+
       {gpx && (
         <Box className='open-trail' sx={{ flexGrow: 0.75 }}>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            <Grid item xs={12}>
+              <Link to="/trails">
+                <h1>Open Trails</h1>
+              </Link>
+            </Grid>
             <Overview gpx={gpx} meta={meta} />
             {(markers.length === 0) ? (
               <Grid item xs={12}>
@@ -135,7 +149,7 @@ const App = () => {
             ) : (
               <>
                 <Filters filters={filters} markers={markers} meta={meta} onChange={onChange} selectedFilters={selectedFilters} setMeta={setMeta} />
-                <MyMap gpx={gpx} coordinates={coordinates} markers={markers} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
+                <MyMap gpx={gpx} coordinates={coordinates} markers={markers} meta={meta} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
                 <Profile gpx={gpx} coordinates={coordinates} />
                 <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
               </>
@@ -145,6 +159,6 @@ const App = () => {
       )}
     </ThemeProvider>
   );
-}
+};
 
-export default App;
+export default Trail;
