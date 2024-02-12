@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 import ErrorPage from './pages/error-page';
 import Trail from './pages/trail';
@@ -8,9 +8,9 @@ import Trails from './pages/trails';
 
 import './index.scss';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: '/trails',
+    path: '/',
     element: <Trails />,
     errorElement: <ErrorPage />,
   },
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     path: '/trails/:trailId',
     element: <Trail />,
   }
-], { basename: '/open-trail' });
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
