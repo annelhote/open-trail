@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material';
 import maplibregl from 'maplibre-gl';
 import React, { useState } from 'react';
-import { default as ReactMapGL, Layer, Source } from 'react-map-gl';
+import { default as ReactMapGL, FullscreenControl, Layer, Source } from 'react-map-gl';
 
 import { CustomMarker, CustomPopup } from '../popup';
 
@@ -86,6 +86,7 @@ const Map = ({ coordinates, gpx, markers, meta, selectedFilters, setCoordinates 
             />
           ))
         }
+        <FullscreenControl />
       </ReactMapGL>
     </Grid>
   )
