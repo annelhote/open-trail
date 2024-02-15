@@ -1,4 +1,5 @@
-import { Box, Grid } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Accordion, AccordionDetails, AccordionSummary, Box, Grid } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import gpxParser from 'gpxparser';
@@ -101,6 +102,7 @@ const Trail = () => {
           });
           // Add custom markers
           const customMarkers = (meta?.markers ?? []).map((marker) => ({ ...marker, ...getMarkerFromType(marker.type) }));
+          // Add markers from GPX file
           const gpxMarkers = (gpx?.waypoints ?? []).map((marker) => ({ ...marker, ...getMarkerFromType(marker?.type ?? getTypeFromName(marker.name)) }));
           markersTmp = [...markersTmp, ...customMarkers, ...gpxMarkers];
           // Remove duplicates
@@ -148,12 +150,40 @@ const Trail = () => {
                 Chargement des données ...
               </Grid>
             ) : (
-              <>
-                <Filters filters={filters} markers={markers} meta={meta} onChange={onChange} selectedFilters={selectedFilters} setMeta={setMeta} />
-                <MyMap gpx={gpx} coordinates={coordinates} markers={markers} meta={meta} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
-                <Profile gpx={gpx} coordinates={coordinates} />
-                <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
-              </>
+              <Grid item xs={12}>
+                <Accordion>
+                  <AccordionSummary aria-controls="panel1-content" id="panel1-header" expandIcon={<ExpandMoreIcon />}>
+                    Filtres
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Filters filters={filters} markers={markers} meta={meta} onChange={onChange} selectedFilters={selectedFilters} setMeta={setMeta} />
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion defaultExpanded>
+                  <AccordionSummary aria-controls="panel2-content" id="panel2-header" expandIcon={<ExpandMoreIcon />}>
+                    Carte
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <MyMap gpx={gpx} coordinates={coordinates} markers={markers} meta={meta} selectedFilters={selectedFilters} setCoordinates={setCoordinates} />
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary aria-controls="panel3-content" id="panel3-header" expandIcon={<ExpandMoreIcon />}>
+                    Profile
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Profile gpx={gpx} coordinates={coordinates} />
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary aria-controls="panel4-content" id="panel4-header" expandIcon={<ExpandMoreIcon />}>
+                    Déroulé
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
+                  </AccordionDetails>
+                </Accordion>
+              </Grid>
             )}
           </Grid>
         </Box>
