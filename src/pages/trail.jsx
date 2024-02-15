@@ -13,7 +13,7 @@ import Profile from '../components/profile';
 import gpxLePoetSigillat from '../data/le-poet-sigillat.gpx';
 import gpxPicosDeEuropa from '../data/picos-de-europa.gpx';
 import data from '../data/data.json';
-import { chunkArray, downSampleArray, getDataFromOverpass, getMarkerFromType } from '../utils';
+import { chunkArray, downSampleArray, getDataFromOverpass, getMarkerFromType, getTypeFromName } from '../utils';
 
 const darkTheme = createTheme({
   palette: {
@@ -64,7 +64,6 @@ const Trail = () => {
       .then((xml) => {
         const newGpx = new gpxParser();
         newGpx.parse(xml);
-        console.log(newGpx);
         setGpx(newGpx);
       })
       .catch((e) => console.error(e));
@@ -102,7 +101,7 @@ const Trail = () => {
           });
           // Add custom markers
           const customMarkers = (meta?.markers ?? []).map((marker) => ({ ...marker, ...getMarkerFromType(marker.type) }));
-          const gpxMarkers = gpx?.waypoints ?? [];
+          const gpxMarkers = (gpx?.waypoints ?? []).map((marker) => ({ ...marker, ...getMarkerFromType(marker?.type ?? getTypeFromName(marker.name)) }));
           markersTmp = [...markersTmp, ...customMarkers, ...gpxMarkers];
           // Remove duplicates
           markersTmp = [...new Map(markersTmp.map((v) => [`${v.lat},${v.lon}`, v])).values()];

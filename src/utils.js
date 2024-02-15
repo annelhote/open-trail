@@ -94,6 +94,48 @@ const getMarkerFromType = (type) => {
       icon: faHouse,
       label: 'chalet',
     },
+    cemetery: {
+      category: 'eau',
+      color: '#0099ff',
+      icon: faFaucetDrip,
+      label: 'cimetière',
+    },
+    deli: {
+      category: 'alimentation',
+      color: '#006633',
+      icon: faCartShopping,
+      label: 'épicerie fine',
+    },
+    department_store: {
+      category: 'alimentation',
+      color: '#006633',
+      icon: faCartShopping,
+      label: 'grand magasin',
+    },
+    drinking_water: {
+      category: 'eau',
+      color: '#0099ff',
+      icon: faFaucetDrip,
+      label: 'eau potable',
+    },
+    food: {
+      category: 'alimentation',
+      color: '#006633',
+      icon: faCartShopping,
+      label: 'alimentation',
+    },
+    friend: {
+      category: 'hébergement',
+      color: '#f2df16',
+      icon: faHouse,
+      label: 'ami',
+    },
+    general: {
+      category: 'alimentation',
+      color: '#006633',
+      icon: faCartShopping,
+      label: 'alimentation générale',
+    },
     guest_house: {
       category: 'hébergement',
       color: '#f2df16',
@@ -112,83 +154,17 @@ const getMarkerFromType = (type) => {
       icon: faHouse,
       label: 'hôtel',
     },
-    motel: {
-      category: 'hébergement',
-      color: '#f2df16',
-      icon: faHouse,
-      label: 'motel',
-    },
-    shelter: {
-      category: 'hébergement',
-      color: '#f2df16',
-      icon: faHouse,
-      label: 'abri',
-    },
-    friend: {
-      category: 'hébergement',
-      color: '#f2df16',
-      icon: faHouse,
-      label: 'ami',
-    },
-    wilderness_hut: {
-      category: 'hébergement',
-      color: '#f2df16',
-      icon: faHouse,
-      label: 'cabane en pleine nature',
-    },
-    deli: {
-      category: 'alimentation',
-      color: '#006633',
-      icon: faCartShopping,
-      label: 'épicerie fine',
-    },
-    department_store: {
-      category: 'alimentation',
-      color: '#006633',
-      icon: faCartShopping,
-      label: 'grand magasin',
-    },
-    food: {
-      category: 'alimentation',
-      color: '#006633',
-      icon: faCartShopping,
-      label: 'alimentation',
-    },
-    general: {
-      category: 'alimentation',
-      color: '#006633',
-      icon: faCartShopping,
-      label: 'alimentation générale',
-    },
     mall: {
       category: 'alimentation',
       color: '#006633',
       icon: faCartShopping,
       label: 'centre commercial',
     },
-    supermarket: {
-      category: 'alimentation',
-      color: '#006633',
-      icon: faCartShopping,
-      label: 'supermarché',
-    },
-    cemetery: {
-      category: 'eau',
-      color: '#0099ff',
-      icon: faFaucetDrip,
-      label: 'cimetière',
-    },
-    drinking_water: {
-      category: 'eau',
-      color: '#0099ff',
-      icon: faFaucetDrip,
-      label: 'eau potable',
-    },
-    water_point: {
-      category: 'eau',
-      color: '#0099ff',
-      icon: faFaucetDrip,
-      label: "point d'eau",
+    motel: {
+      category: 'hébergement',
+      color: '#f2df16',
+      icon: faHouse,
+      label: 'motel',
     },
     restaurant: {
       category: 'alimentation',
@@ -196,14 +172,42 @@ const getMarkerFromType = (type) => {
       icon: faUtensils,
       label: 'restaurant',
     },
+    shelter: {
+      category: 'hébergement',
+      color: '#f2df16',
+      icon: faHouse,
+      label: 'abri',
+    },
+    supermarket: {
+      category: 'alimentation',
+      color: '#006633',
+      icon: faCartShopping,
+      label: 'supermarché',
+    },
     toilets: {
       category: 'eau',
       color: '#0099ff',
       icon: faRestroom,
       label: 'toilettes',
+    },
+    water_point: {
+      category: 'eau',
+      color: '#0099ff',
+      icon: faFaucetDrip,
+      label: "point d'eau",
+    },
+    wilderness_hut: {
+      category: 'hébergement',
+      color: '#f2df16',
+      icon: faHouse,
+      label: 'cabane en pleine nature',
     }
   }
   return types?.[type] ?? { category:'unknown', color: '#e4e5e6', icon: faQuestion };
+}
+
+const getTypeFromName = (name) => {
+  return name.toLowerCase().includes('refugio') ? 'hostel' : '';
 }
 
 export {
@@ -213,4 +217,5 @@ export {
   downSampleArray,
   getDataFromOverpass,
   getMarkerFromType,
+  getTypeFromName,
 }
