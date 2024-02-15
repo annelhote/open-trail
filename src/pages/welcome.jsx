@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Trails = () => {
+const Welcome = () => {
   return (
     <>
       <Link to="/">
@@ -9,10 +9,13 @@ const Trails = () => {
       <div>
         <ul>
           <li>
-            <Link to="/trails/le-poet-sigillat">Le Poët-Sigillat (juillet 2024)</Link>
+            <Link to="/trails">Trails</Link>
           </li>
           <li>
-            <Link to="/trails/picos-de-europa">Picos de Europa (@coco)</Link>
+            <Link to="/livres">Livres</Link>
+          </li>
+          <li>
+            <Link to="/films">Films</Link>
           </li>
         </ul>
       </div>
@@ -20,4 +23,4 @@ const Trails = () => {
   );
 };
 
-export default Trails;
+export default Welcome;

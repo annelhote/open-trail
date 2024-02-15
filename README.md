@@ -164,16 +164,6 @@ https://fr.wikipedia.org/wiki/Pacific_Crest_Trail
 https://www.pcta.org/
 
 
-#### Livres
-
-- Wild de Cheryl Strayed: https://www.librairiesindependantes.com/product/9782264062208/
-- Americana Ou Comment J'Ai Renoncé À Mon Rêve Américain de Luke Healy: https://www.librairiesindependantes.com/product/9782203211933/
-
-
-#### Films
-
-- Wild de Jean-Marc Vallée: https://www.imdb.com/title/tt2305051/
-
 #### Feedbacks
 
 Voici ce qu'il y avait dans mon sac à dos en 2017

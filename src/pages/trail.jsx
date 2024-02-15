@@ -64,6 +64,7 @@ const Trail = () => {
       .then((xml) => {
         const newGpx = new gpxParser();
         newGpx.parse(xml);
+        console.log(newGpx);
         setGpx(newGpx);
       })
       .catch((e) => console.error(e));
@@ -99,10 +100,12 @@ const Trail = () => {
               ...getMarkerFromType(type),
             }
           });
-          // Remove duplicates
-          markersTmp = [...new Map(markersTmp.map(v => [v.id, v])).values()];
           // Add custom markers
-          markersTmp = [...markersTmp, ...(meta?.markers ?? []).map((marker) => ({ ...marker, ...getMarkerFromType(marker.type) }))];
+          const customMarkers = (meta?.markers ?? []).map((marker) => ({ ...marker, ...getMarkerFromType(marker.type) }));
+          const gpxMarkers = gpx?.waypoints ?? [];
+          markersTmp = [...markersTmp, ...customMarkers, ...gpxMarkers];
+          // Remove duplicates
+          markersTmp = [...new Map(markersTmp.map((v) => [`${v.lat},${v.lon}`, v])).values()];
           setMarkers(markersTmp);
         })
         .catch((error) => {
@@ -132,7 +135,6 @@ const Trail = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-
       {gpx && (
         <Box className='open-trail' sx={{ flexGrow: 0.75 }}>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
