@@ -8,11 +8,11 @@ import { downloadGpx } from '../../utils';
 const Overview = ({ gpx, meta }) => {
   const [distance, setDistance] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [elevation, setElevation] = useState(0);
+  const [elevation, setElevation] = useState({ neg: 0, pos: 0 });
 
   useEffect(() => {
     setDistance(Math.floor(gpx.tracks[0].distance.total / 1000));
-    setElevation(Math.floor((gpx.calcElevation(gpx.tracks[0].points)).pos));
+    setElevation(gpx.calcElevation(gpx.tracks[0].points));
     setDuration(Math.ceil(distance / meta.kmPerDay));
   }, [distance, gpx, meta]);
 
@@ -28,7 +28,10 @@ const Overview = ({ gpx, meta }) => {
           <b>{distance}</b> km
         </Grid>
         <Grid item xs={12} sm={1} sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-          <b>{elevation}</b> m D+
+          <b>{elevation.pos.toFixed(0)}</b> m D+
+        </Grid>
+        <Grid item xs={12} sm={1} sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
+          <b>{elevation.neg.toFixed(0)}</b> m D-
         </Grid>
         <Grid item xs={12} sm={1} sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
           <b>{duration}</b> jours

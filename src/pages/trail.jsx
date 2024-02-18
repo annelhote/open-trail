@@ -11,6 +11,7 @@ import MyMap from '../components/map';
 import Overview from '../components/overview';
 import Planner from '../components/planner';
 import Profile from '../components/profile';
+import Stages from '../components/stages';
 import gpxLePoetSigillat from '../data/le-poet-sigillat.gpx';
 import gpxPicosDeEuropa from '../data/picos-de-europa.gpx';
 import data from '../data/data.json';
@@ -181,6 +182,14 @@ const Trail = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Planner gpx={gpx} markers={markers} meta={meta} selectedFilters={selectedFilters} />
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary aria-controls="panel5-content" id="panel5-header" expandIcon={<ExpandMoreIcon />}>
+                    Etapes
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Stages gpx={gpx} markers={markers} meta={meta} />
                   </AccordionDetails>
                 </Accordion>
               </Grid>
