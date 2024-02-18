@@ -74,9 +74,10 @@ Quelle machine à coudre ?
 
 ### Besoins
 
-- Poche latérale pour gourde d'eau
-- Poche bretelle pour smartphone
+- Poches latérales pour gourdes / bouteilles d'eau
+- Poches bretelles pour smartphone
 - Cerveau détachable
+- Fermeture éclaire verticale
 
 
 
