@@ -14,6 +14,7 @@ import Profile from '../components/profile';
 import Stages from '../components/stages';
 import gpxLePoetSigillat from '../data/le-poet-sigillat.gpx';
 import gpxPicosDeEuropa from '../data/picos-de-europa.gpx';
+import gpxTourDuQueyras from '../data/tour-du-queyras.gpx';
 import data from '../data/data.json';
 import { chunkArray, downSampleArray, getDataFromOverpass, getMarkerFromType, getTypeFromName } from '../utils';
 
@@ -39,6 +40,7 @@ const Trail = () => {
   const gpxes = {
     'le-poet-sigillat': gpxLePoetSigillat,
     'picos-de-europa': gpxPicosDeEuropa,
+    'tour-du-queyras': gpxTourDuQueyras,
   }
   meta.gpx = gpxes[params?.trailId];
 

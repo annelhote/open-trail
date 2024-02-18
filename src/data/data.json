@@ -22,5 +22,16 @@
     "kmPerDay": 20,
     "name": "Picos de Europa",
     "website": "https://elanillodepicos.com/"
+  },
+  "tour-du-queyras": {
+    "activity": "hiking",
+    "id": "tour-du-queyras",
+    "initialViewState": {
+      "latitude": 44.7446872,
+      "longitude": 6.8042674,
+      "zoom": 10
+    },
+    "kmPerDay": 20,
+    "name": "Tour du Queyras"
   }
 }
