@@ -27,7 +27,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
   const endPointIndex = getClosestPointIndex(meta.kmPerDay * 1000 * (day + 1));
   const endPoint = points[endPointIndex];
   const endPointDistance = (cumulDistances[endPointIndex] / 1000).toFixed(1);
-  const distance = (gpx.calculDistance(points.slice(startPointIndex, endPointIndex + 1)).total / 1000).toFixed(1);
+  const distance = gpx.calculDistance(points.slice(startPointIndex, endPointIndex + 1)).total / 1000;
   const elevation = gpx.calcElevation(points.slice(startPointIndex, endPointIndex + 1));
 
   return (
@@ -45,7 +45,10 @@ const Stage = ({ day, gpx, markers, meta }) => {
               Point d'arrivée: {endPoint.lat},{endPoint.lon}
             </div>
             <div>
-              Distance: {distance} km
+              Distance: {distance.toFixed(1)} km
+            </div>
+            <div>
+              Distance ITRA: {(distance + elevation.pos / 100).toFixed(1)} km
             </div>
             <div>
               km {startPointDistance} -> km {endPointDistance}
