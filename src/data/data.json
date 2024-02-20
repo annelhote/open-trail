@@ -1,4 +1,15 @@
 {
+  "gr38": {
+    "activity": "hiking",
+    "id": "gr38",
+    "initialViewState": {
+      "latitude": 47.8788921,
+      "longitude": -3.2297529,
+      "zoom": 8
+    },
+    "kmPerDay": 25,
+    "name": "Redon -> Gourin"
+  },
   "le-poet-sigillat": {
     "activity": "hiking",
     "id": "le-poet-sigillat",

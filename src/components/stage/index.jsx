@@ -1,16 +1,10 @@
 import { Card, CardContent, Grid } from '@mui/material';
 
+import { getClosestPointIndex } from '../../utils';
+
 const Stage = ({ day, gpx, markers, meta }) => {
   const points = gpx.tracks[0].points;
   const cumulDistances = [0, ...gpx.calculDistance(points).cumul.slice(0, -1)];
-
-  const getClosestPointIndex = (firstDayDistance) => {
-    const closestDistance = cumulDistances.reduce(
-      (previous, current, index) => Math.abs(firstDayDistance - current) < Math.abs(firstDayDistance - previous.distance) ? { distance: current, index } : previous,
-      { distance: gpx.tracks[0].distance.total, index: points.length - 1 }
-    );
-    return closestDistance.index;
-  }
 
   const getClosestAccomodations = (point) => {
     const accomodations = markers
@@ -21,12 +15,12 @@ const Stage = ({ day, gpx, markers, meta }) => {
       .slice(0, 5);
     return accomodations;
   }
-  const startPointIndex = getClosestPointIndex(meta.kmPerDay * 1000 * day);
+  const startPointIndex = getClosestPointIndex(meta.kmPerDay * 1000 * day, cumulDistances);
   const startPoint = points[startPointIndex];
-  const startPointDistance = (cumulDistances[startPointIndex] / 1000).toFixed(1);
-  const endPointIndex = getClosestPointIndex(meta.kmPerDay * 1000 * (day + 1));
+  const startPointDistance = cumulDistances[startPointIndex] / 1000;
+  const endPointIndex = getClosestPointIndex(meta.kmPerDay * 1000 * (day + 1), cumulDistances);
   const endPoint = points[endPointIndex];
-  const endPointDistance = (cumulDistances[endPointIndex] / 1000).toFixed(1);
+  const endPointDistance = cumulDistances[endPointIndex] / 1000;
   const distance = gpx.calculDistance(points.slice(startPointIndex, endPointIndex + 1)).total / 1000;
   const elevation = gpx.calcElevation(points.slice(startPointIndex, endPointIndex + 1));
 
@@ -51,7 +45,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
               Distance ITRA: {(distance + elevation.pos / 100).toFixed(1)} km
             </div>
             <div>
-              km {startPointDistance} -> km {endPointDistance}
+              km {startPointDistance.toFixed(1)} -> km {endPointDistance.toFixed(1)}
             </div>
 
             <div>

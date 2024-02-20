@@ -12,6 +12,7 @@ import Overview from '../components/overview';
 import Planner from '../components/planner';
 import Profile from '../components/profile';
 import Stages from '../components/stages';
+import gpxGr38 from '../data/gr38.gpx';
 import gpxLePoetSigillat from '../data/le-poet-sigillat.gpx';
 import gpxPicosDeEuropa from '../data/picos-de-europa.gpx';
 import gpxTourDuQueyras from '../data/tour-du-queyras.gpx';
@@ -31,13 +32,14 @@ const Trail = () => {
   const params = useParams();
 
   const [coordinates, setCoordinates] = useState();
+  const [filters, setFilters] = useState({});
   const [gpx, setGpx] = useState();
   const [markers, setMarkers] = useState([]);
   const [meta, setMeta] = useState(data?.[params?.trailId] ?? {});
-  const [filters, setFilters] = useState({});
   const [selectedFilters, setSelectedFilters] = useState([]);
 
   const gpxes = {
+    'gr38': gpxGr38,
     'le-poet-sigillat': gpxLePoetSigillat,
     'picos-de-europa': gpxPicosDeEuropa,
     'tour-du-queyras': gpxTourDuQueyras,
@@ -75,6 +77,7 @@ const Trail = () => {
 
   useEffect(() => {
     if (gpx) {
+      // const cumulDistances = [0, ...gpx.calculDistance(gpx.tracks[0].points).cumul.slice(0, -1)];
       const coordinatesDataCount = gpx.tracks[0].points.length;
       const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
       const pathSamplingPeriod = Math.floor(coordinatesDataCount / targetPathDataCount);
@@ -108,8 +111,12 @@ const Trail = () => {
           // Add markers from GPX file
           const gpxMarkers = (gpx?.waypoints ?? []).map((marker) => ({ ...marker, ...getMarkerFromType(marker?.type ?? getTypeFromName(marker.name)) }));
           markersTmp = [...markersTmp, ...customMarkers, ...gpxMarkers];
-          // Remove duplicates
+          // Remove duplicates based on lat,lon
           markersTmp = [...new Map(markersTmp.map((v) => [`${v.lat},${v.lon}`, v])).values()];
+          // Add distance from start
+          // markersTmp.map((marker) => {
+          //   const tmp = getClosestPointIndex()
+          // });
           setMarkers(markersTmp);
         })
         .catch((error) => {

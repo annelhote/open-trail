@@ -17,6 +17,9 @@ const Trails = () => {
           <li>
             <Link to="/trails/tour-du-queyras">Tour du Queyras - GR58 (septembre 2022)</Link>
           </li>
+          <li>
+            <Link to="/trails/gr38">GR38 (septembre 2022)</Link>
+          </li>
         </ul>
       </div>
     </>

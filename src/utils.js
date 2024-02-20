@@ -42,6 +42,14 @@ const downSampleArray = (input, period) => {
   return output
 }
 
+const getClosestPointIndex = (distance, cumulDistances) => {
+  const closestDistance = cumulDistances.reduce(
+    (previous, current, index) => Math.abs(distance - current) < Math.abs(distance - previous.distance) ? { distance: current, index } : previous,
+    { distance: cumulDistances[cumulDistances.length - 1], index: cumulDistances.length - 1 }
+  );
+  return closestDistance.index;
+}
+
 const getDataFromOverpass = (bbox) => {
   const query = `
     [out:json][timeout:500];
@@ -215,6 +223,7 @@ export {
   chunkArray,
   downloadGpx,
   downSampleArray,
+  getClosestPointIndex,
   getDataFromOverpass,
   getMarkerFromType,
   getTypeFromName,
