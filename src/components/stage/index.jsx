@@ -1,6 +1,6 @@
 import { Card, CardContent, Grid } from '@mui/material';
 
-import { getClosestPointIndex } from '../../utils';
+import { getClosestPointIndex, getITRADistance } from '../../utils';
 
 const Stage = ({ day, gpx, markers, meta }) => {
   const points = gpx.tracks[0].points;
@@ -42,7 +42,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
               Distance: {distance.toFixed(1)} km
             </div>
             <div>
-              Distance ITRA: {(distance + elevation.pos / 100).toFixed(1)} km
+              Distance ITRA: {getITRADistance({ distance, elevation: elevation.pos }).toFixed(1)} km
             </div>
             <div>
               km {startPointDistance.toFixed(1)} -> km {endPointDistance.toFixed(1)}

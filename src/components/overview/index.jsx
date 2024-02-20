@@ -3,18 +3,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Grid, Stack } from '@mui/material';
 import { useEffect, useState } from 'react';
 
-import { downloadGpx } from '../../utils';
+import { downloadGpx, getITRADistance } from '../../utils';
 
 const Overview = ({ gpx, meta }) => {
   const [distance, setDistance] = useState(0);
   const [duration, setDuration] = useState(0);
   const [elevation, setElevation] = useState({ neg: 0, pos: 0 });
+  const [itraDistance, setItraDistance] = useState(0);
 
   useEffect(() => {
     setDistance(Math.floor(gpx.tracks[0].distance.total / 1000));
-    setElevation(gpx.calcElevation(gpx.tracks[0].points));
     setDuration(Math.ceil(distance / meta.kmPerDay));
+    setElevation(gpx.calcElevation(gpx.tracks[0].points));
   }, [distance, gpx, meta]);
+
+  useEffect(() => {
+    setItraDistance(getITRADistance({ distance, elevation: elevation.pos }));
+  }, [distance, elevation])
 
   return (
     <Grid className='overview' container item>
@@ -26,6 +31,9 @@ const Overview = ({ gpx, meta }) => {
       <Grid container item>
         <Grid item xs={12} sm={1}>
           <b>{distance}</b> km
+        </Grid>
+        <Grid item xs={12} sm={1}>
+          <b>{itraDistance.toFixed(0)}</b> km
         </Grid>
         <Grid item xs={12} sm={1} sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
           <b>{elevation.pos.toFixed(0)}</b> m D+

@@ -64,6 +64,8 @@ const getDataFromOverpass = (bbox) => {
   return axios.get(`https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`);
 }
 
+const getITRADistance = ({ distance, elevation}) => distance + (elevation / 100);
+
 const getMarkerFromType = (type) => {
   const types = {
     alpine_hut: {
@@ -225,6 +227,7 @@ export {
   downSampleArray,
   getClosestPointIndex,
   getDataFromOverpass,
+  getITRADistance,
   getMarkerFromType,
   getTypeFromName,
 }
