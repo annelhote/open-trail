@@ -8,7 +8,7 @@
       "zoom": 8
     },
     "kmPerDay": 25,
-    "name": "Redon -> Gourin"
+    "name": "GR38 - Redon -> Gourin"
   },
   "le-poet-sigillat": {
     "activity": "hiking",
@@ -43,6 +43,6 @@
       "zoom": 10
     },
     "kmPerDay": 20,
-    "name": "Tour du Queyras"
+    "name": "GR58 - Tour du Queyras"
   }
 }

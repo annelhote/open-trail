@@ -7,9 +7,9 @@ const CustomMarker = ({ index, marker, openPopup }) => {
     <Marker
       longitude={marker.lon}
       latitude={marker.lat}>
-      <span className="fa-stack fa-2x" onClick={() => openPopup(index)}>
+      <span className="fa-stack" onClick={() => openPopup(index)}>
         <FontAwesomeIcon icon={faLocationPin} color={marker.color} className="fa-regular fa-stack-2x" />
-        <FontAwesomeIcon icon={marker.icon} color="#e4e5e6" className="fa-stack-1x" style={{ position: "absolute", bottom: "15px" }} transform="shrink-4" />
+        <FontAwesomeIcon icon={marker.icon} color="#e4e5e6" className="fa-stack-1x" style={{ position: "absolute", bottom: "5px" }} transform="shrink-4" />
       </span>
     </Marker>
   )
