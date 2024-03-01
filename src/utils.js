@@ -42,7 +42,16 @@ const downSampleArray = (input, period) => {
   return output
 }
 
-const getClosestPointIndex = (distance, cumulDistances) => {
+const getClosestPointByCoordinates = ({ coordinates, gpx }) => {
+  const points = gpx.tracks[0].points;
+  const closestPoint = points.reduce(
+    (accumulator, currentValue, index) => gpx.calcDistanceBetween(currentValue, coordinates) < accumulator.distance ? { distance: gpx.calcDistanceBetween(currentValue, coordinates), point: currentValue, index } : accumulator,
+    { distance: gpx.tracks[0].distance.total, point: points[points.length - 1], index: points.length - 1 },
+  );
+  return closestPoint;
+}
+
+const getClosestPointIndexByDistance = ({ cumulDistances, distance }) => {
   const closestDistance = cumulDistances.reduce(
     (previous, current, index) => Math.abs(distance - current) < Math.abs(distance - previous.distance) ? { distance: current, index } : previous,
     { distance: cumulDistances[cumulDistances.length - 1], index: cumulDistances.length - 1 }
@@ -225,7 +234,8 @@ export {
   chunkArray,
   downloadGpx,
   downSampleArray,
-  getClosestPointIndex,
+  getClosestPointByCoordinates,
+  getClosestPointIndexByDistance,
   getDataFromOverpass,
   getITRADistance,
   getMarkerFromType,

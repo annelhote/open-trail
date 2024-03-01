@@ -7,6 +7,9 @@ const Trails = () => {
         <h1>Open Trails</h1>
       </Link>
       <div>
+        Outil d'assitance en ligne à la l'organisation de randonnées pédestres ou cyclo sur plusieurs jours
+      </div>
+      <div>
         <ul>
           <li>
             <Link to="/trails/le-poet-sigillat">Le Poët-Sigillat (juillet 2024)</Link>

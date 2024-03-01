@@ -17,7 +17,7 @@ import gpxLePoetSigillat from '../data/le-poet-sigillat.gpx';
 import gpxPicosDeEuropa from '../data/picos-de-europa.gpx';
 import gpxTourDuQueyras from '../data/tour-du-queyras.gpx';
 import data from '../data/data.json';
-import { chunkArray, downSampleArray, getDataFromOverpass, getMarkerFromType, getTypeFromName } from '../utils';
+import { chunkArray, downSampleArray, getClosestPointByCoordinates, getDataFromOverpass, getMarkerFromType, getTypeFromName } from '../utils';
 
 const darkTheme = createTheme({
   palette: {
@@ -77,7 +77,7 @@ const Trail = () => {
 
   useEffect(() => {
     if (gpx) {
-      // const cumulDistances = [0, ...gpx.calculDistance(gpx.tracks[0].points).cumul.slice(0, -1)];
+      const cumulDistances = [0, ...gpx.calculDistance(gpx.tracks[0].points).cumul.slice(0, -1)];
       const coordinatesDataCount = gpx.tracks[0].points.length;
       const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
       const pathSamplingPeriod = Math.floor(coordinatesDataCount / targetPathDataCount);
@@ -114,9 +114,12 @@ const Trail = () => {
           // Remove duplicates based on lat,lon
           markersTmp = [...new Map(markersTmp.map((v) => [`${v.lat},${v.lon}`, v])).values()];
           // Add distance from start
-          // markersTmp.map((marker) => {
-          //   const tmp = getClosestPointIndex()
-          // });
+          markersTmp = markersTmp.map((marker) => {
+            const closestPoint = getClosestPointByCoordinates({ coordinates: marker, gpx });
+            const distance = (gpx.calcDistanceBetween(marker, closestPoint.point) + cumulDistances[closestPoint.index] / 1000).toFixed(1);
+            // TODO calculate distance ITRA
+            return { distance, ...marker };
+          });
           setMarkers(markersTmp);
         })
         .catch((error) => {

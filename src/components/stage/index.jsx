@@ -1,6 +1,6 @@
 import { Card, CardContent, Grid } from '@mui/material';
 
-import { getClosestPointIndex, getITRADistance } from '../../utils';
+import { getClosestPointIndexByDistance, getITRADistance } from '../../utils';
 
 const Stage = ({ day, gpx, markers, meta }) => {
   const points = gpx.tracks[0].points;
@@ -9,16 +9,14 @@ const Stage = ({ day, gpx, markers, meta }) => {
   const getClosestAccomodations = (point) => {
     const accomodations = markers
       .filter((marker) => marker.category === 'hébergement')
-      // Distance à vol d'oiseau
-      .map((marker) => ({ ...marker, distance: gpx.calcDistanceBetween(marker, point) }))
       .sort((a, b) => a.distance - b.distance)
       .slice(0, 5);
     return accomodations;
   }
-  const startPointIndex = getClosestPointIndex(meta.kmPerDay * 1000 * day, cumulDistances);
+  const startPointIndex = getClosestPointIndexByDistance({ cumulDistances, distance: meta.kmPerDay * 1000 * day });
   const startPoint = points[startPointIndex];
   const startPointDistance = cumulDistances[startPointIndex] / 1000;
-  const endPointIndex = getClosestPointIndex(meta.kmPerDay * 1000 * (day + 1), cumulDistances);
+  const endPointIndex = getClosestPointIndexByDistance({ cumulDistances, distance: meta.kmPerDay * 1000 * (day + 1) });
   const endPoint = points[endPointIndex];
   const endPointDistance = cumulDistances[endPointIndex] / 1000;
   const distance = gpx.calculDistance(points.slice(startPointIndex, endPointIndex + 1)).total / 1000;
@@ -56,7 +54,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
               <ul>
                 {getClosestAccomodations(endPoint).map((accomodation, index) => (
                   <li key={`accomodation-${index}`}>
-                    {accomodation.name} / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {(accomodation.distance / 1000).toFixed(2)} km
+                    {accomodation.name} / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.distance} km
                   </li>
                 ))}
               </ul>
