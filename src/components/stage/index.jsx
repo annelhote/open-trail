@@ -6,13 +6,15 @@ const Stage = ({ day, gpx, markers, meta }) => {
   const points = gpx.tracks[0].points;
   const cumulDistances = [0, ...gpx.calculDistance(points).cumul.slice(0, -1)];
 
-  const getClosestAccomodations = (point) => {
+  const getClosestAccomodations = ({ category='hébergement', gpx, point }) => {
     const accomodations = markers
-      .filter((marker) => marker.category === 'hébergement')
-      .sort((a, b) => a.distance - b.distance)
+      .filter((marker) => marker.category === category)
+      .map((marker) => ({ ...marker, pointDistance: gpx.calcDistanceBetween(point, marker) / 1000 }))
+      .sort((a, b) => a.pointDistance - b.pointDistance)
       .slice(0, 5);
     return accomodations;
   }
+
   const startPointIndex = getClosestPointIndexByDistance({ cumulDistances, distance: meta.kmPerDay * 1000 * day });
   const startPoint = points[startPointIndex];
   const startPointDistance = cumulDistances[startPointIndex] / 1000;
@@ -27,44 +29,48 @@ const Stage = ({ day, gpx, markers, meta }) => {
       <Grid className="stage" item xs={12} key={day}>
         <Card sx={{ minWidth: 275 }}>
           <CardContent>
-            <div key="day">
+            <h3 key="day">
               Jour {day + 1}
+            </h3>
+            <div>
+              <b>Point de départ:</b> {startPoint.lat},{startPoint.lon}
             </div>
             <div>
-              Point de départ: {startPoint.lat},{startPoint.lon}
+              <b>Point d'arrivée:</b> {endPoint.lat},{endPoint.lon}
             </div>
             <div>
-              Point d'arrivée: {endPoint.lat},{endPoint.lon}
+              <b>Distance:</b> {distance.toFixed(1)} km
             </div>
             <div>
-              Distance: {distance.toFixed(1)} km
+              <b>Distance ITRA:</b> {getITRADistance({ distance, elevation: elevation.pos }).toFixed(1)} km
             </div>
             <div>
-              Distance ITRA: {getITRADistance({ distance, elevation: elevation.pos }).toFixed(1)} km
-            </div>
-            <div>
-              Distance ITRA (autre): {getITRADistanceSecond({ distance, elevation: elevation.pos }).toFixed(1)} km
+              <b>Distance ITRA (autre):</b> {getITRADistanceSecond({ distance, elevation: elevation.pos }).toFixed(1)} km
             </div>
             <div>
               km {startPointDistance.toFixed(1)} -> km {endPointDistance.toFixed(1)}
             </div>
-
             <div>
-              D+: {elevation.pos.toFixed(0)} m / D-: {elevation.neg.toFixed(0)} m
+              <b>D+:</b> {elevation.pos.toFixed(0)} m / <b>D-:</b> {elevation.neg.toFixed(0)} m
             </div>
             <div>
-              Hébergements :
+              <b>Hébergements:</b>
               <ul>
-                {getClosestAccomodations(endPoint).map((accomodation, index) => (
+                {getClosestAccomodations({ gpx, point: endPoint }).map((accomodation, index) => (
                   <li key={`accomodation-${index}`}>
-                    {accomodation.name} / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.distance} km
+                    {accomodation.name} / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.pointDistance.toFixed(3)} km
                   </li>
                 ))}
               </ul>
             </div>
+            {((day + 1) % 4 === 0) && (day !== 0) &&
+              <div>
+                <b>Supermarchés :</b>
+              </div>
+            }
           </CardContent>
         </Card>
-      </Grid>
+      </Grid >
     </>
   );
 };
