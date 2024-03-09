@@ -212,6 +212,12 @@ const getMarkerFromType = (type) => {
       icon: faRestroom,
       label: 'toilettes',
     },
+    tourism: {
+      category: 'hébergement',
+      color: '#f2df16',
+      icon: faHouse,
+      label: 'tourisme',
+    },
     water_point: {
       category: 'eau',
       color: '#0099ff',
