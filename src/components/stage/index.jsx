@@ -63,11 +63,23 @@ const Stage = ({ day, gpx, markers, meta }) => {
                 ))}
               </ul>
             </div>
-            {((day + 1) % 4 === 0) && (day !== 0) &&
+            {(day === 0) &&
               <div>
                 <b>Supermarchés :</b>
                 <ul>
                 {getClosestMarkersByCategory({ category: 'alimentation', gpx, point: endPoint }).map((accomodation, index) => (
+                  <li key={`food-${index}`}>
+                    {accomodation.name} / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.pointDistance.toFixed(3)} km
+                  </li>
+                ))}
+              </ul>
+              </div>
+            }
+            {((day + 1) % 4 === 0) && (day !== 0) &&
+              <div>
+                <b>Supermarchés :</b>
+                <ul>
+                {getClosestMarkersByCategory({ category: 'alimentation', gpx, point: startPoint }).map((accomodation, index) => (
                   <li key={`food-${index}`}>
                     {accomodation.name} / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.pointDistance.toFixed(3)} km
                   </li>
