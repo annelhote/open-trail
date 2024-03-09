@@ -6,13 +6,13 @@ const Stage = ({ day, gpx, markers, meta }) => {
   const points = gpx.tracks[0].points;
   const cumulDistances = [0, ...gpx.calculDistance(points).cumul.slice(0, -1)];
 
-  const getClosestAccomodations = ({ category='hébergement', gpx, point }) => {
-    const accomodations = markers
+  const getClosestMarkersByCategory = ({ category, gpx, point }) => {
+    const closestMarkersByCategory = markers
       .filter((marker) => marker.category === category)
       .map((marker) => ({ ...marker, pointDistance: gpx.calcDistanceBetween(point, marker) / 1000 }))
       .sort((a, b) => a.pointDistance - b.pointDistance)
       .slice(0, 5);
-    return accomodations;
+    return closestMarkersByCategory;
   }
 
   const startPointIndex = getClosestPointIndexByDistance({ cumulDistances, distance: meta.kmPerDay * 1000 * day });
@@ -56,7 +56,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
             <div>
               <b>Hébergements:</b>
               <ul>
-                {getClosestAccomodations({ gpx, point: endPoint }).map((accomodation, index) => (
+                {getClosestMarkersByCategory({ category: 'hébergement', gpx, point: endPoint }).map((accomodation, index) => (
                   <li key={`accomodation-${index}`}>
                     {accomodation.name} / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.pointDistance.toFixed(3)} km
                   </li>
@@ -66,6 +66,13 @@ const Stage = ({ day, gpx, markers, meta }) => {
             {((day + 1) % 4 === 0) && (day !== 0) &&
               <div>
                 <b>Supermarchés :</b>
+                <ul>
+                {getClosestMarkersByCategory({ category: 'alimentation', gpx, point: endPoint }).map((accomodation, index) => (
+                  <li key={`food-${index}`}>
+                    {accomodation.name} / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.pointDistance.toFixed(3)} km
+                  </li>
+                ))}
+              </ul>
               </div>
             }
           </CardContent>

@@ -65,7 +65,7 @@ const getDataFromOverpass = (bbox) => {
     (
       nwr["amenity"~"cafe|drinking_water|restaurant|toilets|water_point"](around:1000,${bbox});
       nwr["landuse"~"cemetery"](around:1000,${bbox});
-      nwr["shop"~"deli|department_store|food|general|mall|supermarket"](around:1000,${bbox});
+      nwr["shop"~"convenience|deli|department_store|food|general|mall|supermarket"](around:1000,${bbox});
       nwr["tourism"~"alpine_hut|apartment|camp_site|chalet|guest_house|hostel|hotel|motel|wilderness_hut"](around:1000,${bbox});
     );
     out center;
@@ -121,6 +121,12 @@ const getMarkerFromType = (type) => {
       color: '#0099ff',
       icon: faFaucetDrip,
       label: 'cimetière',
+    },
+    convenience: {
+      category: 'alimentation',
+      color: '#006633',
+      icon: faCartShopping,
+      label: 'supérette',
     },
     deli: {
       category: 'alimentation',
@@ -189,7 +195,7 @@ const getMarkerFromType = (type) => {
       label: 'motel',
     },
     restaurant: {
-      category: 'alimentation',
+      category: 'restaurant',
       color: '#006633',
       icon: faUtensils,
       label: 'restaurant',
