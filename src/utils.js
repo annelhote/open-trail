@@ -73,7 +73,10 @@ const getDataFromOverpass = (bbox) => {
   return axios.get(`https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`);
 }
 
+// 100 m of positiv elevation means 1 km of distance
 const getITRADistance = ({ distance, elevation}) => distance + (elevation / 100);
+// 100 m of positiv elevation means 611 m of distance
+const getITRADistanceSecond = ({ distance, elevation}) => distance + (elevation / 100 * 0.611);
 
 const getMarkerFromType = (type) => {
   const types = {
@@ -238,6 +241,7 @@ export {
   getClosestPointIndexByDistance,
   getDataFromOverpass,
   getITRADistance,
+  getITRADistanceSecond,
   getMarkerFromType,
   getTypeFromName,
 }
