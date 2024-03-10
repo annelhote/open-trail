@@ -45,7 +45,7 @@ const Filters = ({ filters, markers, meta, onChange, selectedFilters, setMeta })
         >
           <TextField
             id="filled-number"
-            label="Kilomètres parcourus par jour"
+            label="Kilomètres parcourus par jour (ressentis aka ITRA)"
             onChange={(event) => setMeta({ ...meta, kmPerDay: event.target.value })}
             type="number"
             value={meta.kmPerDay}
