@@ -7,7 +7,6 @@
       "longitude": -3.2297529,
       "zoom": 8
     },
-    "kmPerDay": 25,
     "name": "GR38 - Redon -> Gourin"
   },
   "le-poet-sigillat": {
@@ -18,7 +17,6 @@
       "longitude": 5.36890464,
       "zoom": 8
     },
-    "kmPerDay": 20,
     "markers": [{ "label": "Arrivée", "lat": 44.3692526, "lon": 5.3170387, "name": "Arrivée", "type": "friend" }],
     "name": "Valence -> Le Poët-Sigillat"
   },
@@ -30,7 +28,6 @@
       "longitude": -4.9346512,
       "zoom": 10
     },
-    "kmPerDay": 20,
     "name": "Picos de Europa",
     "website": "https://elanillodepicos.com/"
   },
@@ -42,7 +39,6 @@
       "longitude": 6.8042674,
       "zoom": 10
     },
-    "kmPerDay": 20,
     "name": "GR58 - Tour du Queyras"
   }
 }

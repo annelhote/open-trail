@@ -45,6 +45,7 @@ const Trail = () => {
     'tour-du-queyras': gpxTourDuQueyras,
   }
   meta.gpx = gpxes[params?.trailId];
+  meta.kmPerDay = meta?.kmPerDay ?? 25;
 
   const onChange = (event) => {
     const eventName = event.target.name;
