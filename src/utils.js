@@ -6,7 +6,6 @@ import {
   faHouse,
   faQuestion,
   faRestroom,
-  faUtensils,
 } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 
