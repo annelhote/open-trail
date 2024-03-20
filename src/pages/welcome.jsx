@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { Breadcrumbs, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Welcome = () => {
   return (
     <>
-      <Link to="/">
-        <h1>Open Trails</h1>
-      </Link>
+      <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
+        <Typography>Open Trails</Typography>
+      </Breadcrumbs>
       <div>
         <ul>
           <li>

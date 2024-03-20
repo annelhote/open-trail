@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import { Breadcrumbs, Link, Typography } from '@mui/material';
 
 const Trails = () => {
   return (
     <>
-      <Link to="/">
-        <h1>Open Trails</h1>
-      </Link>
+      <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
+        <Link underline="hover" color="inherit" href="/">
+          Open Trails
+        </Link>
+        <Typography>Trails</Typography>
+      </Breadcrumbs>
       <div>
         Outil d'assitance en ligne à la l'organisation de randonnées pédestres ou cyclo sur plusieurs jours
       </div>

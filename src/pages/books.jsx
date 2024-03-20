@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import { Breadcrumbs, Link, Typography } from '@mui/material';
 
 const Books = () => {
   return (
     <>
-      <Link to="/">
-        <h1>Open Trails</h1>
-      </Link>
+      <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
+        <Link underline="hover" color="inherit" href="/">
+          Open Trails
+        </Link>
+        <Typography>Livres</Typography>
+      </Breadcrumbs>
       <div>
         <ul>
           <li>
