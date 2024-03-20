@@ -25,7 +25,7 @@ const router = createHashRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: '/blog/:blogId',
+    path: '/blog/:id',
     element: <Blog />,
     errorElement: <ErrorPage />,
   },
@@ -45,7 +45,7 @@ const router = createHashRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: '/trails/:trailId',
+    path: '/trails/:id',
     element: <Trail />,
     errorElement: <ErrorPage />,
   }

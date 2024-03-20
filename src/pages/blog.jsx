@@ -1,7 +1,20 @@
-import ReactMarkdown from 'react-markdown';
 import { Breadcrumbs, Link, Typography } from '@mui/material';
+import { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import { useParams } from 'react-router-dom';
+
+
 
 const Blog = () => {
+  const params = useParams();
+  const [markdown, setMarkdown] = useState();
+
+  import(`../blog/${params.id}.md`).then((res) => {
+    fetch(res.default)
+      .then((response) => response.text())
+      .then((text) => setMarkdown(text))
+  })
+
   return (
     <>
       <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
@@ -17,9 +30,9 @@ const Blog = () => {
         </Link>
         <Typography>Projet Couture</Typography>
       </Breadcrumbs>
-      <div>
-        <ReactMarkdown>*React-Markdown* is **Awesome**</ReactMarkdown>
-      </div>
+      <ReactMarkdown>
+        {markdown}
+      </ReactMarkdown>
     </>
   );
 };

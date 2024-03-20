@@ -35,7 +35,7 @@ const Trail = () => {
   const [filters, setFilters] = useState({});
   const [gpx, setGpx] = useState();
   const [markers, setMarkers] = useState([]);
-  const [meta, setMeta] = useState(data?.[params?.trailId] ?? {});
+  const [meta, setMeta] = useState(data?.[params?.id] ?? {});
   const [selectedFilters, setSelectedFilters] = useState([]);
 
   const gpxes = {
@@ -44,7 +44,7 @@ const Trail = () => {
     'picos-de-europa': gpxPicosDeEuropa,
     'tour-du-queyras': gpxTourDuQueyras,
   }
-  meta.gpx = gpxes[params?.trailId];
+  meta.gpx = gpxes[params?.id];
   meta.kmPerDay = meta?.kmPerDay ?? 25;
 
   const onChange = (event) => {
