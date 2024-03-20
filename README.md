@@ -24,29 +24,6 @@
 - Github issues
 
 
-## Tracés GPX
-
-Application Locus Map sur le store Andoid Play
-GPX en accès libre sur le site hexatrek https://www.hexatrek.com/
-
-Sites web de référence
-
-- Site officiel de la Fédération Française de la Randonnée Pédestre Le site de la Randonnée Itinérante https://www.mongr.fr/ (export GPX réservé aux membres du site)
-- https://www.gr-infos.com/
-- visu-gpx (téléchargement libre et gratuit) https://www.visugpx.com/
-- Site d'édition d'un GPX
-- gpx studio https://gpx.studio/
-  - merge traces
-  - raccourcir traces
-  - ajouter des markers / pin / POI
-- BRouter-Web https://brouter.de/brouter-web/
-  - Trouver un itinéraire entre 2 points
-- umap https://umap.openstreetmap.fr/fr/
-- WikiLoc https://fr.wikiloc.com téléchargement avec un compte
-- Hikamp https://www.hikamp.com (GPX téléchargeable pour les inscrits)
-- https://mapstogpx.com/
-- https://www.visorando.com/
-
 
 ## Equipement
 
@@ -71,23 +48,6 @@ Sites de références
 Fournitures / Matériaux
 
 Quelle machine à coudre ?
-
-### Besoins
-
-- Poches latérales pour gourdes / bouteilles d'eau
-- Poches bretelles pour smartphone
-- Cerveau détachable
-- Fermeture éclaire verticale
-
-
-
-## Numérique
-
-Liste des sites web de références
-
-Liste des outils pour visualiser / éditer un GPX
-
-App pour suivre son tracé (iOS, Android)
 
 
 
@@ -120,6 +80,8 @@ Période: été 2025
 
 https://fr.wikipedia.org/wiki/Hexatrek
 https://www.hexatrek.com/
+
+GPX en accès libre sur le site hexatrek https://www.hexatrek.com/
 
 
 #### Départ
