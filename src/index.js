@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 
+import Blog from './pages/blog';
+import BlogHome from './pages/blog-home';
 import Books from './pages/books';
 import ErrorPage from './pages/error-page';
 import Movies from './pages/movies';
@@ -15,6 +17,16 @@ const router = createHashRouter([
   {
     path: '/',
     element: <Welcome />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/blog',
+    element: <BlogHome />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/blog/:blogId',
+    element: <Blog />,
     errorElement: <ErrorPage />,
   },
   {
