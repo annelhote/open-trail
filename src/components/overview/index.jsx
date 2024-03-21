@@ -1,6 +1,6 @@
 import { faArrowDown, faArrowUp, faFileArrowDown, faStopwatch, faUpRightAndDownLeftFromCenter } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Box, Button, Grid, Stack, TextField } from '@mui/material';
+import { Button, Grid, Stack, TextField } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 import { downloadGpx, getITRADistance } from '../../utils';
