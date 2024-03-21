@@ -1,8 +1,8 @@
-import { Box, Checkbox, FormControlLabel, Grid, TextField } from '@mui/material';
+import { Box, Checkbox, FormControlLabel, Grid } from '@mui/material';
 
 import { capitalize } from '../../utils';
 
-const Filters = ({ filters, markers, meta, onChange, selectedFilters, setMeta }) => {
+const Filters = ({ filters, markers, onChange, selectedFilters }) => {
   return (
     <Grid className="filters" container item xs={12}>
       {Object.keys(filters).map((category) => (
@@ -33,26 +33,6 @@ const Filters = ({ filters, markers, meta, onChange, selectedFilters, setMeta })
           </Box>
         </Grid>
       ))}
-
-      <Grid item xs={12} sm={3}>
-        <Box
-          autoComplete="off"
-          component="form"
-          noValidate
-          sx={{
-            '& .MuiTextField-root': { width: '100%' },
-          }}
-        >
-          <TextField
-            id="filled-number"
-            label="Kilomètres parcourus par jour (ressentis aka ITRA)"
-            onChange={(event) => setMeta({ ...meta, kmPerDay: event.target.value })}
-            type="number"
-            value={meta.kmPerDay}
-            variant="filled"
-          />
-        </Box>
-      </Grid>
     </Grid>
   );
 };

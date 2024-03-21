@@ -35,7 +35,6 @@ const CustomPopup = ({ marker, closePopup }) => {
           </ul>
         </div>
       </div>
-
     </Popup>
   )
 };

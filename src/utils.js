@@ -80,13 +80,13 @@ const getMarkerFromType = (type) => {
   const types = {
     alpine_hut: {
       category: 'hébergement',
-      color: '#AA8630',
+      color: '#F3B95F',
       icon: faHouse,
       label: 'hutte',
     },
     apartment: {
       category: 'hébergement',
-      color: '#AA8630',
+      color: '#F3B95F',
       icon: faHouse,
       label: 'appartement',
     },
@@ -104,13 +104,13 @@ const getMarkerFromType = (type) => {
     },
     camp_site: {
       category: 'hébergement',
-      color: '#AA8630',
+      color: '#F3B95F',
       icon: faHouse,
       label: 'camping',
     },
     chalet: {
       category: 'hébergement',
-      color: '#AA8630',
+      color: '#F3B95F',
       icon: faHouse,
       label: 'chalet',
     },
@@ -158,7 +158,7 @@ const getMarkerFromType = (type) => {
     },
     friend: {
       category: 'hébergement',
-      color: '#AA8630',
+      color: '#F3B95F',
       icon: faHouse,
       label: 'ami',
     },
@@ -176,7 +176,7 @@ const getMarkerFromType = (type) => {
     },
     guest_house: {
       category: 'hébergement',
-      color: '#AA8630',
+      color: '#F3B95F',
       icon: faHouse,
       label: "maison d'hôtes",
     },
@@ -188,13 +188,13 @@ const getMarkerFromType = (type) => {
     },
     hostel: {
       category: 'hébergement',
-      color: '#AA8630',
+      color: '#F3B95F',
       icon: faHouse,
       label: 'auberge',
     },
     hotel: {
       category: 'hébergement',
-      color: '#AA8630',
+      color: '#F3B95F',
       icon: faHouse,
       label: 'hôtel',
     },
@@ -206,7 +206,7 @@ const getMarkerFromType = (type) => {
     },
     motel: {
       category: 'hébergement',
-      color: '#AA8630',
+      color: '#F3B95F',
       icon: faHouse,
       label: 'motel',
     },
@@ -224,7 +224,7 @@ const getMarkerFromType = (type) => {
     },
     shelter: {
       category: 'hébergement',
-      color: '#AA8630',
+      color: '#F3B95F',
       icon: faHouse,
       label: 'abri',
     },
@@ -242,7 +242,7 @@ const getMarkerFromType = (type) => {
     },
     tourism: {
       category: 'hébergement',
-      color: '#AA8630',
+      color: '#F3B95F',
       icon: faHouse,
       label: 'tourisme',
     },
@@ -254,7 +254,7 @@ const getMarkerFromType = (type) => {
     },
     wilderness_hut: {
       category: 'hébergement',
-      color: '#AA8630',
+      color: '#F3B95F',
       icon: faHouse,
       label: 'cabane en pleine nature',
     }

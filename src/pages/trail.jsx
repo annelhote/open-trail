@@ -1,10 +1,10 @@
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Accordion, AccordionDetails, AccordionSummary, Box, Grid } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Box, Breadcrumbs, Grid, Link, Typography } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import gpxParser from 'gpxparser';
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import Filters from '../components/filters';
 import MyMap from '../components/map';
@@ -154,11 +154,17 @@ const Trail = () => {
         <Box className='open-trail' sx={{ flexGrow: 0.75 }}>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             <Grid item xs={12}>
-              <Link to="/">
-                <h1>Open Trails</h1>
-              </Link>
+              <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
+                <Link underline="hover" color="inherit" href="/">
+                  Open Trails
+                </Link>
+                <Link underline="hover" color="inherit" href="#/trails">
+                  Trails
+                </Link>
+                <Typography>{meta.name}</Typography>
+              </Breadcrumbs>
             </Grid>
-            <Overview gpx={gpx} meta={meta} />
+            <Overview gpx={gpx} meta={meta} setMeta={setMeta} />
             {(markers.length === 0) ? (
               <Grid item xs={12}>
                 Chargement des données ...
@@ -170,7 +176,7 @@ const Trail = () => {
                     Filtres
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Filters filters={filters} markers={markers} meta={meta} onChange={onChange} selectedFilters={selectedFilters} setMeta={setMeta} />
+                    <Filters filters={filters} markers={markers} onChange={onChange} selectedFilters={selectedFilters} />
                   </AccordionDetails>
                 </Accordion>
                 <Accordion defaultExpanded>

@@ -15,16 +15,16 @@ const Trails = () => {
       <div>
         <ul>
           <li>
-            <Link to="/trails/le-poet-sigillat">Le Poët-Sigillat (juillet 2024)</Link>
+            <Link href="#/trails/le-poet-sigillat">Le Poët-Sigillat (juillet 2024)</Link>
           </li>
           <li>
-            <Link to="/trails/picos-de-europa">Picos de Europa (@coco)</Link>
+            <Link href="#/trails/picos-de-europa">Picos de Europa (@coco)</Link>
           </li>
           <li>
-            <Link to="/trails/tour-du-queyras">Tour du Queyras - GR58 (septembre 2022)</Link>
+            <Link href="#/trails/tour-du-queyras">Tour du Queyras - GR58 (septembre 2022)</Link>
           </li>
           <li>
-            <Link to="/trails/gr38">GR38 (septembre 2022)</Link>
+            <Link href="#/trails/gr38">GR38 (septembre 2022)</Link>
           </li>
         </ul>
       </div>

@@ -3,8 +3,6 @@ import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
 
-
-
 const Blog = () => {
   const params = useParams();
   const [markdown, setMarkdown] = useState();
