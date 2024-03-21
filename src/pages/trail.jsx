@@ -155,7 +155,7 @@ const Trail = () => {
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             <Grid item xs={12}>
               <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
-                <Link underline="hover" color="inherit" href="/">
+                <Link underline="hover" color="inherit" href="#">
                   Open Trails
                 </Link>
                 <Link underline="hover" color="inherit" href="#/trails">

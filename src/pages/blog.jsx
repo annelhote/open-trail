@@ -23,7 +23,7 @@ const Blog = () => {
   return (
     <>
       <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
-        <Link underline="hover" color="inherit" href="/">
+        <Link underline="hover" color="inherit" href="#">
           Open Trails
         </Link>
         <Link
