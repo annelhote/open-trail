@@ -1,7 +1,5 @@
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Accordion, AccordionDetails, AccordionSummary, Box, Breadcrumbs, Grid, Link, Typography } from '@mui/material';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
 import gpxParser from 'gpxparser';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -18,15 +16,6 @@ import gpxPicosDeEuropa from '../data/picos-de-europa.gpx';
 import gpxTourDuQueyras from '../data/tour-du-queyras.gpx';
 import data from '../data/data.json';
 import { chunkArray, downSampleArray, getClosestPointByCoordinates, getDataFromOverpass, getMarkerFromType, getTypeFromName } from '../utils';
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#fff',
-    },
-  },
-});
 
 const Trail = () => {
   const params = useParams();
@@ -148,8 +137,7 @@ const Trail = () => {
   }, [filters]);
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
+    <>
       {gpx && (
         <Box className='open-trail' sx={{ flexGrow: 0.75 }}>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
@@ -216,7 +204,7 @@ const Trail = () => {
           </Grid>
         </Box>
       )}
-    </ThemeProvider>
+    </>
   );
 };
 

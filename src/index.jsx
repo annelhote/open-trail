@@ -1,3 +1,5 @@
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
@@ -39,9 +41,24 @@ const router = createHashRouter([
   }
 ]);
 
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    background: {
+      default: "#27272a"
+    },
+    text:{
+      primary: "#e4e5e6"
+    }
+  },
+});
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
