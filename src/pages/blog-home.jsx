@@ -13,12 +13,22 @@ const BlogHome = () => {
         <ul>
           <li>
             <Link underline="hover" color="inherit" href="#/blog/1">
-              Fabriquez votre propre équipement - Sac à dos
+              Fabriquez son propre équipement - Sac à dos
             </Link>
           </li>
           <li>
             <Link underline="hover" color="inherit" href="#/blog/2">
               Bidouiller des GPX
+            </Link>
+          </li>
+          <li>
+            <Link underline="hover" color="inherit" href="#/blog/3">
+              Films
+            </Link>
+          </li>
+          <li>
+            <Link underline="hover" color="inherit" href="#/blog/4">
+              Livres
             </Link>
           </li>
         </ul>

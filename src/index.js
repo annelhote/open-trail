@@ -4,19 +4,17 @@ import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 import Blog from './pages/blog';
 import BlogHome from './pages/blog-home';
-import Books from './pages/books';
 import ErrorPage from './pages/error-page';
-import Movies from './pages/movies';
+import Home from './pages/home';
 import Trail from './pages/trail';
 import Trails from './pages/trails';
-import Welcome from './pages/welcome';
 
 import './index.scss';
 
 const router = createHashRouter([
   {
     path: '/',
-    element: <Welcome />,
+    element: <Home />,
     errorElement: <ErrorPage />,
   },
   {
@@ -27,16 +25,6 @@ const router = createHashRouter([
   {
     path: '/blog/:id',
     element: <Blog />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: '/livres',
-    element: <Books />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: '/films',
-    element: <Movies />,
     errorElement: <ErrorPage />,
   },
   {

@@ -1,17 +1,24 @@
 import { Breadcrumbs, Link, Typography } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
 
 const Blog = () => {
   const params = useParams();
-  const [markdown, setMarkdown] = useState();
 
-  import(`../blog/${params.id}.md`).then((res) => {
-    fetch(res.default)
-      .then((response) => response.text())
-      .then((text) => setMarkdown(text))
-  })
+  const [markdown, setMarkdown] = useState();
+  const [title, setTitle] = useState();
+
+  useEffect(() => {
+    import(`../blog/${params.id}.md`).then((res) => {
+      fetch(res.default)
+        .then((response) => response.text())
+        .then((text) => {
+          setMarkdown(text);
+          setTitle(text.match(/(?<=(^#)\s).*/g)[0])
+        });
+    });
+  }, [params.id]);
 
   return (
     <>
@@ -22,11 +29,13 @@ const Blog = () => {
         <Link
           underline="hover"
           color="inherit"
-          href="/blog"
+          href="#/blog"
         >
           Blog
         </Link>
-        <Typography>Projet Couture</Typography>
+        <Typography>
+          {title}
+        </Typography>
       </Breadcrumbs>
       <ReactMarkdown>
         {markdown}

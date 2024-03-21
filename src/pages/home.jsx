@@ -1,7 +1,7 @@
 import { Breadcrumbs, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-const Welcome = () => {
+const Home = () => {
   return (
     <>
       <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
@@ -13,12 +13,6 @@ const Welcome = () => {
             <Link to="/trails">Trails</Link>
           </li>
           <li>
-            <Link to="/livres">Livres</Link>
-          </li>
-          <li>
-            <Link to="/films">Films</Link>
-          </li>
-          <li>
             <Link to="/blog">Blog</Link>
           </li>
         </ul>
@@ -27,4 +21,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default Home;
