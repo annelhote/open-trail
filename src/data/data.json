@@ -40,5 +40,15 @@
       "zoom": 10
     },
     "name": "GR58 - Tour du Queyras"
+  },
+  "chemin-d-assise-01": {
+    "activity": "hiking",
+    "id": "chemin-d-assise-01",
+    "initialViewState": {
+      "latitude": 45.3229505,
+      "longitude": 6.4955713,
+      "zoom": 8
+    },
+    "name": "Chemin d'Assise"
   }
 }

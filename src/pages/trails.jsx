@@ -26,6 +26,9 @@ const Trails = () => {
           <li>
             <Link href="#/trails/gr38">GR38 (septembre 2022)</Link>
           </li>
+          <li>
+            <Link href="#/trails/chemin-d-assise-01">Chemin d'Assise</Link>
+          </li>
         </ul>
       </div>
     </>

@@ -10,6 +10,7 @@ import Overview from '../components/overview';
 import Planner from '../components/planner';
 import Profile from '../components/profile';
 import Stages from '../components/stages';
+import gpxCheminDassise from '../data/chemin-d-assise-01.gpx';
 import gpxGr38 from '../data/gr38.gpx';
 import gpxLePoetSigillat from '../data/le-poet-sigillat.gpx';
 import gpxPicosDeEuropa from '../data/picos-de-europa.gpx';
@@ -28,6 +29,7 @@ const Trail = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
 
   const gpxes = {
+    'chemin-d-assise-01': gpxCheminDassise,
     'gr38': gpxGr38,
     'le-poet-sigillat': gpxLePoetSigillat,
     'picos-de-europa': gpxPicosDeEuropa,
@@ -113,7 +115,7 @@ const Trail = () => {
           setMarkers(markersTmp);
         })
         .catch((error) => {
-          console.log('error', error);
+          console.error(error);
         });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
