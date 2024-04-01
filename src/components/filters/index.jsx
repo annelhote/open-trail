@@ -19,7 +19,6 @@ const Filters = ({ filters, markers, onChange, selectedFilters }) => {
             }
             label={`${capitalize(category)} (${filters[category].data.length})`}
           />
-
           <Box sx={{ display: 'flex', flexDirection: 'column', ml: 3 }}>
             {filters[category].data.sort().map((item, index) => (
               <FormControlLabel

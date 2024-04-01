@@ -259,7 +259,7 @@ const getMarkerFromType = (type) => {
       label: 'cabane en pleine nature',
     }
   }
-  return types?.[type] ?? { category:'unknown', color: '#e4e5e6', icon: faQuestion };
+  return types?.[type] ?? { category: 'autre', color: '#a9a9a9', icon: faQuestion, label: type };
 }
 
 const getTypeFromName = (name) => {
