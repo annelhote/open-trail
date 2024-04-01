@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Grid, Stack, TextField } from '@mui/material';
 import { useEffect, useState } from 'react';
 
-import { downloadGpx, getITRADistance } from '../../utils';
+import { downloadGpx } from '../../utils';
 
 const Overview = ({ gpx, meta, setMeta }) => {
   const [distance, setDistance] = useState(0);
@@ -12,14 +12,11 @@ const Overview = ({ gpx, meta, setMeta }) => {
   const [itraDistance, setItraDistance] = useState(0);
 
   useEffect(() => {
-    setDistance(Math.floor(gpx.tracks[0].distance.total / 1000));
+    setDistance(Math.round(gpx.tracks[0].distance.total / 1000));
+    setItraDistance(Math.round(gpx.tracks[0].distance.totalItra / 1000))
     setDuration(Math.ceil(distance / meta.kmPerDay));
     setElevation(gpx.calcElevation(gpx.tracks[0].points));
   }, [distance, gpx, meta]);
-
-  useEffect(() => {
-    setItraDistance(getITRADistance({ distance, elevation: elevation.pos }));
-  }, [distance, elevation])
 
   return (
     <Grid className='overview' container item>
