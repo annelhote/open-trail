@@ -12,7 +12,7 @@ import Profile from '../components/profile';
 import Stages from '../components/stages';
 import gpxCheminDassise from '../data/chemin-d-assise-01.gpx';
 import gpxGr38 from '../data/gr38.gpx';
-import gpxLePoetSigillat from '../data/le-poet-sigillat.gpx';
+import gpxLaChapelleEnVercorsLePoet from '../data/la-chapelle-en-vercors-le-poet.gpx';
 import gpxNantesEchalas from '../data/nantes-echalas.gpx';
 import gpxPicosDeEuropa from '../data/picos-de-europa.gpx';
 import gpxTourDuQueyras from '../data/tour-du-queyras.gpx';
@@ -32,7 +32,7 @@ const Trail = () => {
   const gpxes = {
     'chemin-d-assise-01': gpxCheminDassise,
     'gr38': gpxGr38,
-    'le-poet-sigillat': gpxLePoetSigillat,
+    'le-poet-sigillat': gpxLaChapelleEnVercorsLePoet,
     'nantes-echalas': gpxNantesEchalas,
     'picos-de-europa': gpxPicosDeEuropa,
     'tour-du-queyras': gpxTourDuQueyras,

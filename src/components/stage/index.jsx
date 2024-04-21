@@ -64,7 +64,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
               {endPointDistance.toFixed(1)}
             </div>
             <div>
-              <b>D+:</b> {elevation.pos.toFixed(0)} m / <b>D-:</b>{" "}
+              <b>D+:</b> {(elevation?.pos ?? 0).toFixed(0)} m / <b>D-:</b>{" "}
               {elevation.neg.toFixed(0)} m
             </div>
             {day === 0 && (
