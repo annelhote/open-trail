@@ -1,5 +1,4 @@
-import { Breadcrumbs, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Breadcrumbs, Link, Typography } from '@mui/material';
 
 const Home = () => {
   return (
@@ -10,10 +9,14 @@ const Home = () => {
       <div>
         <ul>
           <li>
-            <Link to="/trails">Trails</Link>
+            <Link color="inherit" href="#/trails" underline="hover">
+              Trails
+            </Link>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <Link color="inherit" href="#/blog" underline="hover">
+              Blog
+            </Link>
           </li>
         </ul>
       </div>
