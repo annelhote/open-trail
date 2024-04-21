@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid } from '@mui/material';
+import { Card, CardContent, Grid, Link } from '@mui/material';
 
 import { getClosestPointIndexByDistance, getITRADistance } from '../../utils';
 
@@ -56,7 +56,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
                 <ul>
                 {getClosestMarkersByCategory({ category: 'alimentation', gpx, point: endPoint }).map((accomodation, index) => (
                   <li key={`food-${index}`}>
-                    {accomodation.name} / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.pointDistance.toFixed(3)} km
+                    <Link href={`https://www.openstreetmap.org/${accomodation.osmType}/${accomodation.id}`} target="_blank">{accomodation.name}</Link> / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.pointDistance.toFixed(3)} km
                   </li>
                 ))}
               </ul>
@@ -67,7 +67,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
               <ul>
                 {getClosestMarkersByCategory({ category: 'hébergement', gpx, point: endPoint }).map((accomodation, index) => (
                   <li key={`accomodation-${index}`}>
-                    {accomodation.name} / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.pointDistance.toFixed(3)} km
+                    <Link href={`https://www.openstreetmap.org/${accomodation.osmType}/${accomodation.id}`} target="_blank">{accomodation.name}</Link> / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.pointDistance.toFixed(3)} km
                   </li>
                 ))}
               </ul>
@@ -78,7 +78,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
                 <ul>
                 {getClosestMarkersByCategory({ category: 'alimentation', gpx, point: startPoint }).map((accomodation, index) => (
                   <li key={`food-${index}`}>
-                    {accomodation.name} / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.pointDistance.toFixed(3)} km
+                    <Link href={`https://www.openstreetmap.org/${accomodation.osmType}/${accomodation.id}`} target="_blank">{accomodation.name}</Link> / {accomodation.label} / {accomodation.lat},{accomodation.lon} / {accomodation.pointDistance.toFixed(3)} km
                   </li>
                 ))}
               </ul>
