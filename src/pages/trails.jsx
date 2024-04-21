@@ -29,6 +29,9 @@ const Trails = () => {
           <li>
             <Link href="#/trails/chemin-d-assise-01">Chemin d'Assise</Link>
           </li>
+          <li>
+            <Link href="#/trails/nantes-echalas">Nantes -> Echalas</Link>
+          </li>
         </ul>
       </div>
     </>

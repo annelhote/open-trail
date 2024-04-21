@@ -13,6 +13,7 @@ import Stages from '../components/stages';
 import gpxCheminDassise from '../data/chemin-d-assise-01.gpx';
 import gpxGr38 from '../data/gr38.gpx';
 import gpxLePoetSigillat from '../data/le-poet-sigillat.gpx';
+import gpxNantesEchalas from '../data/nantes-echalas.gpx';
 import gpxPicosDeEuropa from '../data/picos-de-europa.gpx';
 import gpxTourDuQueyras from '../data/tour-du-queyras.gpx';
 import data from '../data/data.json';
@@ -32,6 +33,7 @@ const Trail = () => {
     'chemin-d-assise-01': gpxCheminDassise,
     'gr38': gpxGr38,
     'le-poet-sigillat': gpxLePoetSigillat,
+    'nantes-echalas': gpxNantesEchalas,
     'picos-de-europa': gpxPicosDeEuropa,
     'tour-du-queyras': gpxTourDuQueyras,
   }
@@ -97,7 +99,7 @@ const Trail = () => {
       const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
       const pathSamplingPeriod = Math.floor(coordinatesDataCount / targetPathDataCount);
       const downSampledCoordinates = downSampleArray(gpx.tracks[0].points, pathSamplingPeriod);
-      let chunks = chunkArray(downSampledCoordinates, meta.kmPerDay);
+      let chunks = chunkArray(downSampledCoordinates, 20);
       chunks = chunks.map((chunk) => chunk.map((item) => [item.lat, item.lon]).flat());
 
       Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))

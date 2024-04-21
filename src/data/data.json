@@ -50,5 +50,16 @@
       "zoom": 8
     },
     "name": "Chemin d'Assise"
+  },
+  "nantes-echalas": {
+    "activity": "biking",
+    "id": "nantes-echalas",
+    "initialViewState": {
+      "latitude": 47.1466796,
+      "longitude": 0.8046743,
+      "zoom": 6
+    },
+    "kmPerDay": 80,
+    "name": "Nantes -> Echalas"
   }
 }
