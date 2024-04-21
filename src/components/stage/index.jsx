@@ -4,7 +4,7 @@ import { getClosestPointIndexByDistance, getITRADistance } from '../../utils';
 
 const Stage = ({ day, gpx, markers, meta }) => {
   const points = gpx.tracks[0].points;
-  const cumulDistances = [0, ...gpx.calculDistance(points).cumul.slice(0, -1)];
+  const cumulDistances = [0, ...gpx.tracks[0].distance.cumulItra];
 
   const getClosestMarkersByCategory = ({ category, gpx, point }) => {
     const closestMarkersByCategory = markers

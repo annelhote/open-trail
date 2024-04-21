@@ -1,9 +1,8 @@
 import Stage from '../stage';
 
 const Stages = ({ gpx, markers, meta }) => {
-  const duration = Math.ceil(Math.floor(gpx.tracks[0].distance.total / 1000) / meta.kmPerDay)
+  const duration = Math.ceil(gpx.tracks[0].distance.totalItra / 1000 / meta.kmPerDay);
   const days = [...Array(duration).keys()];
-  days.pop()
 
   return (
     <>

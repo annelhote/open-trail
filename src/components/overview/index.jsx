@@ -12,11 +12,12 @@ const Overview = ({ gpx, meta, setMeta }) => {
   const [itraDistance, setItraDistance] = useState(0);
 
   useEffect(() => {
+    const itraDistanceTmp = gpx.tracks[0].distance.totalItra / 1000;
     setDistance(Math.round(gpx.tracks[0].distance.total / 1000));
-    setItraDistance(Math.round(gpx.tracks[0].distance.totalItra / 1000))
-    setDuration(Math.ceil(distance / meta.kmPerDay));
+    setItraDistance(Math.round(itraDistanceTmp))
+    setDuration(Math.ceil(itraDistanceTmp / meta.kmPerDay));
     setElevation(gpx.calcElevation(gpx.tracks[0].points));
-  }, [distance, gpx, meta]);
+  }, [gpx, meta]);
 
   return (
     <Grid className='overview' container item>
