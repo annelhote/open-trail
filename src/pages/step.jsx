@@ -8,7 +8,8 @@ import data from "../data/data.json";
 const Step = () => {
   const params = useParams();
 
-  const [gpx, setGpx] = useState();
+  // TODO: Calculate gpx file
+  const [gpx] = useState();
   const [meta, setMeta] = useState(data?.[params?.id] ?? {});
 
   return (

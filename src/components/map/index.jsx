@@ -37,6 +37,7 @@ const Map = ({ coordinates, gpx, markers, meta, selectedFilters, setCoordinates 
   const closePopup = () => setSelectedMarker();
   const openPopup = (index) => setSelectedMarker(index);
 
+  // TODO: Do it in the trail page in order to avoid duplicated code
   // Calculate number of days in trail
   const duration = Math.ceil(gpx.tracks[0].distance.totalItra / 1000 / meta.kmPerDay);
   const days = [...Array(duration).keys()];
