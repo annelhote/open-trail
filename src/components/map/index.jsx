@@ -38,15 +38,15 @@ const Map = ({ coordinates, gpx, markers, meta, selectedFilters, setCoordinates 
   const openPopup = (index) => setSelectedMarker(index);
 
   // Calculate number of days in trail
-  const duration = Math.ceil(Math.floor(gpx.tracks[0].distance.total / 1000) / meta.kmPerDay)
+  const duration = Math.ceil(gpx.tracks[0].distance.totalItra / 1000 / meta.kmPerDay);
   const days = [...Array(duration).keys()];
   // Determinates each step
   const points = gpx.tracks[0].points;
-  const cumulDistances = [0, ...gpx.calculDistance(points).cumul.slice(0, -1)];
+  const cumulDistances = [0, ...gpx.tracks[0].distance.cumulItra];
   const gpxs = days.map((day) => {
     const startPointIndex = getClosestPointIndexByDistance({ cumulDistances, distance: meta.kmPerDay * 1000 * day });
     const endPointIndex = getClosestPointIndexByDistance({ cumulDistances, distance: meta.kmPerDay * 1000 * (day + 1) });
-    const trkpts = points.slice(startPointIndex, endPointIndex).map((point) => `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`);
+    const trkpts = points.slice(startPointIndex, endPointIndex + 1).map((point) => `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`);
     const newGpx = new gpxParser();
     newGpx.parse(`<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`);
     return newGpx;
