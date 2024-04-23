@@ -33,6 +33,7 @@ import {
   getDataFromOverpass,
   getMarkerFromType,
   getTypeFromName,
+  overloadGpx,
 } from "../utils";
 
 const Trail = () => {
@@ -80,31 +81,9 @@ const Trail = () => {
     fetch(meta?.gpx)
       .then((res) => res.text())
       .then((xml) => {
-        const newGpx = new gpxParser();
+        let newGpx = new gpxParser();
         newGpx.parse(xml);
-        // Compute cumulative positiv elevation and ITRA distance at each point of the Route/Track
-        const cumulItra = [];
-        const cumulElevation = [];
-        let itraValue = 0;
-        let elevationValue = 0;
-        const points = newGpx.tracks[0].points;
-        for (let i = 0; i < points.length - 1; i++) {
-          const pointFrom = points[i];
-          const pointTo = points[i + 1];
-          let distance = newGpx.calcDistanceBetween(pointFrom, pointTo);
-          const elevation = pointTo.ele - pointFrom.ele;
-          if (elevation > 0) {
-            distance += elevation * 10;
-            elevationValue += elevation;
-          }
-          itraValue += distance;
-          cumulItra.push(itraValue);
-          cumulElevation.push(elevationValue);
-        }
-        newGpx.tracks[0].distance.cumulItra = cumulItra;
-        newGpx.tracks[0].distance.totalItra = itraValue;
-        newGpx.tracks[0].distance.cumulElevation = cumulElevation;
-        newGpx.tracks[0].distance.totalElevation = elevationValue;
+        newGpx = overloadGpx(newGpx);
         setGpx(newGpx);
       })
       .catch((e) => console.error(e));

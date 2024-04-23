@@ -266,6 +266,33 @@ const getTypeFromName = (name) => {
   return name.toLowerCase().includes('refugio') ? 'hostel' : '';
 }
 
+const overloadGpx = (gpx) => {
+  // Compute cumulative positiv elevation and ITRA distance at each point of the Route/Track
+  const cumulItra = [];
+  const cumulElevation = [];
+  let itraValue = 0;
+  let elevationValue = 0;
+  const points = gpx.tracks[0].points;
+  for (let i = 0; i < points.length - 1; i++) {
+    const pointFrom = points[i];
+    const pointTo = points[i + 1];
+    let distance = gpx.calcDistanceBetween(pointFrom, pointTo);
+    const elevation = pointTo.ele - pointFrom.ele;
+    if (elevation > 0) {
+      distance += elevation * 10;
+      elevationValue += elevation;
+    }
+    itraValue += distance;
+    cumulItra.push(itraValue);
+    cumulElevation.push(elevationValue);
+  }
+  gpx.tracks[0].distance.cumulItra = cumulItra;
+  gpx.tracks[0].distance.totalItra = itraValue;
+  gpx.tracks[0].distance.cumulElevation = cumulElevation;
+  gpx.tracks[0].distance.totalElevation = elevationValue;
+  return gpx;
+}
+
 export {
   capitalize,
   chunkArray,
@@ -277,4 +304,5 @@ export {
   getITRADistance,
   getMarkerFromType,
   getTypeFromName,
+  overloadGpx,
 }
