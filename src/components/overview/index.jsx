@@ -1,6 +1,6 @@
 import { faArrowDown, faArrowUp, faFileArrowDown, faStopwatch, faUpRightAndDownLeftFromCenter } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button, Grid, Stack, TextField } from '@mui/material';
+import { Box, Button, Grid, Stack, TextField } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 import { downloadGpx } from '../../utils';
@@ -31,7 +31,7 @@ const Overview = ({ gpx, meta, setMeta }) => {
           <Stack sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
             <FontAwesomeIcon icon={faUpRightAndDownLeftFromCenter} className='fa-rotate-by' style={{ '--fa-rotate-angle': '45deg' }} />
             <Stack direction='row' sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-              <b>{distance}</b> km
+              <Box sx={{ pr: 0.5 }}><b>{distance}</b></Box> km
             </Stack>
           </Stack>
         </Grid>
@@ -39,7 +39,7 @@ const Overview = ({ gpx, meta, setMeta }) => {
           <Stack sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
             <FontAwesomeIcon icon={faUpRightAndDownLeftFromCenter} className='fa-rotate-by' style={{ '--fa-rotate-angle': '45deg' }} />
             <Stack direction='row' sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-              <b>{itraDistance.toFixed(0)}</b> km
+              <Box sx={{ pr: 0.5 }}><b>{itraDistance.toFixed(0)}</b></Box> km
             </Stack>
           </Stack>
         </Grid>
@@ -47,7 +47,7 @@ const Overview = ({ gpx, meta, setMeta }) => {
           <Stack sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
             <FontAwesomeIcon icon={faArrowUp} className='fa-rotate-by' style={{ '--fa-rotate-angle': '45deg' }} />
             <Stack direction='row' sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-              <b>{elevation.pos.toFixed(0)}</b> m D+
+              <Box sx={{ pr: 0.5 }}><b>{elevation.pos.toFixed(0)}</b></Box> m D+
             </Stack>
           </Stack>
         </Grid>
@@ -55,7 +55,7 @@ const Overview = ({ gpx, meta, setMeta }) => {
           <Stack sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
             <FontAwesomeIcon icon={faArrowDown} className='fa-rotate-by' style={{ '--fa-rotate-angle': '-45deg' }} />
             <Stack direction='row' sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-              <b>{elevation.neg.toFixed(0)}</b> m D-
+              <Box sx={{ pr: 0.5 }}><b>{elevation.neg.toFixed(0)}</b></Box> m D-
             </Stack>
           </Stack>
         </Grid>
@@ -63,7 +63,7 @@ const Overview = ({ gpx, meta, setMeta }) => {
           <Stack sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
             <FontAwesomeIcon icon={faStopwatch} />
             <Stack direction='row' sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-              <b>{duration}</b> jours
+              <Box sx={{ pr: 0.5 }}><b>{duration}</b></Box> {duration > 1 ? 'jours' : 'jour'}
             </Stack>
           </Stack>
         </Grid>

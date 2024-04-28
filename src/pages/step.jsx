@@ -72,7 +72,7 @@ const Step = () => {
         setGpx(gpxs[params?.step]);
       })
       .catch((e) => console.error(e));
-  }, [gpx?.tracks, meta?.gpx, meta.kmPerDay, params?.step]);
+  }, [meta?.gpx, meta.kmPerDay, params?.step]);
 
   return (
     <>
@@ -99,7 +99,9 @@ const Step = () => {
                   >
                     {meta.name}
                   </Link>
-                  <Typography>{params.step}</Typography>
+                  <Typography>
+                    Jour {params.step}
+                  </Typography>
                 </Breadcrumbs>
               </Grid>
               <Overview gpx={gpx} meta={meta} setMeta={setMeta} />

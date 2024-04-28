@@ -57,7 +57,7 @@ const Map = ({ coordinates, gpx, markers, meta, selectedFilters, setCoordinates 
     <Grid className="map" item xs={12}>
       <ReactMapGL
         id="map"
-        initialViewState={meta.initialViewState}
+        initialViewState={{ bounds: gpx.tracks[0].bounds }}
         interactiveLayerIds={["path"]}
         mapLib={maplibregl}
         mapStyle={mapStyle}
@@ -73,7 +73,7 @@ const Map = ({ coordinates, gpx, markers, meta, selectedFilters, setCoordinates 
             <Layer
               id={`path-${index}`}
               layout={{ "line-join": "round", "line-cap": "round" }}
-              paint={{ "line-color": index % 2 ? '#9A9EEC' : '#5756A6', "line-width": 3 }}
+              paint={{ "line-color": index % 2 ? "#9A9EEC" : "#5756A6", "line-width": 3 }}
               type="line"
             />
           </Source>

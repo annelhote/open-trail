@@ -2,63 +2,33 @@
   "gr38": {
     "activity": "hiking",
     "id": "gr38",
-    "initialViewState": {
-      "latitude": 47.8788921,
-      "longitude": -3.2297529,
-      "zoom": 8
-    },
     "name": "GR38 - Redon -> Gourin"
   },
   "le-poet-sigillat": {
     "activity": "hiking",
     "id": "le-poet-sigillat",
-    "initialViewState": {
-      "latitude": 44.6937849,
-      "longitude": 5.36890464,
-      "zoom": 8
-    },
     "markers": [{ "label": "Arrivée", "lat": 44.3692526, "lon": 5.3170387, "name": "Arrivée", "type": "friend" }],
     "name": "La Chapelle en Vercors -> Le Poët-Sigillat (août 2024)"
   },
   "picos-de-europa": {
     "activity": "hiking",
     "id": "picos-de-europa",
-    "initialViewState": {
-      "latitude": 43.190296,
-      "longitude": -4.9346512,
-      "zoom": 10
-    },
     "name": "Picos de Europa",
     "website": "https://elanillodepicos.com/"
   },
   "tour-du-queyras": {
     "activity": "hiking",
     "id": "tour-du-queyras",
-    "initialViewState": {
-      "latitude": 44.7446872,
-      "longitude": 6.8042674,
-      "zoom": 10
-    },
     "name": "GR58 - Tour du Queyras"
   },
   "chemin-d-assise-01": {
     "activity": "hiking",
     "id": "chemin-d-assise-01",
-    "initialViewState": {
-      "latitude": 45.3229505,
-      "longitude": 6.4955713,
-      "zoom": 8
-    },
     "name": "Chemin d'Assise"
   },
   "nantes-echalas": {
     "activity": "biking",
     "id": "nantes-echalas",
-    "initialViewState": {
-      "latitude": 47.1466796,
-      "longitude": 0.8046743,
-      "zoom": 6
-    },
     "kmPerDay": 80,
     "name": "Nantes -> Echalas"
   }

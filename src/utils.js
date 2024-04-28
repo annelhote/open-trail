@@ -273,6 +273,10 @@ const overloadGpx = (gpx) => {
   let itraValue = 0;
   let elevationValue = 0;
   const points = gpx.tracks[0].points;
+  let minLat = points[0].lat;
+  let maxLat = points[0].lat;
+  let minLon = points[0].lon;
+  let maxLon = points[0].lon;
   for (let i = 0; i < points.length - 1; i++) {
     const pointFrom = points[i];
     const pointTo = points[i + 1];
@@ -285,11 +289,17 @@ const overloadGpx = (gpx) => {
     itraValue += distance;
     cumulItra.push(itraValue);
     cumulElevation.push(elevationValue);
+    minLat = Math.min(minLat, points[i].lat);
+    maxLat = Math.max(maxLat, points[i].lat);
+    minLon = Math.min(minLon, points[i].lon);
+    maxLon = Math.max(maxLon, points[i].lon);
   }
   gpx.tracks[0].distance.cumulItra = cumulItra;
   gpx.tracks[0].distance.totalItra = itraValue;
   gpx.tracks[0].distance.cumulElevation = cumulElevation;
   gpx.tracks[0].distance.totalElevation = elevationValue;
+  const boundsMargin = Math.min(maxLon - minLon, maxLat - minLat) / 5;
+  gpx.tracks[0].bounds = [minLon - boundsMargin, minLat - boundsMargin, maxLon + boundsMargin, maxLat + boundsMargin];
   return gpx;
 }
 
