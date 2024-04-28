@@ -1,4 +1,4 @@
-import { Breadcrumbs, Link, Typography } from '@mui/material';
+import { Box, Breadcrumbs, Link, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
@@ -21,7 +21,7 @@ const Blog = () => {
   }, [params.id]);
 
   return (
-    <>
+    <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
       <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
         <Link
           color="inherit"
@@ -44,7 +44,7 @@ const Blog = () => {
       <ReactMarkdown>
         {markdown}
       </ReactMarkdown>
-    </>
+    </Box>
   );
 };
 

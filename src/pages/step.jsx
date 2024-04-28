@@ -69,7 +69,7 @@ const Step = () => {
           partGpx = overloadGpx(partGpx);
           return partGpx;
         });
-        setGpx(gpxs[params?.step]);
+        setGpx(gpxs[params?.step - 1]);
       })
       .catch((e) => console.error(e));
   }, [meta?.gpx, meta.kmPerDay, params?.step]);

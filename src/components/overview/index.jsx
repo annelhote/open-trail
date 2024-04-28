@@ -15,7 +15,7 @@ const Overview = ({ gpx, meta, setMeta }) => {
     const itraDistanceTmp = gpx.tracks[0].distance.totalItra / 1000;
     setDistance(Math.round(gpx.tracks[0].distance.total / 1000));
     setItraDistance(Math.round(itraDistanceTmp))
-    setDuration(Math.ceil(itraDistanceTmp / meta.kmPerDay));
+    setDuration(Math.ceil(itraDistanceTmp.toFixed(1) / meta.kmPerDay));
     setElevation(gpx.calcElevation(gpx.tracks[0].points));
   }, [gpx, meta]);
 

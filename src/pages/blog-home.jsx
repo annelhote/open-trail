@@ -1,8 +1,8 @@
-import { Breadcrumbs, Link, Typography } from '@mui/material';
+import { Box, Breadcrumbs, Link, Typography } from '@mui/material';
 
 const BlogHome = () => {
   return (
-    <>
+    <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
       <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
         <Link underline="hover" color="inherit" href="#">
           Open Trails
@@ -33,7 +33,7 @@ const BlogHome = () => {
           </li>
         </ul>
       </div>
-    </>
+    </Box>
   );
 };
 

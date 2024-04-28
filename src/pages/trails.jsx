@@ -1,10 +1,10 @@
-import { Breadcrumbs, Link, Typography } from "@mui/material";
+import { Box, Breadcrumbs, Link, Typography } from "@mui/material";
 
 import data from "../data/data.json";
 
 const Trails = () => {
   return (
-    <>
+    <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
       <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
         <Link underline="hover" color="inherit" href="#">
           Open Trails
@@ -12,8 +12,8 @@ const Trails = () => {
         <Typography>Trails</Typography>
       </Breadcrumbs>
       <div>
-        Outil d'assitance en ligne à la l'organisation de randonnées pédestres
-        ou cyclo sur plusieurs jours
+        Outil d'assitance en ligne à l'organisation de randonnées pédestres
+        ou cyclistes longues distances
       </div>
       <div>
         <ul>
@@ -26,7 +26,7 @@ const Trails = () => {
           ))}
         </ul>
       </div>
-    </>
+    </Box>
   );
 };
 
