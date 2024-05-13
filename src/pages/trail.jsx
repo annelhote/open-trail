@@ -5,20 +5,24 @@ import {
   AccordionSummary,
   Box,
   Breadcrumbs,
+  FormControl,
+  FormControlLabel,
   Grid,
   Link,
+  Radio,
+  RadioGroup,
   Typography,
 } from "@mui/material";
 import gpxParser from "gpxparser";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import Filters from "../components/filters";
 import MyMap from "../components/map";
 import Overview from "../components/overview";
 import Planner from "../components/planner";
 import Profile from "../components/profile";
-import Stages from "../components/stages";
+import Stage from "../components/stage";
 import gpxCheminDassise from "../data/chemin-d-assise-01.gpx";
 import gpxGr38 from "../data/gr38.gpx";
 import gpxLaChapelleEnVercorsLePoet from "../data/la-chapelle-en-vercors-le-poet.gpx";
@@ -30,6 +34,7 @@ import {
   chunkArray,
   downSampleArray,
   getClosestPointByCoordinates,
+  getClosestPointIndexByDistance,
   getDataFromOverpass,
   getMarkerFromType,
   getTypeFromName,
@@ -37,11 +42,15 @@ import {
 } from "../utils";
 
 const Trail = () => {
+  const navigate = useNavigate();
   const params = useParams();
 
   const [coordinates, setCoordinates] = useState();
+  const [days, setDays] = useState([]);
   const [filters, setFilters] = useState({});
   const [gpx, setGpx] = useState();
+  const [gpxComplete, setGpxComplete] = useState();
+  const [gpxs, setGpxs] = useState();
   const [markers, setMarkers] = useState([]);
   const [meta, setMeta] = useState(data?.[params?.id] ?? {});
   const [selectedFilters, setSelectedFilters] = useState([]);
@@ -84,99 +93,129 @@ const Trail = () => {
         let newGpx = new gpxParser();
         newGpx.parse(xml);
         newGpx = overloadGpx(newGpx);
-        setGpx(newGpx);
+        // Calculate days
+        const duration = Math.ceil(
+          newGpx.tracks[0].distance.totalItra / 1000 / meta.kmPerDay
+        );
+        const days = [...Array(duration).keys()].map((day) => day + 1);
+        setDays(days);
+        // Determinates each day
+        const cumulDistances = [0, ...newGpx.tracks[0].distance.cumulItra];
+        const gpxs = days.map((day) => {
+          const startPointIndex = getClosestPointIndexByDistance({
+            cumulDistances,
+            distance: meta.kmPerDay * 1000 * (day - 1),
+          });
+          const endPointIndex = getClosestPointIndexByDistance({
+            cumulDistances,
+            distance: meta.kmPerDay * 1000 * day,
+          });
+          const trkpts = newGpx.tracks[0].points
+            .slice(startPointIndex, endPointIndex + 1)
+            .map(
+              (point) =>
+                `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`
+            );
+          let partGpx = new gpxParser();
+          partGpx.parse(
+            `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`
+          );
+          partGpx = overloadGpx(partGpx);
+          return partGpx;
+        });
+        setGpxs(gpxs);
+        setGpxComplete(newGpx);
+
+        // Load markers
+        const coordinatesDataCount = newGpx.tracks[0].points.length;
+        const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
+        const pathSamplingPeriod = Math.floor(
+          coordinatesDataCount / targetPathDataCount
+        );
+        const downSampledCoordinates = downSampleArray(
+          newGpx.tracks[0].points,
+          pathSamplingPeriod
+        );
+        let chunks = chunkArray(downSampledCoordinates, 20);
+        chunks = chunks.map((chunk) =>
+          chunk.map((item) => [item.lat, item.lon]).flat()
+        );
+
+        Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
+          .then((responses) => {
+            const response = responses
+              .map((response) => response.data.elements)
+              .flat();
+            let markersTmp = response.map((item) => {
+              const type =
+                item?.tags?.amenity ??
+                item?.tags?.landuse ??
+                item?.tags?.shop ??
+                item?.tags?.tourism ??
+                "";
+              return {
+                addrHousenumber: item?.tags?.["addr:housenumber"],
+                addrStreet: item?.tags?.["addr:street"],
+                email: item?.tags?.email,
+                id: item?.id,
+                lat: item?.lat ?? item?.center?.lat,
+                lon: item?.lon ?? item?.center?.lon,
+                name: item?.tags?.name,
+                note: item?.tags?.note,
+                osmType: item?.type,
+                phone:
+                  item?.tags?.phone?.replace(/ /g, "") ??
+                  item?.tags?.["contact:phone"]?.replace(/ /g, ""),
+                type,
+                website: item?.tags?.website,
+                ...getMarkerFromType(type),
+              };
+            });
+            // Add custom markers
+            const customMarkers = (meta?.markers ?? []).map((marker) => ({
+              ...marker,
+              ...getMarkerFromType(marker.type),
+            }));
+            // Add markers from GPX
+            const gpxMarkers = (newGpx?.waypoints ?? []).map((marker) => ({
+              ...marker,
+              ...getMarkerFromType(
+                marker?.type ?? getTypeFromName(marker.name)
+              ),
+            }));
+            markersTmp = [...markersTmp, ...customMarkers, ...gpxMarkers];
+            // Remove duplicates based on lat,lon
+            markersTmp = [
+              ...new Map(
+                markersTmp.map((value) => [`${value.lat},${value.lon}`, value])
+              ).values(),
+            ];
+            // Add distance from start
+            markersTmp = markersTmp.map((marker) => {
+              const closestPoint = getClosestPointByCoordinates({
+                coordinates: marker,
+                gpx: newGpx,
+              });
+              const distance = (
+                newGpx.calcDistanceBetween(marker, closestPoint.point) +
+                cumulDistances[closestPoint.index] / 1000
+              ).toFixed(1);
+              // TODO calculate distance ITRA instead
+              return { distance, ...marker };
+            });
+            newGpx.waypoints = markersTmp;
+            setMarkers(markersTmp);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
       })
       .catch((e) => console.error(e));
-  }, [meta?.gpx]);
+  }, [meta?.gpx, meta.kmPerDay, meta?.markers]);
 
   useEffect(() => {
-    if (gpx) {
-      const cumulDistances = [
-        0,
-        ...gpx.calculDistance(gpx.tracks[0].points).cumul.slice(0, -1),
-      ];
-      const coordinatesDataCount = gpx.tracks[0].points.length;
-      const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
-      const pathSamplingPeriod = Math.floor(
-        coordinatesDataCount / targetPathDataCount
-      );
-      const downSampledCoordinates = downSampleArray(
-        gpx.tracks[0].points,
-        pathSamplingPeriod
-      );
-      let chunks = chunkArray(downSampledCoordinates, 20);
-      chunks = chunks.map((chunk) =>
-        chunk.map((item) => [item.lat, item.lon]).flat()
-      );
-
-      Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
-        .then((responses) => {
-          const response = responses
-            .map((response) => response.data.elements)
-            .flat();
-          let markersTmp = response.map((item) => {
-            const type =
-              item?.tags?.amenity ??
-              item?.tags?.landuse ??
-              item?.tags?.shop ??
-              item?.tags?.tourism ??
-              "";
-            return {
-              addrHousenumber: item?.tags?.["addr:housenumber"],
-              addrStreet: item?.tags?.["addr:street"],
-              email: item?.tags?.email,
-              id: item?.id,
-              lat: item?.lat ?? item?.center?.lat,
-              lon: item?.lon ?? item?.center?.lon,
-              name: item?.tags?.name,
-              note: item?.tags?.note,
-              osmType: item?.type,
-              phone:
-                item?.tags?.phone?.replace(/ /g, "") ??
-                item?.tags?.["contact:phone"]?.replace(/ /g, ""),
-              type,
-              website: item?.tags?.website,
-              ...getMarkerFromType(type),
-            };
-          });
-          // Add custom markers
-          const customMarkers = (meta?.markers ?? []).map((marker) => ({
-            ...marker,
-            ...getMarkerFromType(marker.type),
-          }));
-          // Add markers from GPX file
-          const gpxMarkers = (gpx?.waypoints ?? []).map((marker) => ({
-            ...marker,
-            ...getMarkerFromType(marker?.type ?? getTypeFromName(marker.name)),
-          }));
-          markersTmp = [...markersTmp, ...customMarkers, ...gpxMarkers];
-          // Remove duplicates based on lat,lon
-          markersTmp = [
-            ...new Map(
-              markersTmp.map((v) => [`${v.lat},${v.lon}`, v])
-            ).values(),
-          ];
-          // Add distance from start
-          markersTmp = markersTmp.map((marker) => {
-            const closestPoint = getClosestPointByCoordinates({
-              coordinates: marker,
-              gpx,
-            });
-            const distance = (
-              gpx.calcDistanceBetween(marker, closestPoint.point) +
-              cumulDistances[closestPoint.index] / 1000
-            ).toFixed(1);
-            // TODO calculate distance ITRA
-            return { distance, ...marker };
-          });
-          setMarkers(markersTmp);
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [gpx]);
+    setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
+  }, [gpxComplete, gpxs, params.day]);
 
   useEffect(() => {
     const filtersTmp = {};
@@ -250,14 +289,51 @@ const Trail = () => {
                     Carte
                   </AccordionSummary>
                   <AccordionDetails>
-                    <MyMap
-                      gpx={gpx}
-                      coordinates={coordinates}
-                      markers={markers}
-                      meta={meta}
-                      selectedFilters={selectedFilters}
-                      setCoordinates={setCoordinates}
-                    />
+                    <Grid container spacing={2}>
+                      <Grid item xs={12} md={7}>
+                        <MyMap
+                          coordinates={coordinates}
+                          gpx={gpx}
+                          markers={markers}
+                          meta={meta}
+                          selectedFilters={selectedFilters}
+                          setCoordinates={setCoordinates}
+                        />
+                      </Grid>
+                      <Grid item xs={12} md={5}>
+                        <FormControl>
+                          <RadioGroup
+                            aria-labelledby="radio-buttons-group-label-day"
+                            defaultValue="all"
+                            name="radio-buttons-group-day"
+                            onChange={(e) =>
+                              e.target.value === "all"
+                                ? navigate(`/trails/${params.id}`)
+                                : navigate(
+                                    `/trails/${params.id}/${e.target.value}`
+                                  )
+                            }
+                            value={params?.day ?? "all"}
+                          >
+                            <FormControlLabel
+                              value="all"
+                              control={<Radio />}
+                              key="day-all"
+                              label="Tous"
+                            />
+                            {days &&
+                              days.map((day) => (
+                                <FormControlLabel
+                                  value={day}
+                                  control={<Radio />}
+                                  key={`day-${day}`}
+                                  label={`Jour ${day}`}
+                                />
+                              ))}
+                          </RadioGroup>
+                        </FormControl>
+                      </Grid>
+                    </Grid>
                   </AccordionDetails>
                 </Accordion>
                 <Accordion>
@@ -298,7 +374,16 @@ const Trail = () => {
                     Etapes
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Stages gpx={gpx} markers={markers} meta={meta} />
+                    {days &&
+                      days.map((day, index) => (
+                        <Stage
+                          day={day}
+                          gpx={gpxs[index]}
+                          key={index}
+                          markers={markers}
+                          meta={meta}
+                        />
+                      ))}
                   </AccordionDetails>
                 </Accordion>
               </Grid>

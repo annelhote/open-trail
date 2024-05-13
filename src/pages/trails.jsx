@@ -13,7 +13,7 @@ const Trails = () => {
       </Breadcrumbs>
       <div>
         Outil d'assitance en ligne à l'organisation de randonnées pédestres
-        ou cyclistes longues distances
+        ou cyclistes longues distances.
       </div>
       <div>
         <ul>

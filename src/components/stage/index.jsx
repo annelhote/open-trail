@@ -1,6 +1,6 @@
 import { Card, CardContent, Grid, Link } from "@mui/material";
 
-import { getClosestPointIndexByDistance, getITRADistance } from "../../utils";
+import { getITRADistance } from "../../utils";
 
 const Stage = ({ day, gpx, markers, meta }) => {
   const points = gpx.tracks[0].points;
@@ -18,24 +18,10 @@ const Stage = ({ day, gpx, markers, meta }) => {
     return closestMarkersByCategory;
   };
 
-  const startPointIndex = getClosestPointIndexByDistance({
-    cumulDistances,
-    distance: meta.kmPerDay * 1000 * day,
-  });
-  const startPoint = points[startPointIndex];
-  const startPointDistance = cumulDistances[startPointIndex] / 1000;
-  const endPointIndex = getClosestPointIndexByDistance({
-    cumulDistances,
-    distance: meta.kmPerDay * 1000 * (day + 1),
-  });
-  const endPoint = points[endPointIndex];
-  const endPointDistance = cumulDistances[endPointIndex] / 1000;
-  const distance =
-    gpx.calculDistance(points.slice(startPointIndex, endPointIndex + 1)).total /
-    1000;
-  const elevation = gpx.calcElevation(
-    points.slice(startPointIndex, endPointIndex + 1)
-  );
+  const startPointDistance = cumulDistances[0] / 1000;
+  const endPointDistance = cumulDistances[cumulDistances.length - 1] / 1000;
+  const distance = gpx.calculDistance(points).total / 1000;
+  const elevation = gpx.calcElevation(points);
 
   return (
     <>
@@ -44,10 +30,10 @@ const Stage = ({ day, gpx, markers, meta }) => {
           <CardContent>
             <h3 key="day">Jour {day + 1}</h3>
             <div>
-              <b>Point de départ:</b> {startPoint.lat},{startPoint.lon}
+              <b>Point de départ:</b> {points[0].lat},{points[0].lon}
             </div>
             <div>
-              <b>Point d'arrivée:</b> {endPoint.lat},{endPoint.lon}
+              <b>Point d'arrivée:</b> {points[points.length - 1].lat},{points[points.length - 1].lon}
             </div>
             <div>
               <b>Distance:</b> {distance.toFixed(1)} km
@@ -74,7 +60,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
                   {getClosestMarkersByCategory({
                     category: "alimentation",
                     gpx,
-                    point: endPoint,
+                    point: points[points.length - 1],
                   }).map((accomodation, index) => (
                     <li key={`food-${index}`}>
                       <>
@@ -118,7 +104,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
                 {getClosestMarkersByCategory({
                   category: "hébergement",
                   gpx,
-                  point: endPoint,
+                  point: points[points.length - 1],
                 }).map((accomodation, index) => (
                   <li key={`accomodation-${index}`}>
                     <>
@@ -162,7 +148,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
                   {getClosestMarkersByCategory({
                     category: "alimentation",
                     gpx,
-                    point: startPoint,
+                    point: points[0],
                   }).map((accomodation, index) => (
                     <li key={`food-${index}`}>
                       <>

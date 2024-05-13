@@ -10,7 +10,6 @@ import ErrorPage from './pages/error-page';
 import Home from './pages/home';
 import Trail from './pages/trail';
 import Trails from './pages/trails';
-import Step from './pages/step';
 
 import './index.scss';
 
@@ -36,13 +35,8 @@ const router = createHashRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: '/trails/:id',
+    path: '/trails/:id/:day?',
     element: <Trail />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: '/trails/:id/step/:step',
-    element: <Step />,
     errorElement: <ErrorPage />,
   }
 ]);

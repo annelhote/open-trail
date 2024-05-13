@@ -1,5 +1,7 @@
 # Open Trail
 
+Outil d'assitance en ligne à l'organisation de randonnées pédestres ou cyclistes longues distances.
+
 ## A ouvrir
 
 1. RoadMap ?
@@ -54,7 +56,7 @@ Quelle machine à coudre ?
 ## Services
 
 Planificateur de périple // Retro planning
-Que mettre dans son sac à dos (avec plusieurs niveaux de poids / confort, nombre de jours de marche)
+Que mettre dans son sac à dos (avec plusieurs niveaux de poids / confort, nombre de jours de marche, saison)
 wordpress2book
 Catalogue de randonnées avec recherche par durée, région, niveau de difficulté, dénivelé ...
 
