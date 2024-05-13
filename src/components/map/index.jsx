@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import gpxParser from "gpxparser";
 import maplibregl from "maplibre-gl";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   default as ReactMapGL,
   FullscreenControl,
@@ -45,6 +45,8 @@ const Map = ({
   selectedFilters,
   setCoordinates,
 }) => {
+  const mapRef = useRef();
+
   const [gpxs, setGpxs] = useState([]);
   const [selectedMarker, setSelectedMarker] = useState();
 
@@ -83,6 +85,9 @@ const Map = ({
       return newGpx;
     });
     setGpxs(gpxsTmp);
+    if (mapRef && mapRef.current) {
+      mapRef.current.fitBounds(gpx.tracks[0].bounds);
+    }
   }, [gpx, meta.kmPerDay]);
 
   return (
@@ -97,6 +102,7 @@ const Map = ({
         onMouseEnter={(e) =>
           setCoordinates({ lat: e.lngLat.lat, lon: e.lngLat.lng })
         }
+        ref={mapRef}
       >
         {gpxs.map((gpx, index) => (
           <Source data={gpx.toGeoJSON()} key={`gpx-${index}`} type="geojson">

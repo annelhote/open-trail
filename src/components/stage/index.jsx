@@ -2,7 +2,7 @@ import { Card, CardContent, Grid, Link } from "@mui/material";
 
 import { getITRADistance } from "../../utils";
 
-const Stage = ({ day, gpx, markers, meta }) => {
+const Stage = ({ day, gpx, markers }) => {
   const points = gpx.tracks[0].points;
   const cumulDistances = [0, ...gpx.tracks[0].distance.cumulItra];
 

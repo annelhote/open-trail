@@ -381,7 +381,6 @@ const Trail = () => {
                           gpx={gpxs[index]}
                           key={index}
                           markers={markers}
-                          meta={meta}
                         />
                       ))}
                   </AccordionDetails>
