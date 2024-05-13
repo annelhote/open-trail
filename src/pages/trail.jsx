@@ -253,7 +253,20 @@ const Trail = () => {
                 <Link underline="hover" color="inherit" href="#/trails">
                   Trails
                 </Link>
-                <Typography>{meta.name}</Typography>
+                {params?.day && (
+                  <Link
+                    underline="hover"
+                    color="inherit"
+                    href={`#/trails/${meta.id}`}
+                  >
+                    {meta.name}
+                  </Link>
+                )}
+                {params?.day ? (
+                  <Typography>Jour {params?.day}</Typography>
+                ) : (
+                  <Typography>{meta.name}</Typography>
+                )}
               </Breadcrumbs>
             </Grid>
             <Overview gpx={gpx} meta={meta} setMeta={setMeta} />

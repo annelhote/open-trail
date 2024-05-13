@@ -12,16 +12,14 @@ const Trails = () => {
         <Typography>Trails</Typography>
       </Breadcrumbs>
       <div>
-        Outil d'assitance en ligne à l'organisation de randonnées pédestres
-        ou cyclistes longues distances.
+        Outil d'assitance en ligne à l'organisation de randonnées pédestres ou
+        cyclistes longues distances.
       </div>
       <div>
         <ul>
           {Object.keys(data).map((trail) => (
             <li key={trail}>
-              <Link href={`#/trails/${trail}`}>
-                {data[trail].name}
-              </Link>
+              <Link href={`#/trails/${trail}`}>{data[trail].name}</Link>
             </li>
           ))}
         </ul>

@@ -1,7 +1,7 @@
-import { Box, Breadcrumbs, Link, Typography } from '@mui/material';
-import { useEffect, useState } from 'react';
-import ReactMarkdown from 'react-markdown';
-import { useParams } from 'react-router-dom';
+import { Box, Breadcrumbs, Link, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import { useParams } from "react-router-dom";
 
 const Blog = () => {
   const params = useParams();
@@ -15,7 +15,7 @@ const Blog = () => {
         .then((response) => response.text())
         .then((text) => {
           setMarkdown(text);
-          setTitle(text.match(/(?<=(^#)\s).*/g)[0])
+          setTitle(text.match(/(?<=(^#)\s).*/g)[0]);
         });
     });
   }, [params.id]);
@@ -23,27 +23,15 @@ const Blog = () => {
   return (
     <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
       <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
-        <Link
-          color="inherit"
-          href="#"
-          underline="hover"
-        >
+        <Link color="inherit" href="#" underline="hover">
           Open Trails
         </Link>
-        <Link
-          color="inherit"
-          href="#/blog"
-          underline="hover"
-        >
+        <Link color="inherit" href="#/blog" underline="hover">
           Blog
         </Link>
-        <Typography>
-          {title}
-        </Typography>
+        <Typography>{title}</Typography>
       </Breadcrumbs>
-      <ReactMarkdown>
-        {markdown}
-      </ReactMarkdown>
+      <ReactMarkdown>{markdown}</ReactMarkdown>
     </Box>
   );
 };

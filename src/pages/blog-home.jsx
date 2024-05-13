@@ -1,4 +1,4 @@
-import { Box, Breadcrumbs, Link, Typography } from '@mui/material';
+import { Box, Breadcrumbs, Link, Typography } from "@mui/material";
 
 const BlogHome = () => {
   return (
