@@ -28,18 +28,19 @@ const Stage = ({ day, gpx, markers }) => {
       <Grid className="stage" item xs={12} key={day}>
         <Card sx={{ minWidth: 275 }}>
           <CardContent>
-            <h3 key="day">Jour {day + 1}</h3>
+            <h3 key="day">Jour {day}</h3>
             <div>
               <b>Point de départ:</b> {points[0].lat},{points[0].lon}
             </div>
             <div>
-              <b>Point d'arrivée:</b> {points[points.length - 1].lat},{points[points.length - 1].lon}
+              <b>Point d'arrivée:</b> {points[points.length - 1].lat},
+              {points[points.length - 1].lon}
             </div>
             <div>
               <b>Distance:</b> {distance.toFixed(1)} km
             </div>
             <div>
-              <b>Distance ressentie (aka ITRA):</b>{" "}
+              <b>Distance ITRA:</b>{" "}
               {getITRADistance({ distance, elevation: elevation.pos }).toFixed(
                 1
               )}{" "}

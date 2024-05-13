@@ -358,7 +358,10 @@ const Trail = () => {
                     Profile
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Profile gpx={gpx} coordinates={coordinates} />
+                    <Profile
+                      coordinates={coordinates}
+                      gpx={params?.day ? gpxs?.[params.day - 1] : gpxComplete}
+                    />
                   </AccordionDetails>
                 </Accordion>
                 <Accordion>
@@ -371,7 +374,7 @@ const Trail = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Planner
-                      gpx={gpx}
+                      gpx={params?.day ? gpxs?.[params.day - 1] : gpxComplete}
                       markers={markers}
                       meta={meta}
                       selectedFilters={selectedFilters}
@@ -387,7 +390,13 @@ const Trail = () => {
                     Etapes
                   </AccordionSummary>
                   <AccordionDetails>
-                    {days &&
+                    {params?.day ? (
+                      <Stage
+                        day={params.day}
+                        gpx={gpxs?.[params.day - 1]}
+                        markers={markers}
+                      />
+                    ) : (
                       days.map((day, index) => (
                         <Stage
                           day={day}
@@ -395,7 +404,8 @@ const Trail = () => {
                           key={index}
                           markers={markers}
                         />
-                      ))}
+                      ))
+                    )}
                   </AccordionDetails>
                 </Accordion>
               </Grid>

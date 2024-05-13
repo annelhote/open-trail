@@ -1,9 +1,15 @@
-import { faArrowDown, faArrowUp, faFileArrowDown, faStopwatch, faUpRightAndDownLeftFromCenter } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Box, Button, Grid, Stack, TextField } from '@mui/material';
-import { useEffect, useState } from 'react';
+import {
+  faArrowDown,
+  faArrowUp,
+  faFileArrowDown,
+  faStopwatch,
+  faUpRightAndDownLeftFromCenter,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Box, Button, Grid, Stack, TextField } from "@mui/material";
+import { useEffect, useState } from "react";
 
-import { downloadGpx } from '../../utils';
+import { downloadGpx } from "../../utils";
 
 const Overview = ({ gpx, meta, setMeta }) => {
   const [distance, setDistance] = useState(0);
@@ -14,65 +20,134 @@ const Overview = ({ gpx, meta, setMeta }) => {
   useEffect(() => {
     const itraDistanceTmp = gpx.tracks[0].distance.totalItra / 1000;
     setDistance(Math.round(gpx.tracks[0].distance.total / 1000));
-    setItraDistance(Math.round(itraDistanceTmp))
+    setItraDistance(Math.round(itraDistanceTmp));
     setDuration(Math.ceil(itraDistanceTmp.toFixed(1) / meta.kmPerDay));
     setElevation(gpx.calcElevation(gpx.tracks[0].points));
   }, [gpx, meta]);
 
   return (
-    <Grid className='overview' container item>
+    <Grid className="overview" container item>
       <Grid item>
-        <h2>
-          {meta.name}
-        </h2>
+        <h2>{meta.name}</h2>
       </Grid>
       <Grid container item>
         <Grid item xs={12} sm={1}>
-          <Stack sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-            <FontAwesomeIcon icon={faUpRightAndDownLeftFromCenter} className='fa-rotate-by' style={{ '--fa-rotate-angle': '45deg' }} />
-            <Stack direction='row' sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-              <Box sx={{ pr: 0.5 }}><b>{distance}</b></Box> km
+          <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
+            <FontAwesomeIcon
+              icon={faUpRightAndDownLeftFromCenter}
+              className="fa-rotate-by"
+              style={{ "--fa-rotate-angle": "45deg" }}
+            />
+            <Stack
+              direction="row"
+              sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+            >
+              <Box sx={{ pr: 0.5 }}>
+                <b>{distance}</b>
+              </Box>{" "}
+              km
             </Stack>
           </Stack>
         </Grid>
         <Grid item xs={12} sm={1}>
-          <Stack sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-            <FontAwesomeIcon icon={faUpRightAndDownLeftFromCenter} className='fa-rotate-by' style={{ '--fa-rotate-angle': '45deg' }} />
-            <Stack direction='row' sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-              <Box sx={{ pr: 0.5 }}><b>{itraDistance.toFixed(0)}</b></Box> km
+          <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
+            <FontAwesomeIcon
+              icon={faUpRightAndDownLeftFromCenter}
+              className="fa-rotate-by"
+              style={{ "--fa-rotate-angle": "45deg" }}
+            />
+            <Stack
+              direction="row"
+              sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+            >
+              <Box sx={{ pr: 0.5 }}>
+                <b>{itraDistance.toFixed(0)}</b>
+              </Box>{" "}
+              km
             </Stack>
           </Stack>
         </Grid>
-        <Grid item xs={12} sm={1} sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-          <Stack sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-            <FontAwesomeIcon icon={faArrowUp} className='fa-rotate-by' style={{ '--fa-rotate-angle': '45deg' }} />
-            <Stack direction='row' sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-              <Box sx={{ pr: 0.5 }}><b>{elevation.pos.toFixed(0)}</b></Box> m D+
+        <Grid
+          item
+          xs={12}
+          sm={1}
+          sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+        >
+          <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
+            <FontAwesomeIcon
+              icon={faArrowUp}
+              className="fa-rotate-by"
+              style={{ "--fa-rotate-angle": "45deg" }}
+            />
+            <Stack
+              direction="row"
+              sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+            >
+              <Box sx={{ pr: 0.5 }}>
+                <b>{elevation.pos.toFixed(0)}</b>
+              </Box>{" "}
+              m D+
             </Stack>
           </Stack>
         </Grid>
-        <Grid item xs={12} sm={1} sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-          <Stack sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-            <FontAwesomeIcon icon={faArrowDown} className='fa-rotate-by' style={{ '--fa-rotate-angle': '-45deg' }} />
-            <Stack direction='row' sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-              <Box sx={{ pr: 0.5 }}><b>{elevation.neg.toFixed(0)}</b></Box> m D-
+        <Grid
+          item
+          xs={12}
+          sm={1}
+          sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+        >
+          <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="fa-rotate-by"
+              style={{ "--fa-rotate-angle": "-45deg" }}
+            />
+            <Stack
+              direction="row"
+              sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+            >
+              <Box sx={{ pr: 0.5 }}>
+                <b>{elevation.neg.toFixed(0)}</b>
+              </Box>{" "}
+              m D-
             </Stack>
           </Stack>
         </Grid>
-        <Grid item xs={12} sm={1} sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-          <Stack sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
+        <Grid
+          item
+          xs={12}
+          sm={1}
+          sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+        >
+          <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
             <FontAwesomeIcon icon={faStopwatch} />
-            <Stack direction='row' sx={{ justifyContent: { xs: 'flex-start', sm: 'center' } }}>
-              <Box sx={{ pr: 0.5 }}><b>{duration}</b></Box> {duration > 1 ? 'jours' : 'jour'}
+            <Stack
+              direction="row"
+              sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+            >
+              <Box sx={{ pr: 0.5 }}>
+                <b>{duration}</b>
+              </Box>{" "}
+              {duration > 1 ? "jours" : "jour"}
             </Stack>
           </Stack>
         </Grid>
-        <Grid container item xs={12} sm={true} direction="row" justifyContent="flex-end" spacing={2}>
+        <Grid
+          container
+          item
+          xs={12}
+          sm={true}
+          direction="row"
+          justifyContent="flex-end"
+          spacing={2}
+        >
           <Grid item>
             <TextField
               id="filled-number"
-              label="Kilomètres parcourus par jour (ressentis aka ITRA)"
-              onChange={(event) => setMeta({ ...meta, kmPerDay: event.target.value })}
+              label="Kilomètres parcourus par jour (ITRA)"
+              onChange={(event) =>
+                setMeta({ ...meta, kmPerDay: event.target.value })
+              }
               type="number"
               value={meta.kmPerDay}
               variant="filled"
@@ -80,17 +155,17 @@ const Overview = ({ gpx, meta, setMeta }) => {
           </Grid>
           <Grid item>
             <Button
-              component='label'
+              component="label"
               onClick={() => downloadGpx({ gpx, meta })}
               startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
-              variant='outlined'
+              variant="outlined"
             >
               Download GPX file
             </Button>
           </Grid>
         </Grid>
-      </Grid >
-    </Grid >
+      </Grid>
+    </Grid>
   );
 };
 
