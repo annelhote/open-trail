@@ -126,89 +126,97 @@ const Trail = () => {
         setGpxs(gpxs);
         setGpxComplete(newGpx);
 
-        // Load markers
-        const coordinatesDataCount = newGpx.tracks[0].points.length;
-        const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
-        const pathSamplingPeriod = Math.floor(
-          coordinatesDataCount / targetPathDataCount
-        );
-        const downSampledCoordinates = downSampleArray(
-          newGpx.tracks[0].points,
-          pathSamplingPeriod
-        );
-        let chunks = chunkArray(downSampledCoordinates, 20);
-        chunks = chunks.map((chunk) =>
-          chunk.map((item) => [item.lat, item.lon]).flat()
-        );
+        // Add custom markers
+        const customMarkers = (meta?.markers ?? []).map((marker) => ({
+          ...marker,
+          ...getMarkerFromType(marker.type),
+        }));
+        // Add markers from GPX
+        const gpxMarkers = (newGpx?.waypoints ?? []).map((marker) => ({
+          ...marker,
+          ...getMarkerFromType(marker?.type ?? getTypeFromName(marker.name)),
+        }));
+        let tmp = [...customMarkers, ...gpxMarkers];
+        let count = 0;
+        // Compute markers from OpenStreetMap
+        gpxs.forEach((gpx, index) => {
+          const coordinatesDataCount = gpx.tracks[0].points.length;
+          const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
+          const pathSamplingPeriod = Math.floor(
+            coordinatesDataCount / targetPathDataCount
+          );
+          const downSampledCoordinates = downSampleArray(
+            gpx.tracks[0].points,
+            pathSamplingPeriod
+          );
+          let chunks = chunkArray(downSampledCoordinates, 20);
+          chunks = chunks.map((chunk) =>
+            chunk.map((item) => [item.lat, item.lon]).flat()
+          );
 
-        Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
-          .then((responses) => {
-            const response = responses
-              .map((response) => response.data.elements)
-              .flat();
-            let markersTmp = response.map((item) => {
-              const type =
-                item?.tags?.amenity ??
-                item?.tags?.landuse ??
-                item?.tags?.shop ??
-                item?.tags?.tourism ??
-                "";
-              return {
-                addrHousenumber: item?.tags?.["addr:housenumber"],
-                addrStreet: item?.tags?.["addr:street"],
-                email: item?.tags?.email,
-                id: item?.id,
-                lat: item?.lat ?? item?.center?.lat,
-                lon: item?.lon ?? item?.center?.lon,
-                name: item?.tags?.name,
-                note: item?.tags?.note,
-                osmType: item?.type,
-                phone:
-                  item?.tags?.phone?.replace(/ /g, "") ??
-                  item?.tags?.["contact:phone"]?.replace(/ /g, ""),
-                type,
-                website: item?.tags?.website,
-                ...getMarkerFromType(type),
-              };
-            });
-            // Add custom markers
-            const customMarkers = (meta?.markers ?? []).map((marker) => ({
-              ...marker,
-              ...getMarkerFromType(marker.type),
-            }));
-            // Add markers from GPX
-            const gpxMarkers = (newGpx?.waypoints ?? []).map((marker) => ({
-              ...marker,
-              ...getMarkerFromType(
-                marker?.type ?? getTypeFromName(marker.name)
-              ),
-            }));
-            markersTmp = [...markersTmp, ...customMarkers, ...gpxMarkers];
-            // Remove duplicates based on lat,lon
-            markersTmp = [
-              ...new Map(
-                markersTmp.map((value) => [`${value.lat},${value.lon}`, value])
-              ).values(),
-            ];
-            // Add distance from start
-            markersTmp = markersTmp.map((marker) => {
-              const closestPoint = getClosestPointByCoordinates({
-                coordinates: marker,
-                gpx: newGpx,
+          Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
+            .then((responses) => {
+              const response = responses
+                .map((response) => response.data.elements)
+                .flat();
+              const markersTmp = response.map((item) => {
+                const type =
+                  item?.tags?.amenity ??
+                  item?.tags?.landuse ??
+                  item?.tags?.shop ??
+                  item?.tags?.tourism ??
+                  "";
+                return {
+                  addrHousenumber: item?.tags?.["addr:housenumber"],
+                  addrStreet: item?.tags?.["addr:street"],
+                  day: (index + 1).toString(),
+                  email: item?.tags?.email,
+                  id: item?.id,
+                  lat: item?.lat ?? item?.center?.lat,
+                  lon: item?.lon ?? item?.center?.lon,
+                  name: item?.tags?.name,
+                  note: item?.tags?.note,
+                  osmType: item?.type,
+                  phone:
+                    item?.tags?.phone?.replace(/ /g, "") ??
+                    item?.tags?.["contact:phone"]?.replace(/ /g, ""),
+                  type,
+                  website: item?.tags?.website,
+                  ...getMarkerFromType(type),
+                };
               });
-              const distance = (
-                newGpx.calcDistanceBetween(marker, closestPoint.point) +
-                cumulDistances[closestPoint.index] / 1000
-              ).toFixed(1);
-              // TODO calculate distance ITRA instead
-              return { distance, ...marker };
+              tmp = tmp.concat(markersTmp);
+              count += 1;
+              if (count === gpxs?.length) {
+                // Remove duplicated markers based on lat,lon
+                tmp = [
+                  ...new Map(
+                    tmp.map((value) => [
+                      `${value.lat},${value.lon}`,
+                      value,
+                    ])
+                  ).values(),
+                ];
+                // Add distance from start
+                tmp = tmp.map((marker) => {
+                  const closestPoint = getClosestPointByCoordinates({
+                    coordinates: marker,
+                    gpx: newGpx,
+                  });
+                  // TODO fix distance calculation
+                  const distance = (
+                    newGpx.calcDistanceBetween(marker, closestPoint.point) +
+                    newGpx.tracks[0].distance.cumulItra[closestPoint.index] / 1000
+                  ).toFixed(1);
+                  return { distance, ...marker };
+                });
+                setMarkers(tmp);
+              }
+            })
+            .catch((error) => {
+              console.error(error);
             });
-            newGpx.waypoints = markersTmp;
-            setMarkers(markersTmp);
-          })
-          .catch((error) => {
-            console.error(error);
-          });
+        });
       })
       .catch((e) => console.error(e));
   }, [meta?.gpx, meta.kmPerDay, meta?.markers]);
@@ -246,7 +254,7 @@ const Trail = () => {
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
             <Grid item xs={12}>
-              <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
+              <Breadcrumbs aria-label="breadcrumb" color="color.secondary">
                 <Link underline="hover" color="inherit" href="#">
                   Open Trails
                 </Link>
@@ -374,9 +382,13 @@ const Trail = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Planner
-                      gpx={params?.day ? gpxs?.[params.day - 1] : gpxComplete}
-                      markers={markers}
-                      meta={meta}
+                      markers={
+                        params?.day
+                          ? markers.filter(
+                              (marker) => marker.day === params?.day
+                            )
+                          : markers
+                      }
                       selectedFilters={selectedFilters}
                     />
                   </AccordionDetails>

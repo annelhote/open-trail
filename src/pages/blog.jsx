@@ -22,7 +22,7 @@ const Blog = () => {
 
   return (
     <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
-      <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
+      <Breadcrumbs aria-label="breadcrumb" color="color.secondary">
         <Link color="inherit" href="#" underline="hover">
           Open Trails
         </Link>

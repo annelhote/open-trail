@@ -5,7 +5,7 @@ import data from "../data/data.json";
 const Trails = () => {
   return (
     <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
-      <Breadcrumbs aria-label="breadcrumb" color="color.scecondary">
+      <Breadcrumbs aria-label="breadcrumb" color="color.secondary">
         <Link underline="hover" color="inherit" href="#">
           Open Trails
         </Link>

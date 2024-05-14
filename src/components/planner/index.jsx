@@ -41,7 +41,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 function Row(props: { row: ReturnType<typeof createData> }) {
-  const { index, marker, meta } = props;
+  const { index, marker } = props;
   const [open, setOpen] = useState(false);
 
   return (
@@ -57,9 +57,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
           </IconButton>
         </StyledTableCell>
         <StyledTableCell align="center">
-          {Math.ceil(marker.distance / meta.kmPerDay) === 0
-            ? 1
-            : Math.ceil(marker.distance / meta.kmPerDay)}
+          {marker.day}
         </StyledTableCell>
         <StyledTableCell>{marker.name}</StyledTableCell>
         <StyledTableCell>km {marker.distance}</StyledTableCell>
@@ -122,40 +120,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
   );
 }
 
-const Planner = ({ gpx, markers, meta, selectedFilters }) => {
-  const points = gpx.tracks[0].points;
-  // TODO: Remove it ?
-  const cumulDistances = [
-    0,
-    ...gpx.calculDistance(gpx.tracks[0].points).cumul.slice(0, -1),
-  ];
-  const data = cumulDistances.map((item, index) => ({
-    distance: Math.floor(item / 1000),
-    elevation: points[index].ele,
-  }));
-
-  markers = markers
-    .map((marker) => {
-      const closestPoint = points.reduce(
-        (accumulator, currentValue, index) =>
-          gpx.calcDistanceBetween(currentValue, marker) < accumulator.distance
-            ? {
-                distance: gpx.calcDistanceBetween(currentValue, marker),
-                point: currentValue,
-                index,
-              }
-            : accumulator,
-        {
-          distance: gpx.tracks[0].distance.total,
-          point: points[points.length - 1],
-          index: points.length - 1,
-        }
-      );
-      const redPoint = data[closestPoint.index];
-      return { ...marker, distance: redPoint.distance };
-    })
-    .sort((a, b) => a.distance - b.distance);
-
+const Planner = ({ markers, selectedFilters }) => {
   return (
     <Grid className="planner" container style={{ overflow: "hidden" }}>
       <TableContainer component={Paper} sx={{ maxHeight: 700 }}>
@@ -178,7 +143,7 @@ const Planner = ({ gpx, markers, meta, selectedFilters }) => {
             {markers
               .filter((marker) => selectedFilters.includes(marker.type))
               .map((marker, index) => (
-                <Row index={index} key={index} marker={marker} meta={meta} />
+                <Row index={index} key={index} marker={marker} />
               ))}
           </TableBody>
         </Table>
