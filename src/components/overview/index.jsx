@@ -160,7 +160,7 @@ const Overview = ({ gpx, meta, setMeta }) => {
               startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
               variant="outlined"
             >
-              Download GPX file
+              Télécharger le fichier GPX
             </Button>
           </Grid>
         </Grid>

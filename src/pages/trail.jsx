@@ -191,10 +191,7 @@ const Trail = () => {
                 // Remove duplicated markers based on lat,lon
                 tmp = [
                   ...new Map(
-                    tmp.map((value) => [
-                      `${value.lat},${value.lon}`,
-                      value,
-                    ])
+                    tmp.map((value) => [`${value.lat},${value.lon}`, value])
                   ).values(),
                 ];
                 // Add distance from start
@@ -206,10 +203,12 @@ const Trail = () => {
                   // TODO fix distance calculation
                   const distance = (
                     newGpx.calcDistanceBetween(marker, closestPoint.point) +
-                    newGpx.tracks[0].distance.cumulItra[closestPoint.index] / 1000
+                    newGpx.tracks[0].distance.cumulItra[closestPoint.index] /
+                      1000
                   ).toFixed(1);
                   return { distance, ...marker };
                 });
+                newGpx.waypoints = tmp;
                 setMarkers(tmp);
               }
             })

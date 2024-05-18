@@ -6,10 +6,11 @@ import {
   faHouse,
   faQuestion,
   faRestroom,
-} from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios';
+} from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 
-const capitalize = (string) => !string ? '' : string.charAt(0).toUpperCase() + string.slice(1);
+const capitalize = (string) =>
+  !string ? "" : string.charAt(0).toUpperCase() + string.slice(1);
 
 const chunkArray = (array, chunkSize) => {
   const chunks = [];
@@ -17,14 +18,33 @@ const chunkArray = (array, chunkSize) => {
     chunks.push(array.slice(i, i + chunkSize));
   }
   return chunks;
-}
+};
 
 const downloadGpx = ({ gpx, meta }) => {
-  const link = document.createElement('a');
+  const link = document.createElement("a");
   const source = gpx.xmlSource;
-  // TODO : Append waypoints
-  link.href = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(source)], { type: 'text/csv;charset=utf-8' }));
-  link.setAttribute('download', `${meta.id}.gpx`);
+  const root = source.getElementsByTagName("gpx")[0];
+  for (let i = 0; i < gpx.waypoints.length; i++) {
+    const wpt = gpx.waypoints[i];
+    const node = source.createElementNS("http://www.topografix.com/GPX/1/1", "wpt");
+    node.setAttribute("lat", wpt.lat);
+    node.setAttribute("lon", wpt.lon);
+    const name = source.createElement("name");
+    name.appendChild(source.createTextNode(wpt.label));
+    node.appendChild(name);
+    if (wpt?.name) {
+      const desc = source.createElement("desc");
+      desc.appendChild(source.createTextNode(wpt.name));
+      node.appendChild(desc);
+    }
+    root.appendChild(node);
+  };
+  link.href = URL.createObjectURL(
+    new Blob([new XMLSerializer().serializeToString(source)], {
+      type: "text/csv;charset=utf-8",
+    })
+  );
+  link.setAttribute("download", `${meta.id}.gpx`);
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -32,34 +52,51 @@ const downloadGpx = ({ gpx, meta }) => {
 
 const downSampleArray = (input, period) => {
   if (period < 1 || period % 1 !== 0) {
-    throw new TypeError('Period must be an integer greater than or equal to 1')
+    throw new TypeError("Period must be an integer greater than or equal to 1");
   }
   if (period === 1) {
-    return [...input]
+    return [...input];
   }
-  const output = []
+  const output = [];
   for (let i = 0; i < input.length; i += period) {
-    output.push(input[i])
+    output.push(input[i]);
   }
-  return output
-}
+  return output;
+};
 
 const getClosestPointByCoordinates = ({ coordinates, gpx }) => {
   const points = gpx.tracks[0].points;
   const closestPoint = points.reduce(
-    (accumulator, currentValue, index) => gpx.calcDistanceBetween(currentValue, coordinates) < accumulator.distance ? { distance: gpx.calcDistanceBetween(currentValue, coordinates), point: currentValue, index } : accumulator,
-    { distance: gpx.tracks[0].distance.total, point: points[points.length - 1], index: points.length - 1 },
+    (accumulator, currentValue, index) =>
+      gpx.calcDistanceBetween(currentValue, coordinates) < accumulator.distance
+        ? {
+            distance: gpx.calcDistanceBetween(currentValue, coordinates),
+            point: currentValue,
+            index,
+          }
+        : accumulator,
+    {
+      distance: gpx.tracks[0].distance.total,
+      point: points[points.length - 1],
+      index: points.length - 1,
+    }
   );
   return closestPoint;
-}
+};
 
 const getClosestPointIndexByDistance = ({ cumulDistances, distance }) => {
   const closestDistance = cumulDistances.reduce(
-    (previous, current, index) => Math.abs(distance - current) < Math.abs(distance - previous.distance) ? { distance: current, index } : previous,
-    { distance: cumulDistances[cumulDistances.length - 1], index: cumulDistances.length - 1 }
+    (previous, current, index) =>
+      Math.abs(distance - current) < Math.abs(distance - previous.distance)
+        ? { distance: current, index }
+        : previous,
+    {
+      distance: cumulDistances[cumulDistances.length - 1],
+      index: cumulDistances.length - 1,
+    }
   );
   return closestDistance.index;
-}
+};
 
 const getDataFromOverpass = (bbox) => {
   const query = `
@@ -72,201 +109,210 @@ const getDataFromOverpass = (bbox) => {
     );
     out center;
   `;
-  return axios.get(`https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`);
-}
+  return axios.get(
+    `https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`
+  );
+};
 
 // 100 m of positiv elevation means 1 km of distance
-const getITRADistance = ({ distance, elevation}) => distance + (elevation / 100);
+const getITRADistance = ({ distance, elevation }) => distance + elevation / 100;
 
 const getMarkerFromType = (type) => {
   const types = {
     alpine_hut: {
-      category: 'hébergement',
-      color: '#F3B95F',
+      category: "hébergement",
+      color: "#F3B95F",
       icon: faHouse,
-      label: 'hutte',
+      label: "hutte",
     },
     apartment: {
-      category: 'hébergement',
-      color: '#F3B95F',
+      category: "hébergement",
+      color: "#F3B95F",
       icon: faHouse,
-      label: 'appartement',
+      label: "appartement",
     },
     bar: {
-      category: 'eau',
-      color: '#1993D0',
+      category: "eau",
+      color: "#1993D0",
       icon: faCoffee,
-      label: 'bar',
+      label: "bar",
     },
     cafe: {
-      category: 'sorties',
-      color: '#E26352',
+      category: "sorties",
+      color: "#E26352",
       icon: faChampagneGlasses,
-      label: 'café',
+      label: "café",
     },
     camp_site: {
-      category: 'hébergement',
-      color: '#F3B95F',
+      category: "hébergement",
+      color: "#F3B95F",
       icon: faHouse,
-      label: 'camping',
+      label: "camping",
     },
     chalet: {
-      category: 'hébergement',
-      color: '#F3B95F',
+      category: "hébergement",
+      color: "#F3B95F",
       icon: faHouse,
-      label: 'chalet',
+      label: "chalet",
     },
     cemetery: {
-      category: 'eau',
-      color: '#1993D0',
+      category: "eau",
+      color: "#1993D0",
       icon: faFaucetDrip,
-      label: 'cimetière',
+      label: "cimetière",
     },
     convenience: {
-      category: 'alimentation',
-      color: '#409D44',
+      category: "alimentation",
+      color: "#409D44",
       icon: faCartShopping,
-      label: 'supérette',
+      label: "supérette",
     },
-    'convenience;gas': {
-      category: 'alimentation',
-      color: '#409D44',
+    "convenience;gas": {
+      category: "alimentation",
+      color: "#409D44",
       icon: faCartShopping,
-      label: 'supérette',
+      label: "supérette",
     },
     deli: {
-      category: 'alimentation',
-      color: '#409D44',
+      category: "alimentation",
+      color: "#409D44",
       icon: faCartShopping,
-      label: 'épicerie fine',
+      label: "épicerie fine",
     },
     department_store: {
-      category: 'alimentation',
-      color: '#409D44',
+      category: "alimentation",
+      color: "#409D44",
       icon: faCartShopping,
-      label: 'grand magasin',
+      label: "grand magasin",
     },
     drinking_water: {
-      category: 'eau',
-      color: '#1993D0',
+      category: "eau",
+      color: "#1993D0",
       icon: faFaucetDrip,
-      label: 'eau potable',
+      label: "eau potable",
     },
     food: {
-      category: 'alimentation',
-      color: '#409D44',
+      category: "alimentation",
+      color: "#409D44",
       icon: faCartShopping,
-      label: 'alimentation',
+      label: "alimentation",
     },
     friend: {
-      category: 'hébergement',
-      color: '#F3B95F',
+      category: "hébergement",
+      color: "#F3B95F",
       icon: faHouse,
-      label: 'ami',
+      label: "ami",
     },
     fuel: {
-      category: 'alimentation',
-      color: '#409D44',
+      category: "alimentation",
+      color: "#409D44",
       icon: faCartShopping,
-      label: 'station service',
+      label: "station service",
     },
     general: {
-      category: 'alimentation',
-      color: '#409D44',
+      category: "alimentation",
+      color: "#409D44",
       icon: faCartShopping,
-      label: 'alimentation générale',
+      label: "alimentation générale",
     },
     guest_house: {
-      category: 'hébergement',
-      color: '#F3B95F',
+      category: "hébergement",
+      color: "#F3B95F",
       icon: faHouse,
       label: "maison d'hôtes",
     },
     health_food: {
-      category: 'alimentation',
-      color: '#409D44',
+      category: "alimentation",
+      color: "#409D44",
       icon: faCartShopping,
-      label: 'bien-être',
+      label: "bien-être",
     },
     hostel: {
-      category: 'hébergement',
-      color: '#F3B95F',
+      category: "hébergement",
+      color: "#F3B95F",
       icon: faHouse,
-      label: 'auberge',
+      label: "auberge",
     },
     hotel: {
-      category: 'hébergement',
-      color: '#F3B95F',
+      category: "hébergement",
+      color: "#F3B95F",
       icon: faHouse,
-      label: 'hôtel',
+      label: "hôtel",
     },
     mall: {
-      category: 'alimentation',
-      color: '#409D44',
+      category: "alimentation",
+      color: "#409D44",
       icon: faCartShopping,
-      label: 'centre commercial',
+      label: "centre commercial",
     },
     motel: {
-      category: 'hébergement',
-      color: '#F3B95F',
+      category: "hébergement",
+      color: "#F3B95F",
       icon: faHouse,
-      label: 'motel',
+      label: "motel",
     },
     restaurant: {
-      category: 'sorties',
-      color: '#E26352',
+      category: "sorties",
+      color: "#E26352",
       icon: faChampagneGlasses,
-      label: 'restaurant',
+      label: "restaurant",
     },
     seafood: {
-      category: 'alimentation',
-      color: '#409D44',
+      category: "alimentation",
+      color: "#409D44",
       icon: faCartShopping,
-      label: 'poissonnerie',
+      label: "poissonnerie",
     },
     shelter: {
-      category: 'hébergement',
-      color: '#F3B95F',
+      category: "hébergement",
+      color: "#F3B95F",
       icon: faHouse,
-      label: 'abri',
+      label: "abri",
     },
     supermarket: {
-      category: 'alimentation',
-      color: '#409D44',
+      category: "alimentation",
+      color: "#409D44",
       icon: faCartShopping,
-      label: 'supermarché',
+      label: "supermarché",
     },
     toilets: {
-      category: 'eau',
-      color: '#1993D0',
+      category: "eau",
+      color: "#1993D0",
       icon: faRestroom,
-      label: 'toilettes',
+      label: "toilettes",
     },
     tourism: {
-      category: 'hébergement',
-      color: '#F3B95F',
+      category: "hébergement",
+      color: "#F3B95F",
       icon: faHouse,
-      label: 'tourisme',
+      label: "tourisme",
     },
     water_point: {
-      category: 'eau',
-      color: '#1993D0',
+      category: "eau",
+      color: "#1993D0",
       icon: faFaucetDrip,
       label: "point d'eau",
     },
     wilderness_hut: {
-      category: 'hébergement',
-      color: '#F3B95F',
+      category: "hébergement",
+      color: "#F3B95F",
       icon: faHouse,
-      label: 'cabane en pleine nature',
+      label: "cabane en pleine nature",
+    },
+  };
+  return (
+    types?.[type] ?? {
+      category: "autre",
+      color: "#a9a9a9",
+      icon: faQuestion,
+      label: type,
     }
-  }
-  return types?.[type] ?? { category: 'autre', color: '#a9a9a9', icon: faQuestion, label: type };
-}
+  );
+};
 
 const getTypeFromName = (name) => {
-  return name.toLowerCase().includes('refugio') ? 'hostel' : '';
-}
+  return name.toLowerCase().includes("refugio") ? "hostel" : "";
+};
 
 const overloadGpx = (gpx) => {
   // Compute cumulative positiv elevation and ITRA distance at each point of the Route/Track
@@ -301,9 +347,14 @@ const overloadGpx = (gpx) => {
   gpx.tracks[0].distance.cumulElevation = cumulElevation;
   gpx.tracks[0].distance.totalElevation = elevationValue;
   const boundsMargin = Math.min(maxLon - minLon, maxLat - minLat) / 5;
-  gpx.tracks[0].bounds = [minLon - boundsMargin, minLat - boundsMargin, maxLon + boundsMargin, maxLat + boundsMargin];
+  gpx.tracks[0].bounds = [
+    minLon - boundsMargin,
+    minLat - boundsMargin,
+    maxLon + boundsMargin,
+    maxLat + boundsMargin,
+  ];
   return gpx;
-}
+};
 
 export {
   capitalize,
@@ -317,4 +368,4 @@ export {
   getMarkerFromType,
   getTypeFromName,
   overloadGpx,
-}
+};
