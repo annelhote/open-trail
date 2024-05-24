@@ -36,6 +36,7 @@ import {
   getClosestPointByCoordinates,
   getClosestPointIndexByDistance,
   getDataFromOverpass,
+  getKmPerDayPerActivity,
   getMarkerFromType,
   getTypeFromName,
   overloadGpx,
@@ -64,7 +65,6 @@ const Trail = () => {
     "tour-du-queyras": gpxTourDuQueyras,
   };
   meta.gpx = gpxes[params?.id];
-  meta.kmPerDay = meta?.kmPerDay ?? 25;
 
   const onChange = (event) => {
     const eventName = event.target.name;
@@ -93,6 +93,8 @@ const Trail = () => {
         let newGpx = new gpxParser();
         newGpx.parse(xml);
         newGpx = overloadGpx(newGpx);
+        meta.kmPerDay = getKmPerDayPerActivity(newGpx.tracks[0]?.type ?? 'hiking');
+
         // Calculate days
         const duration = Math.ceil(
           newGpx.tracks[0].distance.totalItra / 1000 / meta.kmPerDay

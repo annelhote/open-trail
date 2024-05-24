@@ -9,6 +9,7 @@ time=34h 53m 20s -->
   creator="BRouter-Web 0.18.1">
   <trk>
     <name>Nantes -&gt; Échalas (677.9km)</name>
+    <type>Cycling</type>
     <trkseg>
       <trkpt lat="47.225372" lon="-1.551499">
         <ele>13.75</ele>

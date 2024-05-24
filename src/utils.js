@@ -117,6 +117,14 @@ const getDataFromOverpass = (bbox) => {
 // 100 m of positiv elevation means 1 km of distance
 const getITRADistance = ({ distance, elevation }) => distance + elevation / 100;
 
+const getKmPerDayPerActivity = (activity) => {
+  const kmPerDayPerActivities = {
+    'cycling': 80,
+    'hiking': 25,
+  };
+  return kmPerDayPerActivities?.[activity.toLowerCase()] ?? 25;
+}
+
 const getMarkerFromType = (type) => {
   const types = {
     alpine_hut: {
@@ -365,6 +373,7 @@ export {
   getClosestPointIndexByDistance,
   getDataFromOverpass,
   getITRADistance,
+  getKmPerDayPerActivity,
   getMarkerFromType,
   getTypeFromName,
   overloadGpx,

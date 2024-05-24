@@ -1,35 +1,28 @@
 {
   "gr38": {
-    "activity": "hiking",
     "id": "gr38",
     "name": "GR38 - Redon -> Gourin"
   },
   "le-poet-sigillat": {
-    "activity": "hiking",
     "id": "le-poet-sigillat",
     "markers": [{ "label": "Arrivée", "lat": 44.3692526, "lon": 5.3170387, "name": "Arrivée", "type": "friend" }],
     "name": "La Chapelle en Vercors -> Le Poët-Sigillat (août 2024)"
   },
   "picos-de-europa": {
-    "activity": "hiking",
     "id": "picos-de-europa",
     "name": "Picos de Europa",
     "website": "https://elanillodepicos.com/"
   },
   "tour-du-queyras": {
-    "activity": "hiking",
     "id": "tour-du-queyras",
     "name": "GR58 - Tour du Queyras"
   },
   "chemin-d-assise": {
-    "activity": "hiking",
     "id": "chemin-d-assise",
     "name": "Chemin d'Assise"
   },
   "nantes-echalas": {
-    "activity": "biking",
     "id": "nantes-echalas",
-    "kmPerDay": 80,
     "name": "Nantes -> Echalas"
   }
 }
