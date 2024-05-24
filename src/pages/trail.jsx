@@ -23,7 +23,7 @@ import Overview from "../components/overview";
 import Planner from "../components/planner";
 import Profile from "../components/profile";
 import Stage from "../components/stage";
-import gpxCheminDassise from "../data/chemin-d-assise-01.gpx";
+import gpxCheminDassise from "../data/chemin-d-assise.gpx";
 import gpxGr38 from "../data/gr38.gpx";
 import gpxLaChapelleEnVercorsLePoet from "../data/la-chapelle-en-vercors-le-poet.gpx";
 import gpxNantesEchalas from "../data/nantes-echalas.gpx";
@@ -56,7 +56,7 @@ const Trail = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
 
   const gpxes = {
-    "chemin-d-assise-01": gpxCheminDassise,
+    "chemin-d-assise": gpxCheminDassise,
     gr38: gpxGr38,
     "le-poet-sigillat": gpxLaChapelleEnVercorsLePoet,
     "nantes-echalas": gpxNantesEchalas,

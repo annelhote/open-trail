@@ -21,9 +21,9 @@
     "id": "tour-du-queyras",
     "name": "GR58 - Tour du Queyras"
   },
-  "chemin-d-assise-01": {
+  "chemin-d-assise": {
     "activity": "hiking",
-    "id": "chemin-d-assise-01",
+    "id": "chemin-d-assise",
     "name": "Chemin d'Assise"
   },
   "nantes-echalas": {
