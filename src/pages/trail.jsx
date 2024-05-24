@@ -220,6 +220,7 @@ const Trail = () => {
         });
       })
       .catch((e) => console.error(e));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [meta?.gpx, meta.kmPerDay, meta?.markers]);
 
   useEffect(() => {
