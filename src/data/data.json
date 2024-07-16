@@ -6,7 +6,8 @@
   "le-poet-sigillat": {
     "id": "le-poet-sigillat",
     "markers": [{ "label": "Arrivée", "lat": 44.3692526, "lon": 5.3170387, "name": "Arrivée", "type": "friend" }],
-    "name": "La Chapelle en Vercors -> Le Poët-Sigillat (août 2024)"
+    "name": "La Chapelle en Vercors -> Le Poët-Sigillat (août 2024)",
+    "startDate": "2024-08-19"
   },
   "picos-de-europa": {
     "id": "picos-de-europa",

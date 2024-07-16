@@ -13,6 +13,7 @@ import {
   RadioGroup,
   Typography,
 } from "@mui/material";
+import dayjs from "dayjs";
 import gpxParser from "gpxparser";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -29,7 +30,7 @@ import gpxLaChapelleEnVercorsLePoet from "../data/la-chapelle-en-vercors-le-poet
 import gpxNantesEchalas from "../data/nantes-echalas.gpx";
 import gpxPicosDeEuropa from "../data/picos-de-europa.gpx";
 import gpxTourDuQueyras from "../data/tour-du-queyras.gpx";
-import data from "../data/data.json";
+import data from '../data/data.json';
 import {
   chunkArray,
   downSampleArray,
@@ -40,7 +41,7 @@ import {
   getMarkerFromType,
   getTypeFromName,
   overloadGpx,
-} from "../utils";
+} from '../utils';
 
 const Trail = () => {
   const navigate = useNavigate();
@@ -65,6 +66,7 @@ const Trail = () => {
     "tour-du-queyras": gpxTourDuQueyras,
   };
   meta.gpx = gpxes[params?.id];
+  meta.startDate = dayjs(meta?.startDate ?? new Date().toISOString().split('T')[0])
 
   const onChange = (event) => {
     const eventName = event.target.name;
@@ -350,7 +352,7 @@ const Trail = () => {
                                   value={day}
                                   control={<Radio />}
                                   key={`day-${day}`}
-                                  label={`Jour ${day}`}
+                                  label={`Jour ${day} - ${meta.startDate.add(day - 1, 'day').format('dddd	DD MMMM')}`}
                                 />
                               ))}
                           </RadioGroup>
@@ -409,6 +411,7 @@ const Trail = () => {
                         day={params.day}
                         gpx={gpxs?.[params.day - 1]}
                         markers={markers}
+                        meta={meta}
                       />
                     ) : (
                       days.map((day, index) => (
@@ -417,6 +420,7 @@ const Trail = () => {
                           gpx={gpxs[index]}
                           key={index}
                           markers={markers}
+                          meta={meta}
                         />
                       ))
                     )}

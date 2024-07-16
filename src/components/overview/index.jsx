@@ -7,6 +7,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, Button, Grid, Stack, TextField } from "@mui/material";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { useEffect, useState } from "react";
 
 import { downloadGpx } from "../../utils";
@@ -145,13 +149,21 @@ const Overview = ({ gpx, meta, setMeta }) => {
             <TextField
               id="filled-number"
               label="Kilomètres parcourus par jour (ITRA)"
-              onChange={(event) =>
-                setMeta({ ...meta, kmPerDay: event.target.value })
-              }
+              onChange={(event) => setMeta({ ...meta, kmPerDay: event.target.value })}
               type="number"
               value={meta.kmPerDay}
               variant="filled"
             />
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DemoContainer components={["DatePicker"]}>
+                <DatePicker
+                  id="start-date"
+                  label="Jour du départ"
+                  onChange={(value) => setMeta({ ...meta, startDate: value })}
+                  value={meta.startDate}
+                />
+              </DemoContainer>
+            </LocalizationProvider>
           </Grid>
           <Grid item>
             <Button

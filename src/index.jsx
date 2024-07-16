@@ -1,5 +1,6 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import dayjs from 'dayjs';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
@@ -12,6 +13,9 @@ import Trail from './pages/trail';
 import Trails from './pages/trails';
 
 import './index.scss';
+import 'dayjs/locale/fr';
+
+dayjs.locale('fr');
 
 const router = createHashRouter([
   {
