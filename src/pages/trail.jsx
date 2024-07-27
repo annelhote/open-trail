@@ -30,7 +30,7 @@ import gpxLaChapelleEnVercorsLePoet from "../data/la-chapelle-en-vercors-le-poet
 import gpxNantesEchalas from "../data/nantes-echalas.gpx";
 import gpxPicosDeEuropa from "../data/picos-de-europa.gpx";
 import gpxTourDuQueyras from "../data/tour-du-queyras.gpx";
-import data from '../data/data.json';
+import data from "../data/data.json";
 import {
   chunkArray,
   downSampleArray,
@@ -41,7 +41,7 @@ import {
   getMarkerFromType,
   getTypeFromName,
   overloadGpx,
-} from '../utils';
+} from "../utils";
 
 const Trail = () => {
   const navigate = useNavigate();
@@ -66,7 +66,9 @@ const Trail = () => {
     "tour-du-queyras": gpxTourDuQueyras,
   };
   meta.gpx = gpxes[params?.id];
-  meta.startDate = dayjs(meta?.startDate ?? new Date().toISOString().split('T')[0])
+  meta.startDate = dayjs(
+    meta?.startDate ?? new Date().toISOString().split("T")[0],
+  );
 
   const onChange = (event) => {
     const eventName = event.target.name;
@@ -77,7 +79,7 @@ const Trail = () => {
         excluded = [...excluded, filters[eventName].data];
       }
       setSelectedFilters(
-        selectedFilters.filter((item) => !excluded.includes(item))
+        selectedFilters.filter((item) => !excluded.includes(item)),
       );
     } else {
       let added = [eventName];
@@ -89,17 +91,20 @@ const Trail = () => {
   };
 
   useEffect(() => {
+    // TODO switch to await
     fetch(meta?.gpx)
       .then((res) => res.text())
       .then((xml) => {
         let newGpx = new gpxParser();
         newGpx.parse(xml);
         newGpx = overloadGpx(newGpx);
-        meta.kmPerDay = getKmPerDayPerActivity(newGpx.tracks[0]?.type ?? 'hiking');
+        meta.kmPerDay = getKmPerDayPerActivity(
+          newGpx.tracks[0]?.type ?? "hiking",
+        );
 
         // Calculate days
         const duration = Math.ceil(
-          newGpx.tracks[0].distance.totalItra / 1000 / meta.kmPerDay
+          newGpx.tracks[0].distance.totalItra / 1000 / meta.kmPerDay,
         );
         const days = [...Array(duration).keys()].map((day) => day + 1);
         setDays(days);
@@ -118,11 +123,11 @@ const Trail = () => {
             .slice(startPointIndex, endPointIndex + 1)
             .map(
               (point) =>
-                `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`
+                `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`,
             );
           let partGpx = new gpxParser();
           partGpx.parse(
-            `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`
+            `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`,
           );
           partGpx = overloadGpx(partGpx);
           return partGpx;
@@ -140,22 +145,22 @@ const Trail = () => {
           ...marker,
           ...getMarkerFromType(marker?.type ?? getTypeFromName(marker.name)),
         }));
-        let tmp = [...customMarkers, ...gpxMarkers];
+        let allMarkers = [...customMarkers, ...gpxMarkers];
         let count = 0;
         // Compute markers from OpenStreetMap
         gpxs.forEach((gpx, index) => {
           const coordinatesDataCount = gpx.tracks[0].points.length;
           const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
           const pathSamplingPeriod = Math.floor(
-            coordinatesDataCount / targetPathDataCount
+            coordinatesDataCount / targetPathDataCount,
           );
           const downSampledCoordinates = downSampleArray(
             gpx.tracks[0].points,
-            pathSamplingPeriod
+            pathSamplingPeriod,
           );
           let chunks = chunkArray(downSampledCoordinates, 20);
           chunks = chunks.map((chunk) =>
-            chunk.map((item) => [item.lat, item.lon]).flat()
+            chunk.map((item) => [item.lat, item.lon]).flat(),
           );
 
           Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
@@ -189,17 +194,20 @@ const Trail = () => {
                   ...getMarkerFromType(type),
                 };
               });
-              tmp = tmp.concat(markersTmp);
+              allMarkers = allMarkers.concat(markersTmp);
               count += 1;
               if (count === gpxs?.length) {
                 // Remove duplicated markers based on lat,lon
-                tmp = [
+                allMarkers = [
                   ...new Map(
-                    tmp.map((value) => [`${value.lat},${value.lon}`, value])
+                    allMarkers.map((value) => [
+                      `${value.lat},${value.lon}`,
+                      value,
+                    ]),
                   ).values(),
                 ];
                 // Add distance from start
-                tmp = tmp.map((marker) => {
+                allMarkers = allMarkers.map((marker) => {
                   const closestPoint = getClosestPointByCoordinates({
                     coordinates: marker,
                     gpx: newGpx,
@@ -212,8 +220,7 @@ const Trail = () => {
                   ).toFixed(1);
                   return { distance, ...marker };
                 });
-                newGpx.waypoints = tmp;
-                setMarkers(tmp);
+                setMarkers(allMarkers);
               }
             })
             .catch((error) => {
@@ -222,7 +229,7 @@ const Trail = () => {
         });
       })
       .catch((e) => console.error(e));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [meta?.gpx, meta.kmPerDay, meta?.markers]);
 
   useEffect(() => {
@@ -335,7 +342,7 @@ const Trail = () => {
                               e.target.value === "all"
                                 ? navigate(`/trails/${params.id}`)
                                 : navigate(
-                                    `/trails/${params.id}/${e.target.value}`
+                                    `/trails/${params.id}/${e.target.value}`,
                                   )
                             }
                             value={params?.day ?? "all"}
@@ -352,7 +359,7 @@ const Trail = () => {
                                   value={day}
                                   control={<Radio />}
                                   key={`day-${day}`}
-                                  label={`Jour ${day} - ${meta.startDate.add(day - 1, 'day').format('dddd	DD MMMM')}`}
+                                  label={`Jour ${day} - ${meta.startDate.add(day - 1, "day").format("dddd	DD MMMM")}`}
                                 />
                               ))}
                           </RadioGroup>
@@ -386,12 +393,13 @@ const Trail = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Planner
+                      gpx={params?.day ? gpxs?.[params.day - 1] : gpxComplete}
                       markers={
                         params?.day
-                          ? markers.filter(
-                              (marker) => marker.day === params?.day
-                            )
-                          : markers
+                          ? markers
+                              .filter((marker) => marker.day === params?.day)
+                              .sort((a, b) => a.day - b.day)
+                          : markers.sort((a, b) => a.distance - b.distance)
                       }
                       selectedFilters={selectedFilters}
                     />

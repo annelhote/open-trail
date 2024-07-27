@@ -3,6 +3,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import {
   Box,
+  Checkbox,
   Collapse,
   Grid,
   IconButton,
@@ -41,12 +42,32 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 function Row(props: { row: ReturnType<typeof createData> }) {
-  const { index, marker } = props;
+  const { handleClick, index, isSelected, marker } = props;
   const [open, setOpen] = useState(false);
+  const isItemSelected = isSelected(marker.id);
+  const labelId = `enhanced-table-checkbox-${index}`;
 
   return (
     <>
-      <StyledTableRow>
+      <StyledTableRow
+        hover
+        onClick={(event) => handleClick(event, marker)}
+        role="checkbox"
+        aria-checked={isItemSelected}
+        tabIndex={-1}
+        key={marker.id}
+        selected={isItemSelected}
+        sx={{ cursor: "pointer" }}
+      >
+        <StyledTableCell padding="checkbox">
+          <Checkbox
+            color="primary"
+            checked={isItemSelected}
+            inputProps={{
+              "aria-labelledby": labelId,
+            }}
+          />
+        </StyledTableCell>
         <StyledTableCell>
           <IconButton
             aria-label="expand row"
@@ -56,9 +77,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </StyledTableCell>
-        <StyledTableCell align="center">
-          {marker.day}
-        </StyledTableCell>
+        <StyledTableCell align="center">{marker.day}</StyledTableCell>
         <StyledTableCell>{marker.name}</StyledTableCell>
         <StyledTableCell>km {marker.distance}</StyledTableCell>
         <StyledTableCell>
@@ -120,7 +139,31 @@ function Row(props: { row: ReturnType<typeof createData> }) {
   );
 }
 
-const Planner = ({ markers, selectedFilters }) => {
+const Planner = ({ gpx, markers, selectedFilters }) => {
+  const [selected, setSelected] = useState([]);
+
+  const handleClick = (event, marker) => {
+    const selectedIndex = selected.map((marker) => marker.id).indexOf(marker.id);
+    let newSelected = [];
+
+    if (selectedIndex === -1) {
+      newSelected = newSelected.concat(selected, marker);
+    } else if (selectedIndex === 0) {
+      newSelected = newSelected.concat(selected.slice(1));
+    } else if (selectedIndex === selected.length - 1) {
+      newSelected = newSelected.concat(selected.slice(0, -1));
+    } else if (selectedIndex > 0) {
+      newSelected = newSelected.concat(
+        selected.slice(0, selectedIndex),
+        selected.slice(selectedIndex + 1),
+      );
+    }
+    setSelected(newSelected);
+    gpx.waypoints = newSelected;
+  };
+
+  const isSelected = (id) => selected.map((marker) => marker.id).indexOf(id) !== -1;
+
   return (
     <Grid className="planner" container style={{ overflow: "hidden" }}>
       <TableContainer component={Paper} sx={{ maxHeight: 700 }}>
@@ -143,7 +186,7 @@ const Planner = ({ markers, selectedFilters }) => {
             {markers
               .filter((marker) => selectedFilters.includes(marker.type))
               .map((marker, index) => (
-                <Row index={index} key={index} marker={marker} />
+                <Row handleClick={handleClick} index={index} isSelected={isSelected} key={index} marker={marker} />
               ))}
           </TableBody>
         </Table>

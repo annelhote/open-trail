@@ -26,23 +26,28 @@ const downloadGpx = ({ gpx, meta }) => {
   const root = source.getElementsByTagName("gpx")[0];
   for (let i = 0; i < gpx.waypoints.length; i++) {
     const wpt = gpx.waypoints[i];
-    const node = source.createElementNS("http://www.topografix.com/GPX/1/1", "wpt");
+    const node = source.createElementNS(
+      "http://www.topografix.com/GPX/1/1",
+      "wpt",
+    );
     node.setAttribute("lat", wpt.lat);
     node.setAttribute("lon", wpt.lon);
-    const name = source.createElement("name");
-    name.appendChild(source.createTextNode(wpt.label));
-    node.appendChild(name);
-    if (wpt?.name) {
+    if ((wpt?.label?.length ?? 0) > 0) {
+      const name = source.createElement("name");
+      name.appendChild(source.createTextNode(wpt.label));
+      node.appendChild(name);
+    }
+    if ((wpt?.name?.length ?? 0) > 0) {
       const desc = source.createElement("desc");
       desc.appendChild(source.createTextNode(wpt.name));
       node.appendChild(desc);
     }
     root.appendChild(node);
-  };
+  }
   link.href = URL.createObjectURL(
     new Blob([new XMLSerializer().serializeToString(source)], {
       type: "text/csv;charset=utf-8",
-    })
+    }),
   );
   link.setAttribute("download", `${meta.id}.gpx`);
   document.body.appendChild(link);
@@ -79,7 +84,7 @@ const getClosestPointByCoordinates = ({ coordinates, gpx }) => {
       distance: gpx.tracks[0].distance.total,
       point: points[points.length - 1],
       index: points.length - 1,
-    }
+    },
   );
   return closestPoint;
 };
@@ -93,7 +98,7 @@ const getClosestPointIndexByDistance = ({ cumulDistances, distance }) => {
     {
       distance: cumulDistances[cumulDistances.length - 1],
       index: cumulDistances.length - 1,
-    }
+    },
   );
   return closestDistance.index;
 };
@@ -109,8 +114,9 @@ const getDataFromOverpass = (bbox) => {
     );
     out center;
   `;
+  // TODO replace by fetch
   return axios.get(
-    `https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`
+    `https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`,
   );
 };
 
@@ -119,11 +125,11 @@ const getITRADistance = ({ distance, elevation }) => distance + elevation / 100;
 
 const getKmPerDayPerActivity = (activity) => {
   const kmPerDayPerActivities = {
-    'cycling': 80,
-    'hiking': 25,
+    cycling: 80,
+    hiking: 25,
   };
   return kmPerDayPerActivities?.[activity.toLowerCase()] ?? 25;
-}
+};
 
 const getMarkerFromType = (type) => {
   const types = {
