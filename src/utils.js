@@ -325,6 +325,7 @@ const getMarkerFromType = (type) => {
 };
 
 const getTypeFromName = (name) => {
+  if (!name) return "";
   return name.toLowerCase().includes("refugio") ? "hostel" : "";
 };
 

@@ -143,7 +143,7 @@ const Trail = () => {
         // Add markers from GPX
         const gpxMarkers = (newGpx?.waypoints ?? []).map((marker) => ({
           ...marker,
-          ...getMarkerFromType(marker?.type ?? getTypeFromName(marker.name)),
+          ...getMarkerFromType(marker?.type ?? getTypeFromName(marker?.name)),
         }));
         let allMarkers = [...customMarkers, ...gpxMarkers];
         let count = 0;
