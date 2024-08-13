@@ -31,6 +31,11 @@ const BlogHome = () => {
               Livres
             </Link>
           </li>
+          <li>
+            <Link underline="hover" color="inherit" href="#/blog/5">
+              Sac à dos
+            </Link>
+          </li>
         </ul>
       </div>
     </Box>

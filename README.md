@@ -149,9 +149,8 @@ Voici ce qu'il y avait dans mon sac à dos en 2017
 - Crème anti-moustique
 - Paire de chaussure Salomon (au total 3 paires de chaussures auront été nécessaire au cours du chemin)
 - Food bag
+- Tongs
 - ...
-
-Filtre à eau
 
 
 - Entraînement physique : préparation à un marathon qui a eu lieu début avril 2017
