@@ -185,6 +185,7 @@ const Trail = () => {
                   lon: item?.lon ?? item?.center?.lon,
                   name: item?.tags?.name,
                   note: item?.tags?.note,
+                  opening_hours: item?.tags?.opening_hours,
                   osmType: item?.type,
                   phone:
                     item?.tags?.phone?.replace(/ /g, "") ??

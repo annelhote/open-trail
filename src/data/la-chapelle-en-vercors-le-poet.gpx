@@ -15,30 +15,6 @@
             <link href="https://gpx.studio"></link>
         </author>
     </metadata>
-    <wpt lat="44.968247" lon="5.416081">
-        <ele>893.5</ele>
-        <name>La Chapelle-en-Vercors</name>
-        <desc>La Chapelle-en-Vercors, 26420, France</desc>
-        <sym> </sym>
-    </wpt>
-    <wpt lat="44.968247" lon="5.416081">
-        <ele>893.5</ele>
-        <desc>La Chapelle-en-Vercors</desc>
-        <name>Lalilou</name>
-        <sym> </sym>
-    </wpt>
-    <wpt lat="44.441823" lon="5.28692">
-        <ele>488.4</ele>
-        <name>26510 Villeperdrix</name>
-        <desc>Villeperdrix, 26510, France</desc>
-        <sym> </sym>
-    </wpt>
-    <wpt lat="44.369523" lon="5.317271">
-        <ele>779.5</ele>
-        <name>Le Poët-Sigillat</name>
-        <desc>Le Poët-Sigillat, 26110, France</desc>
-        <sym> </sym>
-    </wpt>
     <trk>
         <name>La Chapelle-en-Vercors to Belvédère du Col du Rousset</name>
         <type>Hiking</type>
