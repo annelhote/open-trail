@@ -1,0 +1,197 @@
+{
+  "sac à dos": [
+    {
+      "activity": "hiking",
+      "material": "sac à dos"
+    },
+    {
+      "activity": "hiking",
+      "material": "jupe de pluie / sursac"
+    },
+    {
+      "activity": "cycling",
+      "material": "sacoches"
+    }
+  ],
+  "nuit": [
+    {
+      "material": "duvet"
+    },
+    {
+      "material": "pyjama (qui peut être porté pour marcher si besoin)"
+    },
+    {
+      "material": "lampe frontale"
+    },
+    {
+      "material": "tongs"
+    },
+    {
+      "material": "tente"
+    },
+    {
+      "material": "matelas"
+    }
+  ],
+  "manger / boire": [
+    {
+      "material": "couteau / Opinel"
+    },
+    {
+      "material": "fourchette"
+    },
+    {
+      "material": "cuillère (?)"
+    },
+    {
+      "material": "camelbag / gourdes"
+    },
+    {
+      "material": "filtre à eau (?)"
+    },
+    {
+      "material": "food bag / sac d'appoint (?)"
+    },
+    {
+      "material": "snacks (barres de céréales, fruits secs, pompot ...)"
+    },
+    {
+      "material": "réchaud + briquet + bouteille de gaz (?)"
+    },
+    {
+      "material": "popote / pot (?)"
+    },
+    {
+      "material": "gobelet (?)"
+    },
+    {
+      "material": "café ou thé (?)"
+    },
+    {
+      "material": "sac / ziplock poubelle (?)"
+    }
+  ],
+  "tech": [
+    {
+      "material": "téléphone"
+    },
+    {
+      "material": "câbles (micro-USB et USB-C) et prise"
+    },
+    {
+      "material": "batterie externe"
+    },
+    {
+      "material": "livre / liseuse (?)"
+    },
+    {
+      "material": "carte d'identité"
+    },
+    {
+      "material": "carte bleue"
+    },
+    {
+      "material": "lecteur de musique (?)"
+    },
+    {
+      "material": "écouteurs"
+    },
+    {
+      "activity": "cycling",
+      "material": "pompe"
+    }
+  ],
+  "marche": [
+    {
+      "material": "bâtons de marche"
+    },
+    {
+      "material": "duck tape enroulé sur un bâton de marche"
+    },
+    {
+      "material": "pantalon ou short de rando"
+    },
+    {
+      "material": "2 buffs"
+    },
+    {
+      "material": "kit de couture"
+    },
+    {
+      "material": "lunettes de soleil"
+    },
+    {
+      "material": "paire de chaussure de marche"
+    },
+    {
+      "material": "k-way"
+    },
+    {
+      "material": "2 paires de chaussettes de rando"
+    },
+    {
+      "material": "casquette"
+    },
+    {
+      "material": "tee-shirt (merinos)"
+    },
+    {
+      "material": "brassière (?)"
+    },
+    {
+      "material": "2 sous-vêtements (sans couture)"
+    },
+    {
+      "material": "polaire"
+    }
+  ],
+  "pharmacie": [
+    {
+      "material": "tire-tique"
+    },
+    {
+      "material": "labello"
+    },
+    {
+      "material": "crème solaire"
+    },
+    {
+      "material": "spray anti-moustique"
+    },
+    {
+      "material": "pansements"
+    },
+    {
+      "material": "désinfectant"
+    },
+    {
+      "material": "mouchoirs"
+    },
+    {
+      "material": "doliprane"
+    }
+  ],
+  "toilettes": [
+    {
+      "material": "serviette de toilette"
+    },
+    {
+      "material": "dentifrice"
+    },
+    {
+      "material": "savon d'Alep"
+    },
+    {
+      "material": "brosse à dents"
+    },
+    {
+      "material": "brosse à cheveux"
+    },
+    {
+      "material": "rouleau de PQ (dans un sac étanche)"
+    },
+    {
+      "material": "2 pinces à linge"
+    }
+  ]
+}
