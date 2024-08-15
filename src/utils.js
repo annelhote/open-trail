@@ -23,9 +23,49 @@ const chunkArray = (array, chunkSize) => {
 const downloadGpx = ({ gpx, meta }) => {
   const link = document.createElement("a");
   const source = gpx.xmlSource;
+  // const root = source.getElementsByTagName("gpx")[0];
+  // for (let i = 0; i < gpx.waypoints.length; i++) {
+  //   const wpt = gpx.waypoints[i];
+  //   const node = source.createElementNS(
+  //     "http://www.topografix.com/GPX/1/1",
+  //     "wpt",
+  //   );
+  //   node.setAttribute("lat", wpt.lat);
+  //   node.setAttribute("lon", wpt.lon);
+  //   if ((wpt?.label?.length ?? 0) > 0) {
+  //     const name = source.createElement("name");
+  //     name.appendChild(source.createTextNode(wpt.label));
+  //     node.appendChild(name);
+  //   }
+  //   if ((wpt?.name?.length ?? 0) > 0) {
+  //     const desc = source.createElement("desc");
+  //     desc.appendChild(source.createTextNode(wpt.name));
+  //     node.appendChild(desc);
+  //   }
+  //   root.appendChild(node);
+  // }
+  link.href = URL.createObjectURL(
+    new Blob([new XMLSerializer().serializeToString(source)], {
+      type: "text/csv;charset=utf-8",
+    }),
+  );
+  link.setAttribute("download", `${meta.id}.gpx`);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+const downloadPoi = ({ gpx, markers, meta }) => {
+  const link = document.createElement("a");
+  const source = gpx.xmlSource;
   const root = source.getElementsByTagName("gpx")[0];
-  for (let i = 0; i < gpx.waypoints.length; i++) {
-    const wpt = gpx.waypoints[i];
+  // Delete GPX track
+  const tracks = root.getElementsByTagName("trk");
+  while (tracks[0]) tracks[0].parentNode.removeChild(tracks[0]);
+  console.log(markers);
+  console.log(gpx);
+  for (let i = 0; i < markers.length; i++) {
+    const wpt = markers[i];
     const node = source.createElementNS(
       "http://www.topografix.com/GPX/1/1",
       "wpt",
@@ -49,7 +89,7 @@ const downloadGpx = ({ gpx, meta }) => {
       type: "text/csv;charset=utf-8",
     }),
   );
-  link.setAttribute("download", `${meta.id}.gpx`);
+  link.setAttribute("download", `${meta.id}-poi.gpx`);
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -375,6 +415,7 @@ export {
   capitalize,
   chunkArray,
   downloadGpx,
+  downloadPoi,
   downSampleArray,
   getClosestPointByCoordinates,
   getClosestPointIndexByDistance,

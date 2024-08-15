@@ -289,7 +289,7 @@ const Trail = () => {
                 )}
               </Breadcrumbs>
             </Grid>
-            <Overview gpx={gpx} meta={meta} setMeta={setMeta} />
+            <Overview gpx={gpx} markers={markers} meta={meta} setMeta={setMeta} />
             {markers.length === 0 ? (
               <Grid item xs={12}>
                 Chargement des données ...

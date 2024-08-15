@@ -13,9 +13,9 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { useEffect, useState } from "react";
 
-import { downloadGpx } from "../../utils";
+import { downloadGpx, downloadPoi } from "../../utils";
 
-const Overview = ({ gpx, meta, setMeta }) => {
+const Overview = ({ gpx, markers, meta, setMeta }) => {
   const [distance, setDistance] = useState(0);
   const [duration, setDuration] = useState(0);
   const [elevation, setElevation] = useState({ neg: 0, pos: 0 });
@@ -173,6 +173,14 @@ const Overview = ({ gpx, meta, setMeta }) => {
               variant="outlined"
             >
               Télécharger le fichier GPX
+            </Button>
+            <Button
+              component="label"
+              onClick={() => downloadPoi({ gpx, markers, meta })}
+              startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
+              variant="outlined"
+            >
+              Télécharger les points d'intérêt
             </Button>
           </Grid>
         </Grid>
