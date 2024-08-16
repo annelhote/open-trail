@@ -13,11 +13,11 @@ import {
 import { useState } from "react";
 
 import { capitalize } from "../utils";
-import materials from "./backpack.json";
+import materials from "./materials.json";
 
 const BackPack = () => {
   const [activity, setActivity] = useState("hiking");
-  const [ultralight, setUltralight] = useState(true);
+  const [isUltralight, setIsUltralight] = useState(true);
 
   return (
     <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
@@ -37,17 +37,17 @@ const BackPack = () => {
             aria-labelledby="demo-radio-buttons-group-label"
             name="radio-buttons-group"
             value={activity}
-            onChange={(event, value) => setActivity(value)}
+            onChange={(_, value) => setActivity(value)}
           >
             <FormControlLabel
-              value="hiking"
               control={<Radio />}
               label="Randonnée pédestre"
+              value="hiking"
             />
             <FormControlLabel
-              value="cycling"
               control={<Radio />}
               label="Randonnée cyclo"
+              value="cycling"
             />
           </RadioGroup>
         </FormControl>
@@ -55,21 +55,21 @@ const BackPack = () => {
           label="Ultra light"
           control={
             <Checkbox
-              checked={ultralight}
-              onChange={(event) => setUltralight(event.target.checked)}
+              checked={isUltralight}
+              onChange={(event) => setIsUltralight(event.target.checked)}
             />
           }
         />
       </div>
       {Object.keys(materials).map((category) => (
         <>
-          <h3 key={category}>{capitalize(category)}</h3>
+          <h3 key={`category-${category}`}>{capitalize(category)}</h3>
           <ul>
             {materials[category]
               .filter((item) => [activity, undefined].includes(item.activity))
-              .filter((item) => (ultralight ? item?.mandatory ?? true : true))
+              .filter((item) => (isUltralight ? item?.mandatory ?? true : true))
               .map(({ material }, i) => (
-                <li key={`material-${i}`}>{capitalize(material)}</li>
+                <li key={`category-${category}-material-${i}`}>{capitalize(material)}</li>
               ))}
           </ul>
         </>

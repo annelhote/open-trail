@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 
-import BackPack from './pages/backpack';
+import Backpack from './pages/backpack';
 import Blog from './pages/blog';
 import BlogHome from './pages/blog-home';
 import ErrorPage from './pages/error-page';
@@ -30,7 +30,7 @@ const router = createHashRouter([
     errorElement: <ErrorPage />,
   },{
     path: '/blog/5',
-    element: <BackPack />,
+    element: <Backpack />,
     errorElement: <ErrorPage />,
   },
   {
