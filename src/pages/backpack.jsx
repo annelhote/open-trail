@@ -12,16 +12,12 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
-import materials from "./materials.json";
 import { capitalize } from "../utils";
+import materials from "./backpack.json";
 
 const BackPack = () => {
   const [activity, setActivity] = useState("hiking");
-  const [checked, setChecked] = useState(true);
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setChecked(event.target.checked);
-  };
+  const [ultralight, setUltralight] = useState(true);
 
   return (
     <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
@@ -57,16 +53,24 @@ const BackPack = () => {
         </FormControl>
         <FormControlLabel
           label="Ultra light"
-          control={<Checkbox checked={checked} onChange={handleChange} />}
+          control={
+            <Checkbox
+              checked={ultralight}
+              onChange={(event) => setUltralight(event.target.checked)}
+            />
+          }
         />
       </div>
       {Object.keys(materials).map((category) => (
         <>
           <h3 key={category}>{capitalize(category)}</h3>
           <ul>
-            {materials[category].filter((item) => [activity, undefined].includes(item.activity)).map(({ material }, i) => (
-              <li key={`material-${i}`}>{capitalize(material)}</li>
-            ))}
+            {materials[category]
+              .filter((item) => [activity, undefined].includes(item.activity))
+              .filter((item) => (ultralight ? item?.mandatory ?? true : true))
+              .map(({ material }, i) => (
+                <li key={`material-${i}`}>{capitalize(material)}</li>
+              ))}
           </ul>
         </>
       ))}

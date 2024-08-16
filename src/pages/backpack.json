@@ -31,6 +31,10 @@
     },
     {
       "material": "matelas"
+    },
+    {
+      "mandatory": false,
+      "material": "livre / liseuse"
     }
   ],
   "manger / boire": [
@@ -40,40 +44,49 @@
     {
       "material": "fourchette"
     },
-    {
-      "material": "cuillère (?)"
-    },
+    
     {
       "material": "camelbag / gourdes"
-    },
-    {
-      "material": "filtre à eau (?)"
-    },
-    {
-      "material": "food bag / sac d'appoint (?)"
     },
     {
       "material": "snacks (barres de céréales, fruits secs, pompot ...)"
     },
     {
-      "material": "réchaud + briquet + bouteille de gaz (?)"
+      "mandatory": false,
+      "material": "food bag / sac d'appoint"
     },
     {
-      "material": "popote / pot (?)"
+      "mandatory": false,
+      "material": "filtre à eau"
     },
     {
-      "material": "gobelet (?)"
+      "mandatory": false,
+      "material": "cuillère"
     },
     {
-      "material": "café ou thé (?)"
+      "mandatory": false,
+      "material": "réchaud + briquet + bouteille de gaz"
     },
     {
-      "material": "sac / ziplock poubelle (?)"
+      "mandatory": false,
+      "material": "popote / pot"
+    },
+    {
+      "mandatory": false,
+      "material": "gobelet"
+    },
+    {
+      "mandatory": false,
+      "material": "café ou thé"
+    },
+    {
+      "mandatory": false,
+      "material": "sac / ziplock poubelle"
     }
   ],
   "tech": [
     {
-      "material": "téléphone"
+      "material": "smartphone"
     },
     {
       "material": "câbles (micro-USB et USB-C) et prise"
@@ -82,37 +95,31 @@
       "material": "batterie externe"
     },
     {
-      "material": "livre / liseuse (?)"
-    },
-    {
       "material": "carte d'identité"
     },
     {
       "material": "carte bleue"
     },
     {
-      "material": "lecteur de musique (?)"
+      "mandatory": false,
+      "material": "lecteur de musique"
     },
     {
+      "mandatory": false,
       "material": "écouteurs"
-    },
-    {
-      "activity": "cycling",
-      "material": "pompe"
     }
   ],
-  "marche": [
+  "vêtements": [
     {
+      "activity": "hiking",
       "material": "bâtons de marche"
     },
     {
-      "material": "duck tape enroulé sur un bâton de marche"
+      "activity": "hiking",
+      "material": "duck tape (enroulé sur un bâton de marche)"
     },
     {
       "material": "pantalon ou short de rando"
-    },
-    {
-      "material": "2 buffs"
     },
     {
       "material": "kit de couture"
@@ -121,16 +128,18 @@
       "material": "lunettes de soleil"
     },
     {
-      "material": "paire de chaussure de marche"
+      "activity": "hiking",
+      "material": "paire de chaussures de marche"
     },
     {
       "material": "k-way"
     },
     {
+      "activity": "hiking",
       "material": "2 paires de chaussettes de rando"
     },
     {
-      "material": "casquette"
+      "material": "casquette / buff / chapeau"
     },
     {
       "material": "tee-shirt (merinos)"
@@ -143,6 +152,14 @@
     },
     {
       "material": "polaire"
+    },
+    {
+      "mandatory": false,
+      "material": "maillot de bain"
+    },
+    {
+      "mandatory": false,
+      "material": "buff"
     }
   ],
   "pharmacie": [
@@ -165,13 +182,13 @@
       "material": "désinfectant"
     },
     {
-      "material": "mouchoirs"
+      "material": "mouchoirs / coton"
     },
     {
-      "material": "doliprane"
+      "material": "dolipranes"
     }
   ],
-  "toilettes": [
+  "toilette": [
     {
       "material": "serviette de toilette"
     },
@@ -192,6 +209,32 @@
     },
     {
       "material": "2 pinces à linge"
+    }
+  ],
+  "mécanique": [
+    {
+      "activity": "cycling",
+      "material": "rustines"
+    },
+    {
+      "activity": "cycling",
+      "material": "2 x chambres à air"
+    },
+    {
+      "activity": "cycling",
+      "material": "3 x démonte-pneus"
+    },
+    {
+      "activity": "cycling",
+      "material": "lampes de vélo"
+    },
+    {
+      "activity": "cycling",
+      "material": "antivols et clés"
+    },
+    {
+      "activity": "cycling",
+      "material": "pompe"
     }
   ]
 }
