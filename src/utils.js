@@ -23,6 +23,7 @@ const chunkArray = (array, chunkSize) => {
 const downloadGpx = ({ gpx, markers, meta }) => {
   const link = document.createElement("a");
   const source = gpx.xmlSource;
+  const root = source.getElementsByTagName("gpx")[0];
   for (let i = 0; i < markers.length; i++) {
     const wpt = markers[i];
     const node = source.createElementNS(
