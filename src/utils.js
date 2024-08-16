@@ -62,8 +62,6 @@ const downloadPoi = ({ gpx, markers, meta }) => {
   // Delete GPX track
   const tracks = root.getElementsByTagName("trk");
   while (tracks[0]) tracks[0].parentNode.removeChild(tracks[0]);
-  console.log(markers);
-  console.log(gpx);
   for (let i = 0; i < markers.length; i++) {
     const wpt = markers[i];
     const node = source.createElementNS(
@@ -81,6 +79,18 @@ const downloadPoi = ({ gpx, markers, meta }) => {
       const desc = source.createElement("desc");
       desc.appendChild(source.createTextNode(wpt.name));
       node.appendChild(desc);
+    }
+    if ((wpt?.category)) {
+      let sym = ""
+      if (wpt.category === "hébergement") sym = "friends-home";
+      if (wpt.category === "alimentation") sym = "stores-supermarket";
+      if (wpt.category === "sorties") sym = "restaurant-restaurant";
+      if (wpt.category === "eau") sym = "tourism-drinkingwater";
+      if (sym.length > 0) {
+        const sym = source.createElement("sym");
+        sym.appendChild(source.createTextNode(wpt.category));
+        node.appendChild(sym);
+      }
     }
     root.appendChild(node);
   }

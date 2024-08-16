@@ -107,6 +107,14 @@
     {
       "mandatory": false,
       "material": "écouteurs"
+    },
+    {
+      "mandatory": false,
+      "material": "stylo"
+    },
+    {
+      "mandatory": false,
+      "material": "carnet de notes"
     }
   ],
   "vêtements": [
