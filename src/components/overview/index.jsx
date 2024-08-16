@@ -168,7 +168,7 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
           <Grid item>
             <Button
               component="label"
-              onClick={() => downloadGpx({ gpx, meta })}
+              onClick={() => downloadGpx({ gpx, markers, meta })}
               startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
               variant="outlined"
             >
