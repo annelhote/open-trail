@@ -49,17 +49,17 @@ const downloadGpx = ({ gpx, markers, meta }) => {
       node.appendChild(desc);
     }
     if (wpt?.category) {
-      let sym = "";
-      if (wpt.category === "hébergement") sym = "friends-home";
-      if (wpt.category === "alimentation") sym = "stores-supermarket";
-      if (wpt.category === "sorties") sym = "restaurant-restaurant";
-      if (wpt.category === "eau") sym = "tourism-drinkingwater";
-      if (sym.length > 0) {
+      let sym1 = "";
+      if (wpt.category === "hébergement") sym1 = "friends-home";
+      if (wpt.category === "alimentation") sym1 = "stores-supermarket";
+      if (wpt.category === "sorties") sym1 = "restaurant-restaurant";
+      if (wpt.category === "eau") sym1 = "tourism-drinkingwater";
+      if (sym1.length > 0) {
         const sym = source.createElementNS(
           "http://www.topografix.com/GPX/1/1",
           "sym"
         );
-        sym.appendChild(source.createTextNode(wpt.category));
+        sym.appendChild(source.createTextNode(sym1));
         node.appendChild(sym);
       }
     }
@@ -108,17 +108,17 @@ const downloadPoi = ({ gpx, markers, meta }) => {
       node.appendChild(desc);
     }
     if (wpt?.category) {
-      let sym = "";
-      if (wpt.category === "hébergement") sym = "friends-home";
-      if (wpt.category === "alimentation") sym = "stores-supermarket";
-      if (wpt.category === "sorties") sym = "restaurant-restaurant";
-      if (wpt.category === "eau") sym = "tourism-drinkingwater";
-      if (sym.length > 0) {
+      let sym1 = "";
+      if (wpt.category === "hébergement") sym1 = "friends-home";
+      if (wpt.category === "alimentation") sym1 = "stores-supermarket";
+      if (wpt.category === "sorties") sym1 = "restaurant-restaurant";
+      if (wpt.category === "eau") sym1 = "tourism-drinkingwater";
+      if (sym1.length > 0) {
         const sym = source.createElementNS(
           "http://www.topografix.com/GPX/1/1",
           "sym"
         );
-        sym.appendChild(source.createTextNode(wpt.category));
+        sym.appendChild(source.createTextNode(sym1));
         node.appendChild(sym);
       }
     }
