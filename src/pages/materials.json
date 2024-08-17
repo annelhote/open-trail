@@ -35,6 +35,10 @@
     {
       "mandatory": false,
       "material": "livre / liseuse"
+    },
+    {
+      "mandatory": false,
+      "material": "oreiller"
     }
   ],
   "manger / boire": [
@@ -57,7 +61,7 @@
     },
     {
       "mandatory": false,
-      "material": "filtre à eau"
+      "material": "filtre à eau / pastilles"
     },
     {
       "mandatory": false,
@@ -69,7 +73,7 @@
     },
     {
       "mandatory": false,
-      "material": "popote / pot"
+      "material": "popote / pot / gamelle"
     },
     {
       "mandatory": false,
@@ -78,6 +82,10 @@
     {
       "mandatory": false,
       "material": "café ou thé"
+    },
+    {
+      "mandatory": false,
+      "material": "boule à thé"
     },
     {
       "mandatory": false,
@@ -101,6 +109,9 @@
       "material": "carte bleue"
     },
     {
+      "material": "cash"
+    },
+    {
       "mandatory": false,
       "material": "lecteur de musique"
     },
@@ -115,6 +126,10 @@
     {
       "mandatory": false,
       "material": "carnet de notes"
+    },
+    {
+      "mandatory": false,
+      "material": "appareil photo"
     }
   ],
   "vêtements": [
@@ -194,6 +209,14 @@
     },
     {
       "material": "dolipranes"
+    },
+    {
+      "mandatory": false,
+      "material": "coupe ongle"
+    },
+    {
+      "mandatory": false,
+      "material": "pince à épiler"
     }
   ],
   "toilette": [
@@ -217,6 +240,10 @@
     },
     {
       "material": "2 pinces à linge"
+    },
+    {
+      "mandatory": false 
+      "material": "lentilles / lunettes de vue"
     }
   ],
   "mécanique": [
