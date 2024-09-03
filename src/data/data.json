@@ -25,5 +25,10 @@
   "nantes-echalas": {
     "id": "nantes-echalas",
     "name": "Nantes -> Echalas"
+  },
+  "cretes-du-jura": {
+    "id": "cretes-du-jura",
+    "name": "Crêtes du Jura (septembre 2024)",
+    "startDate": "2024-09-06"
   }
 }

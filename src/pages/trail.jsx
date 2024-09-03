@@ -25,12 +25,13 @@ import Planner from "../components/planner";
 import Profile from "../components/profile";
 import Stage from "../components/stage";
 import gpxCheminDassise from "../data/chemin-d-assise.gpx";
+import data from "../data/data.json";
+import gpxCretesDuJura from "../data/cretes-du-jura.gpx";
 import gpxGr38 from "../data/gr38.gpx";
-import gpxLaChapelleEnVercorsLePoet from "../data/la-chapelle-en-vercors-le-poet.gpx";
+import gpxLePoetSigillat from "../data/le-poet-sigillat.gpx";
 import gpxNantesEchalas from "../data/nantes-echalas.gpx";
 import gpxPicosDeEuropa from "../data/picos-de-europa.gpx";
 import gpxTourDuQueyras from "../data/tour-du-queyras.gpx";
-import data from "../data/data.json";
 import {
   chunkArray,
   downSampleArray,
@@ -59,15 +60,16 @@ const Trail = () => {
 
   const gpxes = {
     "chemin-d-assise": gpxCheminDassise,
+    "cretes-du-jura": gpxCretesDuJura,
     gr38: gpxGr38,
-    "le-poet-sigillat": gpxLaChapelleEnVercorsLePoet,
+    "le-poet-sigillat": gpxLePoetSigillat,
     "nantes-echalas": gpxNantesEchalas,
     "picos-de-europa": gpxPicosDeEuropa,
     "tour-du-queyras": gpxTourDuQueyras,
   };
   meta.gpx = gpxes[params?.id];
   meta.startDate = dayjs(
-    meta?.startDate ?? new Date().toISOString().split("T")[0],
+    meta?.startDate ?? new Date().toISOString().split("T")[0]
   );
 
   const onChange = (event) => {
@@ -79,7 +81,7 @@ const Trail = () => {
         excluded = [...excluded, filters[eventName].data];
       }
       setSelectedFilters(
-        selectedFilters.filter((item) => !excluded.includes(item)),
+        selectedFilters.filter((item) => !excluded.includes(item))
       );
     } else {
       let added = [eventName];
@@ -98,13 +100,17 @@ const Trail = () => {
         let newGpx = new gpxParser();
         newGpx.parse(xml);
         newGpx = overloadGpx(newGpx);
-        meta.kmPerDay = getKmPerDayPerActivity(
-          newGpx.tracks[0]?.type ?? "hiking",
-        );
+        if (params?.id === "cretes-du-jura") {
+          meta.kmPerDay = 40;
+        } else {
+          meta.kmPerDay = getKmPerDayPerActivity(
+            newGpx.tracks[0]?.type ?? "hiking"
+          );
+        }
 
         // Calculate days
         const duration = Math.ceil(
-          newGpx.tracks[0].distance.totalItra / 1000 / meta.kmPerDay,
+          newGpx.tracks[0].distance.totalItra / 1000 / meta.kmPerDay
         );
         const days = [...Array(duration).keys()].map((day) => day + 1);
         setDays(days);
@@ -123,11 +129,11 @@ const Trail = () => {
             .slice(startPointIndex, endPointIndex + 1)
             .map(
               (point) =>
-                `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`,
+                `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`
             );
           let partGpx = new gpxParser();
           partGpx.parse(
-            `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`,
+            `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`
           );
           partGpx = overloadGpx(partGpx);
           return partGpx;
@@ -152,15 +158,15 @@ const Trail = () => {
           const coordinatesDataCount = gpx.tracks[0].points.length;
           const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
           const pathSamplingPeriod = Math.floor(
-            coordinatesDataCount / targetPathDataCount,
+            coordinatesDataCount / targetPathDataCount
           );
           const downSampledCoordinates = downSampleArray(
             gpx.tracks[0].points,
-            pathSamplingPeriod,
+            pathSamplingPeriod
           );
           let chunks = chunkArray(downSampledCoordinates, 20);
           chunks = chunks.map((chunk) =>
-            chunk.map((item) => [item.lat, item.lon]).flat(),
+            chunk.map((item) => [item.lat, item.lon]).flat()
           );
 
           Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
@@ -204,7 +210,7 @@ const Trail = () => {
                     allMarkers.map((value) => [
                       `${value.lat},${value.lon}`,
                       value,
-                    ]),
+                    ])
                   ).values(),
                 ];
                 // Add distance from start
@@ -289,7 +295,12 @@ const Trail = () => {
                 )}
               </Breadcrumbs>
             </Grid>
-            <Overview gpx={gpx} markers={markers} meta={meta} setMeta={setMeta} />
+            <Overview
+              gpx={gpx}
+              markers={markers}
+              meta={meta}
+              setMeta={setMeta}
+            />
             {markers.length === 0 ? (
               <Grid item xs={12}>
                 Chargement des données ...
@@ -343,7 +354,7 @@ const Trail = () => {
                               e.target.value === "all"
                                 ? navigate(`/trails/${params.id}`)
                                 : navigate(
-                                    `/trails/${params.id}/${e.target.value}`,
+                                    `/trails/${params.id}/${e.target.value}`
                                   )
                             }
                             value={params?.day ?? "all"}
@@ -360,7 +371,9 @@ const Trail = () => {
                                   value={day}
                                   control={<Radio />}
                                   key={`day-${day}`}
-                                  label={`Jour ${day} - ${meta.startDate.add(day - 1, "day").format("dddd	DD MMMM")}`}
+                                  label={`Jour ${day} - ${meta.startDate
+                                    .add(day - 1, "day")
+                                    .format("dddd	DD MMMM")}`}
                                 />
                               ))}
                           </RadioGroup>

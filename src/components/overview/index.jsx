@@ -67,7 +67,7 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
               <Box sx={{ pr: 0.5 }}>
                 <b>{itraDistance.toFixed(0)}</b>
               </Box>{" "}
-              km
+              km (ITRA)
             </Stack>
           </Stack>
         </Grid>
