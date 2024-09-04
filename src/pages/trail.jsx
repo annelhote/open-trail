@@ -180,6 +180,7 @@ const Trail = () => {
                   item?.tags?.landuse ??
                   item?.tags?.shop ??
                   item?.tags?.tourism ??
+                  item?.tags?.railway ??
                   "";
                 return {
                   addrHousenumber: item?.tags?.["addr:housenumber"],

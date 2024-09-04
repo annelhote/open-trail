@@ -6,6 +6,7 @@ import {
   faHouse,
   faQuestion,
   faRestroom,
+  faTrain,
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 
@@ -191,6 +192,7 @@ const getDataFromOverpass = (bbox) => {
       nwr["landuse"~"cemetery"](around:1000,${bbox});
       nwr["shop"~"convenience|deli|department_store|food|general|mall|supermarket"](around:1000,${bbox});
       nwr["tourism"~"alpine_hut|apartment|camp_site|chalet|guest_house|hostel|hotel|motel|wilderness_hut"](around:1000,${bbox});
+      nwr["railway"="station"](around:10000,${bbox});
     );
     out center;
   `;
@@ -362,6 +364,12 @@ const getMarkerFromType = (type) => {
       color: "#F3B95F",
       icon: faHouse,
       label: "abri",
+    },
+    station: {
+      category: "transport",
+      color: "#AC4FC6",
+      icon: faTrain,
+      label: "gare ferroviaire"
     },
     supermarket: {
       category: "alimentation",
