@@ -183,6 +183,7 @@ const Trail = () => {
                   item?.tags?.railway ??
                   "";
                 return {
+                  addrCity: item?.tags?.["addr:city"],
                   addrHousenumber: item?.tags?.["addr:housenumber"],
                   addrStreet: item?.tags?.["addr:street"],
                   day: (index + 1).toString(),

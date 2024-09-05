@@ -88,6 +88,9 @@ function Row(props: { row: ReturnType<typeof createData> }) {
           {capitalize(marker.label)}
         </StyledTableCell>
         <StyledTableCell>
+          {marker?.addrCity}
+        </StyledTableCell>
+        <StyledTableCell>
           {marker?.opening_hours}
         </StyledTableCell>
       </StyledTableRow>
@@ -184,6 +187,7 @@ const Planner = ({ gpx, markers, selectedFilters }) => {
               <StyledTableCell>Nom</StyledTableCell>
               <StyledTableCell>Distance du départ</StyledTableCell>
               <StyledTableCell>Type</StyledTableCell>
+              <StyledTableCell>Ville</StyledTableCell>
               <StyledTableCell>Heures d'ouverture</StyledTableCell>
             </TableRow>
           </TableHead>
