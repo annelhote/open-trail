@@ -18,7 +18,7 @@ import { downloadGpx, downloadPoi } from "../../utils";
 const Overview = ({ gpx, markers, meta, setMeta }) => {
   const [distance, setDistance] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [elevation, setElevation] = useState({ neg: 0, pos: 0 });
+  const [elevation, setElevation] = useState({ max: 0, min: 0, neg: 0, pos: 0 });
   const [itraDistance, setItraDistance] = useState(0);
 
   useEffect(() => {
@@ -114,6 +114,52 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
                 <b>{elevation.neg.toFixed(0)}</b>
               </Box>{" "}
               m D-
+            </Stack>
+          </Stack>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={1}
+          sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+        >
+          <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
+            <FontAwesomeIcon
+              icon={faArrowUp}
+              className="fa-rotate-by"
+              style={{ "--fa-rotate-angle": "45deg" }}
+            />
+            <Stack
+              direction="row"
+              sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+            >
+              <Box sx={{ pr: 0.5 }}>
+                <b>{elevation.max.toFixed(0)}</b>
+              </Box>{" "}
+              alt. max.
+            </Stack>
+          </Stack>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={1}
+          sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+        >
+          <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="fa-rotate-by"
+              style={{ "--fa-rotate-angle": "-45deg" }}
+            />
+            <Stack
+              direction="row"
+              sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+            >
+              <Box sx={{ pr: 0.5 }}>
+                <b>{elevation.min.toFixed(0)}</b>
+              </Box>{" "}
+              alt. min.
             </Stack>
           </Stack>
         </Grid>
