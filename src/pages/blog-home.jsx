@@ -5,7 +5,7 @@ const BlogHome = () => {
     <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
       <Breadcrumbs aria-label="breadcrumb" color="color.secondary">
         <Link underline="hover" color="inherit" href="#">
-          Open Trails
+          Open Trail
         </Link>
         <Typography>Blog</Typography>
       </Breadcrumbs>

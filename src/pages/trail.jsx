@@ -276,7 +276,7 @@ const Trail = () => {
             <Grid item xs={12}>
               <Breadcrumbs aria-label="breadcrumb" color="color.secondary">
                 <Link underline="hover" color="inherit" href="#">
-                  Open Trails
+                  Open Trail
                 </Link>
                 <Link underline="hover" color="inherit" href="#/trails">
                   Trails

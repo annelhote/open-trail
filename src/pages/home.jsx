@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
       <Breadcrumbs aria-label="breadcrumb" color="color.secondary">
-        <Typography>Open Trails</Typography>
+        <Typography>Open Trail</Typography>
       </Breadcrumbs>
       <div>
         <ul>
