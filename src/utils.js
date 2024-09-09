@@ -77,65 +77,6 @@ const downloadGpx = ({ gpx, markers, meta }) => {
   document.body.removeChild(link);
 };
 
-const downloadPoi = ({ gpx, markers, meta }) => {
-  const link = document.createElement("a");
-  const source = gpx.xmlSource;
-  const root = source.getElementsByTagName("gpx")[0];
-  // Delete GPX track
-  const tracks = root.getElementsByTagName("trk");
-  while (tracks[0]) tracks[0].parentNode.removeChild(tracks[0]);
-  for (let i = 0; i < markers.length; i++) {
-    const wpt = markers[i];
-    const node = source.createElementNS(
-      "http://www.topografix.com/GPX/1/1",
-      "wpt"
-    );
-    node.setAttribute("lat", wpt.lat);
-    node.setAttribute("lon", wpt.lon);
-    if ((wpt?.label?.length ?? 0) > 0) {
-      const name = source.createElementNS(
-        "http://www.topografix.com/GPX/1/1",
-        "name"
-      );
-      name.appendChild(source.createTextNode(wpt.label));
-      node.appendChild(name);
-    }
-    if ((wpt?.name?.length ?? 0) > 0) {
-      const desc = source.createElementNS(
-        "http://www.topografix.com/GPX/1/1",
-        "desc"
-      );
-      desc.appendChild(source.createTextNode(wpt.name));
-      node.appendChild(desc);
-    }
-    if (wpt?.category) {
-      let sym1 = "";
-      if (wpt.category === "hébergement") sym1 = "friends-home";
-      if (wpt.category === "alimentation") sym1 = "stores-supermarket";
-      if (wpt.category === "sorties") sym1 = "restaurant-restaurant";
-      if (wpt.category === "eau") sym1 = "tourism-drinkingwater";
-      if (sym1.length > 0) {
-        const sym = source.createElementNS(
-          "http://www.topografix.com/GPX/1/1",
-          "sym"
-        );
-        sym.appendChild(source.createTextNode(sym1));
-        node.appendChild(sym);
-      }
-    }
-    root.appendChild(node);
-  }
-  link.href = URL.createObjectURL(
-    new Blob([new XMLSerializer().serializeToString(source)], {
-      type: "text/csv;charset=utf-8",
-    })
-  );
-  link.setAttribute("download", `${meta.id}-poi.gpx`);
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
-
 const downSampleArray = (input, period) => {
   if (period < 1 || period % 1 !== 0) {
     throw new TypeError("Period must be an integer greater than or equal to 1");
@@ -463,7 +404,6 @@ export {
   capitalize,
   chunkArray,
   downloadGpx,
-  downloadPoi,
   downSampleArray,
   getClosestPointByCoordinates,
   getClosestPointIndexByDistance,
