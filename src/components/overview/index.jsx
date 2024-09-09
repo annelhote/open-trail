@@ -2,11 +2,22 @@ import {
   faArrowDown,
   faArrowUp,
   faFileArrowDown,
+  faGear,
   faStopwatch,
   faUpRightAndDownLeftFromCenter,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Box, Button, Grid, Stack, TextField } from "@mui/material";
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Grid,
+  Stack,
+  TextField,
+} from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -18,8 +29,14 @@ import { downloadGpx } from "../../utils";
 const Overview = ({ gpx, markers, meta, setMeta }) => {
   const [distance, setDistance] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [elevation, setElevation] = useState({ max: 0, min: 0, neg: 0, pos: 0 });
+  const [elevation, setElevation] = useState({
+    max: 0,
+    min: 0,
+    neg: 0,
+    pos: 0,
+  });
   const [itraDistance, setItraDistance] = useState(0);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const itraDistanceTmp = gpx.tracks[0].distance.totalItra / 1000;
@@ -29,10 +46,74 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
     setElevation(gpx.calcElevation(gpx.tracks[0].points));
   }, [gpx, meta]);
 
+  const handleClickOpen = () => setOpen(true);
+
+  const handleClose = () => setOpen(false);
+
   return (
     <Grid className="overview" container item>
-      <Grid item>
-        <h2>{meta.name}</h2>
+      <Grid container item>
+        <Grid item xs={11}>
+          <h2>{meta.name}</h2>
+        </Grid>
+        <Grid item>
+          <Button variant="none" onClick={handleClickOpen}>
+            <FontAwesomeIcon icon={faGear} />
+          </Button>
+          <Dialog
+            aria-modal
+            open={open}
+            onClose={handleClose}
+            PaperProps={{
+              component: "form",
+              onSubmit: (event, values) => {
+                event.preventDefault();
+                // console.log(event?.target?.["km-itra"]);
+                console.log(values);
+                const formData = new FormData(event.currentTarget);
+                const formJson = Object.fromEntries(formData.entries());
+                const email = formJson.email;
+                handleClose();
+              },
+            }}
+          >
+            <DialogTitle>{meta.name}</DialogTitle>
+            <DialogContent>
+              <TextField
+                defaultValue={meta.kmPerDay}
+                id="km-itra"
+                label="Kilomètres parcourus par jour (ITRA)"
+                // onChange={(event) =>
+                //   setMeta({ ...meta, kmPerDay: event.target.value })
+                // }
+                type="number"
+                variant="filled"
+              />
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DemoContainer components={["DatePicker"]}>
+                  <DatePicker
+                    id="departure-date"
+                    label="Jour du départ"
+                    // onChange={(value) => setMeta({ ...meta, startDate: value })}
+                    value={meta.startDate}
+                  />
+                </DemoContainer>
+              </LocalizationProvider>
+              <Button
+                component="label"
+                onClick={() => downloadGpx({ gpx, markers, meta })}
+                startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
+                variant="outlined"
+              >
+                Télécharger le fichier GPX
+              </Button>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={handleClose}>Cancel</Button>
+              <Button type="submit">Subscribe</Button>
+            </DialogActions>
+          </Dialog>
+        </Grid>
       </Grid>
       <Grid container item>
         <Grid item xs={12} sm={1}>
@@ -181,46 +262,6 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
               {duration > 1 ? "jours" : "jour"}
             </Stack>
           </Stack>
-        </Grid>
-        <Grid
-          container
-          item
-          xs={12}
-          sm={true}
-          direction="row"
-          justifyContent="flex-end"
-          spacing={2}
-        >
-          <Grid item>
-            <TextField
-              id="filled-number"
-              label="Kilomètres parcourus par jour (ITRA)"
-              onChange={(event) => setMeta({ ...meta, kmPerDay: event.target.value })}
-              type="number"
-              value={meta.kmPerDay}
-              variant="filled"
-            />
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DemoContainer components={["DatePicker"]}>
-                <DatePicker
-                  id="start-date"
-                  label="Jour du départ"
-                  onChange={(value) => setMeta({ ...meta, startDate: value })}
-                  value={meta.startDate}
-                />
-              </DemoContainer>
-            </LocalizationProvider>
-          </Grid>
-          <Grid item>
-            <Button
-              component="label"
-              onClick={() => downloadGpx({ gpx, markers, meta })}
-              startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
-              variant="outlined"
-            >
-              Télécharger le fichier GPX
-            </Button>
-          </Grid>
         </Grid>
       </Grid>
     </Grid>
