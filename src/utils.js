@@ -6,6 +6,7 @@ import {
   faHouse,
   faQuestion,
   faRestroom,
+  faShower,
   faTrain,
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
@@ -133,6 +134,7 @@ const getDataFromOverpass = (bbox) => {
       nwr["landuse"~"cemetery"](around:1000,${bbox});
       nwr["shop"~"convenience|deli|department_store|food|general|mall|supermarket"](around:1000,${bbox});
       nwr["tourism"~"alpine_hut|apartment|camp_site|chalet|guest_house|hostel|hotel|motel|wilderness_hut"](around:1000,${bbox});
+      nwr["amenity"="shower"](around:1000,${bbox});
       nwr["railway"="station"](around:10000,${bbox});
     );
     out center;
@@ -305,6 +307,12 @@ const getMarkerFromType = (type) => {
       color: "#F3B95F",
       icon: faHouse,
       label: "abri",
+    },
+    shower: {
+      category: "eau",
+      color: "#1993D0",
+      icon: faShower,
+      label: "douches",
     },
     station: {
       category: "transport",
