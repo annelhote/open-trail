@@ -41,6 +41,11 @@ const BlogHome = () => {
               Hydratation et alimentation
             </Link>
           </li>
+          <li>
+            <Link underline="hover" color="inherit" href="#/blog/7">
+              Tentes
+            </Link>
+          </li>
         </ul>
       </div>
     </Box>
