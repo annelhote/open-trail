@@ -28,7 +28,7 @@ const BackPack = () => {
         <Link color="inherit" href="#/blog" underline="hover">
           Blog
         </Link>
-        <Typography>Sac à dos</Typography>
+        <Typography>Que mettre dans son sac à dos ?</Typography>
       </Breadcrumbs>
       <div>
         <FormControl>

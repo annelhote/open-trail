@@ -23,17 +23,17 @@ const BlogHome = () => {
           </li>
           <li>
             <Link underline="hover" color="inherit" href="#/blog/3">
-              Films
+              Films d'aventure longue distance
             </Link>
           </li>
           <li>
             <Link underline="hover" color="inherit" href="#/blog/4">
-              Livres
+              Livres d'aventure longue distance
             </Link>
           </li>
           <li>
             <Link underline="hover" color="inherit" href="#/blog/5">
-              Sac à dos
+              Que mettre dans son sac à dos ?
             </Link>
           </li>
           <li>
@@ -43,7 +43,7 @@ const BlogHome = () => {
           </li>
           <li>
             <Link underline="hover" color="inherit" href="#/blog/7">
-              Tentes
+              Choisir sa tente ultra-light
             </Link>
           </li>
         </ul>

@@ -66,14 +66,13 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
             onClose={handleClose}
             PaperProps={{
               component: "form",
-              onSubmit: (event, values) => {
+              onSubmit: (event) => {
                 event.preventDefault();
-                // console.log(event?.target?.["km-itra"]);
-                console.log(values);
-                const formData = new FormData(event.currentTarget);
-                const formJson = Object.fromEntries(formData.entries());
-                const email = formJson.email;
-                console.log(email);
+                setMeta({
+                  ...meta,
+                  kmPerDay: event.target.kmItra.value,
+                  startDate: event.target.departureDate.value,
+                });
                 handleClose();
               },
             }}
@@ -82,20 +81,16 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
             <DialogContent>
               <TextField
                 defaultValue={meta.kmPerDay}
-                id="km-itra"
                 label="Kilomètres parcourus par jour (ITRA)"
-                // onChange={(event) =>
-                //   setMeta({ ...meta, kmPerDay: event.target.value })
-                // }
+                name="kmItra"
                 type="number"
                 variant="filled"
               />
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DemoContainer components={["DatePicker"]}>
                   <DatePicker
-                    id="departure-date"
                     label="Jour du départ"
-                    // onChange={(value) => setMeta({ ...meta, startDate: value })}
+                    name="departureDate"
                     value={meta.startDate}
                   />
                 </DemoContainer>
@@ -110,8 +105,8 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
               </Button>
             </DialogContent>
             <DialogActions>
-              <Button onClick={handleClose}>Cancel</Button>
-              <Button type="submit">Subscribe</Button>
+              <Button onClick={handleClose}>Fermer</Button>
+              <Button type="submit">OK</Button>
             </DialogActions>
           </Dialog>
         </Grid>

@@ -38,7 +38,7 @@ import {
   getClosestPointByCoordinates,
   getClosestPointIndexByDistance,
   getDataFromOverpass,
-  getKmPerDayPerActivity,
+  getDefaultKmPerDayPerActivity,
   getMarkerFromType,
   getTypeFromName,
   overloadGpx,
@@ -94,18 +94,23 @@ const Trail = () => {
 
   useEffect(() => {
     // TODO switch to await
+    console.log("useEffect");
+    console.log(meta?.kmPerDay);
     fetch(meta?.gpx)
       .then((res) => res.text())
       .then((xml) => {
         let newGpx = new gpxParser();
         newGpx.parse(xml);
         newGpx = overloadGpx(newGpx);
-        if (params?.id === "cretes-du-jura") {
-          meta.kmPerDay = 40;
-        } else {
-          meta.kmPerDay = getKmPerDayPerActivity(
-            newGpx.tracks[0]?.type ?? "hiking"
-          );
+        // If no kmPerDay set, set default value
+        if (!meta?.kmPerDay) {
+          if (params?.id === "cretes-du-jura") {
+            meta.kmPerDay = 40;
+          } else {
+            meta.kmPerDay = getDefaultKmPerDayPerActivity(
+              newGpx.tracks[0]?.type ?? "hiking"
+            );
+          }
         }
 
         // Calculate days
