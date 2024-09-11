@@ -9,4 +9,19 @@
       color: #27272a;
     }
   }
+
+  &.blog {
+    table {
+      border-collapse: collapse;
+
+      th, td {
+        border: 1px solid grey;
+        padding: 0 1em;
+      }
+      
+      th {
+        font-weight: bold;
+      }
+    }
+  }
 }

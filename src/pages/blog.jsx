@@ -2,6 +2,7 @@ import { Box, Breadcrumbs, Link, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
+import remarkGfm from "remark-gfm";
 
 const Blog = () => {
   const params = useParams();
@@ -21,7 +22,7 @@ const Blog = () => {
   }, [params.id]);
 
   return (
-    <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
+    <Box className="open-trail blog" sx={{ flexGrow: 0.75 }}>
       <Breadcrumbs aria-label="breadcrumb" color="color.secondary">
         <Link color="inherit" href="#" underline="hover">
           Open Trail
@@ -31,7 +32,9 @@ const Blog = () => {
         </Link>
         <Typography>{title}</Typography>
       </Breadcrumbs>
-      <ReactMarkdown>{markdown}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        {markdown}
+      </ReactMarkdown>
     </Box>
   );
 };
