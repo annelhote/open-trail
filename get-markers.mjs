@@ -1,3 +1,4 @@
+// node get-markers.mjs le-poet-sigillat
 import {
   faCartShopping,
   faChampagneGlasses,
@@ -6,12 +7,11 @@ import {
   faHouse,
   faQuestion,
   faRestroom,
-  faShower,
-  faTrain,
 } from "@fortawesome/free-solid-svg-icons";
+import fs from "fs";
+import gpxParser from "gpxparser";
 
-const capitalize = (string) =>
-  !string ? "" : string.charAt(0).toUpperCase() + string.slice(1);
+import data from "./src/data/data.json" assert { type: "json" };
 
 const chunkArray = (array, chunkSize) => {
   const chunks = [];
@@ -21,8 +21,7 @@ const chunkArray = (array, chunkSize) => {
   return chunks;
 };
 
-const downloadGpx = ({ gpx, markers, meta }) => {
-  const link = document.createElement("a");
+const downloadGpx = ({ gpx, markers }) => {
   const source = gpx.xmlSource;
   const root = source.getElementsByTagName("gpx")[0];
   for (let i = 0; i < markers.length; i++) {
@@ -65,16 +64,9 @@ const downloadGpx = ({ gpx, markers, meta }) => {
       }
     }
     root.appendChild(node);
-  }
-  link.href = URL.createObjectURL(
-    new Blob([new XMLSerializer().serializeToString(source)], {
-      type: "text/csv;charset=utf-8",
-    })
-  );
-  link.setAttribute("download", `${meta.id}.gpx`);
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  };
+  console.log(gpx);
+  fs.writeFileSync(`./src/data/${gpx.metadata.name}-generated.gpx`, new window.XMLSerializer().serializeToString(source), "utf-8");
 };
 
 const downSampleArray = (input, period) => {
@@ -111,20 +103,6 @@ const getClosestPointByCoordinates = ({ coordinates, gpx }) => {
   return closestPoint;
 };
 
-const getClosestPointIndexByDistance = ({ cumulDistances, distance }) => {
-  const closestDistance = cumulDistances.reduce(
-    (previous, current, index) =>
-      Math.abs(distance - current) < Math.abs(distance - previous.distance)
-        ? { distance: current, index }
-        : previous,
-    {
-      distance: cumulDistances[cumulDistances.length - 1],
-      index: cumulDistances.length - 1,
-    }
-  );
-  return closestDistance.index;
-};
-
 const getDataFromOverpass = (bbox) => {
   const query = `
     [out:json][timeout:500];
@@ -138,22 +116,10 @@ const getDataFromOverpass = (bbox) => {
     );
     out center;
   `;
-  // TODO replace by fetch
   return fetch(
     `https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`
   );
 };
-
-const getDefaultKmPerDayPerActivity = (activity) => {
-  const kmPerDayPerActivities = {
-    cycling: 80,
-    hiking: 25,
-  };
-  return kmPerDayPerActivities?.[activity.toLowerCase()] ?? 25;
-};
-
-// 100 m of positiv elevation means 1 km of distance
-const getITRADistance = ({ distance, elevation }) => distance + elevation / 100;
 
 const getMarkerFromType = (type) => {
   const types = {
@@ -307,18 +273,6 @@ const getMarkerFromType = (type) => {
       icon: faHouse,
       label: "abri",
     },
-    shower: {
-      category: "eau",
-      color: "#1993D0",
-      icon: faShower,
-      label: "douches",
-    },
-    station: {
-      category: "transport",
-      color: "#AC4FC6",
-      icon: faTrain,
-      label: "gare ferroviaire"
-    },
     supermarket: {
       category: "alimentation",
       color: "#409D44",
@@ -360,9 +314,16 @@ const getMarkerFromType = (type) => {
   );
 };
 
-const getTypeFromName = (name) => {
-  if (!name) return "";
-  return name.toLowerCase().includes("refugio") ? "hostel" : "";
+const getGpx = async (trailId) => {
+  try {
+    const data = fs.readFileSync(`./src/data/${trailId}.gpx`, "utf-8");
+    const gpx = new gpxParser();
+    gpx.parse(data);
+    return gpx;
+  } catch (error) {
+    console.error("Error reading file:", error);
+    return;
+  }
 };
 
 const overloadGpx = (gpx) => {
@@ -407,17 +368,103 @@ const overloadGpx = (gpx) => {
   return gpx;
 };
 
-export {
-  capitalize,
-  chunkArray,
-  downloadGpx,
-  downSampleArray,
-  getClosestPointByCoordinates,
-  getClosestPointIndexByDistance,
-  getDataFromOverpass,
-  getDefaultKmPerDayPerActivity,
-  getITRADistance,
-  getMarkerFromType,
-  getTypeFromName,
-  overloadGpx,
+const getMarkers = async (gpx) => {
+  // Compute markers from OpenStreetMap
+  const coordinatesDataCount = gpx.tracks[0].points.length;
+  const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
+  const pathSamplingPeriod = Math.floor(
+    coordinatesDataCount / targetPathDataCount
+  );
+  const downSampledCoordinates = downSampleArray(
+    gpx.tracks[0].points,
+    pathSamplingPeriod
+  );
+  let chunks = chunkArray(downSampledCoordinates, 20);
+  chunks = chunks.map((chunk) =>
+    chunk.map((item) => [item.lat, item.lon]).flat()
+  );
+
+  let responses = await Promise.all(
+    chunks.map((chunk) => getDataFromOverpass(chunk))
+  );
+  console.log('flag_04');
+  // Needed to make it work
+  console.log(responses);
+  responses = await Promise.all(responses.map((response) => response.json()));
+  responses = responses.map((response) => response.elements).flat();
+
+  console.log('flag_05');
+  console.log(responses);
+  let markers = [];
+  const markersTmp = responses.map((marker) => {
+    const type =
+      marker?.tags?.amenity ??
+      marker?.tags?.landuse ??
+      marker?.tags?.shop ??
+      marker?.tags?.tourism ??
+      "";
+    return {
+      addrHousenumber: marker?.tags?.["addr:housenumber"],
+      addrStreet: marker?.tags?.["addr:street"],
+      // day: (index + 1).toString(),
+      email: marker?.tags?.email,
+      id: marker?.id,
+      lat: marker?.lat ?? marker?.center?.lat,
+      lon: marker?.lon ?? marker?.center?.lon,
+      name: marker?.tags?.name,
+      note: marker?.tags?.note,
+      osmType: marker?.type,
+      phone:
+        marker?.tags?.phone?.replace(/ /g, "") ??
+        marker?.tags?.["contact:phone"]?.replace(/ /g, ""),
+      type,
+      website: marker?.tags?.website,
+      ...getMarkerFromType(type),
+    };
+  });
+  markers = markers.concat(markersTmp);
+  // Remove duplicated markers based on lat,lon
+  markers = [
+    ...new Map(
+      markers.map((value) => [`${value.lat},${value.lon}`, value])
+    ).values(),
+  ];
+  // Add distance from start
+  markers = markers.map((marker) => {
+    const closestPoint = getClosestPointByCoordinates({
+      coordinates: marker,
+      gpx,
+    });
+    // TODO fix distance calculation
+    const distance = (
+      gpx.calcDistanceBetween(marker, closestPoint.point) +
+      gpx.tracks[0].distance.cumulItra[closestPoint.index] / 1000
+    ).toFixed(1);
+    return { distance, ...marker };
+  });
+  return markers;
 };
+
+if (process.argv.length === 3) {
+  const trailId = process.argv[2];
+  const trailName = data?.[trailId]?.name;
+  if (trailName) {
+    console.log('1. Read GPX file');
+    let gpx = await getGpx(trailId);
+    console.log('2. Overload GPX');
+    gpx = overloadGpx(gpx);
+    console.log('3. Load markers');
+    const markers = await getMarkers(gpx);
+    console.log('4. Write GPX file');
+    await downloadGpx({ gpx, markers });
+    console.log('5. Done');
+  } else {
+    console.error(
+      `This trailId "${trailId}" is not in local config file "./src/data/data.json".`
+    );
+  }
+} else {
+  console.error(
+    "Misuse, this command line require one and only one argument : trail id"
+  );
+}
