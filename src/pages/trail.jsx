@@ -39,8 +39,7 @@ import {
   getClosestPointIndexByDistance,
   getDataFromOverpass,
   getDefaultKmPerDayPerActivity,
-  getMarkerFromType,
-  getTypeFromName,
+  getMarkerFromTypeOrName,
   overloadGpx,
 } from "../utils";
 
@@ -94,8 +93,6 @@ const Trail = () => {
 
   useEffect(() => {
     // TODO switch to await
-    console.log("useEffect");
-    console.log(meta?.kmPerDay);
     fetch(meta?.gpx)
       .then((res) => res.text())
       .then((xml) => {
@@ -149,98 +146,120 @@ const Trail = () => {
         // Add custom markers
         const customMarkers = (meta?.markers ?? []).map((marker) => ({
           ...marker,
-          ...getMarkerFromType(marker.type),
+          ...getMarkerFromTypeOrName(marker),
         }));
         // Add markers from GPX
         const gpxMarkers = (newGpx?.waypoints ?? []).map((marker) => ({
           ...marker,
-          ...getMarkerFromType(marker?.type ?? getTypeFromName(marker?.name)),
+          ...getMarkerFromTypeOrName(marker),
         }));
         let allMarkers = [...customMarkers, ...gpxMarkers];
-        let count = 0;
+        // let count = 0;
         // Compute markers from OpenStreetMap
-        gpxs.forEach((gpx, index) => {
-          const coordinatesDataCount = gpx.tracks[0].points.length;
-          const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
-          const pathSamplingPeriod = Math.floor(
-            coordinatesDataCount / targetPathDataCount
-          );
-          const downSampledCoordinates = downSampleArray(
-            gpx.tracks[0].points,
-            pathSamplingPeriod
-          );
-          let chunks = chunkArray(downSampledCoordinates, 20);
-          chunks = chunks.map((chunk) =>
-            chunk.map((item) => [item.lat, item.lon]).flat()
-          );
+        // gpxs.forEach((gpx, index) => {
+        //   const coordinatesDataCount = gpx.tracks[0].points.length;
+        //   const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
+        //   const pathSamplingPeriod = Math.floor(
+        //     coordinatesDataCount / targetPathDataCount
+        //   );
+        //   const downSampledCoordinates = downSampleArray(
+        //     gpx.tracks[0].points,
+        //     pathSamplingPeriod
+        //   );
+        // let chunks = chunkArray(downSampledCoordinates, 20);
+        // chunks = chunks.map((chunk) =>
+        //   chunk.map((item) => [item.lat, item.lon]).flat()
+        // );
 
-          Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
-            .then((responses) => {
-              const response = responses
-                .map((response) => response.data.elements)
-                .flat();
-              const markersTmp = response.map((item) => {
-                const type =
-                  item?.tags?.amenity ??
-                  item?.tags?.landuse ??
-                  item?.tags?.shop ??
-                  item?.tags?.tourism ??
-                  item?.tags?.railway ??
-                  "";
-                return {
-                  addrCity: item?.tags?.["addr:city"],
-                  addrHousenumber: item?.tags?.["addr:housenumber"],
-                  addrStreet: item?.tags?.["addr:street"],
-                  day: (index + 1).toString(),
-                  email: item?.tags?.email,
-                  id: item?.id,
-                  lat: item?.lat ?? item?.center?.lat,
-                  lon: item?.lon ?? item?.center?.lon,
-                  name: item?.tags?.name,
-                  note: item?.tags?.note,
-                  opening_hours: item?.tags?.opening_hours,
-                  osmType: item?.type,
-                  phone:
-                    item?.tags?.phone?.replace(/ /g, "") ??
-                    item?.tags?.["contact:phone"]?.replace(/ /g, ""),
-                  type,
-                  website: item?.tags?.website,
-                  ...getMarkerFromType(type),
-                };
-              });
-              allMarkers = allMarkers.concat(markersTmp);
-              count += 1;
-              if (count === gpxs?.length) {
-                // Remove duplicated markers based on lat,lon
-                allMarkers = [
-                  ...new Map(
-                    allMarkers.map((value) => [
-                      `${value.lat},${value.lon}`,
-                      value,
-                    ])
-                  ).values(),
-                ];
-                // Add distance from start
-                allMarkers = allMarkers.map((marker) => {
-                  const closestPoint = getClosestPointByCoordinates({
-                    coordinates: marker,
-                    gpx: newGpx,
-                  });
-                  // TODO fix distance calculation
-                  const distance = (
-                    newGpx.calcDistanceBetween(marker, closestPoint.point) +
-                    newGpx.tracks[0].distance.cumulItra[closestPoint.index] /
-                      1000
-                  ).toFixed(1);
-                  return { distance, ...marker };
-                });
-                setMarkers(allMarkers);
-              }
-            })
-            .catch((error) => {
-              console.error(error);
-            });
+        // Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
+        //   .then((responses) => {
+        //     const response = responses
+        //       .map((response) => response.data.elements)
+        //       .flat();
+        //     const markersTmp = response.map((item) => {
+        //       const type =
+        //         item?.tags?.amenity ??
+        //         item?.tags?.landuse ??
+        //         item?.tags?.shop ??
+        //         item?.tags?.tourism ??
+        //         item?.tags?.railway ??
+        //         "";
+        //       return {
+        //         addrCity: item?.tags?.["addr:city"],
+        //         addrHousenumber: item?.tags?.["addr:housenumber"],
+        //         addrStreet: item?.tags?.["addr:street"],
+        //         day: (index + 1).toString(),
+        //         email: item?.tags?.email,
+        //         id: item?.id,
+        //         lat: item?.lat ?? item?.center?.lat,
+        //         lon: item?.lon ?? item?.center?.lon,
+        //         name: item?.tags?.name,
+        //         note: item?.tags?.note,
+        //         opening_hours: item?.tags?.opening_hours,
+        //         osmType: item?.type,
+        //         phone:
+        //           item?.tags?.phone?.replace(/ /g, "") ??
+        //           item?.tags?.["contact:phone"]?.replace(/ /g, ""),
+        //         type,
+        //         website: item?.tags?.website,
+        //         ...getMarkerFromType(type),
+        //       };
+        //     });
+        //     allMarkers = allMarkers.concat(markersTmp);
+        //     count += 1;
+        //     if (count === gpxs?.length) {
+        //       // Remove duplicated markers based on lat,lon
+        //       allMarkers = [
+        //         ...new Map(
+        //           allMarkers.map((value) => [
+        //             `${value.lat},${value.lon}`,
+        //             value,
+        //           ])
+        //         ).values(),
+        //       ];
+        //       // Add distance from start
+        //       allMarkers = allMarkers.map((marker) => {
+        //         const closestPoint = getClosestPointByCoordinates({
+        //           coordinates: marker,
+        //           gpx: newGpx,
+        //         });
+        //         // TODO fix distance calculation
+        //         const distance = (
+        //           newGpx.calcDistanceBetween(marker, closestPoint.point) +
+        //           newGpx.tracks[0].distance.cumulItra[closestPoint.index] /
+        //             1000
+        //         ).toFixed(1);
+        //         return { distance, ...marker };
+        //       });
+        //       setMarkers(allMarkers);
+        //     }
+        //   })
+        //   .catch((error) => {
+        //     console.error(error);
+        //   });
+        // });
+        // if (count === gpxs?.length) {
+        // Remove duplicated markers based on lat,lon
+        allMarkers = [
+          ...new Map(
+            allMarkers.map((value) => [`${value.lat},${value.lon}`, value])
+          ).values(),
+        ];
+        // Add distance from start
+        allMarkers = allMarkers.map((marker) => {
+          const closestPoint = getClosestPointByCoordinates({
+            coordinates: marker,
+            gpx: newGpx,
+          });
+          // TODO fix distance calculation
+          const distance = (
+            newGpx.calcDistanceBetween(marker, closestPoint.point) +
+            newGpx.tracks[0].distance.cumulItra[closestPoint.index] / 1000
+          ).toFixed(1);
+          return { distance, ...marker };
         });
+        setMarkers(allMarkers);
+        // }
       })
       .catch((e) => console.error(e));
     // eslint-disable-next-line react-hooks/exhaustive-deps

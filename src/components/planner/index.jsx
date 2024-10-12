@@ -18,7 +18,7 @@ import { styled } from "@mui/material/styles";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import { useState } from "react";
 
-import { capitalize, getMarkerFromType } from "../../utils";
+import { capitalize, getMarkerFromTypeOrName } from "../../utils";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -82,7 +82,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
         <StyledTableCell>km {marker.distance}</StyledTableCell>
         <StyledTableCell>
           <FontAwesomeIcon
-            icon={getMarkerFromType(marker.type).icon}
+            icon={getMarkerFromTypeOrName(marker).icon}
             color="#e4e5e6"
           />{" "}
           {capitalize(marker.label)}

@@ -97,7 +97,10 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
               </LocalizationProvider>
               <Button
                 component="label"
-                onClick={() => downloadGpx({ gpx, markers, meta })}
+                onClick={() => {
+                  downloadGpx({ gpx, markers, meta });
+                  handleClose();
+                }}
                 startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
                 variant="outlined"
               >

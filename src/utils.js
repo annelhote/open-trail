@@ -9,6 +9,7 @@ import {
   faShower,
   faTrain,
 } from "@fortawesome/free-solid-svg-icons";
+import XmlBeautify from "xml-beautify";
 
 const capitalize = (string) =>
   !string ? "" : string.charAt(0).toUpperCase() + string.slice(1);
@@ -50,24 +51,36 @@ const downloadGpx = ({ gpx, markers, meta }) => {
       node.appendChild(desc);
     }
     if (wpt?.category) {
-      let sym1 = "";
-      if (wpt.category === "hébergement") sym1 = "friends-home";
-      if (wpt.category === "alimentation") sym1 = "stores-supermarket";
-      if (wpt.category === "sorties") sym1 = "restaurant-restaurant";
-      if (wpt.category === "eau") sym1 = "tourism-drinkingwater";
-      if (sym1.length > 0) {
+      let symValue = "";
+      if (wpt.category === "hébergement") symValue = "friends-home";
+      if (wpt.category === "alimentation") symValue = "stores-supermarket";
+      if (wpt.category === "sorties") symValue = "restaurant-restaurant";
+      if (wpt.category === "eau") symValue = "tourism-drinkingwater";
+      if (symValue.length > 0) {
         const sym = source.createElementNS(
           "http://www.topografix.com/GPX/1/1",
           "sym"
         );
-        sym.appendChild(source.createTextNode(sym1));
+        sym.appendChild(source.createTextNode(symValue));
         node.appendChild(sym);
+      }
+    }
+    if (wpt?.category) {
+      let typeValue = "";
+      if (wpt.category === "hébergement") typeValue = "friends-home";
+      if (typeValue.length > 0) {
+        const type = source.createElementNS(
+          "http://www.topografix.com/GPX/1/1",
+          "type"
+        );
+        type.appendChild(source.createTextNode(typeValue));
+        node.appendChild(type);
       }
     }
     root.appendChild(node);
   }
   link.href = URL.createObjectURL(
-    new Blob([new XMLSerializer().serializeToString(source)], {
+    new Blob([new XmlBeautify().beautify((new XMLSerializer()).serializeToString(source))], {
       type: "text/csv;charset=utf-8",
     })
   );
@@ -155,7 +168,7 @@ const getDefaultKmPerDayPerActivity = (activity) => {
 // 100 m of positiv elevation means 1 km of distance
 const getITRADistance = ({ distance, elevation }) => distance + elevation / 100;
 
-const getMarkerFromType = (type) => {
+const getMarkerFromTypeOrName = (marker) => {
   const types = {
     alpine_hut: {
       category: "hébergement",
@@ -350,20 +363,19 @@ const getMarkerFromType = (type) => {
       label: "cabane en pleine nature",
     },
   };
-  return (
-    types?.[type] ?? {
-      category: "autre",
-      color: "#a9a9a9",
-      icon: faQuestion,
-      label: type,
-    }
-  );
-};
-
-const getTypeFromName = (name) => {
-  if (!name) return "";
-  return name.toLowerCase().includes("refugio") ? "hostel" : "";
-};
+  if (marker?.type && types?.[marker.type.toLowerCase()]) {
+    return types[marker.type.toLowerCase()]
+  }
+  if (marker?.name && Object.values(types).find(type => type.label === marker.name.toLowerCase())) {
+    return Object.values(types).find(type => type.label === marker.name.toLowerCase());
+  }
+  return {
+    category: "autre",
+    color: "#a9a9a9",
+    icon: faQuestion,
+    label: "autre",
+  };
+}
 
 const overloadGpx = (gpx) => {
   // Compute cumulative positiv elevation and ITRA distance at each point of the Route/Track
@@ -417,7 +429,6 @@ export {
   getDataFromOverpass,
   getDefaultKmPerDayPerActivity,
   getITRADistance,
-  getMarkerFromType,
-  getTypeFromName,
+  getMarkerFromTypeOrName,
   overloadGpx,
 };
