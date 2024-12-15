@@ -49,11 +49,11 @@ const Trail = () => {
 
   const [coordinates, setCoordinates] = useState();
   const [days, setDays] = useState([]);
-  const [filters, setFilters] = useState({});
+  const [filters] = useState({});
   const [gpx, setGpx] = useState();
   const [gpxComplete, setGpxComplete] = useState();
   const [gpxs, setGpxs] = useState();
-  const [markers, setMarkers] = useState([]);
+  const [markers] = useState([]);
   const [meta, setMeta] = useState({});
   const [selectedFilters, setSelectedFilters] = useState([]);
 

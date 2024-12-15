@@ -29,6 +29,11 @@ import gpxCretesDuJura from "../data/cretes-du-jura.gpx";
 import data from "../data/data.json";
 import gpxGr38 from "../data/gr38.gpx";
 import gpxHexatrek01 from "../data/hexatrek-01.gpx";
+import gpxHexatrek02 from "../data/hexatrek-02.gpx";
+import gpxHexatrek03 from "../data/hexatrek-03.gpx";
+import gpxHexatrek04 from "../data/hexatrek-04.gpx";
+import gpxHexatrek05 from "../data/hexatrek-05.gpx";
+import gpxHexatrek06 from "../data/hexatrek-06.gpx";
 import gpxLePoetSigillat from "../data/le-poet-sigillat.gpx";
 import gpxNantesEchalas from "../data/nantes-echalas.gpx";
 import gpxPicosDeEuropa from "../data/picos-de-europa.gpx";
@@ -63,6 +68,11 @@ const TrailById = () => {
     "cretes-du-jura": gpxCretesDuJura,
     gr38: gpxGr38,
     "hexatrek-01": gpxHexatrek01,
+    "hexatrek-02": gpxHexatrek02,
+    "hexatrek-03": gpxHexatrek03,
+    "hexatrek-04": gpxHexatrek04,
+    "hexatrek-05": gpxHexatrek05,
+    "hexatrek-06": gpxHexatrek06,
     "le-poet-sigillat": gpxLePoetSigillat,
     "nantes-echalas": gpxNantesEchalas,
     "picos-de-europa": gpxPicosDeEuropa,
