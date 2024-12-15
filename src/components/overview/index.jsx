@@ -22,6 +22,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 
 import { downloadGpx } from "../../utils";
@@ -71,7 +72,7 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
                 setMeta({
                   ...meta,
                   kmPerDay: event.target.kmItra.value,
-                  startDate: event.target.departureDate.value,
+                  startDate: dayjs(event.target.departureDate.value, 'DD/MM/YYYY'),
                 });
                 handleClose();
               },
@@ -89,6 +90,7 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DemoContainer components={["DatePicker"]}>
                   <DatePicker
+                    format="DD/MM/YYYY"
                     label="Jour du départ"
                     name="departureDate"
                     value={meta.startDate}

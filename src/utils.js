@@ -65,18 +65,19 @@ const downloadGpx = ({ gpx, markers, meta }) => {
         node.appendChild(sym);
       }
     }
-    if (wpt?.category) {
-      let typeValue = "";
-      if (wpt.category === "hébergement") typeValue = "friends-home";
-      if (typeValue.length > 0) {
-        const type = source.createElementNS(
-          "http://www.topografix.com/GPX/1/1",
-          "type"
-        );
-        type.appendChild(source.createTextNode(typeValue));
-        node.appendChild(type);
-      }
-    }
+    // TODO: export marker type
+    // if (wpt?.category) {
+    //   let typeValue = "";
+    //   if (wpt.category === "hébergement") typeValue = "friends-home";
+    //   if (typeValue.length > 0) {
+    //     const type = source.createElementNS(
+    //       "http://www.topografix.com/GPX/1/1",
+    //       "type"
+    //     );
+    //     type.appendChild(source.createTextNode(typeValue));
+    //     node.appendChild(type);
+    //   }
+    // }
     root.appendChild(node);
   }
   link.href = URL.createObjectURL(

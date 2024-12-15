@@ -30,5 +30,11 @@
     "id": "cretes-du-jura",
     "name": "Crêtes du Jura (septembre 2024)",
     "startDate": "2024-09-06"
+  },
+  "hexatrek-01": {
+    "id": "hexatrek-01",
+    "kmPerDay": 30,
+    "name": "Hexatrek - Etape 1 - Grand est",
+    "startDate": "2025-06-16"
   }
 }

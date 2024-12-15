@@ -13,10 +13,9 @@ import {
   RadioGroup,
   Typography,
 } from "@mui/material";
-import dayjs from "dayjs";
 import gpxParser from "gpxparser";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 import Filters from "../components/filters";
 import MyMap from "../components/map";
@@ -44,6 +43,7 @@ import {
 } from "../utils";
 
 const Trail = () => {
+  const { state } = useLocation();
   const navigate = useNavigate();
   const params = useParams();
 
@@ -54,22 +54,66 @@ const Trail = () => {
   const [gpxComplete, setGpxComplete] = useState();
   const [gpxs, setGpxs] = useState();
   const [markers, setMarkers] = useState([]);
-  const [meta, setMeta] = useState(data?.[params?.id] ?? {});
+  const [meta, setMeta] = useState({});
   const [selectedFilters, setSelectedFilters] = useState([]);
 
-  const gpxes = {
-    "chemin-d-assise": gpxCheminDassise,
-    "cretes-du-jura": gpxCretesDuJura,
-    gr38: gpxGr38,
-    "le-poet-sigillat": gpxLePoetSigillat,
-    "nantes-echalas": gpxNantesEchalas,
-    "picos-de-europa": gpxPicosDeEuropa,
-    "tour-du-queyras": gpxTourDuQueyras,
-  };
-  meta.gpx = gpxes[params?.id];
-  meta.startDate = dayjs(
-    meta?.startDate ?? new Date().toISOString().split("T")[0]
-  );
+  // const gpxes = {
+  //   "chemin-d-assise": gpxCheminDassise,
+  //   "cretes-du-jura": gpxCretesDuJura,
+  //   gr38: gpxGr38,
+  //   "le-poet-sigillat": gpxLePoetSigillat,
+  //   "nantes-echalas": gpxNantesEchalas,
+  //   "picos-de-europa": gpxPicosDeEuropa,
+  //   "tour-du-queyras": gpxTourDuQueyras,
+  // };
+  // meta.gpx = gpxes[params?.id];
+  // meta.startDate = dayjs(
+  //   meta?.startDate ?? new Date().toISOString().split("T")[0],
+  // );
+
+  useEffect(() => {
+    // Parse GPX
+    let gpxCompleteTmp = new gpxParser();
+    gpxCompleteTmp.parse(state?.gpx);
+    gpxCompleteTmp = overloadGpx(gpxCompleteTmp);
+    setGpxComplete(gpxCompleteTmp);
+    // Compute days
+    const duration = Math.ceil(
+      gpxCompleteTmp.tracks[0].distance.totalItra / 1000 / state?.kmPerDay,
+    );
+    const daysTmp = [...Array(duration).keys()].map((day) => day + 1);
+    setDays(daysTmp);
+    // Compute GPXs
+    const cumulDistances = [0, ...gpxCompleteTmp.tracks[0].distance.cumulItra];
+    const gpxsTmp = daysTmp.map((day) => {
+      const startPointIndex = getClosestPointIndexByDistance({
+        cumulDistances,
+        distance: state.kmPerDay * 1000 * (day - 1),
+      });
+      const endPointIndex = getClosestPointIndexByDistance({
+        cumulDistances,
+        distance: state.kmPerDay * 1000 * day,
+      });
+      const trkpts = gpxCompleteTmp.tracks[0].points
+        .slice(startPointIndex, endPointIndex + 1)
+        .map(
+          (point) =>
+            `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`,
+        );
+      let partGpx = new gpxParser();
+      partGpx.parse(
+        `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`,
+      );
+      partGpx = overloadGpx(partGpx);
+      return partGpx;
+    });
+    setMeta(state);
+    setGpxs(gpxsTmp);
+  }, [state]);
+
+  useEffect(() => {
+    setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
+  }, [gpxComplete, gpxs, params.day]);
 
   const onChange = (event) => {
     const eventName = event.target.name;
@@ -80,7 +124,7 @@ const Trail = () => {
         excluded = [...excluded, filters[eventName].data];
       }
       setSelectedFilters(
-        selectedFilters.filter((item) => !excluded.includes(item))
+        selectedFilters.filter((item) => !excluded.includes(item)),
       );
     } else {
       let added = [eventName];
@@ -91,211 +135,212 @@ const Trail = () => {
     }
   };
 
-  useEffect(() => {
-    // TODO switch to await
-    fetch(meta?.gpx)
-      .then((res) => res.text())
-      .then((xml) => {
-        let newGpx = new gpxParser();
-        newGpx.parse(xml);
-        newGpx = overloadGpx(newGpx);
-        // If no kmPerDay set, set default value
-        if (!meta?.kmPerDay) {
-          if (params?.id === "cretes-du-jura") {
-            meta.kmPerDay = 40;
-          } else {
-            meta.kmPerDay = getDefaultKmPerDayPerActivity(
-              newGpx.tracks[0]?.type ?? "hiking"
-            );
-          }
-        }
+  // useEffect(() => {
+  //   // TODO switch to await
+  //   fetch(meta?.gpx)
+  //     .then((res) => res.text())
+  //     .then((xml) => {
+  //       let newGpx = new gpxParser();
+  //       newGpx.parse(xml);
+  //       newGpx = overloadGpx(newGpx);
+  //       // If no kmPerDay set, set default value
+  //       if (!meta?.kmPerDay) {
+  //         if (params?.id === "cretes-du-jura") {
+  //           meta.kmPerDay = 40;
+  //         } else {
+  //           meta.kmPerDay = getDefaultKmPerDayPerActivity(
+  //             newGpx.tracks[0]?.type ?? "hiking",
+  //           );
+  //         }
+  //       }
 
-        // Calculate days
-        const duration = Math.ceil(
-          newGpx.tracks[0].distance.totalItra / 1000 / meta.kmPerDay
-        );
-        const days = [...Array(duration).keys()].map((day) => day + 1);
-        setDays(days);
-        // Determinates each day
-        const cumulDistances = [0, ...newGpx.tracks[0].distance.cumulItra];
-        const gpxs = days.map((day) => {
-          const startPointIndex = getClosestPointIndexByDistance({
-            cumulDistances,
-            distance: meta.kmPerDay * 1000 * (day - 1),
-          });
-          const endPointIndex = getClosestPointIndexByDistance({
-            cumulDistances,
-            distance: meta.kmPerDay * 1000 * day,
-          });
-          const trkpts = newGpx.tracks[0].points
-            .slice(startPointIndex, endPointIndex + 1)
-            .map(
-              (point) =>
-                `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`
-            );
-          let partGpx = new gpxParser();
-          partGpx.parse(
-            `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`
-          );
-          partGpx = overloadGpx(partGpx);
-          return partGpx;
-        });
-        setGpxs(gpxs);
-        setGpxComplete(newGpx);
+  //       // Calculate days
+  //       const duration = Math.ceil(
+  //         newGpx.tracks[0].distance.totalItra / 1000 / meta.kmPerDay,
+  //       );
+  //       const days = [...Array(duration).keys()].map((day) => day + 1);
+  //       setDays(days);
+  //       // Determinates each day
+  //       const cumulDistances = [0, ...newGpx.tracks[0].distance.cumulItra];
+  //       const gpxs = days.map((day) => {
+  //         const startPointIndex = getClosestPointIndexByDistance({
+  //           cumulDistances,
+  //           distance: meta.kmPerDay * 1000 * (day - 1),
+  //         });
+  //         const endPointIndex = getClosestPointIndexByDistance({
+  //           cumulDistances,
+  //           distance: meta.kmPerDay * 1000 * day,
+  //         });
+  //         const trkpts = newGpx.tracks[0].points
+  //           .slice(startPointIndex, endPointIndex + 1)
+  //           .map(
+  //             (point) =>
+  //               `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`,
+  //           );
+  //         let partGpx = new gpxParser();
+  //         partGpx.parse(
+  //           `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`,
+  //         );
+  //         partGpx = overloadGpx(partGpx);
+  //         return partGpx;
+  //       });
+  //       setGpxs(gpxs);
+  //       setGpxComplete(newGpx);
 
-        // Add custom markers
-        const customMarkers = (meta?.markers ?? []).map((marker) => ({
-          ...marker,
-          ...getMarkerFromTypeOrName(marker),
-        }));
-        // Add markers from GPX
-        const gpxMarkers = (newGpx?.waypoints ?? []).map((marker) => ({
-          ...marker,
-          ...getMarkerFromTypeOrName(marker),
-        }));
-        let allMarkers = [...customMarkers, ...gpxMarkers];
-        // let count = 0;
-        // Compute markers from OpenStreetMap
-        // gpxs.forEach((gpx, index) => {
-        //   const coordinatesDataCount = gpx.tracks[0].points.length;
-        //   const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
-        //   const pathSamplingPeriod = Math.floor(
-        //     coordinatesDataCount / targetPathDataCount
-        //   );
-        //   const downSampledCoordinates = downSampleArray(
-        //     gpx.tracks[0].points,
-        //     pathSamplingPeriod
-        //   );
-        // let chunks = chunkArray(downSampledCoordinates, 20);
-        // chunks = chunks.map((chunk) =>
-        //   chunk.map((item) => [item.lat, item.lon]).flat()
-        // );
+  //       // Add custom markers
+  //       const customMarkers = (meta?.markers ?? []).map((marker) => ({
+  //         ...marker,
+  //         ...getMarkerFromTypeOrName(marker),
+  //       }));
+  //       // Add markers from GPX
+  //       const gpxMarkers = (newGpx?.waypoints ?? []).map((marker) => ({
+  //         ...marker,
+  //         ...getMarkerFromTypeOrName(marker),
+  //       }));
+  //       let allMarkers = [...customMarkers, ...gpxMarkers];
+  //       // let count = 0;
+  //       // Compute markers from OpenStreetMap
+  //       // gpxs.forEach((gpx, index) => {
+  //       //   const coordinatesDataCount = gpx.tracks[0].points.length;
+  //       //   const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
+  //       //   const pathSamplingPeriod = Math.floor(
+  //       //     coordinatesDataCount / targetPathDataCount
+  //       //   );
+  //       //   const downSampledCoordinates = downSampleArray(
+  //       //     gpx.tracks[0].points,
+  //       //     pathSamplingPeriod
+  //       //   );
+  //       // let chunks = chunkArray(downSampledCoordinates, 20);
+  //       // chunks = chunks.map((chunk) =>
+  //       //   chunk.map((item) => [item.lat, item.lon]).flat()
+  //       // );
 
-        // Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
-        //   .then((responses) => {
-        //     const response = responses
-        //       .map((response) => response.data.elements)
-        //       .flat();
-        //     const markersTmp = response.map((item) => {
-        //       const type =
-        //         item?.tags?.amenity ??
-        //         item?.tags?.landuse ??
-        //         item?.tags?.shop ??
-        //         item?.tags?.tourism ??
-        //         item?.tags?.railway ??
-        //         "";
-        //       return {
-        //         addrCity: item?.tags?.["addr:city"],
-        //         addrHousenumber: item?.tags?.["addr:housenumber"],
-        //         addrStreet: item?.tags?.["addr:street"],
-        //         day: (index + 1).toString(),
-        //         email: item?.tags?.email,
-        //         id: item?.id,
-        //         lat: item?.lat ?? item?.center?.lat,
-        //         lon: item?.lon ?? item?.center?.lon,
-        //         name: item?.tags?.name,
-        //         note: item?.tags?.note,
-        //         opening_hours: item?.tags?.opening_hours,
-        //         osmType: item?.type,
-        //         phone:
-        //           item?.tags?.phone?.replace(/ /g, "") ??
-        //           item?.tags?.["contact:phone"]?.replace(/ /g, ""),
-        //         type,
-        //         website: item?.tags?.website,
-        //         ...getMarkerFromType(type),
-        //       };
-        //     });
-        //     allMarkers = allMarkers.concat(markersTmp);
-        //     count += 1;
-        //     if (count === gpxs?.length) {
-        //       // Remove duplicated markers based on lat,lon
-        //       allMarkers = [
-        //         ...new Map(
-        //           allMarkers.map((value) => [
-        //             `${value.lat},${value.lon}`,
-        //             value,
-        //           ])
-        //         ).values(),
-        //       ];
-        //       // Add distance from start
-        //       allMarkers = allMarkers.map((marker) => {
-        //         const closestPoint = getClosestPointByCoordinates({
-        //           coordinates: marker,
-        //           gpx: newGpx,
-        //         });
-        //         // TODO fix distance calculation
-        //         const distance = (
-        //           newGpx.calcDistanceBetween(marker, closestPoint.point) +
-        //           newGpx.tracks[0].distance.cumulItra[closestPoint.index] /
-        //             1000
-        //         ).toFixed(1);
-        //         return { distance, ...marker };
-        //       });
-        //       setMarkers(allMarkers);
-        //     }
-        //   })
-        //   .catch((error) => {
-        //     console.error(error);
-        //   });
-        // });
-        // if (count === gpxs?.length) {
-        // Remove duplicated markers based on lat,lon
-        allMarkers = [
-          ...new Map(
-            allMarkers.map((value) => [`${value.lat},${value.lon}`, value])
-          ).values(),
-        ];
-        // Add distance from start
-        allMarkers = allMarkers.map((marker) => {
-          const closestPoint = getClosestPointByCoordinates({
-            coordinates: marker,
-            gpx: newGpx,
-          });
-          // TODO fix distance calculation
-          const distance = (
-            newGpx.calcDistanceBetween(marker, closestPoint.point) +
-            newGpx.tracks[0].distance.cumulItra[closestPoint.index] / 1000
-          ).toFixed(1);
-          return { distance, ...marker };
-        });
-        setMarkers(allMarkers);
-        // }
-      })
-      .catch((e) => console.error(e));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [meta?.gpx, meta.kmPerDay, meta?.markers]);
+  //       // Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
+  //       //   .then((responses) => {
+  //       //     const response = responses
+  //       //       .map((response) => response.data.elements)
+  //       //       .flat();
+  //       //     const markersTmp = response.map((item) => {
+  //       //       const type =
+  //       //         item?.tags?.amenity ??
+  //       //         item?.tags?.landuse ??
+  //       //         item?.tags?.shop ??
+  //       //         item?.tags?.tourism ??
+  //       //         item?.tags?.railway ??
+  //       //         "";
+  //       //       return {
+  //       //         addrCity: item?.tags?.["addr:city"],
+  //       //         addrHousenumber: item?.tags?.["addr:housenumber"],
+  //       //         addrStreet: item?.tags?.["addr:street"],
+  //       //         day: (index + 1).toString(),
+  //       //         email: item?.tags?.email,
+  //       //         id: item?.id,
+  //       //         lat: item?.lat ?? item?.center?.lat,
+  //       //         lon: item?.lon ?? item?.center?.lon,
+  //       //         name: item?.tags?.name,
+  //       //         note: item?.tags?.note,
+  //       //         opening_hours: item?.tags?.opening_hours,
+  //       //         osmType: item?.type,
+  //       //         phone:
+  //       //           item?.tags?.phone?.replace(/ /g, "") ??
+  //       //           item?.tags?.["contact:phone"]?.replace(/ /g, ""),
+  //       //         type,
+  //       //         website: item?.tags?.website,
+  //       //         ...getMarkerFromType(type),
+  //       //       };
+  //       //     });
+  //       //     allMarkers = allMarkers.concat(markersTmp);
+  //       //     count += 1;
+  //       //     if (count === gpxs?.length) {
+  //       //       // Remove duplicated markers based on lat,lon
+  //       //       allMarkers = [
+  //       //         ...new Map(
+  //       //           allMarkers.map((value) => [
+  //       //             `${value.lat},${value.lon}`,
+  //       //             value,
+  //       //           ])
+  //       //         ).values(),
+  //       //       ];
+  //       //       // Add distance from start
+  //       //       allMarkers = allMarkers.map((marker) => {
+  //       //         const closestPoint = getClosestPointByCoordinates({
+  //       //           coordinates: marker,
+  //       //           gpx: newGpx,
+  //       //         });
+  //       //         // TODO fix distance calculation
+  //       //         const distance = (
+  //       //           newGpx.calcDistanceBetween(marker, closestPoint.point) +
+  //       //           newGpx.tracks[0].distance.cumulItra[closestPoint.index] /
+  //       //             1000
+  //       //         ).toFixed(1);
+  //       //         return { distance, ...marker };
+  //       //       });
+  //       //       setMarkers(allMarkers);
+  //       //     }
+  //       //   })
+  //       //   .catch((error) => {
+  //       //     console.error(error);
+  //       //   });
+  //       // });
+  //       // if (count === gpxs?.length) {
+  //       // Remove duplicated markers based on lat,lon
+  //       allMarkers = [
+  //         ...new Map(
+  //           allMarkers.map((value) => [`${value.lat},${value.lon}`, value]),
+  //         ).values(),
+  //       ];
+  //       // Add distance from start
+  //       allMarkers = allMarkers.map((marker) => {
+  //         const closestPoint = getClosestPointByCoordinates({
+  //           coordinates: marker,
+  //           gpx: newGpx,
+  //         });
+  //         // TODO fix distance calculation
+  //         const distance = (
+  //           newGpx.calcDistanceBetween(marker, closestPoint.point) +
+  //           newGpx.tracks[0].distance.cumulItra[closestPoint.index] / 1000
+  //         ).toFixed(1);
+  //         return { distance, ...marker };
+  //       });
+  //       setMarkers(allMarkers);
+  //       // }
+  //     })
+  //     .catch((e) => console.error(e));
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
-  useEffect(() => {
-    setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
-  }, [gpxComplete, gpxs, params.day]);
+  // useEffect(() => {
+  //   setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
+  // }, [gpxComplete, gpxs, params.day]);
 
-  useEffect(() => {
-    const filtersTmp = {};
-    markers.forEach((marker) => {
-      if (!Object.keys(filtersTmp).includes(marker.category))
-        filtersTmp[marker.category] = { color: marker.color, data: [] };
-      if (!filtersTmp[marker.category].data.includes(marker.type))
-        filtersTmp[marker.category].data.push(marker.type);
-    });
-    setFilters(filtersTmp);
-  }, [markers]);
+  // useEffect(() => {
+  //   const filtersTmp = {};
+  //   markers.forEach((marker) => {
+  //     if (!Object.keys(filtersTmp).includes(marker.category))
+  //       filtersTmp[marker.category] = { color: marker.color, data: [] };
+  //     if (!filtersTmp[marker.category].data.includes(marker.type))
+  //       filtersTmp[marker.category].data.push(marker.type);
+  //   });
+  //   setFilters(filtersTmp);
+  // }, [markers]);
 
-  useEffect(() => {
-    let selectedFiltersTmp = Object.keys(filters);
-    selectedFiltersTmp.forEach((item) => {
-      selectedFiltersTmp = [...selectedFiltersTmp, ...filters[item].data];
-    });
-    setSelectedFilters(selectedFiltersTmp);
-  }, [filters]);
+  // useEffect(() => {
+  //   let selectedFiltersTmp = Object.keys(filters);
+  //   selectedFiltersTmp.forEach((item) => {
+  //     selectedFiltersTmp = [...selectedFiltersTmp, ...filters[item].data];
+  //   });
+  //   setSelectedFilters(selectedFiltersTmp);
+  // }, [filters]);
+  //
 
   return (
     <>
       {gpx && (
         <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
           <Grid
+            columns={{ xs: 4, sm: 8, md: 12 }}
             container
             spacing={{ xs: 2, md: 3 }}
-            columns={{ xs: 4, sm: 8, md: 12 }}
           >
             <Grid item xs={12}>
               <Breadcrumbs aria-label="breadcrumb" color="color.secondary">
@@ -309,15 +354,15 @@ const Trail = () => {
                   <Link
                     underline="hover"
                     color="inherit"
-                    href={`#/trails/${meta.id}`}
+                    href={`#/trails/${params.id}`}
                   >
-                    {meta.name}
+                    {meta?.name}
                   </Link>
                 )}
                 {params?.day ? (
                   <Typography>Jour {params?.day}</Typography>
                 ) : (
-                  <Typography>{meta.name}</Typography>
+                  <Typography>{meta?.name}</Typography>
                 )}
               </Breadcrumbs>
             </Grid>
@@ -327,155 +372,158 @@ const Trail = () => {
               meta={meta}
               setMeta={setMeta}
             />
-            {markers.length === 0 ? (
+            {/* {markers.length === 0 ? (
               <Grid item xs={12}>
                 Chargement des données ...
               </Grid>
-            ) : (
-              <Grid item xs={12}>
-                <Accordion>
-                  <AccordionSummary
-                    aria-controls="panel1-content"
-                    id="panel1-header"
-                    expandIcon={<ExpandMoreIcon />}
-                  >
-                    Filtres
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Filters
-                      filters={filters}
-                      markers={markers}
-                      onChange={onChange}
-                      selectedFilters={selectedFilters}
-                    />
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion defaultExpanded>
-                  <AccordionSummary
-                    aria-controls="panel2-content"
-                    id="panel2-header"
-                    expandIcon={<ExpandMoreIcon />}
-                  >
-                    Carte
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Grid container spacing={2}>
-                      <Grid item xs={12} md={7}>
-                        <MyMap
-                          coordinates={coordinates}
-                          gpx={gpx}
-                          markers={markers}
-                          meta={meta}
-                          selectedFilters={selectedFilters}
-                          setCoordinates={setCoordinates}
-                        />
-                      </Grid>
-                      <Grid item xs={12} md={5}>
-                        <FormControl>
-                          <RadioGroup
-                            aria-labelledby="radio-buttons-group-label-day"
-                            defaultValue="all"
-                            name="radio-buttons-group-day"
-                            onChange={(e) =>
-                              e.target.value === "all"
-                                ? navigate(`/trails/${params.id}`)
-                                : navigate(
-                                    `/trails/${params.id}/${e.target.value}`
-                                  )
-                            }
-                            value={params?.day ?? "all"}
-                          >
-                            <FormControlLabel
-                              value="all"
-                              control={<Radio />}
-                              key="day-all"
-                              label="Tous"
-                            />
-                            {days &&
-                              days.map((day) => (
-                                <FormControlLabel
-                                  value={day}
-                                  control={<Radio />}
-                                  key={`day-${day}`}
-                                  label={`Jour ${day} - ${meta.startDate
-                                    .add(day - 1, "day")
-                                    .format("dddd	DD MMMM")}`}
-                                />
-                              ))}
-                          </RadioGroup>
-                        </FormControl>
-                      </Grid>
+            ) : ( */}
+            <Grid item xs={12}>
+              <Accordion>
+                <AccordionSummary
+                  aria-controls="panel1-content"
+                  id="panel1-header"
+                  expandIcon={<ExpandMoreIcon />}
+                >
+                  Filtres
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Filters
+                    filters={filters}
+                    markers={markers}
+                    onChange={onChange}
+                    selectedFilters={selectedFilters}
+                  />
+                </AccordionDetails>
+              </Accordion>
+              <Accordion defaultExpanded>
+                <AccordionSummary
+                  aria-controls="panel2-content"
+                  id="panel2-header"
+                  expandIcon={<ExpandMoreIcon />}
+                >
+                  Carte
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} md={7}>
+                      <MyMap
+                        coordinates={coordinates}
+                        gpx={gpx}
+                        markers={markers}
+                        meta={meta}
+                        selectedFilters={selectedFilters}
+                        setCoordinates={setCoordinates}
+                      />
                     </Grid>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion>
-                  <AccordionSummary
-                    aria-controls="panel3-content"
-                    id="panel3-header"
-                    expandIcon={<ExpandMoreIcon />}
-                  >
-                    Profile
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Profile
-                      coordinates={coordinates}
-                      gpx={params?.day ? gpxs?.[params.day - 1] : gpxComplete}
+                    <Grid item xs={12} md={5}>
+                      <FormControl>
+                        <RadioGroup
+                          aria-labelledby="radio-buttons-group-label-day"
+                          defaultValue="all"
+                          name="radio-buttons-group-day"
+                          onChange={(e) =>
+                            e.target.value === "all"
+                              ? navigate(`/trails/trail`, {
+                                  state: meta,
+                                })
+                              : navigate(
+                                  `/trails/trail/${e.target.value}`,
+                                  { state: meta },
+                                )
+                          }
+                          value={params?.day ?? "all"}
+                        >
+                          <FormControlLabel
+                            value="all"
+                            control={<Radio />}
+                            key="day-all"
+                            label="Tous"
+                          />
+                          {days &&
+                            days.map((day) => (
+                              <FormControlLabel
+                                value={day}
+                                control={<Radio />}
+                                key={`day-${day}`}
+                                label={`Jour ${day} - ${meta?.startDate
+                                  .add(day - 1, "day")
+                                  .format("dddd	DD MMMM")}`}
+                              />
+                            ))}
+                        </RadioGroup>
+                      </FormControl>
+                    </Grid>
+                  </Grid>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  aria-controls="panel3-content"
+                  id="panel3-header"
+                  expandIcon={<ExpandMoreIcon />}
+                >
+                  Profile
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Profile
+                    coordinates={coordinates}
+                    gpx={gpx}
+                  />
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  aria-controls="panel4-content"
+                  id="panel4-header"
+                  expandIcon={<ExpandMoreIcon />}
+                >
+                  Déroulé
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Planner
+                    gpx={gpx}
+                    markers={
+                      params?.day
+                        ? markers
+                            .filter((marker) => marker.day === params?.day)
+                            .sort((a, b) => a.day - b.day)
+                        : markers.sort((a, b) => a.distance - b.distance)
+                    }
+                    selectedFilters={selectedFilters}
+                  />
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  aria-controls="panel5-content"
+                  id="panel5-header"
+                  expandIcon={<ExpandMoreIcon />}
+                >
+                  Etapes
+                </AccordionSummary>
+                <AccordionDetails>
+                  {params?.day ? (
+                    <Stage
+                      day={params.day}
+                      gpx={gpx}
+                      markers={markers}
+                      meta={meta}
                     />
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion>
-                  <AccordionSummary
-                    aria-controls="panel4-content"
-                    id="panel4-header"
-                    expandIcon={<ExpandMoreIcon />}
-                  >
-                    Déroulé
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Planner
-                      gpx={params?.day ? gpxs?.[params.day - 1] : gpxComplete}
-                      markers={
-                        params?.day
-                          ? markers
-                              .filter((marker) => marker.day === params?.day)
-                              .sort((a, b) => a.day - b.day)
-                          : markers.sort((a, b) => a.distance - b.distance)
-                      }
-                      selectedFilters={selectedFilters}
-                    />
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion>
-                  <AccordionSummary
-                    aria-controls="panel5-content"
-                    id="panel5-header"
-                    expandIcon={<ExpandMoreIcon />}
-                  >
-                    Etapes
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    {params?.day ? (
+                  ) : (
+                    days.map((day, index) => (
                       <Stage
-                        day={params.day}
-                        gpx={gpxs?.[params.day - 1]}
+                        day={day}
+                        gpx={gpxs[index]}
+                        key={index}
                         markers={markers}
                         meta={meta}
                       />
-                    ) : (
-                      days.map((day, index) => (
-                        <Stage
-                          day={day}
-                          gpx={gpxs[index]}
-                          key={index}
-                          markers={markers}
-                          meta={meta}
-                        />
-                      ))
-                    )}
-                  </AccordionDetails>
-                </Accordion>
-              </Grid>
-            )}
+                    ))
+                  )}
+                </AccordionDetails>
+              </Accordion>
+            </Grid>
+            {/* )} */}
           </Grid>
         </Box>
       )}
