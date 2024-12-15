@@ -10,9 +10,12 @@ import {
   Typography,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import dayjs from "dayjs";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import data from "../data/data.json";
@@ -37,6 +40,7 @@ const Trails = () => {
   const [gpx, setGpx] = useState();
   const [kmPerDay, setKmPerDay] = useState(20);
   const [name, setName] = useState();
+  const [startDate, setStartDate] = useState(dayjs(new Date().toISOString().split("T")[0]));
 
   useEffect(() => {
     const getGpxFromFile = async () => {
@@ -71,27 +75,38 @@ const Trails = () => {
         {gpx && (
           <>
             <TextField
+              defaultValue={name}
               label="Nom de la randonnée"
               onChange={(event) => setName(event.target.value)}
               required
-              value={name}
               variant="filled"
             />
             <Select
+              defaultValue={activity}
               onChange={(event) => setActivity(event.target.value)}
-              value={activity}
             >
               <MenuItem value={"hiking"}>Randonnée pédestre</MenuItem>
               <MenuItem value={"cycling"}>Randonnée cycliste</MenuItem>
             </Select>
             <TextField
+              defaultValue={kmPerDay}
               InputProps={{ inputProps: { min: 0 } }}
               label="Kilomètres parcourus par jour (ITRA)"
               onChange={(event) => setKmPerDay(event.target.value)}
               type="number"
-              value={kmPerDay}
+              variant="filled"
             />
-            {/* TODO: Add date picker for the start date */}
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DemoContainer components={["DatePicker"]}>
+                <DatePicker
+                  defaultValue={startDate}
+                  format="DD/MM/YYYY"
+                  label="Jour du départ"
+                  name="departureDate"
+                  onChange={(event) => setStartDate(event)}
+                />
+              </DemoContainer>
+            </LocalizationProvider>
             <Button
               component="label"
               onClick={() =>
@@ -102,7 +117,7 @@ const Trails = () => {
                     gpx,
                     kmPerDay,
                     name,
-                    startDate: dayjs(new Date().toISOString().split("T")[0]),
+                    startDate,
                   },
                 })
               }

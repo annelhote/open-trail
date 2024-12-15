@@ -13,8 +13,9 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-  DialogTitle,
   Grid,
+  MenuItem,
+  Select,
   Stack,
   TextField,
 } from "@mui/material";
@@ -71,17 +72,33 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
                 event.preventDefault();
                 setMeta({
                   ...meta,
+                  activity: event.target.activity.value,
                   kmPerDay: event.target.kmItra.value,
+                  name: event.target.name.value,
                   startDate: dayjs(event.target.departureDate.value, 'DD/MM/YYYY'),
                 });
                 handleClose();
               },
             }}
           >
-            <DialogTitle>{meta.name}</DialogTitle>
             <DialogContent>
               <TextField
+                defaultValue={meta.name}
+                label="Nom de la randonnée"
+                name="name"
+                required
+                variant="filled"
+              />
+              <Select
+                defaultValue={meta.activity}
+                name="activity"
+              >
+                <MenuItem value={"hiking"}>Randonnée pédestre</MenuItem>
+                <MenuItem value={"cycling"}>Randonnée cycliste</MenuItem>
+              </Select>
+              <TextField
                 defaultValue={meta.kmPerDay}
+                InputProps={{ inputProps: { min: 0 } }}
                 label="Kilomètres parcourus par jour (ITRA)"
                 name="kmItra"
                 type="number"
@@ -90,10 +107,10 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DemoContainer components={["DatePicker"]}>
                   <DatePicker
+                    defaultValue={meta.startDate}
                     format="DD/MM/YYYY"
                     label="Jour du départ"
                     name="departureDate"
-                    value={meta.startDate}
                   />
                 </DemoContainer>
               </LocalizationProvider>
@@ -104,7 +121,7 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
                   handleClose();
                 }}
                 startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
-                variant="outlined"
+                variant="contained"
               >
                 Télécharger le fichier GPX
               </Button>
