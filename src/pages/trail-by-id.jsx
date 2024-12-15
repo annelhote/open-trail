@@ -34,11 +34,11 @@ import gpxNantesEchalas from "../data/nantes-echalas.gpx";
 import gpxPicosDeEuropa from "../data/picos-de-europa.gpx";
 import gpxTourDuQueyras from "../data/tour-du-queyras.gpx";
 import {
-  chunkArray,
-  downSampleArray,
+  // chunkArray,
+  // downSampleArray,
   getClosestPointByCoordinates,
   getClosestPointIndexByDistance,
-  getDataFromOverpass,
+  // getDataFromOverpass,
   getDefaultKmPerDayPerActivity,
   getMarkerFromTypeOrName,
   overloadGpx,
