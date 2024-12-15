@@ -48,7 +48,7 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
     setElevation(gpx.calcElevation(gpx.tracks[0].points));
   }, [gpx, meta]);
 
-  const handleClickOpen = () => setOpen(true);
+  const handleOpen = () => setOpen(true);
 
   const handleClose = () => setOpen(false);
 
@@ -59,7 +59,7 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
           <h2>{meta.name}</h2>
         </Grid>
         <Grid item>
-          <Button variant="none" onClick={handleClickOpen}>
+          <Button variant="none" onClick={handleOpen}>
             <FontAwesomeIcon icon={faGear} />
           </Button>
           <Dialog
@@ -73,7 +73,7 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
                 setMeta({
                   ...meta,
                   activity: event.target.activity.value,
-                  kmPerDay: event.target.kmItra.value,
+                  kmPerDay: Number(event.target.kmItra.value),
                   name: event.target.name.value,
                   startDate: dayjs(event.target.departureDate.value, 'DD/MM/YYYY'),
                 });

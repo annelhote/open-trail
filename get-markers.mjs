@@ -65,7 +65,6 @@ const downloadGpx = ({ gpx, markers }) => {
     }
     root.appendChild(node);
   };
-  console.log(gpx);
   fs.writeFileSync(`./src/data/${gpx.metadata.name}-generated.gpx`, new window.XMLSerializer().serializeToString(source), "utf-8");
 };
 
@@ -387,14 +386,10 @@ const getMarkers = async (gpx) => {
   let responses = await Promise.all(
     chunks.map((chunk) => getDataFromOverpass(chunk))
   );
-  console.log('flag_04');
   // Needed to make it work
-  console.log(responses);
   responses = await Promise.all(responses.map((response) => response.json()));
   responses = responses.map((response) => response.elements).flat();
 
-  console.log('flag_05');
-  console.log(responses);
   let markers = [];
   const markersTmp = responses.map((marker) => {
     const type =
@@ -449,15 +444,10 @@ if (process.argv.length === 3) {
   const trailId = process.argv[2];
   const trailName = data?.[trailId]?.name;
   if (trailName) {
-    console.log('1. Read GPX file');
     let gpx = await getGpx(trailId);
-    console.log('2. Overload GPX');
     gpx = overloadGpx(gpx);
-    console.log('3. Load markers');
     const markers = await getMarkers(gpx);
-    console.log('4. Write GPX file');
     await downloadGpx({ gpx, markers });
-    console.log('5. Done');
   } else {
     console.error(
       `This trailId "${trailId}" is not in local config file "./src/data/data.json".`

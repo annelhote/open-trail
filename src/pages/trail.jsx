@@ -34,11 +34,11 @@ import Stage from "../components/stage";
 import {
   // chunkArray,
   // downSampleArray,
-  // getClosestPointByCoordinates,
+  getClosestPointByCoordinates,
   getClosestPointIndexByDistance,
   // getDataFromOverpass,
   // getDefaultKmPerDayPerActivity,
-  // getMarkerFromTypeOrName,
+  getMarkerFromTypeOrName,
   overloadGpx,
 } from "../utils";
 
@@ -49,11 +49,11 @@ const Trail = () => {
 
   const [coordinates, setCoordinates] = useState();
   const [days, setDays] = useState([]);
-  const [filters] = useState({});
+  const [filters, setFilters] = useState({});
   const [gpx, setGpx] = useState();
   const [gpxComplete, setGpxComplete] = useState();
   const [gpxs, setGpxs] = useState();
-  const [markers] = useState([]);
+  const [markers, setMarkers] = useState([]);
   const [meta, setMeta] = useState({});
   const [selectedFilters, setSelectedFilters] = useState([]);
 
@@ -72,44 +72,166 @@ const Trail = () => {
   // );
 
   useEffect(() => {
-    // Parse GPX
-    let gpxCompleteTmp = new gpxParser();
-    gpxCompleteTmp.parse(state?.gpx);
-    gpxCompleteTmp = overloadGpx(gpxCompleteTmp);
-    setGpxComplete(gpxCompleteTmp);
-    // Compute days
-    const duration = Math.ceil(
-      gpxCompleteTmp.tracks[0].distance.totalItra / 1000 / state?.kmPerDay,
-    );
-    const daysTmp = [...Array(duration).keys()].map((day) => day + 1);
-    setDays(daysTmp);
-    // Compute GPXs
-    const cumulDistances = [0, ...gpxCompleteTmp.tracks[0].distance.cumulItra];
-    const gpxsTmp = daysTmp.map((day) => {
-      const startPointIndex = getClosestPointIndexByDistance({
-        cumulDistances,
-        distance: state.kmPerDay * 1000 * (day - 1),
-      });
-      const endPointIndex = getClosestPointIndexByDistance({
-        cumulDistances,
-        distance: state.kmPerDay * 1000 * day,
-      });
-      const trkpts = gpxCompleteTmp.tracks[0].points
-        .slice(startPointIndex, endPointIndex + 1)
-        .map(
-          (point) =>
-            `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`,
-        );
-      let partGpx = new gpxParser();
-      partGpx.parse(
-        `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`,
-      );
-      partGpx = overloadGpx(partGpx);
-      return partGpx;
-    });
     setMeta(state);
-    setGpxs(gpxsTmp);
   }, [state]);
+
+  useEffect(() => {
+    if (meta.gpx) {
+      // Parse GPX
+      let gpxCompleteTmp = new gpxParser();
+      gpxCompleteTmp.parse(meta?.gpx);
+      gpxCompleteTmp = overloadGpx(gpxCompleteTmp);
+      setGpxComplete(gpxCompleteTmp);
+      // Compute days
+      const duration = Math.ceil(
+        gpxCompleteTmp.tracks[0].distance.totalItra / 1000 / meta?.kmPerDay,
+      );
+      const daysTmp = [...Array(duration).keys()].map((day) => day + 1);
+      setDays(daysTmp);
+      // Compute GPXs
+      const cumulDistances = [0, ...gpxCompleteTmp.tracks[0].distance.cumulItra];
+      const gpxsTmp = daysTmp.map((day) => {
+        const startPointIndex = getClosestPointIndexByDistance({
+          cumulDistances,
+          distance: meta.kmPerDay * 1000 * (day - 1),
+        });
+        const endPointIndex = getClosestPointIndexByDistance({
+          cumulDistances,
+          distance: meta.kmPerDay * 1000 * day,
+        });
+        const trkpts = gpxCompleteTmp.tracks[0].points
+          .slice(startPointIndex, endPointIndex + 1)
+          .map(
+            (point) =>
+              `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`,
+          );
+        let partGpx = new gpxParser();
+        partGpx.parse(
+          `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`,
+        );
+        partGpx = overloadGpx(partGpx);
+        return partGpx;
+      });
+      setGpxs(gpxsTmp);
+
+      // Add custom markers
+      const customMarkers = (meta?.markers ?? []).map((marker) => ({
+        ...marker,
+        ...getMarkerFromTypeOrName(marker),
+      }));
+      // Add markers from GPX
+      const gpxMarkers = (gpxCompleteTmp?.waypoints ?? []).map((marker) => ({
+        ...marker,
+        ...getMarkerFromTypeOrName(marker),
+      }));
+      let allMarkers = [...customMarkers, ...gpxMarkers];
+      // let count = 0;
+      // Compute markers from OpenStreetMap
+      // gpxs.forEach((gpx, index) => {
+      //   const coordinatesDataCount = gpx.tracks[0].points.length;
+      //   const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
+      //   const pathSamplingPeriod = Math.floor(
+      //     coordinatesDataCount / targetPathDataCount
+      //   );
+      //   const downSampledCoordinates = downSampleArray(
+      //     gpx.tracks[0].points,
+      //     pathSamplingPeriod
+      //   );
+      // let chunks = chunkArray(downSampledCoordinates, 20);
+      // chunks = chunks.map((chunk) =>
+      //   chunk.map((item) => [item.lat, item.lon]).flat()
+      // );
+
+      // Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)))
+      //   .then((responses) => {
+      //     const response = responses
+      //       .map((response) => response.data.elements)
+      //       .flat();
+      //     const markersTmp = response.map((item) => {
+      //       const type =
+      //         item?.tags?.amenity ??
+      //         item?.tags?.landuse ??
+      //         item?.tags?.shop ??
+      //         item?.tags?.tourism ??
+      //         item?.tags?.railway ??
+      //         "";
+      //       return {
+      //         addrCity: item?.tags?.["addr:city"],
+      //         addrHousenumber: item?.tags?.["addr:housenumber"],
+      //         addrStreet: item?.tags?.["addr:street"],
+      //         day: (index + 1).toString(),
+      //         email: item?.tags?.email,
+      //         id: item?.id,
+      //         lat: item?.lat ?? item?.center?.lat,
+      //         lon: item?.lon ?? item?.center?.lon,
+      //         name: item?.tags?.name,
+      //         note: item?.tags?.note,
+      //         opening_hours: item?.tags?.opening_hours,
+      //         osmType: item?.type,
+      //         phone:
+      //           item?.tags?.phone?.replace(/ /g, "") ??
+      //           item?.tags?.["contact:phone"]?.replace(/ /g, ""),
+      //         type,
+      //         website: item?.tags?.website,
+      //         ...getMarkerFromType(type),
+      //       };
+      //     });
+      //     allMarkers = allMarkers.concat(markersTmp);
+      //     count += 1;
+      //     if (count === gpxs?.length) {
+      //       // Remove duplicated markers based on lat,lon
+      //       allMarkers = [
+      //         ...new Map(
+      //           allMarkers.map((value) => [
+      //             `${value.lat},${value.lon}`,
+      //             value,
+      //           ])
+      //         ).values(),
+      //       ];
+      //       // Add distance from start
+      //       allMarkers = allMarkers.map((marker) => {
+      //         const closestPoint = getClosestPointByCoordinates({
+      //           coordinates: marker,
+      //           gpx: newGpx,
+      //         });
+      //         // TODO fix distance calculation
+      //         const distance = (
+      //           newGpx.calcDistanceBetween(marker, closestPoint.point) +
+      //           newGpx.tracks[0].distance.cumulItra[closestPoint.index] /
+      //             1000
+      //         ).toFixed(1);
+      //         return { distance, ...marker };
+      //       });
+      //       setMarkers(allMarkers);
+      //     }
+      //   })
+      //   .catch((error) => {
+      //     console.error(error);
+      //   });
+      // });
+      // if (count === gpxs?.length) {
+      // Remove duplicated markers based on lat,lon
+      allMarkers = [
+        ...new Map(
+          allMarkers.map((value) => [`${value.lat},${value.lon}`, value]),
+        ).values(),
+      ];
+      // Add distance from start
+      allMarkers = allMarkers.map((marker) => {
+        const closestPoint = getClosestPointByCoordinates({
+          coordinates: marker,
+          gpx: gpxCompleteTmp,
+        });
+        // TODO fix distance calculation
+        const distance = (
+          gpxCompleteTmp.calcDistanceBetween(marker, closestPoint.point) +
+          gpxCompleteTmp.tracks[0].distance.cumulItra[closestPoint.index] / 1000
+        ).toFixed(1);
+        return { distance, ...marker };
+      });
+      setMarkers(allMarkers);
+    }
+  }, [meta]);
 
   useEffect(() => {
     setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
@@ -313,25 +435,24 @@ const Trail = () => {
   //   setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
   // }, [gpxComplete, gpxs, params.day]);
 
-  // useEffect(() => {
-  //   const filtersTmp = {};
-  //   markers.forEach((marker) => {
-  //     if (!Object.keys(filtersTmp).includes(marker.category))
-  //       filtersTmp[marker.category] = { color: marker.color, data: [] };
-  //     if (!filtersTmp[marker.category].data.includes(marker.type))
-  //       filtersTmp[marker.category].data.push(marker.type);
-  //   });
-  //   setFilters(filtersTmp);
-  // }, [markers]);
+  useEffect(() => {
+    const filtersTmp = {};
+    markers.forEach((marker) => {
+      if (!Object.keys(filtersTmp).includes(marker.category))
+        filtersTmp[marker.category] = { color: marker.color, data: [] };
+      if (!filtersTmp[marker.category].data.includes(marker.type))
+        filtersTmp[marker.category].data.push(marker.type);
+    });
+    setFilters(filtersTmp);
+  }, [markers]);
 
-  // useEffect(() => {
-  //   let selectedFiltersTmp = Object.keys(filters);
-  //   selectedFiltersTmp.forEach((item) => {
-  //     selectedFiltersTmp = [...selectedFiltersTmp, ...filters[item].data];
-  //   });
-  //   setSelectedFilters(selectedFiltersTmp);
-  // }, [filters]);
-  //
+  useEffect(() => {
+    let selectedFiltersTmp = Object.keys(filters);
+    selectedFiltersTmp.forEach((item) => {
+      selectedFiltersTmp = [...selectedFiltersTmp, ...filters[item].data];
+    });
+    setSelectedFilters(selectedFiltersTmp);
+  }, [filters]);
 
   return (
     <>
@@ -424,12 +545,12 @@ const Trail = () => {
                           onChange={(e) =>
                             e.target.value === "all"
                               ? navigate(`/trails/trail`, {
-                                  state: meta,
-                                })
+                                state: meta,
+                              })
                               : navigate(
-                                  `/trails/trail/${e.target.value}`,
-                                  { state: meta },
-                                )
+                                `/trails/trail/${e.target.value}`,
+                                { state: meta },
+                              )
                           }
                           value={params?.day ?? "all"}
                         >
@@ -485,8 +606,8 @@ const Trail = () => {
                     markers={
                       params?.day
                         ? markers
-                            .filter((marker) => marker.day === params?.day)
-                            .sort((a, b) => a.day - b.day)
+                          .filter((marker) => marker.day === params?.day)
+                          .sort((a, b) => a.day - b.day)
                         : markers.sort((a, b) => a.distance - b.distance)
                     }
                     selectedFilters={selectedFilters}

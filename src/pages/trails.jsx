@@ -92,7 +92,7 @@ const Trails = () => {
               defaultValue={kmPerDay}
               InputProps={{ inputProps: { min: 0 } }}
               label="Kilomètres parcourus par jour (ITRA)"
-              onChange={(event) => setKmPerDay(event.target.value)}
+              onChange={(event) => setKmPerDay(Number(event.target.value))}
               type="number"
               variant="filled"
             />
