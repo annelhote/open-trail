@@ -136,8 +136,8 @@ const Map = ({
           .filter((marker) => selectedFilters.includes(marker.type))
           .map((marker, index) => (
             <CustomMarker
-              key={`marker-${index}`}
               index={index}
+              key={`marker-${index}`}
               marker={marker}
               openPopup={openPopup}
             />
