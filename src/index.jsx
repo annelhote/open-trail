@@ -11,7 +11,6 @@ import BlogHome from "./pages/blog-home";
 import ErrorPage from "./pages/error-page";
 import Home from "./pages/home";
 import Trail from "./pages/trail";
-import TrailById from "./pages/trail-by-id";
 import Trails from "./pages/trails";
 
 import "dayjs/locale/fr";
@@ -48,11 +47,6 @@ const router = createHashRouter([
   {
     path: "/trails/trail/:day?",
     element: <Trail />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/trails/:id/:day?",
-    element: <TrailById />,
     errorElement: <ErrorPage />,
   },
 ]);

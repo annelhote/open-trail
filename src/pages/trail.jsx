@@ -23,14 +23,6 @@ import Overview from "../components/overview";
 import Planner from "../components/planner";
 import Profile from "../components/profile";
 import Stage from "../components/stage";
-// import gpxCheminDassise from "../data/chemin-d-assise.gpx";
-// import data from "../data/data.json";
-// import gpxCretesDuJura from "../data/cretes-du-jura.gpx";
-// import gpxGr38 from "../data/gr38.gpx";
-// import gpxLePoetSigillat from "../data/le-poet-sigillat.gpx";
-// import gpxNantesEchalas from "../data/nantes-echalas.gpx";
-// import gpxPicosDeEuropa from "../data/picos-de-europa.gpx";
-// import gpxTourDuQueyras from "../data/tour-du-queyras.gpx";
 import {
   chunkArray,
   downSampleArray,
@@ -56,20 +48,6 @@ const Trail = () => {
   const [markers, setMarkers] = useState([]);
   const [meta, setMeta] = useState({});
   const [selectedFilters, setSelectedFilters] = useState([]);
-
-  // const gpxes = {
-  //   "chemin-d-assise": gpxCheminDassise,
-  //   "cretes-du-jura": gpxCretesDuJura,
-  //   gr38: gpxGr38,
-  //   "le-poet-sigillat": gpxLePoetSigillat,
-  //   "nantes-echalas": gpxNantesEchalas,
-  //   "picos-de-europa": gpxPicosDeEuropa,
-  //   "tour-du-queyras": gpxTourDuQueyras,
-  // };
-  // meta.gpx = gpxes[params?.id];
-  // meta.startDate = dayjs(
-  //   meta?.startDate ?? new Date().toISOString().split("T")[0],
-  // );
 
   useEffect(() => {
     setMeta(state);

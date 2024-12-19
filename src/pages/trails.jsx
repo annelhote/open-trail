@@ -18,16 +18,16 @@ import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import data from "../data/data.json";
+import data from "./data.json";
 
 const VisuallyHiddenInput = styled("input")({
+  bottom: 0,
   clip: "rect(0 0 0 0)",
   clipPath: "inset(50%)",
   height: 1,
+  left: 0,
   overflow: "hidden",
   position: "absolute",
-  bottom: 0,
-  left: 0,
   whiteSpace: "nowrap",
   width: 1,
 });
@@ -113,7 +113,6 @@ const Trails = () => {
                 navigate("/trails/trail", {
                   state: {
                     activity,
-                    file,
                     gpx,
                     kmPerDay,
                     name,
@@ -129,14 +128,29 @@ const Trails = () => {
         )}
       </FormControl>
       <div>
-        <i>Exemples:</i>
-        <ul>
-          {Object.keys(data).map((trail) => (
-            <li key={trail}>
-              <Link href={`#/trails/${trail}`}>{data[trail].name}</Link>
-            </li>
-          ))}
-        </ul>
+        <p>Exemples:</p>
+        {Object.keys(data).map((trail) => (
+          <Button
+            component="label"
+            key={trail}
+            onClick={async () => {
+              const file = await fetch(`./open-trail/data/${trail}.gpx`);
+              const _gpx = await file.text();
+              return navigate(`/trails/trail`, {
+                state: {
+                  activity: 'hiking',
+                  gpx: _gpx,
+                  kmPerDay: 20,
+                  name: data[trail].name,
+                  startDate: dayjs('2025-01-01'),
+                },
+              });
+            }}
+            variant="contained"
+          >
+            {data[trail].name}
+          </Button>
+        ))}
       </div>
     </Box>
   );
