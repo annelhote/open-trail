@@ -134,7 +134,7 @@ const Trails = () => {
             component="label"
             key={trail}
             onClick={async () => {
-              const file = await fetch(`./open-trail/data/${trail}.gpx`);
+              const file = await fetch(`./data/${trail}.gpx`);
               const _gpx = await file.text();
               return navigate(`/trails/trail`, {
                 state: {
