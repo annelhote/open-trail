@@ -13,6 +13,7 @@ import {
   RadioGroup,
   Typography,
 } from "@mui/material";
+import dayjs from "dayjs";
 import gpxParser from "gpxparser";
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
@@ -182,11 +183,28 @@ const Trail = () => {
     }
 
     getData();
-  }, [meta.gpx, meta.kmPerDay, meta?.markers]);
+  }, [meta?.gpx, meta?.kmPerDay, meta?.markers]);
 
   useEffect(() => {
     setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
   }, [gpxComplete, gpxs, params.day]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const trailId = params?.trailId;
+      const file = await fetch(`/open-trail/data/${trailId}.gpx`);
+      const _gpx = await file.text();
+      setMeta({
+        activity: 'hiking',
+        gpx: _gpx,
+        kmPerDay: 20,
+        name: trailId,
+        startDate: dayjs(new Date().toISOString().split("T")[0]),
+      });
+    }
+
+    getData();
+  }, [params?.trailId])
 
   const onChange = (event) => {
     const eventName = event.target.name;
@@ -317,11 +335,11 @@ const Trail = () => {
                           name="radio-buttons-group-day"
                           onChange={(e) =>
                             e.target.value === "all"
-                              ? navigate(`/trails/trail`, {
+                              ? navigate(`/trails/${params?.trailId ?? 'trail'}`, {
                                 state: meta,
                               })
                               : navigate(
-                                `/trails/trail/${e.target.value}`,
+                                `/trails/${params?.trailId ?? 'trail'}/${e.target.value}`,
                                 { state: meta },
                               )
                           }

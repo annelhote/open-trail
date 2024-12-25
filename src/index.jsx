@@ -49,6 +49,11 @@ const router = createHashRouter([
     element: <Trail />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "/trails/:trailId/:day?",
+    element: <Trail />,
+    errorElement: <ErrorPage />,
+  },
 ]);
 
 const darkTheme = createTheme({

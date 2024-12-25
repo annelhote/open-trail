@@ -129,28 +129,15 @@ const Trails = () => {
       </FormControl>
       <div>
         <p>Exemples:</p>
-        {Object.keys(data).map((trail) => (
-          <Button
-            component="label"
-            key={trail}
-            onClick={async () => {
-              const file = await fetch(`/open-trail/data/${trail}.gpx`);
-              const _gpx = await file.text();
-              return navigate(`/trails/trail`, {
-                state: {
-                  activity: 'hiking',
-                  gpx: _gpx,
-                  kmPerDay: 20,
-                  name: data[trail].name,
-                  startDate: dayjs('2025-01-01'),
-                },
-              });
-            }}
-            variant="contained"
-          >
-            {data[trail].name}
-          </Button>
-        ))}
+        <ul>
+          {Object.keys(data).map((trail) => (
+            <li key={trail}>
+              <Link href={`#/trails/${trail}`}>
+                {data[trail].name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </Box>
   );
