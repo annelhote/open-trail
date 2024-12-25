@@ -152,7 +152,6 @@ const getDataFromOverpass = (bbox) => {
     );
     out center;
   `;
-  // TODO replace by fetch
   return fetch(
     `https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`
   );
