@@ -185,7 +185,7 @@ const Trail = () => {
     }
 
     getData();
-  }, [meta?.gpx, meta?.itra, meta?.kmPerDay, meta?.markers]);
+  }, [meta, meta?.gpx, meta?.itra, meta?.kmPerDay, meta?.markers]);
 
   useEffect(() => {
     setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
