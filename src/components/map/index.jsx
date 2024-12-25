@@ -54,11 +54,10 @@ const Map = ({
   const openPopup = (index) => setSelectedMarker(index);
 
   useEffect(() => {
-    // TODO: Do it in the trail page in order to avoid duplicated code
     // Calculate number of days in trail
-    const duration = Math.ceil(
-      gpx.tracks[0].distance.totalItra / 1000 / meta.kmPerDay
-    );
+    // TODO: Do it in the trail page in order to avoid duplicated code
+    const distanceTmp = (meta?.itra ? gpx.tracks[0].distance.totalItra : gpx.tracks[0].distance.total) / 1000;
+    const duration = Math.ceil(distanceTmp.toFixed(1) / meta.kmPerDay)
     const days = [...Array(duration).keys()];
     // Determinates each step
     const points = gpx.tracks[0].points;
@@ -88,7 +87,7 @@ const Map = ({
     if (mapRef && mapRef.current) {
       mapRef.current.fitBounds(gpx.tracks[0].bounds);
     }
-  }, [gpx, meta.kmPerDay]);
+  }, [gpx, meta?.itra, meta?.kmPerDay]);
 
   return (
     <Grid className="map" item xs={12}>

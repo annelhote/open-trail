@@ -10,9 +10,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Box,
   Button,
+  Checkbox,
   Dialog,
   DialogActions,
   DialogContent,
+  FormControlLabel,
+  FormGroup,
   Grid,
   MenuItem,
   Select,
@@ -37,14 +40,13 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
     neg: 0,
     pos: 0,
   });
-  const [itraDistance, setItraDistance] = useState(0);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const itraDistanceTmp = gpx.tracks[0].distance.totalItra / 1000;
-    setDistance(Math.round(gpx.tracks[0].distance.total / 1000));
-    setItraDistance(Math.round(itraDistanceTmp));
-    setDuration(Math.ceil(itraDistanceTmp.toFixed(1) / meta.kmPerDay));
+    // TODO: Do it in the trail page in order to avoid duplicated code
+    const distanceTmp = (meta?.itra ? gpx.tracks[0].distance.totalItra : gpx.tracks[0].distance.total) / 1000;
+    setDistance(Math.round(distanceTmp));
+    setDuration(Math.ceil(distanceTmp.toFixed(1) / meta.kmPerDay));
     setElevation(gpx.calcElevation(gpx.tracks[0].points));
   }, [gpx, meta]);
 
@@ -73,7 +75,8 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
                 setMeta({
                   ...meta,
                   activity: event.target.activity.value,
-                  kmPerDay: Number(event.target.kmItra.value),
+                  itra: event.target.itra.checked,
+                  kmPerDay: Number(event.target.kmPerDay.value),
                   name: event.target.name.value,
                   startDate: dayjs(event.target.departureDate.value, 'DD/MM/YYYY'),
                 });
@@ -82,49 +85,55 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
             }}
           >
             <DialogContent>
-              <TextField
-                defaultValue={meta.name}
-                label="Nom de la randonnée"
-                name="name"
-                required
-                variant="filled"
-              />
-              <Select
-                defaultValue={meta.activity}
-                name="activity"
-              >
-                <MenuItem value={"hiking"}>Randonnée pédestre</MenuItem>
-                <MenuItem value={"cycling"}>Randonnée cycliste</MenuItem>
-              </Select>
-              <TextField
-                defaultValue={meta.kmPerDay}
-                InputProps={{ inputProps: { min: 0 } }}
-                label="Kilomètres parcourus par jour (ITRA)"
-                name="kmItra"
-                type="number"
-                variant="filled"
-              />
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DemoContainer components={["DatePicker"]}>
-                  <DatePicker
-                    defaultValue={meta.startDate}
-                    format="DD/MM/YYYY"
-                    label="Jour du départ"
-                    name="departureDate"
-                  />
-                </DemoContainer>
-              </LocalizationProvider>
-              <Button
-                component="label"
-                onClick={() => {
-                  downloadGpx({ gpx, markers, meta });
-                  handleClose();
-                }}
-                startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
-                variant="contained"
-              >
-                Télécharger le fichier GPX
-              </Button>
+              <FormGroup>
+                <TextField
+                  defaultValue={meta.name}
+                  label="Nom de la randonnée"
+                  name="name"
+                  required
+                  variant="filled"
+                />
+                <Select
+                  defaultValue={meta.activity}
+                  name="activity"
+                >
+                  <MenuItem value={"hiking"}>Randonnée pédestre</MenuItem>
+                  <MenuItem value={"cycling"}>Randonnée cycliste</MenuItem>
+                </Select>
+                <TextField
+                  defaultValue={meta.kmPerDay}
+                  InputProps={{ inputProps: { min: 0 } }}
+                  label="Kilomètres parcourus par jour"
+                  name="kmPerDay"
+                  type="number"
+                  variant="filled"
+                />
+                <FormControlLabel
+                  control={<Checkbox defaultChecked={meta?.itra ?? false} name="itra" />}
+                  label="Calcul des distances en kilomètre-effort (km-e)"
+                />
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DemoContainer components={["DatePicker"]}>
+                    <DatePicker
+                      defaultValue={meta.startDate}
+                      format="DD/MM/YYYY"
+                      label="Jour du départ"
+                      name="departureDate"
+                    />
+                  </DemoContainer>
+                </LocalizationProvider>
+                <Button
+                  component="label"
+                  onClick={() => {
+                    downloadGpx({ gpx, markers, meta });
+                    handleClose();
+                  }}
+                  startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
+                  variant="contained"
+                >
+                  Télécharger le fichier GPX
+                </Button>
+              </FormGroup>
             </DialogContent>
             <DialogActions>
               <Button onClick={handleClose}>Fermer</Button>
@@ -148,25 +157,7 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
               <Box sx={{ pr: 0.5 }}>
                 <b>{distance}</b>
               </Box>{" "}
-              km
-            </Stack>
-          </Stack>
-        </Grid>
-        <Grid item xs={12} sm={1}>
-          <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
-            <FontAwesomeIcon
-              icon={faUpRightAndDownLeftFromCenter}
-              className="fa-rotate-by"
-              style={{ "--fa-rotate-angle": "45deg" }}
-            />
-            <Stack
-              direction="row"
-              sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
-            >
-              <Box sx={{ pr: 0.5 }}>
-                <b>{itraDistance.toFixed(0)}</b>
-              </Box>{" "}
-              km (ITRA)
+              {meta?.itra ? 'km-e' : 'km'}
             </Stack>
           </Stack>
         </Grid>

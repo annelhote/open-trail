@@ -105,7 +105,7 @@ const downSampleArray = (input, period) => {
   return output;
 };
 
-const getClosestPointByCoordinates = ({ coordinates, gpx }) => {
+const getClosestPointByCoordinates = ({ coordinates, gpx, meta }) => {
   const points = gpx.tracks[0].points;
   const closestPoint = points.reduce(
     (accumulator, currentValue, index) =>
@@ -117,7 +117,7 @@ const getClosestPointByCoordinates = ({ coordinates, gpx }) => {
           }
         : accumulator,
     {
-      distance: gpx.tracks[0].distance.total,
+      distance: meta?.itra ? gpx.tracks[0].distance.totalItra : gpx.tracks[0].distance.total,
       point: points[points.length - 1],
       index: points.length - 1,
     }

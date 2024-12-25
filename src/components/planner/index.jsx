@@ -148,7 +148,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
 const Planner = ({ gpx, markers, selectedFilters }) => {
   const [selected, setSelected] = useState([]);
 
-  const handleClick = (event, marker) => {
+  const handleClick = (_, marker) => {
     const selectedIndex = selected.map((marker) => marker.id).indexOf(marker.id);
     let newSelected = [];
 

@@ -63,13 +63,14 @@ const Trail = () => {
         gpxCompleteTmp = overloadGpx(gpxCompleteTmp);
         setGpxComplete(gpxCompleteTmp);
         // Compute days
-        const duration = Math.ceil(
-          gpxCompleteTmp.tracks[0].distance.totalItra / 1000 / meta?.kmPerDay,
-        );
+        // TODO: Do it in the trail page in order to avoid duplicated code
+        const distanceTmp = (meta?.itra ? gpxCompleteTmp.tracks[0].distance.totalItra : gpxCompleteTmp.tracks[0].distance.total) / 1000;
+        const duration = Math.ceil(distanceTmp.toFixed(1) / meta.kmPerDay);
         const daysTmp = [...Array(duration).keys()].map((day) => day + 1);
         setDays(daysTmp);
         // Compute GPXs
-        const cumulDistances = [0, ...gpxCompleteTmp.tracks[0].distance.cumulItra];
+        const cumul = meta?.itra ? gpxCompleteTmp.tracks[0].distance.cumulItra : gpxCompleteTmp.tracks[0].distance.cumul;
+        const cumulDistances = [0, ...cumul];
         const gpxsTmp = daysTmp.map((day) => {
           const startPointIndex = getClosestPointIndexByDistance({
             cumulDistances,
@@ -170,11 +171,12 @@ const Trail = () => {
           const closestPoint = getClosestPointByCoordinates({
             coordinates: marker,
             gpx: gpxCompleteTmp,
+            meta,
           });
           // TODO fix distance calculation
           const distance = (
             gpxCompleteTmp.calcDistanceBetween(marker, closestPoint.point) +
-            gpxCompleteTmp.tracks[0].distance.cumulItra[closestPoint.index] / 1000
+            (meta?.itra ? gpxCompleteTmp.tracks[0].distance.cumul[closestPoint.index] : gpxCompleteTmp.tracks[0].distance.cumulItra[closestPoint.index]) / 1000
           ).toFixed(1);
           return { distance, ...marker };
         });
@@ -183,7 +185,7 @@ const Trail = () => {
     }
 
     getData();
-  }, [meta?.gpx, meta?.kmPerDay, meta?.markers]);
+  }, [meta?.gpx, meta?.itra, meta?.kmPerDay, meta?.markers]);
 
   useEffect(() => {
     setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
@@ -197,13 +199,14 @@ const Trail = () => {
       setMeta({
         activity: 'hiking',
         gpx: _gpx,
+        itra: false,
         kmPerDay: 20,
         name: trailId,
         startDate: dayjs(new Date().toISOString().split("T")[0]),
       });
     }
 
-    getData();
+    if (params?.trailId) getData();
   }, [params?.trailId])
 
   const onChange = (event) => {

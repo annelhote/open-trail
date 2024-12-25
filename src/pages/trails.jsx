@@ -2,7 +2,10 @@ import {
   Box,
   Breadcrumbs,
   Button,
+  Checkbox,
   FormControl,
+  FormControlLabel,
+  FormGroup,
   Link,
   MenuItem,
   Select,
@@ -38,6 +41,7 @@ const Trails = () => {
   const [activity, setActivity] = useState("hiking");
   const [file, setFile] = useState();
   const [gpx, setGpx] = useState();
+  const [itra, setItra] = useState(false);
   const [kmPerDay, setKmPerDay] = useState(20);
   const [name, setName] = useState();
   const [startDate, setStartDate] = useState(dayjs(new Date().toISOString().split("T")[0]));
@@ -73,7 +77,7 @@ const Trails = () => {
         </Button>
         {file && !gpx && <div>Spinner</div>}
         {gpx && (
-          <>
+          <FormGroup>
             <TextField
               defaultValue={name}
               label="Nom de la randonnée"
@@ -91,10 +95,14 @@ const Trails = () => {
             <TextField
               defaultValue={kmPerDay}
               InputProps={{ inputProps: { min: 0 } }}
-              label="Kilomètres parcourus par jour (ITRA)"
+              label="Kilomètres parcourus par jour"
               onChange={(event) => setKmPerDay(Number(event.target.value))}
               type="number"
               variant="filled"
+            />
+            <FormControlLabel
+              control={<Checkbox checked={itra} onChange={(event) => setItra(event.target.checked)} />}
+              label="Calcul des distances en kilomètre-effort (km-e)"
             />
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer components={["DatePicker"]}>
@@ -102,7 +110,6 @@ const Trails = () => {
                   defaultValue={startDate}
                   format="DD/MM/YYYY"
                   label="Jour du départ"
-                  name="departureDate"
                   onChange={(event) => setStartDate(event)}
                 />
               </DemoContainer>
@@ -114,6 +121,7 @@ const Trails = () => {
                   state: {
                     activity,
                     gpx,
+                    itra,
                     kmPerDay,
                     name,
                     startDate,
@@ -124,7 +132,7 @@ const Trails = () => {
             >
               Envoyer
             </Button>
-          </>
+          </FormGroup>
         )}
       </FormControl>
       <div>
