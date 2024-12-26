@@ -57,10 +57,20 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
   return (
     <Grid className="overview" container item>
       <Grid container item>
-        <Grid item xs={11}>
+        <Grid item xs={8}>
           <h2>{meta.name}</h2>
         </Grid>
-        <Grid item>
+        <Grid item xs={3}>
+          <Button
+            component="label"
+            onClick={() => downloadGpx({ gpx, markers, meta })}
+            startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
+            variant="contained"
+          >
+            Télécharger le fichier GPX
+          </Button>
+        </Grid>
+        <Grid item justifyContent="center" xs={1}>
           <Button variant="none" onClick={handleOpen}>
             <FontAwesomeIcon icon={faGear} />
           </Button>
@@ -122,17 +132,6 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
                     />
                   </DemoContainer>
                 </LocalizationProvider>
-                <Button
-                  component="label"
-                  onClick={() => {
-                    downloadGpx({ gpx, markers, meta });
-                    handleClose();
-                  }}
-                  startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
-                  variant="contained"
-                >
-                  Télécharger le fichier GPX
-                </Button>
               </FormGroup>
             </DialogContent>
             <DialogActions>

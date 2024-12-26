@@ -85,7 +85,7 @@ const downloadGpx = ({ gpx, markers, meta }) => {
       type: "text/csv;charset=utf-8",
     })
   );
-  link.setAttribute("download", `${meta.id}.gpx`);
+  link.setAttribute("download", `${meta.name}.gpx`);
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

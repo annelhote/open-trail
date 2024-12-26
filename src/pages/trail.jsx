@@ -56,7 +56,7 @@ const Trail = () => {
 
   useEffect(() => {
     const getData = async () => {
-      if (meta.gpx) {
+      if (meta?.gpx) {
         // Parse GPX
         let gpxCompleteTmp = new gpxParser();
         gpxCompleteTmp.parse(meta?.gpx);
@@ -193,7 +193,7 @@ const Trail = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const trailId = params?.trailId;
+      const { trailId } = params;
       const file = await fetch(`/open-trail/data/${trailId}.gpx`);
       const _gpx = await file.text();
       setMeta({
@@ -207,7 +207,7 @@ const Trail = () => {
     }
 
     if (params?.trailId) getData();
-  }, [params?.trailId])
+  }, [params])
 
   const onChange = (event) => {
     const eventName = event.target.name;
