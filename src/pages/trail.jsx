@@ -189,7 +189,7 @@ const Trail = () => {
                   <Link
                     underline="hover"
                     color="inherit"
-                    href={`#/trails/${params.id}`}
+                    href={`#/trails/${params.trailId}`}
                   >
                     {settings?.name}
                   </Link>
@@ -269,7 +269,7 @@ const Trail = () => {
                             value="all"
                             control={<Radio />}
                             key="day-all"
-                            label="Tous"
+                            label="Tout le parcours"
                           />
                           {days &&
                             days.map((day) => (

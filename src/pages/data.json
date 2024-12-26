@@ -1,70 +1,32 @@
 {
   "gr38": {
-    "id": "gr38",
     "name": "GR38 - Redon -> Gourin"
   },
   "le-poet-sigillat": {
-    "id": "le-poet-sigillat",
     "markers": [{ "label": "Arrivée", "lat": 44.3692526, "lon": 5.3170387, "name": "Arrivée", "type": "friend" }],
     "name": "La Chapelle en Vercors -> Le Poët-Sigillat (août 2024)",
     "startDate": "2024-08-19"
   },
   "picos-de-europa": {
-    "id": "picos-de-europa",
     "name": "Picos de Europa",
     "website": "https://elanillodepicos.com/"
   },
   "tour-du-queyras": {
-    "id": "tour-du-queyras",
     "name": "GR58 - Tour du Queyras"
   },
   "chemin-d-assise": {
-    "id": "chemin-d-assise",
     "name": "Chemin d'Assise"
   },
   "nantes-echalas": {
-    "id": "nantes-echalas",
     "name": "Nantes -> Echalas"
   },
   "cretes-du-jura": {
-    "id": "cretes-du-jura",
     "name": "Crêtes du Jura (septembre 2024)",
     "startDate": "2024-09-06"
   },
-  "hexatrek-01": {
-    "id": "hexatrek-01",
+  "hexatrek": {
     "kmPerDay": 30,
-    "name": "Hexatrek - Etape 1 - Le Grand Est (16 juin au 16 juillet 2025)",
+    "name": "Hexatrek (16 juin 2025)",
     "startDate": "2025-06-16"
-  },
-  "hexatrek-02": {
-    "id": "hexatrek-02",
-    "kmPerDay": 30,
-    "name": "Hexatrek - Etape 2 - Alpes du Nord (17 juillet au 6 août 2025)",
-    "startDate": "2025-07-17"
-  },
-  "hexatrek-03": {
-    "id": "hexatrek-03",
-    "kmPerDay": 30,
-    "name": "Hexatrek - Etape 3 - Hautes Alpes (7 août au 2 septembre 2025)",
-    "startDate": "2025-08-07"
-  },
-  "hexatrek-04": {
-    "id": "hexatrek-04",
-    "kmPerDay": 30,
-    "name": "Hexatrek - Etape 4 - Gorges & Causses (3 septembre au 25 septembre 2025)",
-    "startDate": "2025-09-03"
-  },
-  "hexatrek-05": {
-    "id": "hexatrek-05",
-    "kmPerDay": 30,
-    "name": "Hexatrek - Etape 5 - Pyrénées Est (26 septembre au 24 octobre 2025)",
-    "startDate": "2025-09-26"
-  },
-  "hexatrek-06": {
-    "id": "hexatrek-06",
-    "kmPerDay": 30,
-    "name": "Hexatrek - Etape 6 - Pyrénées Ouest (25 octobre au 15 novembre 2025)",
-    "startDate": "2025-10-25"
   }
 }

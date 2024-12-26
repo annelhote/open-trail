@@ -44,7 +44,7 @@ const Stage = ({ day, gpx, markers, settings }) => {
               <b>Distance:</b> {distance.toFixed(1)} km
             </div>
             <div>
-              <b>Distance ITRA:</b>{" "}
+              <b>Distance km-e:</b>{" "}
               {getITRADistance({ distance, elevation: elevation.pos }).toFixed(
                 1,
               )}{" "}
