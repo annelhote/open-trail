@@ -25,12 +25,7 @@ import Planner from "../components/planner";
 import Profile from "../components/profile";
 import Stage from "../components/stage";
 import {
-  chunkArray,
-  downSampleArray,
-  getClosestPointByCoordinates,
   getClosestPointIndexByDistance,
-  getDataFromOverpass,
-  // getDefaultKmPerDayPerActivity,
   getMarkerFromTypeOrName,
   overloadGpx,
 } from "../utils";
@@ -94,7 +89,6 @@ const Trail = () => {
           return partGpx;
         });
         setGpxs(gpxsTmp);
-
         // Add custom markers
         const customMarkers = (meta?.markers ?? []).map((marker) => ({
           ...marker,
@@ -106,80 +100,6 @@ const Trail = () => {
           ...getMarkerFromTypeOrName(marker),
         }));
         let allMarkers = [...customMarkers, ...gpxMarkers];
-        // Compute markers from OpenStreetMap
-        const promises = gpxsTmp.map(async (gpx, index) => {
-          const coordinatesDataCount = gpx.tracks[0].points.length;
-          const targetPathDataCount = Math.pow(coordinatesDataCount, 0.7);
-          const pathSamplingPeriod = Math.floor(
-            coordinatesDataCount / targetPathDataCount
-          );
-          const downSampledCoordinates = downSampleArray(
-            gpx.tracks[0].points,
-            pathSamplingPeriod
-          );
-
-          let chunks = chunkArray(downSampledCoordinates, 20);
-          chunks = chunks.map((chunk) =>
-            chunk.map((item) => [item.lat, item.lon]).flat()
-          );
-
-          const responses = await Promise.all(chunks.map((chunk) => getDataFromOverpass(chunk)));
-          const jsons = await Promise.all(responses.map((response) => response.json()));
-          return jsons.map((json) => json?.elements ?? []).flat().map((item) => {
-            const type =
-              item?.tags?.amenity ??
-              item?.tags?.landuse ??
-              item?.tags?.shop ??
-              item?.tags?.tourism ??
-              item?.tags?.railway ??
-              "";
-            return {
-              addrCity: item?.tags?.["addr:city"],
-              addrHousenumber: item?.tags?.["addr:housenumber"],
-              addrStreet: item?.tags?.["addr:street"],
-              day: (index + 1).toString(),
-              email: item?.tags?.email,
-              id: item?.id,
-              lat: item?.lat ?? item?.center?.lat,
-              lon: item?.lon ?? item?.center?.lon,
-              name: item?.tags?.name,
-              note: item?.tags?.note,
-              opening_hours: item?.tags?.opening_hours,
-              osmType: item?.type,
-              phone:
-                item?.tags?.phone?.replace(/ /g, "") ??
-                item?.tags?.["contact:phone"]?.replace(/ /g, ""),
-              type,
-              website: item?.tags?.website,
-              ...getMarkerFromTypeOrName({ type }),
-            };
-          });
-        });
-        const markersByDay = await Promise.all(promises);
-        allMarkers = [
-          ...allMarkers,
-          ...markersByDay.flat(),
-        ]
-        // Remove duplicated markers based on lat,lon
-        allMarkers = [
-          ...new Map(
-            allMarkers.map((value) => [`${value.lat},${value.lon}`, value]),
-          ).values(),
-        ];
-        // Add distance from start
-        allMarkers = allMarkers.map((marker) => {
-          const closestPoint = getClosestPointByCoordinates({
-            coordinates: marker,
-            gpx: gpxCompleteTmp,
-            meta,
-          });
-          // TODO fix distance calculation
-          const distance = (
-            gpxCompleteTmp.calcDistanceBetween(marker, closestPoint.point) +
-            (meta?.itra ? gpxCompleteTmp.tracks[0].distance.cumul[closestPoint.index] : gpxCompleteTmp.tracks[0].distance.cumulItra[closestPoint.index]) / 1000
-          ).toFixed(1);
-          return { distance, ...marker };
-        });
         setMarkers(allMarkers);
       }
     }
@@ -283,15 +203,12 @@ const Trail = () => {
             </Grid>
             <Overview
               gpx={gpx}
+              gpxs={gpxs}
               markers={markers}
               meta={meta}
+              setMarkers={setMarkers}
               setMeta={setMeta}
             />
-            {/* {markers.length === 0 ? (
-              <Grid item xs={12}>
-                Chargement des données ...
-              </Grid>
-            ) : ( */}
             <Grid item xs={12}>
               <Accordion>
                 <AccordionSummary

@@ -3,6 +3,7 @@ import {
   faArrowUp,
   faFileArrowDown,
   faGear,
+  faLocationPin,
   faStopwatch,
   faUpRightAndDownLeftFromCenter,
 } from "@fortawesome/free-solid-svg-icons";
@@ -22,6 +23,7 @@ import {
   Stack,
   TextField,
 } from "@mui/material";
+import { LoadingButton } from '@mui/lab';
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -29,9 +31,9 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 
-import { downloadGpx } from "../../utils";
+import { downloadGpx, getPois } from "../../utils";
 
-const Overview = ({ gpx, markers, meta, setMeta }) => {
+const Overview = ({ gpx, gpxs, markers, meta, setMarkers, setMeta }) => {
   const [distance, setDistance] = useState(0);
   const [duration, setDuration] = useState(0);
   const [elevation, setElevation] = useState({
@@ -40,6 +42,7 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
     neg: 0,
     pos: 0,
   });
+  const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -57,21 +60,39 @@ const Overview = ({ gpx, markers, meta, setMeta }) => {
   return (
     <Grid className="overview" container item>
       <Grid container item>
-        <Grid item xs={8}>
+        <Grid item xs={7}>
           <h2>{meta.name}</h2>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={2}>
+          <LoadingButton
+            component="label"
+            loading={loading}
+            onClick={async () => {
+              setLoading(true);
+              const markersTmp = await getPois({ gpx, gpxs, meta });
+              setMarkers([...markers, ...markersTmp]);
+              setLoading(false);
+            }}
+            size="small"
+            startIcon={<FontAwesomeIcon icon={faLocationPin} />}
+            variant="contained"
+          >
+            Charger les POIs
+          </LoadingButton>
+        </Grid>
+        <Grid item xs={2}>
           <Button
             component="label"
             onClick={() => downloadGpx({ gpx, markers, meta })}
+            size="small"
             startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
             variant="contained"
           >
-            Télécharger le fichier GPX
+            Exporter le GPX
           </Button>
         </Grid>
         <Grid item justifyContent="center" xs={1}>
-          <Button variant="none" onClick={handleOpen}>
+          <Button onClick={handleOpen} variant="none">
             <FontAwesomeIcon icon={faGear} />
           </Button>
           <Dialog
