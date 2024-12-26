@@ -22,7 +22,7 @@ const chunkArray = (array, chunkSize) => {
   return chunks;
 };
 
-const downloadGpx = ({ gpx, markers, meta }) => {
+const downloadGpx = ({ gpx, markers, settings }) => {
   const link = document.createElement("a");
   const source = gpx.xmlSource;
   const root = source.getElementsByTagName("gpx")[0];
@@ -85,7 +85,7 @@ const downloadGpx = ({ gpx, markers, meta }) => {
       type: "text/csv;charset=utf-8",
     })
   );
-  link.setAttribute("download", `${meta.name}.gpx`);
+  link.setAttribute("download", `${settings.name}.gpx`);
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -105,7 +105,7 @@ const downSampleArray = (input, period) => {
   return output;
 };
 
-const getClosestPointByCoordinates = ({ coordinates, gpx, meta }) => {
+const getClosestPointByCoordinates = ({ coordinates, gpx, settings }) => {
   const points = gpx.tracks[0].points;
   const closestPoint = points.reduce(
     (accumulator, currentValue, index) =>
@@ -117,7 +117,7 @@ const getClosestPointByCoordinates = ({ coordinates, gpx, meta }) => {
           }
         : accumulator,
     {
-      distance: meta?.itra ? gpx.tracks[0].distance.totalItra : gpx.tracks[0].distance.total,
+      distance: settings?.itra ? gpx.tracks[0].distance.totalItra : gpx.tracks[0].distance.total,
       point: points[points.length - 1],
       index: points.length - 1,
     }
@@ -377,7 +377,7 @@ const getMarkerFromTypeOrName = (marker) => {
   };
 };
 
-const getPois = async ({ gpx, gpxs, meta }) => {
+const getPois = async ({ gpx, gpxs, settings }) => {
   let allMarkers = [];
   // Compute markers from OpenStreetMap
   const promises = gpxs.map(async (gpx, index) => {
@@ -444,12 +444,12 @@ const getPois = async ({ gpx, gpxs, meta }) => {
     const closestPoint = getClosestPointByCoordinates({
       coordinates: marker,
       gpx,
-      meta,
+      settings,
     });
     // TODO fix distance calculation
     const distance = (
       gpx.calcDistanceBetween(marker, closestPoint.point) +
-      (meta?.itra ? gpx.tracks[0].distance.cumul[closestPoint.index] : gpx.tracks[0].distance.cumulItra[closestPoint.index]) / 1000
+      (settings?.itra ? gpx.tracks[0].distance.cumul[closestPoint.index] : gpx.tracks[0].distance.cumulItra[closestPoint.index]) / 1000
     ).toFixed(1);
     return { distance, ...marker };
   });

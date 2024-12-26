@@ -33,7 +33,7 @@ import { useEffect, useState } from "react";
 
 import { downloadGpx, getPois } from "../../utils";
 
-const Overview = ({ gpx, gpxs, markers, meta, setMarkers, setMeta }) => {
+const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => {
   const [distance, setDistance] = useState(0);
   const [duration, setDuration] = useState(0);
   const [elevation, setElevation] = useState({
@@ -47,11 +47,11 @@ const Overview = ({ gpx, gpxs, markers, meta, setMarkers, setMeta }) => {
 
   useEffect(() => {
     // TODO: Do it in the trail page in order to avoid duplicated code
-    const distanceTmp = (meta?.itra ? gpx.tracks[0].distance.totalItra : gpx.tracks[0].distance.total) / 1000;
+    const distanceTmp = (settings?.itra ? gpx.tracks[0].distance.totalItra : gpx.tracks[0].distance.total) / 1000;
     setDistance(Math.round(distanceTmp));
-    setDuration(Math.ceil(distanceTmp.toFixed(1) / meta.kmPerDay));
+    setDuration(Math.ceil(distanceTmp.toFixed(1) / settings.kmPerDay));
     setElevation(gpx.calcElevation(gpx.tracks[0].points));
-  }, [gpx, meta]);
+  }, [gpx, settings]);
 
   const handleOpen = () => setOpen(true);
 
@@ -61,7 +61,9 @@ const Overview = ({ gpx, gpxs, markers, meta, setMarkers, setMeta }) => {
     <Grid className="overview" container item>
       <Grid container item>
         <Grid item xs={7}>
-          <h2>{meta.name}</h2>
+          <h2>
+            {settings.name}
+          </h2>
         </Grid>
         <Grid item xs={2}>
           <LoadingButton
@@ -69,7 +71,7 @@ const Overview = ({ gpx, gpxs, markers, meta, setMarkers, setMeta }) => {
             loading={loading}
             onClick={async () => {
               setLoading(true);
-              const markersTmp = await getPois({ gpx, gpxs, meta });
+              const markersTmp = await getPois({ gpx, gpxs, settings });
               setMarkers([...markers, ...markersTmp]);
               setLoading(false);
             }}
@@ -83,7 +85,7 @@ const Overview = ({ gpx, gpxs, markers, meta, setMarkers, setMeta }) => {
         <Grid item xs={2}>
           <Button
             component="label"
-            onClick={() => downloadGpx({ gpx, markers, meta })}
+            onClick={() => downloadGpx({ gpx, markers, settings })}
             size="small"
             startIcon={<FontAwesomeIcon icon={faFileArrowDown} />}
             variant="contained"
@@ -103,8 +105,8 @@ const Overview = ({ gpx, gpxs, markers, meta, setMarkers, setMeta }) => {
               component: "form",
               onSubmit: (event) => {
                 event.preventDefault();
-                setMeta({
-                  ...meta,
+                setSettings({
+                  ...settings,
                   activity: event.target.activity.value,
                   itra: event.target.itra.checked,
                   kmPerDay: Number(event.target.kmPerDay.value),
@@ -118,21 +120,21 @@ const Overview = ({ gpx, gpxs, markers, meta, setMarkers, setMeta }) => {
             <DialogContent>
               <FormGroup>
                 <TextField
-                  defaultValue={meta.name}
+                  defaultValue={settings.name}
                   label="Nom de la randonnée"
                   name="name"
                   required
                   variant="filled"
                 />
                 <Select
-                  defaultValue={meta.activity}
+                  defaultValue={settings.activity}
                   name="activity"
                 >
                   <MenuItem value={"hiking"}>Randonnée pédestre</MenuItem>
                   <MenuItem value={"cycling"}>Randonnée cycliste</MenuItem>
                 </Select>
                 <TextField
-                  defaultValue={meta.kmPerDay}
+                  defaultValue={settings.kmPerDay}
                   InputProps={{ inputProps: { min: 0 } }}
                   label="Kilomètres parcourus par jour"
                   name="kmPerDay"
@@ -140,13 +142,13 @@ const Overview = ({ gpx, gpxs, markers, meta, setMarkers, setMeta }) => {
                   variant="filled"
                 />
                 <FormControlLabel
-                  control={<Checkbox defaultChecked={meta?.itra ?? false} name="itra" />}
+                  control={<Checkbox defaultChecked={settings?.itra ?? false} name="itra" />}
                   label="Calcul des distances en kilomètre-effort (km-e)"
                 />
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DemoContainer components={["DatePicker"]}>
                     <DatePicker
-                      defaultValue={meta.startDate}
+                      defaultValue={settings.startDate}
                       format="DD/MM/YYYY"
                       label="Jour du départ"
                       name="departureDate"
@@ -177,7 +179,7 @@ const Overview = ({ gpx, gpxs, markers, meta, setMarkers, setMeta }) => {
               <Box sx={{ pr: 0.5 }}>
                 <b>{distance}</b>
               </Box>{" "}
-              {meta?.itra ? 'km-e' : 'km'}
+              {settings?.itra ? 'km-e' : 'km'}
             </Stack>
           </Stack>
         </Grid>

@@ -41,9 +41,9 @@ const Map = ({
   coordinates,
   gpx,
   markers,
-  meta,
   selectedFilters,
   setCoordinates,
+  settings,
 }) => {
   const mapRef = useRef();
 
@@ -56,8 +56,8 @@ const Map = ({
   useEffect(() => {
     // Calculate number of days in trail
     // TODO: Do it in the trail page in order to avoid duplicated code
-    const distanceTmp = (meta?.itra ? gpx.tracks[0].distance.totalItra : gpx.tracks[0].distance.total) / 1000;
-    const duration = Math.ceil(distanceTmp.toFixed(1) / meta.kmPerDay)
+    const distanceTmp = (settings?.itra ? gpx.tracks[0].distance.totalItra : gpx.tracks[0].distance.total) / 1000;
+    const duration = Math.ceil(distanceTmp.toFixed(1) / settings.kmPerDay)
     const days = [...Array(duration).keys()];
     // Determinates each step
     const points = gpx.tracks[0].points;
@@ -65,11 +65,11 @@ const Map = ({
     const gpxsTmp = days.map((day) => {
       const startPointIndex = getClosestPointIndexByDistance({
         cumulDistances,
-        distance: meta.kmPerDay * 1000 * day,
+        distance: settings.kmPerDay * 1000 * day,
       });
       const endPointIndex = getClosestPointIndexByDistance({
         cumulDistances,
-        distance: meta.kmPerDay * 1000 * (day + 1),
+        distance: settings.kmPerDay * 1000 * (day + 1),
       });
       const trkpts = points
         .slice(startPointIndex, endPointIndex + 1)
@@ -87,7 +87,7 @@ const Map = ({
     if (mapRef && mapRef.current) {
       mapRef.current.fitBounds(gpx.tracks[0].bounds);
     }
-  }, [gpx, meta?.itra, meta?.kmPerDay]);
+  }, [gpx, settings?.itra, settings?.kmPerDay]);
 
   return (
     <Grid className="map" item xs={12}>

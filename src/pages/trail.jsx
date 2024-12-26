@@ -42,38 +42,38 @@ const Trail = () => {
   const [gpxComplete, setGpxComplete] = useState();
   const [gpxs, setGpxs] = useState();
   const [markers, setMarkers] = useState([]);
-  const [meta, setMeta] = useState({});
+  const [settings, setSettings] = useState({});
   const [selectedFilters, setSelectedFilters] = useState([]);
 
   useEffect(() => {
-    setMeta(state);
+    setSettings(state);
   }, [state]);
 
   useEffect(() => {
     const getData = async () => {
-      if (meta?.gpx) {
+      if (settings?.gpx) {
         // Parse GPX
         let gpxCompleteTmp = new gpxParser();
-        gpxCompleteTmp.parse(meta?.gpx);
+        gpxCompleteTmp.parse(settings?.gpx);
         gpxCompleteTmp = overloadGpx(gpxCompleteTmp);
         setGpxComplete(gpxCompleteTmp);
         // Compute days
         // TODO: Do it in the trail page in order to avoid duplicated code
-        const distanceTmp = (meta?.itra ? gpxCompleteTmp.tracks[0].distance.totalItra : gpxCompleteTmp.tracks[0].distance.total) / 1000;
-        const duration = Math.ceil(distanceTmp.toFixed(1) / meta.kmPerDay);
+        const distanceTmp = (settings?.itra ? gpxCompleteTmp.tracks[0].distance.totalItra : gpxCompleteTmp.tracks[0].distance.total) / 1000;
+        const duration = Math.ceil(distanceTmp.toFixed(1) / settings.kmPerDay);
         const daysTmp = [...Array(duration).keys()].map((day) => day + 1);
         setDays(daysTmp);
         // Compute GPXs
-        const cumul = meta?.itra ? gpxCompleteTmp.tracks[0].distance.cumulItra : gpxCompleteTmp.tracks[0].distance.cumul;
+        const cumul = settings?.itra ? gpxCompleteTmp.tracks[0].distance.cumulItra : gpxCompleteTmp.tracks[0].distance.cumul;
         const cumulDistances = [0, ...cumul];
         const gpxsTmp = daysTmp.map((day) => {
           const startPointIndex = getClosestPointIndexByDistance({
             cumulDistances,
-            distance: meta.kmPerDay * 1000 * (day - 1),
+            distance: settings.kmPerDay * 1000 * (day - 1),
           });
           const endPointIndex = getClosestPointIndexByDistance({
             cumulDistances,
-            distance: meta.kmPerDay * 1000 * day,
+            distance: settings.kmPerDay * 1000 * day,
           });
           const trkpts = gpxCompleteTmp.tracks[0].points
             .slice(startPointIndex, endPointIndex + 1)
@@ -90,7 +90,7 @@ const Trail = () => {
         });
         setGpxs(gpxsTmp);
         // Add custom markers
-        const customMarkers = (meta?.markers ?? []).map((marker) => ({
+        const customMarkers = (settings?.markers ?? []).map((marker) => ({
           ...marker,
           ...getMarkerFromTypeOrName(marker),
         }));
@@ -105,7 +105,7 @@ const Trail = () => {
     }
 
     getData();
-  }, [meta, meta?.gpx, meta?.itra, meta?.kmPerDay, meta?.markers]);
+  }, [settings]);
 
   useEffect(() => {
     setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
@@ -116,7 +116,7 @@ const Trail = () => {
       const { trailId } = params;
       const file = await fetch(`/open-trail/data/${trailId}.gpx`);
       const _gpx = await file.text();
-      setMeta({
+      setSettings({
         activity: 'hiking',
         gpx: _gpx,
         itra: false,
@@ -191,13 +191,13 @@ const Trail = () => {
                     color="inherit"
                     href={`#/trails/${params.id}`}
                   >
-                    {meta?.name}
+                    {settings?.name}
                   </Link>
                 )}
                 {params?.day ? (
                   <Typography>Jour {params?.day}</Typography>
                 ) : (
-                  <Typography>{meta?.name}</Typography>
+                  <Typography>{settings?.name}</Typography>
                 )}
               </Breadcrumbs>
             </Grid>
@@ -205,9 +205,9 @@ const Trail = () => {
               gpx={gpx}
               gpxs={gpxs}
               markers={markers}
-              meta={meta}
               setMarkers={setMarkers}
-              setMeta={setMeta}
+              setSettings={setSettings}
+              settings={settings}
             />
             <Grid item xs={12}>
               <Accordion>
@@ -242,9 +242,9 @@ const Trail = () => {
                         coordinates={coordinates}
                         gpx={gpx}
                         markers={markers}
-                        meta={meta}
                         selectedFilters={selectedFilters}
                         setCoordinates={setCoordinates}
+                        settings={settings}
                       />
                     </Grid>
                     <Grid item xs={12} md={5}>
@@ -256,11 +256,11 @@ const Trail = () => {
                           onChange={(e) =>
                             e.target.value === "all"
                               ? navigate(`/trails/${params?.trailId ?? 'trail'}`, {
-                                state: meta,
+                                state: settings,
                               })
                               : navigate(
                                 `/trails/${params?.trailId ?? 'trail'}/${e.target.value}`,
-                                { state: meta },
+                                { state: settings },
                               )
                           }
                           value={params?.day ?? "all"}
@@ -277,7 +277,7 @@ const Trail = () => {
                                 value={day}
                                 control={<Radio />}
                                 key={`day-${day}`}
-                                label={`Jour ${day} - ${meta?.startDate
+                                label={`Jour ${day} - ${settings?.startDate
                                   .add(day - 1, "day")
                                   .format("dddd	DD MMMM")}`}
                               />
@@ -339,7 +339,7 @@ const Trail = () => {
                       day={params.day}
                       gpx={gpx}
                       markers={markers}
-                      meta={meta}
+                      settings={settings}
                     />
                   ) : (
                     days.map((day, index) => (
@@ -348,7 +348,7 @@ const Trail = () => {
                         gpx={gpxs[index]}
                         key={index}
                         markers={markers}
-                        meta={meta}
+                        settings={settings}
                       />
                     ))
                   )}

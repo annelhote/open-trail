@@ -2,7 +2,7 @@ import { Card, CardContent, Grid, Link } from "@mui/material";
 
 import { getITRADistance } from "../../utils";
 
-const Stage = ({ day, gpx, markers, meta }) => {
+const Stage = ({ day, gpx, markers, settings }) => {
   const points = gpx.tracks[0].points;
   const cumulDistances = [0, ...gpx.tracks[0].distance.cumulItra];
 
@@ -31,7 +31,7 @@ const Stage = ({ day, gpx, markers, meta }) => {
             <h3 key="day">Jour {day}</h3>
             <div>
               <b>Date:</b>{" "}
-              {meta.startDate.add(day - 1, "day").format("dddd	DD MMMM")}
+              {settings.startDate.add(day - 1, "day").format("dddd DD MMMM")}
             </div>
             <div>
               <b>Point de départ:</b> {points[0].lat},{points[0].lon}
