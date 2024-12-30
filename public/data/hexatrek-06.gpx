@@ -2,11 +2,7 @@
 <gpx creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <metadata>
   <name>HexaTrek - Etape 6 (Pyrénées Ouest)</name>
-  <desc>Les plus hauts sommets des Pyrénées se dressent ici.
-Ici, les randonneurs peuvent s'attendre à d'importants dénivelés, mais leurs efforts ne seront pas vains puisque récompensés par d'incroyables paysages ou la violence des arêtes le dispute à la splendeur de la nature.
-
-Dernière étape dans le sens Nord-Sud, elle laissera aux randonneurs de l’HexaTrek un des plus beaux souvenirs du parcours.
-Première étape dans le sens Sud-Nord, elle ouvrira le bal de la meilleure des manières pour les mois de marche à suivre. </desc>
+  <desc>{ "itra": true, "kmPerDay": 30, "name": "Hexatrek 06 (25/10/2025 - 15/11/2025)", "startDate": "2025-10-25" }</desc>
   <author>
    <name>Kevin Ginisty  (HexaTrek) </name>
    <link href="https://www.strava.com/athletes/131711318"/>

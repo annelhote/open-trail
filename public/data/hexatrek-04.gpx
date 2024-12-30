@@ -2,12 +2,7 @@
 <gpx creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <metadata>
   <name>HexaTrek - Etape 4 (Gorges &amp; Causses)</name>
-  <desc>Cette région du sud du Massif central est pleine de surprises.
-Les gorges qu’elle abrite ont façonnées les paysages au fil du temps et de l’eau.
-
-Créant de hauts plateaux entre les jonctions de ces rivières, ces reliefs offrent aux randonneurs de l’HexaTrek d’incroyables points de vue sur les quatre parcs naturels traversés.
-
-Itinéraire alternatif par les Gorges de l'Ardeche ou du Tarn en Canoe/kayak disponible dans l'application mobile</desc>
+  <desc>{ "itra": true, "kmPerDay": 30, "name": "Hexatrek 04 (03/09/2025 - 25/09/2025)", "startDate": "2025-09-03" }</desc>
   <author>
    <name>Kevin Ginisty  (HexaTrek) </name>
    <link href="https://www.strava.com/athletes/131711318"/>

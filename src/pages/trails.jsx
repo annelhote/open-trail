@@ -21,8 +21,6 @@ import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import data from "./data.json";
-
 const VisuallyHiddenInput = styled("input")({
   bottom: 0,
   clip: "rect(0 0 0 0)",
@@ -45,6 +43,23 @@ const Trails = () => {
   const [kmPerDay, setKmPerDay] = useState(20);
   const [name, setName] = useState();
   const [startDate, setStartDate] = useState(dayjs(new Date().toISOString().split("T")[0]));
+
+  const trails = {
+    "gr38": "GR38 - Redon -> Gourin",
+    "le-poet-sigillat": "La Chapelle en Vercors -> Le Poët-Sigillat (août 2024)",
+    "picos-de-europa": "Picos de Europa",
+    "tour-du-queyras": "GR58 - Tour du Queyras",
+    "chemin-d-assise": "Chemin d'Assise",
+    "nantes-echalas": "Nantes -> Echalas",
+    "cretes-du-jura": "Crêtes du Jura (septembre 2024)",
+    "hexatrek": "Hexatrek (16/06/2025 - 12/11/2025)",
+    "hexatrek-01": "Hexatrek 01 (16/06/2025 - 16/07/2025)",
+    "hexatrek-02": "Hexatrek 02 (17/07/2025 - 06/08/2025)",
+    "hexatrek-03": "Hexatrek 03 (07/08/2025 - 02/09/2025)",
+    "hexatrek-04": "Hexatrek 04 (03/09/2025 - 25/09/2025)",
+    "hexatrek-05": "Hexatrek 05 (26/09/2025 - 24/10/2025)",
+    "hexatrek-06": "Hexatrek 06 (25/10/2025 - 15/11/2025)",
+  }
 
   useEffect(() => {
     const getGpxFromFile = async () => {
@@ -138,10 +153,10 @@ const Trails = () => {
       <div>
         <p>Exemples:</p>
         <ul>
-          {Object.keys(data).map((trail) => (
+          {Object.keys(trails).map((trail) => (
             <li key={trail}>
               <Link href={`#/trails/${trail}`}>
-                {data[trail].name}
+                {trails[trail]}
               </Link>
             </li>
           ))}

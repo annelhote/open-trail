@@ -3,6 +3,7 @@
   xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <metadata>
+    <desc>{ "name": "Picos de Europa", "website": "https://elanillodepicos.com/" }<desc>
     <name>Wikiloc - El Anillo de Picos (completo)</name>
     <link href="https://www.wikiloc.com/mountaineering-trails/el-anillo-de-picos-completo-18426181">
       <text>El Anillo de Picos (completo) on Wikiloc</text>

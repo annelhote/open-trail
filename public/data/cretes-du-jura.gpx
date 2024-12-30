@@ -8,7 +8,10 @@
  xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v2"
  xmlns:locus="http://www.locusmap.eu">
 	<metadata>
-		<desc>File with points/tracks from Locus Map/4.25.1</desc>
+		<author>
+			<name>LightHouse</name>
+		</author>
+		<desc>{ "name": "Crêtes du Jura (septembre 2024)", "startDate": "2024-09-06" }</desc>
 		<time>2024-09-04T09:14:33.246Z</time>
 	</metadata>
 <trk>

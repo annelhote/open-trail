@@ -2,11 +2,7 @@
 <gpx creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <metadata>
   <name>HexaTrek - Etape 1 (Le Grand Est)</name>
-  <desc>Cette étape de moyenne montagne est incroyablement diversifiée et riche en patrimoines culturels.
-
-Avec l'une des densités de châteaux-forts au km² les plus élevées au monde, vous croiserez de très nombreuses ruines qui témoignent de l’histoire tumultueuse de la région.
-
-La route des vins, la gastronomie locale et les villages pittoresques d'Alsace sauront titiller tous vos sens.</desc>
+  <desc>{ "itra": true, "kmPerDay": 30, "name": "Hexatrek 01 (16/06/2025 - 16/07/2025)", "startDate": "2025-06-16" }</desc>
   <author>
    <name>Kevin Ginisty  (HexaTrek) </name>
    <link href="https://www.strava.com/athletes/131711318"/>

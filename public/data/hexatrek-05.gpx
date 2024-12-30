@@ -2,13 +2,7 @@
 <gpx creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <metadata>
   <name>HexaTrek - Etape 5 (Pyrenees Est)</name>
-  <desc>L’étape N°5 vous conduira sur les sommets de la chaine Est des Pyrénées.
-
-L’itinéraire traverse continuellement des frontières, entre la France, l’Andorre et L’Espagne, dans le but de rester au cœur du massif pyrénéen.
-
-Les forêts de l'Ariège et l'arrière-pays pyrénéens offriront aux randonneurs des paysages à couper le souffle
-
-Itinéraire alternatif par la HRP (Haute Route des Pyrénées.) disponible dans l'application mobile</desc>
+  <desc>{ "itra": true, "kmPerDay": 30, "name": "Hexatrek 05 (26/09/2025 - 24/10/2025)", "startDate": "2025-09-26" }</desc>
   <author>
    <name>Kevin Ginisty  (HexaTrek) </name>
    <link href="https://www.strava.com/athletes/131711318"/>

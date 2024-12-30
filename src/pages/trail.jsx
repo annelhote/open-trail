@@ -29,7 +29,6 @@ import {
   getMarkerFromTypeOrName,
   overloadGpx,
 } from "../utils";
-import data from "./data.json";
 
 const Trail = () => {
   const { state } = useLocation();
@@ -53,14 +52,13 @@ const Trail = () => {
       const trailId = params?.trailId;
       const file = await fetch(`/open-trail/data/${trailId}.gpx`);
       const _gpx = await file.text();
-      const { itra, kmPerDay, startDate } = data[trailId];
       setSettings({
         activity: 'hiking',
         gpx: _gpx,
-        itra: itra ?? false,
-        kmPerDay: kmPerDay ?? 20,
+        itra: false,
+        kmPerDay: 20,
         name: trailId,
-        startDate: startDate ? dayjs(startDate) : dayjs(new Date().toISOString().split("T")[0]),
+        startDate: dayjs(new Date().toISOString().split("T")[0]),
       });
     }
 
@@ -77,8 +75,15 @@ const Trail = () => {
       let gpxCompleteTmp = new gpxParser();
       gpxCompleteTmp.parse(settings?.gpx);
       gpxCompleteTmp = overloadGpx(gpxCompleteTmp);
+      const metadata = JSON.parse(gpxCompleteTmp.metadata.desc);
+      if (metadata?.startDate) metadata.startDate = dayjs(metadata.startDate);
+      setSettings({
+        ...settings,
+        ...metadata,
+      });
       setGpxComplete(gpxCompleteTmp);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [settings?.gpx]);
 
   // If GPX Complete has been computed, calculate distance, duration ...
@@ -128,10 +133,6 @@ const Trail = () => {
       setMarkers([...customMarkers, ...gpxMarkers]);
     }
   }, [gpxComplete, settings?.itra, settings.kmPerDay, settings?.markers]);
-
-  useEffect(() => {
-
-  }, [settings?.itra, settings?.kmPerDay]);
 
   // Choose current GPX displayd as complete GPX or stage of the GPX
   useEffect(() => {

@@ -2,11 +2,7 @@
 <gpx creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <metadata>
   <name>HexaTrek - Etape 2 (Alpes du Nord)</name>
-  <desc>Une traversée au cœur des plus beaux paysages de montagne, au centre de la chaine des Alpes.
-
-L’étape N°2 de l’HexaTrek c’est une immersion au plus proche des sommets. De nombreux glaciers, des lacs de hautes montagnes et beaucoup de fromages !
-
-Si les Alpes du Nord sont connues de tous pour les stations de ski qui y ont fleuri, ceux qui ont pris le contrepied de les visiter en saison estivale portent maintenant un tout autre regard sur ce massif emblématique du paysage français.</desc>
+  <desc>{ "itra": true, "kmPerDay": 30, "name": "Hexatrek 02 (17/07/2025 - 06/08/2025)", "startDate": "2025-07-17" }</desc>
   <author>
    <name>Kevin Ginisty  (HexaTrek) </name>
    <link href="https://www.strava.com/athletes/131711318"/>
