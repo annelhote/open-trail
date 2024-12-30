@@ -458,7 +458,7 @@ const getPois = async ({ gpx, gpxs, settings }) => {
 
 const overloadGpx = (gpx) => {
   // Compute cumulative positiv elevation and ITRA distance at each point of the Route/Track
-  const cumulItra = [];
+  const cumulItra = [0];
   const cumulElevation = [];
   let itraValue = 0;
   let elevationValue = 0;

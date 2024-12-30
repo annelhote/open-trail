@@ -61,7 +61,7 @@ const Map = ({
     const days = [...Array(duration).keys()];
     // Determinates each step
     const points = gpx.tracks[0].points;
-    const cumulDistances = [0, ...gpx.tracks[0].distance.cumulItra];
+    const cumulDistances = settings?.itra ? gpx.tracks[0].distance.cumulItra : gpx.tracks[0].distance.cumul;
     const gpxsTmp = days.map((day) => {
       const startPointIndex = getClosestPointIndexByDistance({
         cumulDistances,
