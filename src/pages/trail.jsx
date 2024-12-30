@@ -29,6 +29,7 @@ import {
   getMarkerFromTypeOrName,
   overloadGpx,
 } from "../utils";
+import data from "./data.json";
 
 const Trail = () => {
   const { state } = useLocation();
@@ -45,89 +46,95 @@ const Trail = () => {
   const [settings, setSettings] = useState({});
   const [selectedFilters, setSelectedFilters] = useState([]);
 
+  // If there is a trailId in the url params (meaning a GPX file in public/data), use it as settings
+  // Else if there is a state (meaning uploaded GPX file), use it as settings
   useEffect(() => {
-    setSettings(state);
-  }, [state]);
-
-  useEffect(() => {
-    const getData = async () => {
-      if (settings?.gpx) {
-        // Parse GPX
-        let gpxCompleteTmp = new gpxParser();
-        gpxCompleteTmp.parse(settings?.gpx);
-        gpxCompleteTmp = overloadGpx(gpxCompleteTmp);
-        setGpxComplete(gpxCompleteTmp);
-        // Compute days
-        // TODO: Do it in the trail page in order to avoid duplicated code
-        const distanceTmp = (settings?.itra ? gpxCompleteTmp.tracks[0].distance.totalItra : gpxCompleteTmp.tracks[0].distance.total) / 1000;
-        const duration = Math.ceil(distanceTmp.toFixed(1) / settings.kmPerDay);
-        const daysTmp = [...Array(duration).keys()].map((day) => day + 1);
-        setDays(daysTmp);
-        // Compute GPXs
-        const cumul = settings?.itra ? gpxCompleteTmp.tracks[0].distance.cumulItra : gpxCompleteTmp.tracks[0].distance.cumul;
-        const cumulDistances = [0, ...cumul];
-        const gpxsTmp = daysTmp.map((day) => {
-          const startPointIndex = getClosestPointIndexByDistance({
-            cumulDistances,
-            distance: settings.kmPerDay * 1000 * (day - 1),
-          });
-          const endPointIndex = getClosestPointIndexByDistance({
-            cumulDistances,
-            distance: settings.kmPerDay * 1000 * day,
-          });
-          const trkpts = gpxCompleteTmp.tracks[0].points
-            .slice(startPointIndex, endPointIndex + 1)
-            .map(
-              (point) =>
-                `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`,
-            );
-          let partGpx = new gpxParser();
-          partGpx.parse(
-            `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`,
-          );
-          partGpx = overloadGpx(partGpx);
-          return partGpx;
-        });
-        setGpxs(gpxsTmp);
-        // Add custom markers
-        const customMarkers = (settings?.markers ?? []).map((marker) => ({
-          ...marker,
-          ...getMarkerFromTypeOrName(marker),
-        }));
-        // Add markers from GPX
-        const gpxMarkers = (gpxCompleteTmp?.waypoints ?? []).map((marker) => ({
-          ...marker,
-          ...getMarkerFromTypeOrName(marker),
-        }));
-        let allMarkers = [...customMarkers, ...gpxMarkers];
-        setMarkers(allMarkers);
-      }
-    }
-
-    getData();
-  }, [settings]);
-
-  useEffect(() => {
-    setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
-  }, [gpxComplete, gpxs, params.day]);
-
-  useEffect(() => {
-    const getData = async () => {
+    const getGpxFromTrailId = async () => {
       const { trailId } = params;
       const file = await fetch(`/open-trail/data/${trailId}.gpx`);
       const _gpx = await file.text();
+      const { itra, kmPerDay, startDate } = data[trailId];
       setSettings({
         activity: 'hiking',
         gpx: _gpx,
-        itra: false,
-        kmPerDay: 20,
+        itra: itra ?? false,
+        kmPerDay: kmPerDay ?? 20,
         name: trailId,
-        startDate: dayjs(new Date().toISOString().split("T")[0]),
+        startDate: startDate ? dayjs(startDate) : dayjs(new Date().toISOString().split("T")[0]),
       });
     }
 
-    if (params?.trailId) getData();
-  }, [params])
+    if (params?.trailId) {
+      getGpxFromTrailId();
+    } else if (state) setSettings(state);
+  }, [params, state]);
+
+  // If gpx in settings, parse GPX
+  useEffect(() => {
+    if (settings?.gpx) {
+      let gpxCompleteTmp = new gpxParser();
+      gpxCompleteTmp.parse(settings?.gpx);
+      gpxCompleteTmp = overloadGpx(gpxCompleteTmp);
+      setGpxComplete(gpxCompleteTmp);
+    }
+  }, [settings?.gpx]);
+
+  // If GPX Complete has been computed, calculate distance, duration ...
+  useEffect(() => {
+    if (gpxComplete) {
+      // Compute days
+      // TODO: Do it in the trail page in order to avoid duplicated code
+      const distanceTmp = (settings?.itra ? gpxComplete.tracks[0].distance.totalItra : gpxComplete.tracks[0].distance.total) / 1000;
+      const duration = Math.ceil(distanceTmp.toFixed(1) / settings.kmPerDay);
+      const daysTmp = [...Array(duration).keys()].map((day) => day + 1);
+      setDays(daysTmp);
+      // Compute GPXs
+      const cumulDistances = settings?.itra ? gpxComplete.tracks[0].distance.cumulItra : gpxComplete.tracks[0].distance.cumul;
+      const gpxsTmp = daysTmp.map((day) => {
+        const startPointIndex = getClosestPointIndexByDistance({
+          cumulDistances,
+          distance: settings.kmPerDay * 1000 * (day - 1),
+        });
+        const endPointIndex = getClosestPointIndexByDistance({
+          cumulDistances,
+          distance: settings.kmPerDay * 1000 * day,
+        });
+        const trkpts = gpxComplete.tracks[0].points
+          .slice(startPointIndex, endPointIndex + 1)
+          .map(
+            (point) =>
+              `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`,
+          );
+        let partGpx = new gpxParser();
+        partGpx.parse(
+          `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`,
+        );
+        partGpx = overloadGpx(partGpx);
+        return partGpx;
+      });
+      setGpxs(gpxsTmp);
+      // Add custom markers
+      const customMarkers = (settings?.markers ?? []).map((marker) => ({
+        ...marker,
+        ...getMarkerFromTypeOrName(marker),
+      }));
+      // Add markers from GPX
+      const gpxMarkers = (gpxComplete?.waypoints ?? []).map((marker) => ({
+        ...marker,
+        ...getMarkerFromTypeOrName(marker),
+      }));
+      setMarkers([...customMarkers, ...gpxMarkers]);
+    }
+  }, [gpxComplete, settings?.itra, settings.kmPerDay, settings?.markers]);
+
+  useEffect(() => {
+
+  }, [settings?.itra, settings?.kmPerDay]);
+
+  // Choose current GPX displayd as complete GPX or stage of the GPX
+  useEffect(() => {
+    setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
+  }, [gpxComplete, gpxs, params.day]);
 
   const onChange = (event) => {
     const eventName = event.target.name;
