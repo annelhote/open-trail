@@ -50,7 +50,7 @@ const Trail = () => {
   // Else if there is a state (meaning uploaded GPX file), use it as settings
   useEffect(() => {
     const getGpxFromTrailId = async () => {
-      const { trailId } = params;
+      const trailId = params?.trailId;
       const file = await fetch(`/open-trail/data/${trailId}.gpx`);
       const _gpx = await file.text();
       const { itra, kmPerDay, startDate } = data[trailId];
@@ -64,10 +64,12 @@ const Trail = () => {
       });
     }
 
-    if (params?.trailId) {
-      getGpxFromTrailId();
-    } else if (state) setSettings(state);
-  }, [params, state]);
+    if (!settings?.gpx) {
+      if (params?.trailId) {
+        getGpxFromTrailId();
+      } else if (state) setSettings(state);
+    }
+  }, [params?.trailId, settings?.gpx, state]);
 
   // If gpx in settings, parse GPX
   useEffect(() => {
