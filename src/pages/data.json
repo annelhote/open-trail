@@ -28,5 +28,35 @@
     "kmPerDay": 30,
     "name": "Hexatrek (16 juin 2025)",
     "startDate": "2025-06-16"
+  },
+  "hexatrek-01": {
+    "kmPerDay": 30,
+    "name": "Hexatrek 01 (16 juin 2025)",
+    "startDate": "2025-06-16"
+  },
+  "hexatrek-02": {
+    "kmPerDay": 30,
+    "name": "Hexatrek 02 (16 juin 2025)",
+    "startDate": "2025-06-16"
+  },
+  "hexatrek-03": {
+    "kmPerDay": 30,
+    "name": "Hexatrek 03 (16 juin 2025)",
+    "startDate": "2025-06-16"
+  },
+  "hexatrek-04": {
+    "kmPerDay": 30,
+    "name": "Hexatrek 04 (16 juin 2025)",
+    "startDate": "2025-06-16"
+  },
+  "hexatrek-05": {
+    "kmPerDay": 30,
+    "name": "Hexatrek 05 (16 juin 2025)",
+    "startDate": "2025-06-16"
+  },
+  "hexatrek-06": {
+    "kmPerDay": 30,
+    "name": "Hexatrek 06 (16 juin 2025)",
+    "startDate": "2025-06-16"
   }
 }
