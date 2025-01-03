@@ -53,7 +53,6 @@ const Trail = () => {
       const file = await fetch(`/open-trail/data/${trailId}.gpx`);
       const _gpx = await file.text();
       setSettings({
-        activity: 'hiking',
         gpx: _gpx,
         itra: false,
         kmPerDay: 20,
@@ -365,7 +364,6 @@ const Trail = () => {
                 </AccordionDetails>
               </Accordion>
             </Grid>
-            {/* )} */}
           </Grid>
         </Box>
       )}

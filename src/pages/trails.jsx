@@ -7,8 +7,6 @@ import {
   FormControlLabel,
   FormGroup,
   Link,
-  MenuItem,
-  Select,
   TextField,
   Typography,
 } from "@mui/material";
@@ -36,7 +34,6 @@ const VisuallyHiddenInput = styled("input")({
 const Trails = () => {
   const navigate = useNavigate();
 
-  const [activity, setActivity] = useState("hiking");
   const [file, setFile] = useState();
   const [gpx, setGpx] = useState();
   const [itra, setItra] = useState(false);
@@ -45,20 +42,20 @@ const Trails = () => {
   const [startDate, setStartDate] = useState(dayjs(new Date().toISOString().split("T")[0]));
 
   const trails = {
-    "gr38": "GR38 - Redon -> Gourin",
-    "le-poet-sigillat": "La Chapelle en Vercors -> Le Poët-Sigillat (août 2024)",
-    "picos-de-europa": "Picos de Europa",
-    "tour-du-queyras": "GR58 - Tour du Queyras",
-    "chemin-d-assise": "Chemin d'Assise",
-    "nantes-echalas": "Nantes -> Echalas",
-    "cretes-du-jura": "Crêtes du Jura (septembre 2024)",
-    "hexatrek": "Hexatrek (16/06/2025 - 12/11/2025)",
     "hexatrek-01": "Hexatrek 01 (16/06/2025 - 16/07/2025)",
     "hexatrek-02": "Hexatrek 02 (17/07/2025 - 06/08/2025)",
     "hexatrek-03": "Hexatrek 03 (07/08/2025 - 02/09/2025)",
     "hexatrek-04": "Hexatrek 04 (03/09/2025 - 25/09/2025)",
     "hexatrek-05": "Hexatrek 05 (26/09/2025 - 24/10/2025)",
     "hexatrek-06": "Hexatrek 06 (25/10/2025 - 15/11/2025)",
+    "hexatrek": "Hexatrek (16/06/2025 - 12/11/2025)",
+    "cretes-du-jura": "Crêtes du Jura (septembre 2024)",
+    "le-poet-sigillat": "La Chapelle en Vercors -> Le Poët-Sigillat (août 2024)",
+    "gr38": "GR38 - Redon -> Gourin",
+    "tour-du-queyras": "GR58 - Tour du Queyras",
+    "picos-de-europa": "Picos de Europa",
+    "chemin-d-assise": "Chemin d'Assise",
+    "nantes-echalas": "Nantes -> Echalas",
   }
 
   useEffect(() => {
@@ -100,13 +97,6 @@ const Trails = () => {
               required
               variant="filled"
             />
-            <Select
-              defaultValue={activity}
-              onChange={(event) => setActivity(event.target.value)}
-            >
-              <MenuItem value={"hiking"}>Randonnée pédestre</MenuItem>
-              <MenuItem value={"cycling"}>Randonnée cycliste</MenuItem>
-            </Select>
             <TextField
               defaultValue={kmPerDay}
               InputProps={{ inputProps: { min: 0 } }}
@@ -134,7 +124,6 @@ const Trails = () => {
               onClick={() =>
                 navigate("/trails/trail", {
                   state: {
-                    activity,
                     gpx,
                     itra,
                     kmPerDay,

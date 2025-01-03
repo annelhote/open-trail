@@ -18,8 +18,6 @@ import {
   FormControlLabel,
   FormGroup,
   Grid,
-  MenuItem,
-  Select,
   Stack,
   TextField,
 } from "@mui/material";
@@ -107,7 +105,6 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
                 event.preventDefault();
                 setSettings({
                   ...settings,
-                  activity: event.target.activity.value,
                   itra: event.target.itra.checked,
                   kmPerDay: Number(event.target.kmPerDay.value),
                   name: event.target.name.value,
@@ -126,13 +123,6 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
                   required
                   variant="filled"
                 />
-                <Select
-                  defaultValue={settings.activity}
-                  name="activity"
-                >
-                  <MenuItem value={"hiking"}>Randonnée pédestre</MenuItem>
-                  <MenuItem value={"cycling"}>Randonnée cycliste</MenuItem>
-                </Select>
                 <TextField
                   defaultValue={settings.kmPerDay}
                   InputProps={{ inputProps: { min: 0 } }}
