@@ -7,7 +7,7 @@ import {
   Breadcrumbs,
   FormControl,
   FormControlLabel,
-  Grid,
+  Grid2,
   Link,
   Radio,
   RadioGroup,
@@ -181,12 +181,12 @@ const Trail = () => {
     <>
       {gpx && (
         <Box className="open-trail" sx={{ flexGrow: 0.75 }}>
-          <Grid
-            columns={{ xs: 4, sm: 8, md: 12 }}
+          <Grid2
             container
+            size={{ xs: 4, sm: 8, md: 12 }}
             spacing={{ xs: 2, md: 3 }}
           >
-            <Grid item xs={12}>
+            <Grid2 size={{ xs: 12 }}>
               <Breadcrumbs aria-label="breadcrumb" color="color.secondary">
                 <Link underline="hover" color="inherit" href="#">
                   Open Trail
@@ -209,7 +209,7 @@ const Trail = () => {
                   <Typography>{settings?.name}</Typography>
                 )}
               </Breadcrumbs>
-            </Grid>
+            </Grid2>
             <Overview
               gpx={gpx}
               gpxs={gpxs}
@@ -218,7 +218,7 @@ const Trail = () => {
               setSettings={setSettings}
               settings={settings}
             />
-            <Grid item xs={12}>
+            <Grid2 size={{ xs: 12 }}>
               <Accordion>
                 <AccordionSummary
                   aria-controls="panel1-content"
@@ -245,8 +245,8 @@ const Trail = () => {
                   Carte
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Grid container spacing={2}>
-                    <Grid item xs={12} md={7}>
+                  <Grid2 container spacing={2}>
+                    <Grid2 size={{ xs: 12, md: 7 }}>
                       <MyMap
                         coordinates={coordinates}
                         gpx={gpx}
@@ -255,8 +255,8 @@ const Trail = () => {
                         setCoordinates={setCoordinates}
                         settings={settings}
                       />
-                    </Grid>
-                    <Grid item xs={12} md={5}>
+                    </Grid2>
+                    <Grid2 size={{ xs: 12, md: 5 }}>
                       <FormControl>
                         <RadioGroup
                           aria-labelledby="radio-buttons-group-label-day"
@@ -293,8 +293,8 @@ const Trail = () => {
                             ))}
                         </RadioGroup>
                       </FormControl>
-                    </Grid>
-                  </Grid>
+                    </Grid2>
+                  </Grid2>
                 </AccordionDetails>
               </Accordion>
               <Accordion>
@@ -363,8 +363,8 @@ const Trail = () => {
                   )}
                 </AccordionDetails>
               </Accordion>
-            </Grid>
-          </Grid>
+            </Grid2>
+          </Grid2>
         </Box>
       )}
     </>

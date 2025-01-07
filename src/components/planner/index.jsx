@@ -5,7 +5,7 @@ import {
   Box,
   Checkbox,
   Collapse,
-  Grid,
+  Grid2,
   IconButton,
   Paper,
   Table,
@@ -171,7 +171,7 @@ const Planner = ({ gpx, markers, selectedFilters }) => {
   const isSelected = (id) => selected.map((marker) => marker.id).indexOf(id) !== -1;
 
   return (
-    <Grid className="planner" container style={{ overflow: "hidden" }}>
+    <Grid2 className="planner" container style={{ overflow: "hidden" }}>
       <TableContainer component={Paper} sx={{ maxHeight: 700 }}>
         <Table
           aria-label="a planner table"
@@ -200,7 +200,7 @@ const Planner = ({ gpx, markers, selectedFilters }) => {
           </TableBody>
         </Table>
       </TableContainer>
-    </Grid>
+    </Grid2>
   );
 };
 

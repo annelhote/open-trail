@@ -160,6 +160,7 @@ Voici ce qu'il y avait dans mon sac à dos en 2017
 
 - Entraînement physique : préparation à un marathon qui a eu lieu début avril 2017
 - Blog : https://pereetfillesurlepct.wordpress.com/
+- https://lameriquedusudvuepar2blondes.wordpress.com
 
 
 ## Website

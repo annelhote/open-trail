@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid2 } from "@mui/material";
 import gpxParser from "gpxparser";
 import maplibregl from "maplibre-gl";
 import React, { useEffect, useRef, useState } from "react";
@@ -90,7 +90,7 @@ const Map = ({
   }, [gpx, settings?.itra, settings?.kmPerDay]);
 
   return (
-    <Grid className="map" item xs={12}>
+    <Grid2 className="map" size={{ xs: 12 }}>
       <ReactMapGL
         id="map"
         initialViewState={{ bounds: gpx.tracks[0].bounds }}
@@ -144,7 +144,7 @@ const Map = ({
         <FullscreenControl />
         <NavigationControl />
       </ReactMapGL>
-    </Grid>
+    </Grid2>
   );
 };
 

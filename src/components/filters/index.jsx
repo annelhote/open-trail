@@ -1,12 +1,12 @@
-import { Box, Checkbox, FormControlLabel, Grid } from '@mui/material';
+import { Box, Checkbox, FormControlLabel, Grid2 } from '@mui/material';
 
 import { capitalize } from '../../utils';
 
 const Filters = ({ filters, markers, onChange, selectedFilters }) => {
   return (
-    <Grid className="filters" container item xs={12}>
+    <Grid2 className="filters" container size={{ xs: 12 }}>
       {Object.keys(filters).map((category) => (
-        <Grid item key={category} xs={12} md={3}>
+        <Grid2 key={category} size={{ xs: 12, md: 3 }}>
           <FormControlLabel
             control={
               <Checkbox
@@ -30,9 +30,9 @@ const Filters = ({ filters, markers, onChange, selectedFilters }) => {
               />
             ))}
           </Box>
-        </Grid>
+        </Grid2>
       ))}
-    </Grid>
+    </Grid2>
   );
 };
 

@@ -17,7 +17,7 @@ import {
   DialogContent,
   FormControlLabel,
   FormGroup,
-  Grid,
+  Grid2,
   Stack,
   TextField,
 } from "@mui/material";
@@ -56,14 +56,14 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
   const handleClose = () => setOpen(false);
 
   return (
-    <Grid className="overview" container item>
-      <Grid container item>
-        <Grid item xs={7}>
+    <Grid2 className="overview" container size={{ xs: 12 }}>
+      <Grid2 container size={{ xs: 12 }}>
+        <Grid2 size={{ xs: 12, md: 7 }}>
           <h2>
             {settings.name}
           </h2>
-        </Grid>
-        <Grid item xs={2}>
+        </Grid2>
+        <Grid2 size={{ xs: 10, md: 2 }}>
           <LoadingButton
             component="label"
             loading={loading}
@@ -79,8 +79,8 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
           >
             Charger les POIs
           </LoadingButton>
-        </Grid>
-        <Grid item xs={2}>
+        </Grid2>
+        <Grid2 size={{ xs: 10, md: 2 }}>
           <Button
             component="label"
             onClick={() => downloadGpx({ gpx, markers, settings })}
@@ -90,8 +90,8 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
           >
             Exporter le GPX
           </Button>
-        </Grid>
-        <Grid item justifyContent="center" xs={1}>
+        </Grid2>
+        <Grid2 justifyContent="center" size={{ xs: 1 }}>
           <Button onClick={handleOpen} variant="none">
             <FontAwesomeIcon icon={faGear} />
           </Button>
@@ -152,10 +152,10 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
               <Button type="submit">OK</Button>
             </DialogActions>
           </Dialog>
-        </Grid>
-      </Grid>
-      <Grid container item>
-        <Grid item xs={12} sm={1}>
+        </Grid2>
+      </Grid2>
+      <Grid2 container size={{ xs: 12 }}>
+        <Grid2 size={{ xs: 12, sm: 1 }}>
           <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
             <FontAwesomeIcon
               icon={faUpRightAndDownLeftFromCenter}
@@ -172,11 +172,9 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
               {settings?.itra ? 'km-e' : 'km'}
             </Stack>
           </Stack>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={1}
+        </Grid2>
+        <Grid2
+          size={{ xs: 12, sm: 1 }}
           sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
         >
           <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
@@ -195,11 +193,9 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
               m D+
             </Stack>
           </Stack>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={1}
+        </Grid2>
+        <Grid2
+          size={{ xs: 12, sm: 1 }}
           sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
         >
           <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
@@ -218,11 +214,9 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
               m D-
             </Stack>
           </Stack>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={1}
+        </Grid2>
+        <Grid2
+          size={{ xs:12, sm: 1 }}
           sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
         >
           <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
@@ -241,11 +235,9 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
               alt. max.
             </Stack>
           </Stack>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={1}
+        </Grid2>
+        <Grid2
+          size={{ xs: 12, sm: 1 }}
           sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
         >
           <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
@@ -264,11 +256,9 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
               alt. min.
             </Stack>
           </Stack>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={1}
+        </Grid2>
+        <Grid2
+          size={{ xs: 12, sm: 1 }}
           sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
         >
           <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
@@ -283,9 +273,9 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
               {duration > 1 ? "jours" : "jour"}
             </Stack>
           </Stack>
-        </Grid>
-      </Grid>
-    </Grid>
+        </Grid2>
+      </Grid2>
+    </Grid2>
   );
 };
 
