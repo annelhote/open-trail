@@ -1,3 +1,7 @@
+import {
+  faFlagCheckered,
+  faPlay,
+} from "@fortawesome/free-solid-svg-icons";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
   Accordion,
@@ -96,6 +100,7 @@ const Trail = () => {
       setDays(daysTmp);
       // Compute GPXs
       const cumulDistances = settings?.itra ? gpxComplete.tracks[0].distance.cumulItra : gpxComplete.tracks[0].distance.cumul;
+      const stepsMarkers = [];
       const gpxsTmp = daysTmp.map((day) => {
         const startPointIndex = getClosestPointIndexByDistance({
           cumulDistances,
@@ -111,6 +116,17 @@ const Trail = () => {
             (point) =>
               `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`,
           );
+        const startPoint = gpxComplete.tracks[0].points[startPointIndex];
+        stepsMarkers.push({
+          category: 'étape',
+          color: '#5DC245',
+          icon: faPlay,
+          label: 'départ',
+          lat: startPoint.lat,
+          lon: startPoint.lon,
+          name: `Etape ${day} - Début`,
+          type: 'start'
+        })
         let partGpx = new gpxParser();
         partGpx.parse(
           `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`,
@@ -118,18 +134,25 @@ const Trail = () => {
         partGpx = overloadGpx(partGpx);
         return partGpx;
       });
+      // Add marker for arrival
+      const lastPoint = gpxComplete.tracks[0].points[gpxComplete.tracks[0].points.length - 1];
+      stepsMarkers.push({
+        category: 'étape',
+        color: '#FF0000',
+        icon: faFlagCheckered,
+        label: 'arrivée',
+        lat: lastPoint.lat,
+        lon: lastPoint.lon,
+        name: `Arrivée !`,
+        type: 'end',
+      })
       setGpxs(gpxsTmp);
-      // Add custom markers
-      const customMarkers = (settings?.markers ?? []).map((marker) => ({
-        ...marker,
-        ...getMarkerFromTypeOrName(marker),
-      }));
       // Add markers from GPX
       const gpxMarkers = (gpxComplete?.waypoints ?? []).map((marker) => ({
         ...marker,
         ...getMarkerFromTypeOrName(marker),
       }));
-      setMarkers([...customMarkers, ...gpxMarkers]);
+      setMarkers([...gpxMarkers, ...stepsMarkers]);
     }
   }, [gpxComplete, settings?.itra, settings.kmPerDay, settings?.markers]);
 
