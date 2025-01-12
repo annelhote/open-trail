@@ -82,7 +82,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
         <StyledTableCell>km {marker.distance}</StyledTableCell>
         <StyledTableCell>
           <FontAwesomeIcon
-            icon={getMarkerFromTypeOrName(marker).icon}
+            icon={marker.icon}
             color="#e4e5e6"
           />{" "}
           {capitalize(marker.label)}

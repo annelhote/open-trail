@@ -1,14 +1,20 @@
 import {
+  faBeerMugEmpty,
   faCartShopping,
   faChampagneGlasses,
   faCoffee,
   faFaucetDrip,
   faHouse,
+  faMonument,
   faMountain,
   faQuestion,
   faRestroom,
+  faSeedling,
   faShower,
+  faSnowflake,
+  faStar,
   faTrain,
+  faTree,
 } from "@fortawesome/free-solid-svg-icons";
 import XmlBeautify from "xml-beautify";
 
@@ -162,6 +168,7 @@ const getDataFromOverpass = (bbox) => {
 const getITRADistance = ({ distance, elevation }) => distance + elevation / 100;
 
 const getMarkerFromTypeOrName = (marker) => {
+  if (!marker?.type && marker?.sym) marker.type = marker.sym;
   const types = {
     alpine_hut: {
       category: "hébergement",
@@ -174,6 +181,12 @@ const getMarkerFromTypeOrName = (marker) => {
       color: "#F3B95F",
       icon: faHouse,
       label: "appartement",
+    },
+    attraction: {
+      category: "attraction",
+      color: "#134E13",
+      icon: faStar,
+      label: "attraction",
     },
     bar: {
       category: "eau",
@@ -247,6 +260,12 @@ const getMarkerFromTypeOrName = (marker) => {
       icon: faHouse,
       label: "ami",
     },
+    frozen_food: {
+      category: "alimentation",
+      color: "#409D44",
+      icon: faSnowflake,
+      label: "surgelés",
+    },
     fuel: {
       category: "alimentation",
       color: "#409D44",
@@ -258,6 +277,12 @@ const getMarkerFromTypeOrName = (marker) => {
       color: "#409D44",
       icon: faCartShopping,
       label: "alimentation générale",
+    },
+    grass: {
+      category: "attraction",
+      color: "#134E13",
+      icon: faSeedling,
+      label: "pelouse",
     },
     guest_house: {
       category: "hébergement",
@@ -289,11 +314,23 @@ const getMarkerFromTypeOrName = (marker) => {
       icon: faCartShopping,
       label: "centre commercial",
     },
+    monument: {
+      category: "attraction",
+      color: "#134E13",
+      icon: faMonument,
+      label: "monument",
+    },
     motel: {
       category: "hébergement",
       color: "#F3B95F",
       icon: faHouse,
       label: "motel",
+    },
+    park: {
+      category: "attraction",
+      color: "#134E13",
+      icon: faTree,
+      label: "parc",
     },
     peak: {
       category: "attraction",
@@ -301,11 +338,23 @@ const getMarkerFromTypeOrName = (marker) => {
       icon: faMountain,
       label: "sommet",
     },
+    pub: {
+      category: "sorties",
+      color: "#E26352",
+      icon: faBeerMugEmpty,
+      label: "pub",
+    },
     restaurant: {
       category: "sorties",
       color: "#E26352",
       icon: faChampagneGlasses,
       label: "restaurant",
+    },
+    'restaurant;shelter': {
+      category: "hébergement",
+      color: "#F3B95F",
+      icon: faHouse,
+      label: "abri / restaurant",
     },
     seafood: {
       category: "alimentation",
@@ -368,6 +417,7 @@ const getMarkerFromTypeOrName = (marker) => {
   if (marker?.name && Object.values(types).find(type => type.label === marker.name.toLowerCase())) {
     return Object.values(types).find(type => type.label === marker.name.toLowerCase());
   }
+  console.error(marker);
   return {
     category: "autre",
     color: "#a9a9a9",
