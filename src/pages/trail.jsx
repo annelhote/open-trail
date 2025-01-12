@@ -150,7 +150,11 @@ const Trail = () => {
       // Add markers from GPX
       const gpxMarkers = (gpxComplete?.waypoints ?? []).map((marker) => ({
         ...marker,
-        ...getMarkerFromTypeOrName(marker),
+        type: marker?.sym?.toLowerCase(),
+        ...getMarkerFromTypeOrName({
+          name: marker?.name,
+          type: marker?.sym?.toLowerCase(),
+        }),
       }));
       setMarkers([...gpxMarkers, ...stepsMarkers]);
     }

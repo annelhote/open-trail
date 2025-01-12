@@ -4,6 +4,7 @@ import {
   faCoffee,
   faFaucetDrip,
   faHouse,
+  faMountain,
   faQuestion,
   faRestroom,
   faShower,
@@ -293,6 +294,12 @@ const getMarkerFromTypeOrName = (marker) => {
       color: "#F3B95F",
       icon: faHouse,
       label: "motel",
+    },
+    peak: {
+      category: "attraction",
+      color: "#134E13",
+      icon: faMountain,
+      label: "sommet",
     },
     restaurant: {
       category: "sorties",
