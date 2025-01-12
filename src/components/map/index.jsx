@@ -38,11 +38,11 @@ const mapStyle = {
 };
 
 const Map = ({
-  coordinates,
+  // coordinates,
   gpx,
   markers,
   selectedFilters,
-  setCoordinates,
+  // setCoordinates,
   settings,
 }) => {
   const mapRef = useRef();
@@ -97,10 +97,10 @@ const Map = ({
         interactiveLayerIds={["path"]}
         mapLib={maplibregl}
         mapStyle={mapStyle}
-        onMouseLeave={() => setCoordinates()}
-        onMouseEnter={(e) =>
-          setCoordinates({ lat: e.lngLat.lat, lon: e.lngLat.lng })
-        }
+        // onMouseLeave={() => setCoordinates()}
+        // onMouseEnter={(e) =>
+        //   setCoordinates({ lat: e.lngLat.lat, lon: e.lngLat.lng })
+        // }
         ref={mapRef}
       >
         {gpxs.map((gpx, index) => (
@@ -116,14 +116,14 @@ const Map = ({
             />
           </Source>
         ))}
-        {coordinates && (
+        {/* {coordinates && (
           <Source data={{ coordinates, type: "Point" }} type="geojson">
             <Layer
               paint={{ "circle-color": "red", "circle-radius": 7 }}
               type="circle"
             />
           </Source>
-        )}
+        )} */}
         {selectedMarker && (
           <CustomPopup
             closePopup={closePopup}

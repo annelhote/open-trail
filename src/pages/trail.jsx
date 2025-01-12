@@ -39,7 +39,7 @@ const Trail = () => {
   const navigate = useNavigate();
   const params = useParams();
 
-  const [coordinates, setCoordinates] = useState();
+  // const [coordinates, setCoordinates] = useState();
   const [days, setDays] = useState([]);
   const [filters, setFilters] = useState({});
   const [gpx, setGpx] = useState();
@@ -272,11 +272,11 @@ const Trail = () => {
                   <Grid2 container spacing={2}>
                     <Grid2 size={{ xs: 12, md: 7 }}>
                       <MyMap
-                        coordinates={coordinates}
+                        // coordinates={coordinates}
                         gpx={gpx}
                         markers={markers}
                         selectedFilters={selectedFilters}
-                        setCoordinates={setCoordinates}
+                        // setCoordinates={setCoordinates}
                         settings={settings}
                       />
                     </Grid2>
@@ -331,7 +331,7 @@ const Trail = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Profile
-                    coordinates={coordinates}
+                    // coordinates={coordinates}
                     gpx={gpx}
                   />
                 </AccordionDetails>
