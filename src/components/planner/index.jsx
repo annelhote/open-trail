@@ -18,7 +18,7 @@ import { styled } from "@mui/material/styles";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import { useState } from "react";
 
-import { capitalize, getMarkerFromTypeOrName } from "../../utils";
+import { capitalize } from "../../utils";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
