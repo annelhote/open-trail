@@ -161,7 +161,7 @@ const Trail = () => {
   // Choose current GPX displayd as complete GPX or stage of the GPX
   useEffect(() => {
     setGpx(params?.day ? gpxs?.[gpxFirstDay] : gpxComplete);
-  }, [gpxComplete, gpxs, params.day]);
+  }, [gpxComplete, gpxFirstDay, gpxs, params?.day]);
 
   useEffect(() => {
     const daysTmp = params?.day?.split('-');
