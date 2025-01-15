@@ -2,18 +2,15 @@ import { Grid2 } from "@mui/material";
 import * as d3 from "d3";
 import React, { useEffect } from "react";
 
-const Profile = ({
-  // coordinates,
-  gpx,
-}) => {
+const Profile = ({ gpxs }) => {
   const createGraph = async () => {
-    const points = gpx.tracks[0].points;
+    const points = gpxs.map((gpx) => gpx.tracks[0].points).flat();
     const cumulDistances = [
       0,
-      ...gpx.calculDistance(gpx.tracks[0].points).cumul.slice(0, -1),
+      ...gpxs[0].calculDistance(points).cumul.slice(0, -1),
     ];
     const data = cumulDistances.map((item, index) => ({
-      distance: Math.floor(item / 1000),
+      distance: item / 1000,
       elevation: points[index].ele,
     }));
 
@@ -46,7 +43,7 @@ const Profile = ({
       .line()
       .x((d) => x(d.distance))
       .y((d) => y(d.elevation))
-      .curve(d3.curveCardinal);
+      .curve(d3.curveNatural);
     svg
       .append("path")
       .data([data])
@@ -55,40 +52,12 @@ const Profile = ({
       .attr("stroke", "#e4e5e6")
       .attr("stroke-width", 1.5)
       .attr("d", elevationLine);
-
-    // Red point
-    // if (coordinates) {
-    //   const closestPoint = points.reduce(
-    //     (accumulator, currentValue, index) =>
-    //       gpx.calcDistanceBetween(currentValue, coordinates) <
-    //       accumulator.distance
-    //         ? {
-    //             distance: gpx.calcDistanceBetween(currentValue, coordinates),
-    //             point: currentValue,
-    //             index,
-    //           }
-    //         : accumulator,
-    //     {
-    //       distance: gpx.tracks[0].distance.total,
-    //       point: points[points.length - 1],
-    //       index: points.length - 1,
-    //     }
-    //   );
-    //   const redPoint = data[closestPoint.index];
-    //   svg
-    //     .append("circle")
-    //     .attr("fill", "red")
-    //     .attr("cx", x(redPoint.distance))
-    //     .attr("cy", y(redPoint.elevation))
-    //     .attr("r", 5);
-    // }
   };
 
   useEffect(() => {
     createGraph();
-    // }, [coordinates, gpx]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [gpx]);
+  }, []);
 
   return (
     <Grid2 className="profile" size={{ xs: 12 }}>

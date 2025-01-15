@@ -33,6 +33,7 @@ import { downloadGpx, getPois } from "../../utils";
 
 const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => {
   const [distance, setDistance] = useState(0);
+  const [distanceItra, setDistanceItra] = useState(0);
   const [duration, setDuration] = useState(0);
   const [elevation, setElevation] = useState({
     max: 0,
@@ -45,11 +46,19 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
 
   useEffect(() => {
     // TODO: Do it in the trail page in order to avoid duplicated code
-    const distanceTmp = (settings?.itra ? gpx.tracks[0].distance.totalItra : gpx.tracks[0].distance.total) / 1000;
-    setDistance(Math.round(distanceTmp));
-    setDuration(Math.ceil(distanceTmp.toFixed(1) / settings.kmPerDay));
-    setElevation(gpx.calcElevation(gpx.tracks[0].points));
-  }, [gpx, settings]);
+    const { distance, distanceItra, points } = gpxs.reduce(
+      (acc, cur) => ({
+        distance: acc.distance + cur.tracks[0].distance.total,
+        distanceItra: acc.distanceItra + cur.tracks[0].distance.totalItra,
+        points : [...acc.points, ...cur.tracks[0].points],
+      }),
+      { distance: 0, distanceItra: 0, points: [] },
+    );
+    setDistance(Math.round(distance / 1000));
+    setDistanceItra(Math.round(distanceItra / 1000));
+    setDuration(Math.ceil(((settings?.itra ? distanceItra : distance) / 1000).toFixed(1) / settings.kmPerDay));
+    setElevation(gpxs[0].calcElevation(points));
+  }, [gpxs, settings]);
 
   const handleOpen = () => setOpen(true);
 
@@ -69,7 +78,7 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
             loading={loading}
             onClick={async () => {
               setLoading(true);
-              const markersTmp = await getPois({ gpx, gpxs, settings });
+              const markersTmp = await getPois({ gpxs });
               setMarkers([...markers, ...markersTmp]);
               setLoading(false);
             }}
@@ -169,7 +178,25 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
               <Box sx={{ pr: 0.5 }}>
                 <b>{distance}</b>
               </Box>{" "}
-              {settings?.itra ? 'km-e' : 'km'}
+              km
+            </Stack>
+          </Stack>
+        </Grid2>
+        <Grid2 size={{ xs: 12, sm: 1 }}>
+          <Stack sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}>
+            <FontAwesomeIcon
+              icon={faUpRightAndDownLeftFromCenter}
+              className="fa-rotate-by"
+              style={{ "--fa-rotate-angle": "45deg" }}
+            />
+            <Stack
+              direction="row"
+              sx={{ justifyContent: { xs: "flex-start", sm: "center" } }}
+            >
+              <Box sx={{ pr: 0.5 }}>
+                <b>{distanceItra}</b>
+              </Box>{" "}
+              km-e
             </Stack>
           </Stack>
         </Grid2>

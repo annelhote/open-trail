@@ -39,11 +39,12 @@ const Trail = () => {
   const navigate = useNavigate();
   const params = useParams();
 
-  // const [coordinates, setCoordinates] = useState();
   const [days, setDays] = useState([]);
   const [filters, setFilters] = useState({});
   const [gpx, setGpx] = useState();
   const [gpxComplete, setGpxComplete] = useState();
+  const [gpxFirstDay, setGpxFirstDay] = useState();
+  const [gpxLastDay, setGpxLastDay] = useState();
   const [gpxs, setGpxs] = useState();
   const [markers, setMarkers] = useState([]);
   const [settings, setSettings] = useState({});
@@ -86,7 +87,7 @@ const Trail = () => {
       });
       setGpxComplete(gpxCompleteTmp);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [settings?.gpx]);
 
   // If GPX Complete has been computed, calculate distance, duration ...
@@ -110,12 +111,6 @@ const Trail = () => {
           cumulDistances,
           distance: settings.kmPerDay * 1000 * day,
         });
-        const trkpts = gpxComplete.tracks[0].points
-          .slice(startPointIndex, endPointIndex + 1)
-          .map(
-            (point) =>
-              `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`,
-          );
         const startPoint = gpxComplete.tracks[0].points[startPointIndex];
         stepsMarkers.push({
           category: 'étape',
@@ -126,7 +121,13 @@ const Trail = () => {
           lon: startPoint.lon,
           name: `Etape ${day} - Début`,
           type: 'start'
-        })
+        });
+        const trkpts = gpxComplete.tracks[0].points
+          .slice(startPointIndex, endPointIndex + 1)
+          .map(
+            (point) =>
+              `<trkpt lat="${point.lat}" lon="${point.lon}"><ele>${point.ele}</ele></trkpt>`,
+          );
         let partGpx = new gpxParser();
         partGpx.parse(
           `<xml><gpx><trk><trkseg>${trkpts}</trkseg></trk></gpx></xml>`,
@@ -159,8 +160,20 @@ const Trail = () => {
 
   // Choose current GPX displayd as complete GPX or stage of the GPX
   useEffect(() => {
-    setGpx(params?.day ? gpxs?.[params.day - 1] : gpxComplete);
+    setGpx(params?.day ? gpxs?.[gpxFirstDay] : gpxComplete);
   }, [gpxComplete, gpxs, params.day]);
+
+  useEffect(() => {
+    const daysTmp = params?.day?.split('-');
+    let gpxFirstDayTmp = 1;
+    let gpxLastDayTmp = days.lngth;
+    if (daysTmp) {
+      gpxFirstDayTmp = Number(daysTmp[0]);
+      gpxLastDayTmp = daysTmp.length > 1 ? Number(daysTmp[1]) : Number(daysTmp[0]);
+    }
+    setGpxFirstDay(gpxFirstDayTmp);
+    setGpxLastDay(gpxLastDayTmp);
+  }, [days, gpxs, params.day])
 
   const onChange = (event) => {
     const eventName = event.target.name;
@@ -228,7 +241,7 @@ const Trail = () => {
                   </Link>
                 )}
                 {params?.day ? (
-                  <Typography>Jour {params?.day}</Typography>
+                  <Typography>Jour {gpxFirstDay}{(gpxLastDay !== gpxFirstDay) && `à ${gpxLastDay}`}</Typography>
                 ) : (
                   <Typography>{settings?.name}</Typography>
                 )}
@@ -236,7 +249,7 @@ const Trail = () => {
             </Grid2>
             <Overview
               gpx={gpx}
-              gpxs={gpxs}
+              gpxs={gpxs.slice(gpxFirstDay - 1, gpxLastDay)}
               markers={markers}
               setMarkers={setMarkers}
               setSettings={setSettings}
@@ -272,12 +285,9 @@ const Trail = () => {
                   <Grid2 container spacing={2}>
                     <Grid2 size={{ xs: 12, md: 7 }}>
                       <MyMap
-                        // coordinates={coordinates}
-                        gpx={gpx}
+                        gpxs={gpxs.slice(gpxFirstDay - 1, gpxLastDay)}
                         markers={markers}
                         selectedFilters={selectedFilters}
-                        // setCoordinates={setCoordinates}
-                        settings={settings}
                       />
                     </Grid2>
                     <Grid2 size={{ xs: 12, md: 5 }}>
@@ -296,7 +306,7 @@ const Trail = () => {
                                 { state: settings },
                               )
                           }
-                          value={params?.day ?? "all"}
+                          value={params?.day ? gpxFirstDay : "all"}
                         >
                           <FormControlLabel
                             value="all"
@@ -331,8 +341,7 @@ const Trail = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Profile
-                    // coordinates={coordinates}
-                    gpx={gpx}
+                    gpxs={gpxs.slice(gpxFirstDay - 1, gpxLastDay)}
                   />
                 </AccordionDetails>
               </Accordion>
@@ -348,11 +357,9 @@ const Trail = () => {
                   <Planner
                     gpx={gpx}
                     markers={
-                      params?.day
-                        ? markers
-                          .filter((marker) => marker.day === params?.day)
-                          .sort((a, b) => a.day - b.day)
-                        : markers.sort((a, b) => a.distance - b.distance)
+                      markers
+                        .filter((marker) => gpxFirstDay >= marker.day && marker.day <= gpxLastDay)
+                        .sort((a, b) => a.distance - b.distance)
                     }
                     selectedFilters={selectedFilters}
                   />
@@ -367,15 +374,8 @@ const Trail = () => {
                   Etapes
                 </AccordionSummary>
                 <AccordionDetails>
-                  {params?.day ? (
-                    <Stage
-                      day={params.day}
-                      gpx={gpx}
-                      markers={markers}
-                      settings={settings}
-                    />
-                  ) : (
-                    days.map((day, index) => (
+                  {
+                    days.slice(gpxFirstDay - 1, gpxFirstDay + 1).map((day, index) => (
                       <Stage
                         day={day}
                         gpx={gpxs[index]}
@@ -384,7 +384,7 @@ const Trail = () => {
                         settings={settings}
                       />
                     ))
-                  )}
+                  }
                 </AccordionDetails>
               </Accordion>
             </Grid2>

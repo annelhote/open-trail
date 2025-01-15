@@ -417,7 +417,6 @@ const getMarkerFromTypeOrName = (marker) => {
   if (marker?.name && Object.values(types).find(type => type.label === marker.name.toLowerCase())) {
     return Object.values(types).find(type => type.label === marker.name.toLowerCase());
   }
-  console.error(marker);
   return {
     category: "autre",
     color: "#a9a9a9",
@@ -426,7 +425,7 @@ const getMarkerFromTypeOrName = (marker) => {
   };
 };
 
-const getPois = async ({ gpx, gpxs, settings }) => {
+const getPois = async ({ gpxs }) => {
   let allMarkers = [];
   // Compute markers from OpenStreetMap
   const promises = gpxs.map(async (gpx, index) => {
@@ -459,6 +458,7 @@ const getPois = async ({ gpx, gpxs, settings }) => {
         addrCity: item?.tags?.["addr:city"],
         addrHousenumber: item?.tags?.["addr:housenumber"],
         addrStreet: item?.tags?.["addr:street"],
+        distance: 0,
         day: (index + 1).toString(),
         email: item?.tags?.email,
         id: item?.id,
@@ -488,20 +488,6 @@ const getPois = async ({ gpx, gpxs, settings }) => {
       allMarkers.map((value) => [`${value.lat},${value.lon}`, value]),
     ).values(),
   ];
-  // Add distance from start
-  allMarkers = allMarkers.map((marker) => {
-    const closestPoint = getClosestPointByCoordinates({
-      coordinates: marker,
-      gpx,
-      settings,
-    });
-    // TODO fix distance calculation
-    const distance = (
-      gpx.calcDistanceBetween(marker, closestPoint.point) +
-      (settings?.itra ? gpx.tracks[0].distance.cumul[closestPoint.index] : gpx.tracks[0].distance.cumulItra[closestPoint.index]) / 1000
-    ).toFixed(1);
-    return { distance, ...marker };
-  });
   return allMarkers;
 };
 
