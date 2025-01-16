@@ -536,6 +536,7 @@ const overloadGpx = (gpx) => {
 export {
   capitalize,
   downloadGpx,
+  getClosestPointByCoordinates,
   getClosestPointIndexByDistance,
   getITRADistance,
   getMarkerFromTypeOrName,
