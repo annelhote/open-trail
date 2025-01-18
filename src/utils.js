@@ -112,7 +112,7 @@ const downSampleArray = (input, period) => {
   return output;
 };
 
-const getClosestPointByCoordinates = ({ coordinates, gpx, settings }) => {
+const getClosestPointByCoordinates = ({ coordinates, gpx }) => {
   const points = gpx.tracks[0].points;
   const closestPoint = points.reduce(
     (accumulator, currentValue, index) =>
@@ -124,7 +124,7 @@ const getClosestPointByCoordinates = ({ coordinates, gpx, settings }) => {
           }
         : accumulator,
     {
-      distance: settings?.itra ? gpx.tracks[0].distance.totalItra : gpx.tracks[0].distance.total,
+      distance: gpx.tracks[0].distance.total,
       point: points[points.length - 1],
       index: points.length - 1,
     }
@@ -454,11 +454,13 @@ const getPois = async ({ gpxs }) => {
         item?.tags?.tourism ??
         item?.tags?.railway ??
         "";
+      const closestPoint = getClosestPointByCoordinates({ coordinates: item, gpx });
+      const distance = ((gpx.calcDistanceBetween(item, closestPoint.point) + gpx.tracks[0].distance.cumul[closestPoint.index]) / 1000).toFixed(1);
       return {
         addrCity: item?.tags?.["addr:city"],
         addrHousenumber: item?.tags?.["addr:housenumber"],
         addrStreet: item?.tags?.["addr:street"],
-        distance: 0,
+        distance,
         day: (index + 1).toString(),
         email: item?.tags?.email,
         id: item?.id,
@@ -536,7 +538,6 @@ const overloadGpx = (gpx) => {
 export {
   capitalize,
   downloadGpx,
-  getClosestPointByCoordinates,
   getClosestPointIndexByDistance,
   getITRADistance,
   getMarkerFromTypeOrName,

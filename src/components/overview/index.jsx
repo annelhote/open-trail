@@ -45,19 +45,20 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    // TODO: Do it in the trail page in order to avoid duplicated code
-    const { distance, distanceItra, points } = gpxs.reduce(
-      (acc, cur) => ({
-        distance: acc.distance + cur.tracks[0].distance.total,
-        distanceItra: acc.distanceItra + cur.tracks[0].distance.totalItra,
-        points : [...acc.points, ...cur.tracks[0].points],
-      }),
-      { distance: 0, distanceItra: 0, points: [] },
-    );
-    setDistance(Math.round(distance / 1000));
-    setDistanceItra(Math.round(distanceItra / 1000));
-    setDuration(Math.ceil(((settings?.itra ? distanceItra : distance) / 1000).toFixed(1) / settings.kmPerDay));
-    setElevation(gpxs[0].calcElevation(points));
+    if (gpxs.length > 0) {
+      const { distance, distanceItra, points } = gpxs.reduce(
+        (acc, cur) => ({
+          distance: acc.distance + cur.tracks[0].distance.total,
+          distanceItra: acc.distanceItra + cur.tracks[0].distance.totalItra,
+          points : [...acc.points, ...cur.tracks[0].points],
+        }),
+        { distance: 0, distanceItra: 0, points: [] },
+      );
+      setDistance(Math.round(distance / 1000));
+      setDistanceItra(Math.round(distanceItra / 1000));
+      setDuration(Math.ceil(((settings?.itra ? distanceItra : distance) / 1000).toFixed(1) / settings.kmPerDay));
+      setElevation(gpxs[0].calcElevation(points));
+    }
   }, [gpxs, settings]);
 
   const handleOpen = () => setOpen(true);
@@ -78,8 +79,8 @@ const Overview = ({ gpx, gpxs, markers, setMarkers, setSettings, settings }) => 
             loading={loading}
             onClick={async () => {
               setLoading(true);
-              const markersTmp = await getPois({ gpxs });
-              setMarkers([...markers, ...markersTmp]);
+              const newMarkers = await getPois({ gpxs });
+              setMarkers([...markers, ...newMarkers]);
               setLoading(false);
             }}
             size="small"

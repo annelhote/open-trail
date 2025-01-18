@@ -115,6 +115,8 @@ const Trail = () => {
         stepsMarkers.push({
           category: 'étape',
           color: '#5DC245',
+          day,
+          distance: 0,
           icon: faPlay,
           label: 'départ',
           lat: startPoint.lat,
@@ -140,6 +142,8 @@ const Trail = () => {
       stepsMarkers.push({
         category: 'étape',
         color: '#FF0000',
+        day: daysTmp[daysTmp.length - 1],
+        distance: (gpxsTmp[gpxsTmp.length - 1].tracks[0].distance.total / 1000).toFixed(1),
         icon: faFlagCheckered,
         label: 'arrivée',
         lat: lastPoint.lat,
@@ -166,7 +170,7 @@ const Trail = () => {
   useEffect(() => {
     const daysTmp = params?.day?.split('-');
     let gpxFirstDayTmp = 1;
-    let gpxLastDayTmp = days.lngth;
+    let gpxLastDayTmp = days.length;
     if (daysTmp) {
       gpxFirstDayTmp = Number(daysTmp[0]);
       gpxLastDayTmp = daysTmp.length > 1 ? Number(daysTmp[1]) : Number(daysTmp[0]);
@@ -355,11 +359,11 @@ const Trail = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Planner
-                    gpx={gpx}
                     markers={
                       markers
-                        .filter((marker) => gpxFirstDay >= marker.day && marker.day <= gpxLastDay)
+                        .filter((marker) => gpxFirstDay <= marker.day && marker.day <= gpxLastDay)
                         .sort((a, b) => a.distance - b.distance)
+                        .sort((a, b) => a.day - b.day)
                     }
                     selectedFilters={selectedFilters}
                   />

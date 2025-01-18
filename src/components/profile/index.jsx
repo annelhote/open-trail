@@ -55,9 +55,11 @@ const Profile = ({ gpxs }) => {
   };
 
   useEffect(() => {
-    createGraph();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    if (gpxs.length > 0) {
+      createGraph();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [gpxs.length]);
 
   return (
     <Grid2 className="profile" size={{ xs: 12 }}>

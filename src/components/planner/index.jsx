@@ -145,7 +145,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
   );
 }
 
-const Planner = ({ gpx, markers, selectedFilters }) => {
+const Planner = ({ markers, selectedFilters }) => {
   const [selected, setSelected] = useState([]);
 
   const handleClick = (_, marker) => {
@@ -165,7 +165,7 @@ const Planner = ({ gpx, markers, selectedFilters }) => {
       );
     }
     setSelected(newSelected);
-    gpx.waypoints = newSelected;
+    // gpx.waypoints = newSelected;
   };
 
   const isSelected = (id) => selected.map((marker) => marker.id).indexOf(id) !== -1;
@@ -185,7 +185,7 @@ const Planner = ({ gpx, markers, selectedFilters }) => {
               <StyledTableCell />
               <StyledTableCell>Jour</StyledTableCell>
               <StyledTableCell>Nom</StyledTableCell>
-              <StyledTableCell>Distance du départ</StyledTableCell>
+              <StyledTableCell>Distance du début de journée</StyledTableCell>
               <StyledTableCell>Type</StyledTableCell>
               <StyledTableCell>Ville</StyledTableCell>
               <StyledTableCell>Heures d'ouverture</StyledTableCell>
