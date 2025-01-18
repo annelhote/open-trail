@@ -10,11 +10,11 @@ import {
   Box,
   Breadcrumbs,
   FormControl,
-  FormControlLabel,
   Grid2,
+  InputLabel,
   Link,
-  Radio,
-  RadioGroup,
+  MenuItem,
+  Select,
   Typography,
 } from "@mui/material";
 import dayjs from "dayjs";
@@ -287,50 +287,66 @@ const Trail = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Grid2 container spacing={2}>
-                    <Grid2 size={{ xs: 12, md: 7 }}>
+                    <Grid2 size={{ xs: 12, md: 9 }}>
                       <MyMap
                         gpxs={gpxs.slice(gpxFirstDay - 1, gpxLastDay)}
                         markers={markers}
                         selectedFilters={selectedFilters}
                       />
                     </Grid2>
-                    <Grid2 size={{ xs: 12, md: 5 }}>
-                      <FormControl>
-                        <RadioGroup
-                          aria-labelledby="radio-buttons-group-label-day"
-                          defaultValue="all"
-                          name="radio-buttons-group-day"
-                          onChange={(e) =>
-                            e.target.value === "all"
-                              ? navigate(`/trails/${params?.trailId ?? 'trail'}`, {
-                                state: settings,
-                              })
-                              : navigate(
-                                `/trails/${params?.trailId ?? 'trail'}/${e.target.value}`,
-                                { state: settings },
-                              )
-                          }
-                          value={params?.day ? gpxFirstDay : "all"}
-                        >
-                          <FormControlLabel
-                            value="all"
-                            control={<Radio />}
-                            key="day-all"
-                            label="Tout le parcours"
-                          />
-                          {days &&
-                            days.map((day) => (
-                              <FormControlLabel
-                                value={day}
-                                control={<Radio />}
-                                key={`day-${day}`}
-                                label={`Jour ${day} - ${settings?.startDate
-                                  .add(day - 1, "day")
-                                  .format("dddd	DD MMMM")}`}
-                              />
-                            ))}
-                        </RadioGroup>
-                      </FormControl>
+                    <Grid2 size={{ xs: 12, md: 3 }}>
+                      <Box sx={{ mb: 2 }}>
+                        <FormControl variant="standard">
+                          <InputLabel id="select-first-day-standard-label">De</InputLabel>
+                          <Select
+                            labelId="select-first-day-label"
+                            id="select-first-day"
+                            value={gpxFirstDay}
+                            label="Age"
+                            onChange={(e) => navigate(`/trails/${params?.trailId ?? 'trail'}/${e.target.value}-${gpxLastDay}`, {
+                              state: settings,
+                            })}
+                          >
+                            {days &&
+                              days.map((day) => (
+                                <MenuItem
+                                  key={`select-first-day-${day}`}
+                                  value={day}
+                                >
+                                  {`Jour ${day} - ${settings?.startDate
+                                    .add(day - 1, "day")
+                                    .format("dddd	DD MMMM")}`}
+                                </MenuItem>
+                              ))}
+                          </Select>
+                        </FormControl>
+                      </Box>
+                      <Box>
+                        <FormControl variant="standard">
+                          <InputLabel id="select-last-day-standard-label">à</InputLabel>
+                          <Select
+                            labelId="select-last-day-label"
+                            id="select-last-day"
+                            value={gpxLastDay}
+                            label="Age"
+                            onChange={(e) => navigate(`/trails/${params?.trailId ?? 'trail'}/${gpxFirstDay}-${e.target.value}`, {
+                              state: settings,
+                            })}
+                          >
+                            {days &&
+                              days.map((day) => (
+                                <MenuItem
+                                  key={`select-last-day-${day}`}
+                                  value={day}
+                                >
+                                  {`Jour ${day} - ${settings?.startDate
+                                    .add(day - 1, "day")
+                                    .format("dddd	DD MMMM")}`}
+                                </MenuItem>
+                              ))}
+                          </Select>
+                        </FormControl>
+                      </Box>
                     </Grid2>
                   </Grid2>
                 </AccordionDetails>
