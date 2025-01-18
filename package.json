@@ -15,6 +15,7 @@
     "@mui/x-date-pickers": "^7.23.3",
     "d3": "^7.8.5",
     "dayjs": "^1.11.10",
+    "fast-xml-parser": "^4.5.1",
     "gpxparser": "^3.0.8",
     "mapbox-gl": "^3.1.0",
     "maplibre-gl": "^3.6.2",

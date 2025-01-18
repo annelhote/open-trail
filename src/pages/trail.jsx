@@ -18,9 +18,11 @@ import {
   Typography,
 } from "@mui/material";
 import dayjs from "dayjs";
+import { XMLParser } from "fast-xml-parser";
 import gpxParser from "gpxparser";
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
+
 
 import Filters from "../components/filters";
 import MyMap from "../components/map";
@@ -78,6 +80,10 @@ const Trail = () => {
     if (settings?.gpx) {
       let gpxCompleteTmp = new gpxParser();
       gpxCompleteTmp.parse(settings?.gpx);
+      // Patch: overlaod markers as only the 70 first are parsed by gpxParser !!!
+      const parser = new XMLParser({ attributeNamePrefix : "", ignoreAttributes : false });
+      const gpxPatch = parser.parse(settings?.gpx);
+      gpxCompleteTmp.waypoints = gpxPatch.gpx.wpt;
       gpxCompleteTmp = overloadGpx(gpxCompleteTmp);
       const metadata = JSON.parse(gpxCompleteTmp.metadata.desc);
       if (metadata?.startDate) metadata.startDate = dayjs(metadata.startDate);
@@ -245,7 +251,7 @@ const Trail = () => {
                   </Link>
                 )}
                 {params?.day ? (
-                  <Typography>Jour {gpxFirstDay}{(gpxLastDay !== gpxFirstDay) && `à ${gpxLastDay}`}</Typography>
+                  <Typography>Jour {gpxFirstDay}{(gpxLastDay !== gpxFirstDay) && ` à ${gpxLastDay}`}</Typography>
                 ) : (
                   <Typography>{settings?.name}</Typography>
                 )}
