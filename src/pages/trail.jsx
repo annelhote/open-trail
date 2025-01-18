@@ -57,7 +57,7 @@ const Trail = () => {
   useEffect(() => {
     const getGpxFromTrailId = async () => {
       const trailId = params?.trailId;
-      const file = await fetch(`/open-trail/data/${trailId}.gpx`);
+      const file = await fetch(`/open-trail/gpx/${trailId}.gpx`);
       const _gpx = await file.text();
       setSettings({
         gpx: _gpx,
