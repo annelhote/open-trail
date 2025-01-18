@@ -42,12 +42,6 @@ const Trails = () => {
   const [startDate, setStartDate] = useState(dayjs(new Date().toISOString().split("T")[0]));
 
   const trails = {
-    "hexatrek-01": "Hexatrek 01 - Le Grand Est - Vosges, Doubs, Jura - 16/06/2025 -> 16/07/2025",
-    "hexatrek-02": "Hexatrek 02 - Alpes du Nord - Savoie, Beaufortain, Vanoise - 17/07/2025 -> 06/08/2025",
-    "hexatrek-03": "Hexatrek 03 - Hautes Alpes - Ecrins, Belledonne, Vercors - 07/08/2025 -> 02/09/2025",
-    "hexatrek-04": "Hexatrek 04 - Gorges & Causses - Cévennes, Tarn, Languedoc - 03/09/2025 -> 25/09/2025",
-    "hexatrek-05": "Hexatrek 05 - Pyrénées Est - Corbière, Catalogne, Ariège - 26/09/2025 -> 24/10/2025",
-    "hexatrek-06": "Hexatrek 06 - Pyrénées Ouest - Béarn, Basque - 25/10/2025 -> 15/11/2025",
     "hexatrek": "Hexatrek - 16/06/2025 -> 12/11/2025",
     "cretes-du-jura": "Crêtes du Jura - Septembre 2024",
     "le-poet-sigillat": "La Chapelle en Vercors -> Le Poët-Sigillat - Août 2024",
