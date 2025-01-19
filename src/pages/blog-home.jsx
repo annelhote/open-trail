@@ -46,6 +46,11 @@ const BlogHome = () => {
               Choisir sa tente ultra-light
             </Link>
           </li>
+          <li>
+            <Link underline="hover" color="inherit" href="#/blog/8">
+              Contruire mon itinéraire Hexatrek
+            </Link>
+          </li>
         </ul>
       </div>
     </Box>
