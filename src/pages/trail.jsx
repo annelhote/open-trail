@@ -23,7 +23,6 @@ import gpxParser from "gpxparser";
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-
 import Filters from "../components/filters";
 import MyMap from "../components/map";
 import Overview from "../components/overview";
@@ -45,8 +44,8 @@ const Trail = () => {
   const [filters, setFilters] = useState({});
   const [gpx, setGpx] = useState();
   const [gpxComplete, setGpxComplete] = useState();
-  const [gpxFirstDay, setGpxFirstDay] = useState();
-  const [gpxLastDay, setGpxLastDay] = useState();
+  const [gpxFirstDay, setGpxFirstDay] = useState(1);
+  const [gpxLastDay, setGpxLastDay] = useState(2);
   const [gpxs, setGpxs] = useState();
   const [markers, setMarkers] = useState([]);
   const [settings, setSettings] = useState({});
@@ -85,7 +84,10 @@ const Trail = () => {
       const gpxPatch = parser.parse(settings?.gpx);
       gpxCompleteTmp.waypoints = gpxPatch.gpx.wpt;
       gpxCompleteTmp = overloadGpx(gpxCompleteTmp);
-      const metadata = JSON.parse(gpxCompleteTmp.metadata.desc);
+      let metadata = {};
+      try {
+        metadata = JSON.parse(gpxCompleteTmp.metadata.desc);
+      } catch (_) {}
       if (metadata?.startDate) metadata.startDate = dayjs(metadata.startDate);
       setSettings({
         ...settings,
@@ -174,13 +176,16 @@ const Trail = () => {
   }, [gpxComplete, gpxFirstDay, gpxs, params?.day]);
 
   useEffect(() => {
-    const daysTmp = params?.day?.split('-');
     let gpxFirstDayTmp = 1;
-    let gpxLastDayTmp = days.length;
+    let gpxLastDayTmp = 2;
+    if (days.length > 0) {
+      gpxLastDayTmp = days.length;
+    }
+    const daysTmp = params?.day?.split('-');
     if (daysTmp) {
       gpxFirstDayTmp = Number(daysTmp[0]);
       gpxLastDayTmp = daysTmp.length > 1 ? Number(daysTmp[1]) : Number(daysTmp[0]);
-    }
+    };
     setGpxFirstDay(gpxFirstDayTmp);
     setGpxLastDay(gpxLastDayTmp);
   }, [days, gpxs, params.day])
