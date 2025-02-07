@@ -165,7 +165,8 @@ const Trail = () => {
         ...marker,
         type: marker?.sym?.toLowerCase(),
         ...getMarkerFromTypeOrName(marker),
-      }));
+      // Display only markers from transportation category (aka train stations)
+      })).filter((marker) => marker.category === 'transport');
       setMarkers([...gpxMarkers, ...stepsMarkers]);
     }
   }, [gpxComplete, settings?.itra, settings.kmPerDay, settings?.markers]);
