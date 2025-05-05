@@ -42,7 +42,7 @@ const Trails = () => {
   const [startDate, setStartDate] = useState(dayjs(new Date().toISOString().split("T")[0]));
 
   const trails = {
-    "hexatrek": "Hexatrek - 16/06/2025 -> 12/11/2025",
+    "hexatrek": "Hexatrek - 26/05/2025 -> 17/10/2025",
     "cretes-du-jura": "Crêtes du Jura - Septembre 2024",
     "le-poet-sigillat": "La Chapelle en Vercors -> Le Poët-Sigillat - Août 2024",
     "gr38": "GR38 - Redon -> Gourin",
