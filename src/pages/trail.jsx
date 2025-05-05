@@ -407,7 +407,7 @@ const Trail = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   {
-                    days.slice(gpxFirstDay - 1, gpxFirstDay + 1).map((day, index) => (
+                    days.slice(gpxFirstDay - 1, gpxLastDay).map((day, index) => (
                       <Stage
                         day={day}
                         gpx={gpxs[index]}
