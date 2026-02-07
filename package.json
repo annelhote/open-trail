@@ -15,6 +15,7 @@
   "scripts": {
     "starNext": "concurrently \"npm run server\" \"npm run client\"",
     "start": "npm run client",
+    "build": "npm run build",
     "client": "npm -w client run start",
     "server": "npm -w server run dev"
   }
