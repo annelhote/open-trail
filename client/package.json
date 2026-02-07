@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.0.1",
+  "homepage": "https://annelhote.github.io/open-trail/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.3",
