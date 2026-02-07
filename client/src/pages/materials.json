@@ -1,0 +1,275 @@
+{
+  "sac à dos": [
+    {
+      "activity": "hiking",
+      "material": "sac à dos"
+    },
+    {
+      "activity": "hiking",
+      "material": "jupe de pluie / sursac"
+    },
+    {
+      "activity": "cycling",
+      "material": "sacoches"
+    }
+  ],
+  "nuit": [
+    {
+      "material": "duvet"
+    },
+    {
+      "material": "pyjama (qui peut être porté pour marcher si besoin)"
+    },
+    {
+      "material": "lampe frontale"
+    },
+    {
+      "material": "tongs"
+    },
+    {
+      "material": "tente"
+    },
+    {
+      "material": "matelas"
+    },
+    {
+      "mandatory": false,
+      "material": "livre / liseuse"
+    },
+    {
+      "mandatory": false,
+      "material": "oreiller"
+    }
+  ],
+  "manger / boire": [
+    {
+      "material": "couteau / Opinel"
+    },
+    {
+      "material": "fourchette"
+    },
+    
+    {
+      "material": "camelbag / gourdes"
+    },
+    {
+      "material": "snacks (barres de céréales, fruits secs, pompot ...)"
+    },
+    {
+      "mandatory": false,
+      "material": "food bag / sac d'appoint"
+    },
+    {
+      "mandatory": false,
+      "material": "filtre à eau / pastilles"
+    },
+    {
+      "mandatory": false,
+      "material": "cuillère"
+    },
+    {
+      "mandatory": false,
+      "material": "réchaud + briquet + bouteille de gaz"
+    },
+    {
+      "mandatory": false,
+      "material": "popote / pot / gamelle"
+    },
+    {
+      "mandatory": false,
+      "material": "gobelet"
+    },
+    {
+      "mandatory": false,
+      "material": "café ou thé"
+    },
+    {
+      "mandatory": false,
+      "material": "boule à thé"
+    },
+    {
+      "mandatory": false,
+      "material": "sac / ziplock poubelle"
+    }
+  ],
+  "tech": [
+    {
+      "material": "smartphone"
+    },
+    {
+      "material": "câbles (micro-USB et USB-C) et prise"
+    },
+    {
+      "material": "batterie externe"
+    },
+    {
+      "material": "carte d'identité"
+    },
+    {
+      "material": "carte bleue"
+    },
+    {
+      "material": "cash"
+    },
+    {
+      "mandatory": false,
+      "material": "lecteur de musique"
+    },
+    {
+      "mandatory": false,
+      "material": "écouteurs"
+    },
+    {
+      "mandatory": false,
+      "material": "stylo"
+    },
+    {
+      "mandatory": false,
+      "material": "carnet de notes"
+    },
+    {
+      "mandatory": false,
+      "material": "appareil photo"
+    }
+  ],
+  "vêtements": [
+    {
+      "activity": "hiking",
+      "material": "bâtons de marche"
+    },
+    {
+      "activity": "hiking",
+      "material": "duck tape (enroulé sur un bâton de marche)"
+    },
+    {
+      "material": "pantalon ou short de rando"
+    },
+    {
+      "material": "kit de couture"
+    },
+    {
+      "material": "lunettes de soleil"
+    },
+    {
+      "activity": "hiking",
+      "material": "paire de chaussures de marche"
+    },
+    {
+      "material": "k-way"
+    },
+    {
+      "activity": "hiking",
+      "material": "2 paires de chaussettes de rando"
+    },
+    {
+      "material": "casquette / buff / chapeau"
+    },
+    {
+      "material": "tee-shirt (merinos)"
+    },
+    {
+      "material": "brassière (?)"
+    },
+    {
+      "material": "2 sous-vêtements (sans couture)"
+    },
+    {
+      "material": "polaire"
+    },
+    {
+      "mandatory": false,
+      "material": "maillot de bain"
+    },
+    {
+      "mandatory": false,
+      "material": "buff"
+    }
+  ],
+  "pharmacie": [
+    {
+      "material": "tire-tique"
+    },
+    {
+      "material": "labello"
+    },
+    {
+      "material": "crème solaire"
+    },
+    {
+      "material": "spray anti-moustique"
+    },
+    {
+      "material": "pansements"
+    },
+    {
+      "material": "désinfectant"
+    },
+    {
+      "material": "mouchoirs / coton"
+    },
+    {
+      "material": "dolipranes"
+    },
+    {
+      "mandatory": false,
+      "material": "coupe ongle"
+    },
+    {
+      "mandatory": false,
+      "material": "pince à épiler"
+    }
+  ],
+  "toilette": [
+    {
+      "material": "serviette de toilette"
+    },
+    {
+      "material": "dentifrice"
+    },
+    {
+      "material": "savon d'Alep"
+    },
+    {
+      "material": "brosse à dents"
+    },
+    {
+      "material": "brosse à cheveux"
+    },
+    {
+      "material": "rouleau de PQ (dans un sac étanche)"
+    },
+    {
+      "material": "2 pinces à linge"
+    },
+    {
+      "mandatory": false,
+      "material": "lentilles / lunettes de vue"
+    }
+  ],
+  "mécanique": [
+    {
+      "activity": "cycling",
+      "material": "rustines"
+    },
+    {
+      "activity": "cycling",
+      "material": "2 x chambres à air"
+    },
+    {
+      "activity": "cycling",
+      "material": "3 x démonte-pneus"
+    },
+    {
+      "activity": "cycling",
+      "material": "lampes de vélo"
+    },
+    {
+      "activity": "cycling",
+      "material": "antivols et clés"
+    },
+    {
+      "activity": "cycling",
+      "material": "pompe"
+    }
+  ]
+}

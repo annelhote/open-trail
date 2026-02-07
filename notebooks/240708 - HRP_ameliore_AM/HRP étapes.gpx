@@ -1,0 +1,809 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.6.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="42.336291600000003" minlon="-1.774081400000000" maxlat="44.009007199999999" maxlon="3.157858000000000"/></metadata>                   
+<wpt lat="42.9358339" lon="-0.6288526">
+  <name>8.6 Lescun - Table d'orientation</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.622797" lon="0.765159">
+  <name>23 Túnel Vielha (S)</name>
+  <extensions>
+    <ogr:BUS_DRIVER_TIP>BETTER TO STAND BY THE PARKING ENTRANCE AND WAVE AS THE BUS APPROACHES. Sometimes the driver cannot see the bus stop and it could make it pass by without being able to make a U-turn !</ogr:BUS_DRIVER_TIP>
+  </extensions>
+</wpt>
+<wpt lat="42.805916" lon="-0.418327">
+  <name>12 Col Ouest carrossable (Pourtalet)</name>
+  <extensions>
+    <ogr:description>Col de Pourtalet</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.663889" lon="0.981944">
+  <name>25 Col Est carrossable (Vielha)</name>
+  <extensions>
+    <ogr:description>Port de la Bonaigua</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="43.3730335" lon="-1.7740814">
+  <name>1 Panneau de départ du GR 10</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.3553561" lon="-1.7542783">
+  <name>1 HENDAYE (1er bivouac)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.2817309" lon="-1.6319614">
+  <name>2 Col de Liziunaga</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.3092177" lon="-1.6352634">
+  <name>(2) La Rhune</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.1424014" lon="-1.5208198">
+  <name>3 Elizondo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.177225" lon="-1.4845668">
+  <name>3bis Arizkun</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.264894" lon="-1.3519922">
+  <name>(4) Bidarray - le champ</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.098532" lon="-1.428217">
+  <name>4 Les Aldudes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.097345" lon="-1.426564">
+  <name>4 La Poste Aldudes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.08521" lon="-1.389714">
+  <name>4.2 Passer par ici au lieu de la trace (pas de sentier, fougères...)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.068383" lon="-1.195155">
+  <name>5 Béhérobie (Logis Hôtel Sources de la Nive)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.036492" lon="-1.034828">
+  <name>6 Col Bagargiak - Chalets d'Iraty</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.036472" lon="-1.03486">
+  <name>6 Mailing Resupply Package</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9671977" lon="-0.9403729">
+  <name>7 Abri d'Ardane Gagnekoa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.945102" lon="-0.83465">
+  <name>7.5 Refugio de Belagua</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.978232" lon="-0.749422">
+  <name>8 La P St Martin - Refuge Jeandel (annuel)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9587002" lon="-0.7052496">
+  <name>8.5 Super refuge d'Anie (Lescun)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8978469" lon="-0.7165689">
+  <name>9 Cabane D'ansabère</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.840644" lon="-0.615698">
+  <name>10 Refuge du lac d'Arlet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.78901" lon="-0.528591">
+  <name>11 Hotel Candanchú</name>
+  <extensions>
+    <ogr:description>Very good place for hikers - good rates</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.795664" lon="-0.52499">
+  <name>11 Col du Somport (Albergue Aysa)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.835539" lon="-0.426911">
+  <name>12 Refuge de Pombie (FFCAM)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.858216" lon="-0.288805">
+  <name>13 Refuge de Larribet (FFCAM)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.855592" lon="-0.26449">
+  <name>13.4 Refuge du Balaïtous Ledormeur</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.846056" lon="-0.329129">
+  <name>[fermé] 13bis Refuge d'Arrémoulit (FFCAM)</name>
+  <extensions>
+    <ogr:description>En travaux pour 2 ans à partir de juin 2023</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.9595125" lon="-0.3340104">
+  <name>(13) Chalet CAF de Gourette (FFCAM)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.816933" lon="-0.287608">
+  <name>13.4bis Refugio Respomuso</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.82007" lon="-0.194682">
+  <name>14 Refuge Wallon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.792711" lon="-0.141148">
+  <name>14.5 Refuge des Oulettes de Gaube (FFCAM)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.77939" lon="-0.124202">
+  <name>15 Refuge de Bayssellance (FFCAM)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.739454" lon="-0.022718">
+  <name>16 (Gav) Chalet la Grange de Holle (Gavarnie FFCAM)</name>
+  <extensions>
+    <ogr:description>grange de holle table banc restauration type refuge montagne</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.735158" lon="-0.010194">
+  <name>16 Post Office + Tourism Office</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7276746" lon="-0.0075514">
+  <name>16 Gavarnie Camping </name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6959422" lon="-0.0333865">
+  <name>16bis Refuge de la Breche de Roland ou de Sarradets (FFCAM)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.691191" lon="-0.0342509">
+  <name>16bis Brèche de Roland</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6595004" lon="0.0771184">
+  <name>17bis (GR11) Collado de Añisclo</name>
+  <extensions>
+    <ogr:description>Col classique du GR11 pour passer Gavarnie</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.719911" lon="0.012255">
+  <name>16.2 Refuge des Espuguettes (gardé)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6632722" lon="0.0151497">
+  <name>16bis.5 Refugio de Góriz</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.750881" lon="0.08745">
+  <name>17 Auberge de La Munia (Héas)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6976959" lon="0.0401425">
+  <name>17bis Refuge de Tucarroya</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6840469" lon="0.0274738">
+  <name>17bis [très dur] Col du Cylindre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7044639" lon="0.1570706">
+  <name>17.9 Refugio de la Barrosa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8608888" lon="0.0905581">
+  <name>(17) Refuge de la Glère (FFCAM)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6600483" lon="0.2083477">
+  <name>18 Parzán</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8816297" lon="0.2053432">
+  <name>(18) Refuge de Campana de Cloutou  (FFCAM)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6687248" lon="0.2905241">
+  <name>18.4 Refugio del Paso de los Caballos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.660692" lon="0.37722">
+  <name>19 Refuge Biadós</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7035926" lon="0.4376097">
+  <name>19.7 Refuge Pratz Cazeneuve</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.722681" lon="0.419558">
+  <name>20 Refuge de la Soula (gardé)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.703805" lon="0.508099">
+  <name>21 Refuge du Portillon (FFCAM)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.73057" lon="0.4995856">
+  <name>(21) Le Refuge d'Espingo (FFCAM)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6990773" lon="0.6423815">
+  <name>(21.9) Refuge de Venasque (FFCAM)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6785655" lon="0.6499417">
+  <name>22 La Besurta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.66936" lon="0.65077">
+  <name>22 Refuge de la Rencluse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.615164" lon="0.76809">
+  <name>23 Refugi Conangles (Vielha)</name>
+  <extensions>
+    <ogr:description>Cerca de Espitao de Vielha</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.634715" lon="0.85465">
+  <name>24 Refugio de la Restanca</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.624414" lon="0.920342">
+  <name>24.5 Refugi de Colomèrs (été)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.663889" lon="0.981944">
+  <name>25 Port de la Bonaigua</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.700841" lon="1.099766">
+  <name>26 Alos de Isil</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.725765" lon="1.107046">
+  <name>26 Refugi del Fornet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7060032" lon="1.189018">
+  <name>27 Abri Enric Pujol / Refugi Mont-Roig</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.703887" lon="1.306513">
+  <name>28 Refugi Certascan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.707848" lon="1.4501">
+  <name>29 Gîte de Mounicou</name>
+  <extensions>
+    <ogr:description>Good place but french speaking only</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.710269" lon="1.425939">
+  <name>29 Parking de l'Artigue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.665033" lon="1.489762">
+  <name>30 Refuge du Fourcat (été)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.622653" lon="1.564164">
+  <name>31 Refuge Borda de Sorteny (été)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.617661" lon="1.625899">
+  <name>31.5 Snow level Pole</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5913726" lon="1.6689965">
+  <name>32 Camping Inclès/Soldeu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.607382" lon="1.715737">
+  <name>32bis Refuge de Juclar (été)</name>
+  <extensions>
+    <ogr:description>Refuge with food</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.603882" lon="1.868551">
+  <name>33bis Refuge des Bésines (annuel)</name>
+  <extensions>
+    <ogr:description>Food ! Anytime !</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.587272" lon="1.797979">
+  <name>33bis Gîte d'étape l'Hospitalité</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.559582" lon="1.811921">
+  <name>33 Hôtel du Col</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.560026" lon="2.00393">
+  <name>34 Auberge du Carlit - Refuge des Bouillouses</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.474415" lon="2.079679">
+  <name>35 Eyne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.3362916" lon="2.1926238">
+  <name>35.5 Refugi Pla d'Erola</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.419632" lon="2.257638">
+  <name>36 Refuge d'Ull de Ter</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.500236" lon="2.409374">
+  <name>37 Refuge Forestier de Mariailles (été)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.534411" lon="2.465039">
+  <name>37.6 Refuge des Cortalets (été)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.501757" lon="2.548446">
+  <name>38 Refuge/Gîte de Batère (été)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.472914" lon="2.669719">
+  <name>39 Amélie-les-Bains-Palalda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.42458" lon="2.784266">
+  <name>40 Hostal dels Trabucayres (Las Illas)</name>
+  <extensions>
+    <ogr:description>Backpacker friendly</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.425431" lon="2.784691">
+  <name>40 Gîte d'étape at the mairie Restrooms tables bench water (Illas)</name>
+  <extensions>
+    <ogr:description>Backpacker friendly place</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.4790073" lon="2.9230164">
+  <name>41 Col de l'Ouillat (Chalet de l'Albère)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4772818" lon="3.0401833">
+  <name>41.5 Refuge Tomy - par Maurice Parxes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4820377" lon="3.1291093">
+  <name>42(fin) BANYULS-SUR-MER</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4812433" lon="3.1295287">
+  <name>42 Plaque fin TransPy</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.3700229" lon="-1.7644818">
+  <name>1 Gare des Deux-Jumeaux - Hendaye</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0894975" lon="-1.4244495">
+  <name>4 Bus Txik Txak Pierre Oteiza</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.2684193" lon="-1.3452026">
+  <name>(4) Gare de Bidarray Pont Noblia</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.167726" lon="-1.237725">
+  <name>(5) Saint-Jean-Pied-de-Port</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9959062" lon="-0.6035748">
+  <name>(9 à 11) Gare de Bedous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7973938" lon="0.5962162">
+  <name>21 à 23 Gare de Luchon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.915634" lon="0.6516">
+  <name>(23-25) Bus SNCF - Marignac</name>
+  <extensions>
+    <ogr:description>Part ensuite vers Luchon. Alternative possible en semaine : prendre le 395 de St Gaudens à Les, puis un bus à Les</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.9137" lon="0.648649">
+  <name>(23-25) Taxis Marignac --&gt; Les (Ambulances Du Haut Comminges)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8097231" lon="0.7094604">
+  <name>(23-25) Bus fréquents val d'Aran - Les</name>
+  <extensions>
+    <ogr:description>En semaine, le bus 395 fait la liaison entre Les et St Gaudens</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.656136" lon="1.836447">
+  <name>(33Nord) Merens-Les-Vals</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4590675" lon="1.904519">
+  <name>(33Sud) Latour-de-Carol-Enveitg</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5894592" lon="1.8004013">
+  <name>33bis Gare d'Andorre-L'Hospitalet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.497871" lon="2.087559">
+  <name>34.8 Gare de Bolquère – Eyne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4829511" lon="3.12505">
+  <name>42fin Banyuls-sur-Mer</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5247232" lon="2.8276718">
+  <name>(40.3) Le Boulou Gare</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.424494" lon="3.157858">
+  <name>(42) Portbou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9444299" lon="-0.720758">
+  <name>8.6 Pic d'Anie</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9194764" lon="-0.7270543">
+  <name>8.8 Pic et château des 3 Rois</name>
+  <extensions>
+    <ogr:description>Chemin principal côté espagnol (Sud-Ouest), cheminée praticable par le Nord</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.8436556" lon="-0.4378647">
+  <name>12 Pic du Midi d'Ossau (2884m)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8389281" lon="-0.2901607">
+  <name>13 Balaïtous (3144m)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7737299" lon="-0.1465129">
+  <name>15 Vignemale (3298m)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.775029" lon="-0.134835">
+  <name>15 Petit Vignemale</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6937291" lon="-0.0509821">
+  <name>16bis Le Taillon</name>
+  <extensions>
+    <ogr:description>à faire via la brèche, en partant côté espagnol</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.6755943" lon="0.0337596">
+  <name>17bis Mont Perdu (3348m)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.684722" lon="0.023889">
+  <name>17bis Cylindre du Marboré</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8354" lon="0.1152833">
+  <name>(17) Néouvielle</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.800771" lon="0.1004459">
+  <name>(17) Pic Long</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9368725" lon="0.1410922">
+  <name>(17) Pic du Midi de Bigorre (2876m)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.654622" lon="0.4353577">
+  <name>19 Posets (3375m, Tuca de Llardana)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.702452" lon="0.482218">
+  <name>[dur] 20.5 Col des Gourgs Blancs</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.701558" lon="0.526299">
+  <name>[dur] 21.2 Col Inférieur de Litérole</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7148253" lon="0.5491397">
+  <name>(21.3) Refuge du Maupas (FFCAM)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.654184" lon="0.6564648">
+  <name>22 Aneto via ibon del Salterillo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6311217" lon="0.6566032">
+  <name>22 Aneto (3404m)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.629444" lon="0.698611">
+  <name>[dur] 23.3 Tuc de Molières</name>
+  <extensions>
+    <ogr:description>Pic / col des Mulleres, gentil petit II en rocher franc sur le versant Est</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.6332852" lon="0.8753278">
+  <name>24.2 Montardo 2833m</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7979" lon="1.085674">
+  <name>(26) Mont Valier (2838m)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4146996" lon="2.1337987">
+  <name>35.5 Pic de Finestrelles</name>
+  <extensions>
+    <ogr:description>Ecrins visibles par temps exceptionnel</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.5188823" lon="2.456656">
+  <name>37.5 Canigó (2785m)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.268028" lon="-1.4406999">
+  <name>Ferme Esteben Borda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.092043" lon="-1.1646524">
+  <name>Gite Kaskoleta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.316225" lon="-1.6267135">
+  <name>Les Trois fontaines - super bivouac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8883134" lon="-0.5524488">
+  <name>(10) Chemin de la Mâture</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8959144" lon="-0.405281">
+  <name>(12) Pic de la Sagette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8532258" lon="0.2097135">
+  <name>(18) Refuge de Bastan (gardé)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7443412" lon="0.4905807">
+  <name>(21) Refuge du Lac d'Oô (annuel)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.723606" lon="-0.008485">
+  <name>16 Refuge Le Pailha</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8247815" lon="0.2075288">
+  <name>(18) Refuge de l'Oule (annuel)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8078852" lon="-0.0990885">
+  <name>(15) Refuge d'Estom (annuel)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8263794" lon="0.1683122">
+  <name>(17) Refuge d'Orédon (annuel)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6913486" lon="1.3965331">
+  <name>29 Refuge de l'Étang du Pinet (été)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6053217" lon="0.8774011">
+  <name>(24.1) Refugi Ventosa i Calvell</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6210461" lon="0.9632941">
+  <name>24.5 Refugi de Saboredo (été)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5282162" lon="0.8484524">
+  <name>24 Vall de Boí (Eglises à l'UNESCO)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4956968" lon="1.5940819">
+  <name>31.5 Madriu-Perafita-Claror Valley (UNESCO)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4072743" lon="2.48143">
+  <name>(37) Fort Lagarde</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4708113" lon="2.6644603">
+  <name>39 Fort-les-Bains</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4585433" lon="2.8592589">
+  <name>40.5 Fort de Bellegarde (Perthus)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4745135" lon="3.0200733">
+  <name>41.5 Forêt de Massane</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.367222" lon="2.4567009">
+  <name>(37) Col d'Ares (1513m)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.603833" lon="1.441826">
+  <name>Tripoint Ouest - Pic de Médécourbe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.504727" lon="1.725946">
+  <name>Tripoint Est - Portella Blanca d'Andorra</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="44.0090072" lon="-0.2514722">
+  <name>Cirque d'Araing (étang + refuge GR10)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.762892" lon="1.361461">
+  <name>Cascade d'Ars (GR10)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9387861" lon="1.7532984">
+  <name>Forteresse de Roquefixade</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.988514" lon="-1.006055">
+  <name>6.5 Pic d'Orhy</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5876064" lon="1.7983527">
+  <name>33bis Gîte d'étape l'Hospitalité</name>
+  <extensions>
+    <ogr:description>Possibilité de poste restante</ogr:description>
+  </extensions>
+</wpt>
+</gpx>

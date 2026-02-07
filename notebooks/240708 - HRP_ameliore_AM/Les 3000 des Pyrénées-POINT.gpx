@@ -1,0 +1,1108 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.6.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="42.585711479186998" minlon="-0.297811000000000" maxlat="42.838944300000001" maxlon="1.406421661376950"/></metadata>                   
+<wpt lat="42.828561" lon="-0.297811">
+  <name>Frondella SW | 3.001 m</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.671915" lon="1.406198">
+  <name>Pic du Montcalm 3077m</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.692828178405797" lon="0.502924919128418">
+  <name>3000m Pt Pic du Portillon (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.780155874788797" lon="-0.255898665636778">
+  <name>3000m Pic Arnales (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7021193504333" lon="0.467970371246338">
+  <name>3003m Pic Saint-Saud (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.704006955027602" lon="0.132501879706979">
+  <name>3003m Robiñera (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.630729675292997" lon="0.426664352416992">
+  <name>3004m Punta SE de la Forqueta (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6625299453735" lon="1.40174388885498">
+  <name>3004m Rodo de Canalbona (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.808228461071799" lon="-0.237837508320808">
+  <name>3005m Grande Fache (F+)</name>
+  <extensions>
+    <ogr:description>En vert = 14 sommets possibles sans corde ni piolet selon Outside.fr</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.687721252441399" lon="-0.026757717132568">
+  <name>3006m Casque du Marboré (F)</name>
+  <extensions>
+    <ogr:description>Prévoir une Petzel</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.7972412109375" lon="0.129475593566895">
+  <name>3006m Pic d'Estaragne (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699458599090597" lon="0.557792186737061">
+  <name>3006m Pic de Boum	(PD)</name>
+  <extensions>
+    <ogr:description>Besoin de corde selon K. Jornet</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.713359398767402" lon="0.479532117024064">
+  <name>3006m Pointe Belloc central (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.631630897522001" lon="0.425806045532227">
+  <name>3007m Pic Forqueta ou Pic des Tourets (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.712703179568102" lon="0.480055985972285">
+  <name>3007m Point Belloc Sud (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.826938629150398" lon="0.107674598693848">
+  <name>3007m Pointe Reboul-Vidal (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.714210916310499" lon="0.47927487641573">
+  <name>3008m Pic Belloc (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.694501876831097" lon="0.466232299804688">
+  <name>3008m Pic Occ de Clarabide (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.685648072511" lon="-0.017055748030543">
+  <name>3009m Tour du Marboré (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.629485130310101" lon="0.698554515838623">
+  <name>3010m Tuc de Mulleres (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7718181442469" lon="-0.262168329209089">
+  <name>3011m Aiguille de Pondiellos (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.834835052490199" lon="0.119991302490234">
+  <name>3011m Pic Ramougn (PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.693386077880902" lon="0.470287799835205">
+  <name>3011m Pico de Gias (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.704007625579798" lon="0.523416996002197">
+  <name>3011m Pointe Lacq	(PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.701797485351598" lon="0.015835762023926">
+  <name>3012m Petit Astazou (occidental) (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.696475982666001" lon="0.468721389770508">
+  <name>3012m Pic Oriental de Clarabide (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.804858181625598" lon="0.103656649589539">
+  <name>3014m Aiguille Tourrat (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.605237960815401" lon="0.826292037963867">
+  <name>3014m Besiberri Nord (PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.593007087707498" lon="0.826506614685059">
+  <name>3014m Malavesina Aguja Norte (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.585711479186998" lon="0.880322456359863">
+  <name>3014m Punta alta (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.804430117830599" lon="0.089423088356853">
+  <name>3016m Grabounouse Nord (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8007211256772" lon="0.094385426491499">
+  <name>3017m Dent d'Estibère male (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.711238861083999" lon="0.385251045227051">
+  <name>3018m Pic du Port de la Pez (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.694845199584996" lon="0.467605590820313">
+  <name>3020m Pic de Clarabide Central (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6333904266357" lon="0.632228851318359">
+  <name>3021m Aiguille Juncadella (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.803174676373601" lon="0.088023310527205">
+  <name>3021m Pic de Crabounouse (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.834393577650197" lon="-0.289779491722584">
+  <name>3022m Aiguille Cadier (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.837606193497798" lon="-0.284143919125199">
+  <name>3022m Aiguille d'Ussel (AD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.728404998779297" lon="0.135097503662109">
+  <name>3022m Pic Heid (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.662165164947503" lon="0.053644180297852">
+  <name>3022m Punta de las Olas (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.705016136169398" lon="0.520305633544922">
+  <name>3023m Aiguille inf de Lézat (AD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7675652503967" lon="-0.269873142242432">
+  <name>3023m Algas Sud-Est (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.734928131103501" lon="0.359995365142822">
+  <name>3023m Pic de Lustou (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.710702419280999" lon="0.384757518768311">
+  <name>3024m Pic de la Pez (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.701926231384299" lon="0.531892776489258">
+  <name>3025m Aiguille Jean Garnier (PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.626695632934599" lon="0.413188934326172">
+  <name>3025m Pic Eriste nord ou Pic Beraldi (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.669610977172901" lon="0.05218505859375">
+  <name>3026m Pic Sud-Est Baudrimont (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6696968078613" lon="0.030083656311035">
+  <name>3027m Punta de las Escaleras (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.625472545623801" lon="0.672397613525391">
+  <name>3028m Forca Estasen (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.709994316101103" lon="0.338194370269775">
+  <name>3028m Pic Central de Batoua Culfreda (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.616996765136697" lon="0.667848587036133">
+  <name>3029m Aiguille sud ouest de Russell (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.713298797607401" lon="0.392847061157227">
+  <name>3029m Pic de l'Abeillé (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.623713016510003" lon="0.644781589508057">
+  <name>3030m Argarot Sur (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.593822479247997" lon="0.825948715209961">
+  <name>3030m Besiberri Sud (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.694581001997001" lon="-0.062134880572557">
+  <name>3031m Gabietou oriental (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.801017761230497" lon="0.091667175292969">
+  <name>3031m Pic de Bugarret (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7104878425598" lon="0.339460372924805">
+  <name>3032m Batoua NE ou Culfreda (F)</name>
+  <extensions>
+    <ogr:description>Besoin corde selon K. Jornet</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.774687185883501" lon="-0.135048385709524">
+  <name>3032m Petit Vignemale (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.591333389282198" lon="0.827922821044922">
+  <name>3033m Pic de Comaloforno (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.780929356813402" lon="-0.257496172562242">
+  <name>3034m Aguja de Arnales (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.692961953580401" lon="-0.06521531380713">
+  <name>3034m Gabietou occidental (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.708706855773897" lon="0.336349010467529">
+  <name>3034m Pic de Batoua ou Culfreda (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.705273628234899" lon="0.483012199401855">
+  <name>3034m Pic Gourdon (F)</name>
+  <extensions>
+    <ogr:description>Facile un fois au col</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.6166319847107" lon="0.677011013031006">
+  <name>3034m Pointe Orientale Russell (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6242709159851" lon="0.644867420196533">
+  <name>3035m Aiguille Argarot (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.830564975738497" lon="0.111150406301022">
+  <name>3035m Premier Conseillers (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.827787296846502" lon="0.107730170711875">
+  <name>3035m Turon de Néouvielle (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.768316268920898" lon="-0.270624160766602">
+  <name>3036m Pic Algas (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7054667472839" lon="0.519876480102539">
+  <name>3037m Aiguille Centrale SE Lézat (AD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6313734054565" lon="0.627808570861816">
+  <name>3037m Pic Aragüells (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.831170735880697" lon="0.112950839102268">
+  <name>3039m Pic des 3 conseillers (F)</name>
+  <extensions>
+    <ogr:description>Surement assez facile</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.668666839599602" lon="1.40127182006836">
+  <name>3041m Cap Coma de Riufred (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699823379516602" lon="0.535647869110107">
+  <name>3041m Tusse de Remuñe (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.634634971618702" lon="0.635790824890137">
+  <name>3043m Aiguille de Cregüeña (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.774281501769998" lon="-0.153207778930664">
+  <name>3043m Aiguille inférieure du Clot de la Hount (PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.702312469482401" lon="0.471618175506592">
+  <name>3043m Pic Camboué (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.700273990631104" lon="0.539424419403076">
+  <name>3043m Pic Navarro (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.673301696777301" lon="0.047421455383301">
+  <name>3045m Baudrimont NO (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.623004913330099" lon="0.409111976623535">
+  <name>3045m Pic d'Eristé sud ou Pic de Bagüeñola (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.700080871582003" lon="0.536978244781494">
+  <name>3045m Pic Rabadá	(F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.766599655151403" lon="-0.266890525817871">
+  <name>3046m Pico Argualas (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.703042030334501" lon="0.525283813476563">
+  <name>3048m Pointe Mamy (AD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.837739214301102" lon="-0.285825747996569">
+  <name>3049m Tour de Costerillou (D)</name>
+  <extensions>
+    <ogr:description>Besoin corde selon K. Jornet (surtout en descente)</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.692699432372997" lon="0.507581233978271">
+  <name>3050m Pic du Portillon d'Oo (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7676296234131" lon="-0.152478218078613">
+  <name>3051m Aiguille SO de Cerbillona (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7717069163918" lon="-0.264154756441712">
+  <name>3051m Garmo negro (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.624764442443798" lon="0.645639896392822">
+  <name>3052m Aiguille Tchihatcheff (AD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.625064849853501" lon="0.409412384033203">
+  <name>3053m Grand pic d'Eriste (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.655684947967501" lon="0.618710517883301">
+  <name>3054m Aiguille de Albe (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.832174804061701" lon="-0.29280686751008">
+  <name>3055m Frondella central (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7099514007568" lon="0.393984317779541">
+  <name>3057m Pic Marcos Feliu (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.705810070037799" lon="0.519211292266846">
+  <name>3058m Aiguille Centrale NO de Lézat (AD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.802734207361901" lon="0.102925663813949">
+  <name>3058m Pic Maubic (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.669739723205602" lon="1.38758182525635">
+  <name>3058m Sotllo Nord (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.713427543640101" lon="0.51511287689209">
+  <name>3060m Grand Quayrat ou Pic Quayrat (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7064752578735" lon="0.393490791320801">
+  <name>3061m Petit Bachimale (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.833372158929699" lon="-0.290125915780663">
+  <name>3062m Frondella nord (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5939297676086" lon="0.651991367340088">
+  <name>3062m Tuca de Culebras (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.625150680541999" lon="0.646841526031494">
+  <name>3065m Aiguille de Franqueville (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.710123062133803" lon="0.484771728515625">
+  <name>3065m Pic des Spijeoles (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699694633483901" lon="0.481166839599609">
+  <name>3065m Pic Jean Arlaud (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.593994140625" lon="0.653171539306641">
+  <name>3067m Pic de Vallibierna (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.706174850463903" lon="0.518782138824463">
+  <name>3069m Aiguille sup du Lézat (AD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8327268362045" lon="-0.290491953492165">
+  <name>3071m Frondella (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.702484130859403" lon="0.024075508117676">
+  <name>3071m Grand Astazou (F)</name>
+  <extensions>
+    <ogr:description>Via le lac de Tuca Roya, puis le col entre les 2 Astazou</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.668709754943798" lon="1.38745307922363">
+  <name>3072m Pic de Sotllo (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.783087864518201" lon="-0.263208523392677">
+  <name>3073m Pic d'Enfer occidental (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.658624649047901" lon="0.443530082702637">
+  <name>3073m Pic inf de la Paúl (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.685301313176801" lon="0.000272579491138">
+  <name>3073m Épaule du Marboré (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7941655553877" lon="0.105832340195775">
+  <name>3074m Pic Maou (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.635261686518803" lon="0.636966889724135">
+  <name>3075m Aiguille Haurillon (AD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.781448364257798" lon="-0.258865356445313">
+  <name>3076m Pic d'Enfer oriental (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.677249908447301" lon="0.043172836303711">
+  <name>3077m Epaule d'Esparets (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.671928405761697" lon="1.40642166137695">
+  <name>3077m Pic de Montcalm (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.660598754882798" lon="0.446233749389648">
+  <name>3078m Pic de la Paul (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.662401199340799" lon="0.451083183288574">
+  <name>3079m Pico de Bardamina (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.644076347351103" lon="0.427865982055664">
+  <name>3080m Tuca del Forao de la Neu (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7814093884081" lon="-0.260448195040226">
+  <name>3082m Pic d'Enfer central (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.641780376434298" lon="0.636928081512451">
+  <name>3085m Abadías Pico Aguja SO (D)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.645406723022496" lon="0.435247421264648">
+  <name>3085m Dent de Llardana (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.722396850585902" lon="0.136985778808594">
+  <name>3085m Pic de Troumouse (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.654247283935497" lon="0.623452663421631">
+  <name>3087m Alba Colmillo Oriental (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.720851898193402" lon="0.135440826416016">
+  <name>3090m Pic de Serre Mourène (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.835350036621101" lon="0.115013122558594">
+  <name>3091m Pic de Néouvielle (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.685489654541001" lon="0.018882751464844">
+  <name>3093m Tuqueta de Marboré (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.686691284179702" lon="0.002446174621582">
+  <name>3095m Pic de la cascade occidental (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.695510387420697" lon="0.52109956741333">
+  <name>3095m Tuca de Lliterola (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.716217041015597" lon="0.133380889892578">
+  <name>3096m Petite Munia (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.695274353027301" lon="0.491509437561035">
+  <name>3097m Cap du Seil de la Baque Occ (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.703127861022899" lon="0.395207405090332">
+  <name>3100m Pointe del Ibón (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.693128585815401" lon="0.492796897888184">
+  <name>3103m Cap du Seil de la Baque Ori (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.700123786926298" lon="0.474300384521484">
+  <name>3104m Pointe Lourde Rocheblave (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7026557922363" lon="0.526614189147949">
+  <name>3106m Crabioules occidental (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.688837051391602" lon="0.004763603210449">
+  <name>3106m Pic Brulle ou Pic de la cascade central (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.707376480102504" lon="0.516700744628906">
+  <name>3107m Pic Lézat (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.701389789581299" lon="0.54556131362915">
+  <name>3109m Pic de Maupas (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6923990249634" lon="0.496230125427246">
+  <name>3110m Cap du Seil de la Baque (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.625365257263198" lon="0.668964385986328">
+  <name>3111m Gendarme-Tour de Salenques (D)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699887752533002" lon="0.475223064422607">
+  <name>3114m Tour Armengaud (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.773723602294901" lon="-0.152649879455566">
+  <name>3115m Aiguille Sup Clot Hount (PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.665448188781703" lon="1.39994144439697">
+  <name>3115m Punta Gabarro (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.702634334564202" lon="0.529425144195557">
+  <name>3116m Pic des Crabioules Oriental (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.653646469116197" lon="0.6252121925354">
+  <name>3118m Muela d'Albe (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.655684947967501" lon="0.620963573455811">
+  <name>3118m Pico de Alba (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699909210205099" lon="0.39525032043457">
+  <name>3120m Pointe Ledormeur (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.640857696533203" lon="0.424003601074219">
+  <name>3121m Pic des Pavots (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6976990699768" lon="0.520927906036377">
+  <name>3121m Pico Royo (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.763724327087402" lon="-0.136127471923828">
+  <name>3124m Pointe inférieure du Tapou (PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.665061950683601" lon="0.437521934509277">
+  <name>3125m Pic des Vétérans (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.625365257263198" lon="0.668556690216064">
+  <name>3127m Premier Ressaut de Salenques (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699995040893597" lon="0.477669239044189">
+  <name>3129m Pic des Gourgs Blancs (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.761621475219698" lon="-0.136427879333496">
+  <name>3130m Pic du Milieu (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.668023109436" lon="1.39680862426758">
+  <name>3131m Pic Verdaguer (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.698857784271198" lon="0.522794723510742">
+  <name>3132m Pointe de Literole (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.764110565185497" lon="-0.136513710021973">
+  <name>3132m Pointe sup du Tapou (PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.714953385293498" lon="0.13185597024858">
+  <name>3133m Pic de la Munia (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.798957824707003" lon="0.101966857910156">
+  <name>3135m  Aiguille Badet (PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.653968334197998" lon="0.624504089355469">
+  <name>3136m Diente de Alba (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.694458961486802" lon="0.396537780761719">
+  <name>3136m Punta del sabre (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.666950225830099" lon="1.39792442321777">
+  <name>3143m Pique d'Estats (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.693730993196397" lon="-0.0512654799968">
+  <name>3144m Pic du Taillon (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6160311698914" lon="0.672547817230225">
+  <name>3146m Aiguille sup de Russell (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.625300884246798" lon="0.66791296005249">
+  <name>3148m 2nd Ressaut de Salenques (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.762866020202601" lon="-0.13582706451416">
+  <name>3150m Grand Pic de Tapou (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7732543833554" lon="-0.139985494315624">
+  <name>3154m Épaule de Chausenque (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.648775577545202" lon="0.627872943878174">
+  <name>3156m Bondidier Nord (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7890014648438" lon="0.117073059082031">
+  <name>3157m Pic de Lentilla (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.797756195068402" lon="0.104198455810547">
+  <name>3160m Pic de Badet (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.661457061767599" lon="0.435290336608887">
+  <name>3160m Pic des jumeaux Ravier (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.690038681030302" lon="0.008025169372559">
+  <name>3161m Pic de la cascade oriental (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.653861045837402" lon="0.628430843353271">
+  <name>3170m Pointe Delmás (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.792091369628899" lon="0.119733810424805">
+  <name>3173m Pic de Campbieil (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.691390514373801" lon="0.51537036895752">
+  <name>3176m Hito Occid Perdiguère (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.680382728576703" lon="0.030341148376465">
+  <name>3176m Nudillo du Mont Perdu (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.698578834533699" lon="0.394370555877686">
+  <name>3177m Pic Schrader ou Gd Batchimale (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.648110389709501" lon="0.627508163452148">
+  <name>3185m Pic le Bondidier (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.652938365936301" lon="0.628752708435059">
+  <name>3185m Pic Mir (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.679052352905302" lon="0.031671524047852">
+  <name>3188m Doigt du Mont Perdu (AD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.800846099853501" lon="0.100078582763672">
+  <name>3192m Pic Long (PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.621803283691399" lon="0.667591094970703">
+  <name>3192m Pointe de la Brèche Russell (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.681069374084501" lon="0.020942687988281">
+  <name>3194m Piton SO du Cylindre (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.773394361138301" lon="-0.144889242947102">
+  <name>3197m Piton Carré (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.773458398878603" lon="-0.142280040308833">
+  <name>3204m Pointe Chausenque (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.617297172546401" lon="0.67190408706665">
+  <name>3205m Antecime SE de Russell (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.618434429168701" lon="0.670573711395264">
+  <name>3207m Pic Russell (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.766385078430197" lon="-0.13831615447998">
+  <name>3219m Montferrat (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.651801109314" lon="0.629675388336182">
+  <name>3220m 2e Pic Occidental de la Maladeta ou Pic Sayó (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.691991329193101" lon="0.518867969512939">
+  <name>3222m Pic Perdiguère (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.634377479553201" lon="0.652527809143066">
+  <name>3228m Coronas Aguja Collado (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.647509574890101" lon="0.642142295837402">
+  <name>3235m Maladeta NE (PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.768445014953599" lon="-0.146470069885254">
+  <name>3235m Pic Central (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.624528408050502" lon="0.666003227233887">
+  <name>3241m Pic Margalida (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.769217491149902" lon="-0.149688720703125">
+  <name>3247m Pic de Cerbillona (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.692742347717299" lon="0.011544227600098">
+  <name>3248m Pic du Marboré (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.649269104003899" lon="0.633516311645508">
+  <name>3254m 1er Pic Occidental de la Maladeta ou Pic Cordier (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.669568061828599" lon="0.043129920959473">
+  <name>3254m Pic Añisclo ou Soum de Ramond (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.647767066955602" lon="0.636970996856689">
+  <name>3265m Pic del Collado de la Rimaya (AD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.653088569641099" lon="0.432801246643066">
+  <name>3273m Tuqueta Roya (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.627189159393303" lon="0.661647319793701">
+  <name>3274m Punta Brecha Tempestades (D)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.643260955810497" lon="0.638473033905029">
+  <name>3279m Pic Abadias (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.635922431945801" lon="0.651068687438965">
+  <name>3286m Tuca Collado Coronas (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.773170061409502" lon="-0.149773294106126">
+  <name>3289m Clot de la Hount (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.626137733459501" lon="0.662784576416016">
+  <name>3290m Pic des Tempêtes (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.637166976928697" lon="0.649309158325195">
+  <name>3293m Pico de Coronas (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.633733749389599" lon="0.654523372650146">
+  <name>3298m Punta Oliveras-Arenas (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.773956535384102" lon="-0.147336758673191">
+  <name>3298m Vignemale ou Pique longue (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.646393775939899" lon="0.640361309051514">
+  <name>3308m La Maladeta (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.652530670166001" lon="0.430741310119629">
+  <name>3311m Tuca de Llardaneta (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.684760093689" lon="0.023989677429199">
+  <name>3328m Cylindre du Marboré (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.649827003478997" lon="0.426664352416992">
+  <name>3332m Pic de Las Espadas (PD)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.638626098632798" lon="0.64518928527832">
+  <name>3346m Pico del Medio (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.630407810211203" lon="0.655574798583984">
+  <name>3350m Aiguille Daviu (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.639570236206097" lon="0.641326904296875">
+  <name>3350m Pic Maudit (PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.629334926605203" lon="0.659694671630859">
+  <name>3350m Épaule de l’Aneto (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.675619125366197" lon="0.03446102142334">
+  <name>3355m Mont Perdu (F+)</name>
+  <extensions>
+    <ogr:description>Via col NO</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.639441490173297" lon="0.642614364624023">
+  <name>3355m Pointe d'Astorg (PD+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.654676437377901" lon="0.435333251953125">
+  <name>3375m Posets (F)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.631137371063197" lon="0.656647682189941">
+  <name>3404m Aneto (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8389443" lon="-0.2902653">
+  <name>3144m Balaïtous (F+)</name>
+  <extensions>
+  </extensions>
+</wpt>
+</gpx>

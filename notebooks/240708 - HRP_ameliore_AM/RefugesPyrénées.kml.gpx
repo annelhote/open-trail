@@ -1,0 +1,7680 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.6.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="42.087091999999998" minlon="-1.628970000000000" maxlat="43.307243000000000" maxlon="3.103654000000000"/></metadata>                   
+<wpt lat="43.0856953" lon="-0.422349">
+  <name>Hôtel de la piscine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.902095" lon="0.768822">
+  <name>cabane tuc de l etang</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.764124" lon="-0.634059">
+  <name>refuge de lizara</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.684381" lon="1.465129">
+  <name>orri de malcaras</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.511083" lon="1.608928">
+  <name>refuge des agols</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.71686" lon="0.68198">
+  <name>cabane pouylanes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9512" lon="-0.539">
+  <name>cabane de lapassa ronglet col iseye</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0428" lon="-0.2395">
+  <name>cabane de monbula</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.89135" lon="-0.66689">
+  <name>cabane de annes anes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.824847" lon="-0.532108">
+  <name>cabane arnousse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.891667" lon="-0.525833">
+  <name>cabane borde de passette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.975008" lon="-0.471987">
+  <name>refuge d arrioutort</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.879876" lon="-0.46562">
+  <name>cabane d aule</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.85079" lon="-0.584196">
+  <name>cabane de couylaret</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.823408" lon="-0.585149">
+  <name>cabane grosse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.627486" lon="0.457435">
+  <name>refuge angel orus forcau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.682437" lon="1.371224">
+  <name>refuge de broate</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.445471" lon="1.610293">
+  <name>caseta forestal dels pollineres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.338818" lon="2.028784">
+  <name>cabane de campilles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.07917" lon="-0.482905">
+  <name>cabane de castillou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.570556" lon="0.93638">
+  <name>refuge centraleta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9613" lon="0.311">
+  <name>cabanes du col de beyrede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9275" lon="-0.4792">
+  <name>cabane de artigue de sesques</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5347" lon="2.494266">
+  <name>refuge de prat cabrera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.55778" lon="1.884181">
+  <name>refuge de font viva</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.817684" lon="1.508024">
+  <name>cabane de artats</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.335189" lon="1.875926">
+  <name>refugi del pla gran</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.591389" lon="0.710556">
+  <name>refuge d anglios</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.897461" lon="-0.717269">
+  <name>cabane d ansabere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.450556" lon="2.201944">
+  <name>cabane de la basse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.597428" lon="1.919764">
+  <name>cabane de rouzet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9036" lon="-0.4752">
+  <name>cabanes de gazies</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.792908" lon="-0.14125">
+  <name>refuge des oulettes de gaube</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.96408" lon="0.757803">
+  <name>abri forestier de juzet d izaut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.861039" lon="0.186939">
+  <name>abri de port bielh</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.416389" lon="0.489722">
+  <name>refuge de la plana del turbon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.656111" lon="2.153611">
+  <name>refuge oller</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.680219" lon="1.862776">
+  <name>cabane col de joux</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.718313" lon="1.931828">
+  <name>cabane d ascou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.93369" lon="0.24406">
+  <name>cabane de sarroua</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.712282" lon="1.415433">
+  <name>cabane de pebre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9387" lon="-0.5666">
+  <name>cabane de sargun</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9523" lon="-0.5244">
+  <name>cabane d escurets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.94035" lon="0.07563">
+  <name>cabane du lac bleu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.87121" lon="0.189718">
+  <name>refuge de port bielh</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.816454" lon="0.984896">
+  <name>cabane de grauilles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.665014" lon="1.489322">
+  <name>refuge du fourcat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.645833" lon="0.536389">
+  <name>cabane de santa ana</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.706705" lon="1.370283">
+  <name>orri des legunes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.887474" lon="-0.090809">
+  <name>cabane du lisey</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.807423" lon="1.024208">
+  <name>cabane de peyralade</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.878889" lon="0.666944">
+  <name>cabane de saribarolles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.711746" lon="1.413872">
+  <name>cabane de peyre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9315" lon="-0.5551">
+  <name>cabane de pedaing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.876738" lon="0.808525">
+  <name>cabane du plan des sederes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.603817" lon="1.783173">
+  <name>refuge brougnic</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.894122" lon="0.59352">
+  <name>cabane de guran</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8846" lon="0.8043">
+  <name>cabane de gerus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6519" lon="2.17">
+  <name>abri madres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9329" lon="-0.5698">
+  <name>cabane de arna</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.919487" lon="0.467026">
+  <name>cabane areng</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.604319" lon="0.809571">
+  <name>refuge du besiberri le nouveau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7576" lon="0.6518">
+  <name>cabane deth cap de bosc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4559" lon="2.2804">
+  <name>cabane pastorale de alemany</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7589" lon="1.45884">
+  <name>orri d engescles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.771944" lon="0.478333">
+  <name>cabane montmedan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.84345" lon="0.45634">
+  <name>cabane christau du haut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.778013" lon="0.514415">
+  <name>cabane de bergueres milieu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.835709" lon="-0.427013">
+  <name>refuge de pombie</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.919803" lon="0.761404">
+  <name>refuge col de mente</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8433" lon="0.44753">
+  <name>cabane christau du bas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.73608" lon="1.346399">
+  <name>cabane du turon d ars</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8964" lon="-0.4626">
+  <name>cabane de er</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7756" lon="-0.1219">
+  <name>grotte bellevue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.867142" lon="0.848148">
+  <name>cabane du col de la terme</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.77549" lon="1.46058">
+  <name>orri de saleix</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.691479" lon="-0.034931">
+  <name>abri de la breche de roland</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.606777" lon="1.550499">
+  <name>refuge de coma obaga</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.824334" lon="0.207174">
+  <name>refuge de l oule</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9598" lon="-0.4503">
+  <name>cabane de lusque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.548936" lon="2.457083">
+  <name>refuge de balatg</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.83393" lon="0.879396">
+  <name>cabane de l etang d araing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.967179" lon="-0.94049">
+  <name>abri d ardane gagnekoa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.764271" lon="1.463306">
+  <name>cabane forestiere du far</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.829214" lon="1.197943">
+  <name>cabane du cap de la serre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.869395" lon="-0.26673">
+  <name>cabane de doumblas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.855526" lon="-0.264273">
+  <name>refuge ledormeur</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9382" lon="-0.5095">
+  <name>cabane de liet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.370655" lon="2.001136">
+  <name>refuge de l orry andreu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.71604" lon="1.81523">
+  <name>refuge du baillat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.845468" lon="0.88228">
+  <name>cabane d illau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.869404" lon="-0.411998">
+  <name>cabane de cherue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8531" lon="0.20978">
+  <name>refuge du bastan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.855366" lon="0.570592">
+  <name>cabane d antenac superieur</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.048509" lon="-0.348246">
+  <name>cabane couscouilla</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.77086" lon="1.46703">
+  <name>lavoir de saleix</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.875385" lon="0.151873">
+  <name>cabane aygues cluses</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.712238" lon="1.551656">
+  <name>cabane d auruzan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.573433" lon="1.973417">
+  <name>abri de l estany de les dugues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.573" lon="1.9521">
+  <name>cabane de l etang de soubirans</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6225" lon="0.921944">
+  <name>refuge de colomers</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.599837" lon="1.850671">
+  <name>refuge du barrage des besines</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.607222" lon="0.833056">
+  <name>refuge du besiberri l ancien</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.56879" lon="1.968101">
+  <name>abri du lac d estany llong</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.475833" lon="2.956944">
+  <name>refuge de la tagnarede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.589721" lon="2.011899">
+  <name>cabane de la balmeta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.893797" lon="0.98107">
+  <name>cabane du col de l araing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.839781" lon="1.078037">
+  <name>cabane eychelle</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.841721" lon="-0.365487">
+  <name>cabane d arrious</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.51757" lon="2.04617">
+  <name>cabane de fornells</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.526915" lon="1.993675">
+  <name>refuge de la calma</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.603821" lon="1.86802">
+  <name>refuge caf des besines</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.707989" lon="1.591657">
+  <name>cabane de beze</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.725506" lon="0.533003">
+  <name>cabane de sarnes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.464273" lon="2.223841">
+  <name>refuge de la caranca</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.87368" lon="-0.64116">
+  <name>cabane det caillau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.637103" lon="2.047635">
+  <name>cabane jaceta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.560556" lon="1.996667">
+  <name>hotel des bouillouses</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6402" lon="1.7984">
+  <name>cabane de la jasse de mourguillou ou etang de comte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.722667" lon="0.42042">
+  <name>refuge de la soula</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.792047" lon="1.033804">
+  <name>cabane de barlonguere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.733969" lon="1.51799">
+  <name>orri du pique d endron</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.866573" lon="0.189219">
+  <name>cabane de port bielh</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4826" lon="2.1708">
+  <name>orri de prats balaguer</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.939755" lon="0.722706">
+  <name>cabane du col de caube</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.68481" lon="1.781486">
+  <name>cabane des esquers du dessus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.920278" lon="-0.290555">
+  <name>cabane de bassia</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.629167" lon="1.450083">
+  <name>cabane d estrets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.895736" lon="0.872705">
+  <name>cabane du col de l estrade</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.694979" lon="1.785467">
+  <name>cabane des esquers du dessous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.489837" lon="1.607201">
+  <name>cabane de la farga</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.492084" lon="1.59453">
+  <name>refuge de fontverd</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.563942" lon="1.968314">
+  <name>refuge des freres aymard</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7377" lon="0.3367">
+  <name>cabane du lustou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.950155" lon="0.044876">
+  <name>cabane du lac d ourrec</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.580556" lon="1.006389">
+  <name>refuge ernest mallafre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.817834" lon="0.04915">
+  <name>cabane de motte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.578012" lon="1.901581">
+  <name>refuge de la guimbarde</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.735342" lon="1.703455">
+  <name>cabane gerieys</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.479741" lon="1.578223">
+  <name>cabane de perafita</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.719641" lon="0.571684">
+  <name>cabane de la houradade</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.71318" lon="1.608458">
+  <name>refuge de larnoum</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.978199" lon="-0.691548">
+  <name>cabane icheus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.913814" lon="0.117716">
+  <name>cabane d aoube</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.65039" lon="1.76172">
+  <name>refuge de prat redoun</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.611259" lon="1.671467">
+  <name>cabane de sorda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.733836" lon="1.327431">
+  <name>cabane de turguilla</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.916044" lon="-0.251715">
+  <name>cabane barrage du tech</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.065063" lon="-0.165331">
+  <name>cabane de aoulhet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.800869" lon="1.430552">
+  <name>cabane de freychinede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.782331" lon="1.403686">
+  <name>cabane du port de saleix</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.712018" lon="0.577885">
+  <name>abri de graues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.45679" lon="2.281122">
+  <name>cabane de alemany</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.73041" lon="0.0041">
+  <name>cabane d alans</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.855609" lon="-0.46988">
+  <name>cabane col long dayous d en haut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.559076" lon="2.003751">
+  <name>refuge des bouillouses</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.843405" lon="1.452528">
+  <name>cabane de la coumeders</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.838581" lon="0.024536">
+  <name>cabane de marvarissa ou de bachebirou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.851751" lon="-0.517563">
+  <name>refuge de larry</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.674138" lon="1.775747">
+  <name>cabane edf de savignac ou du ressec</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.759124" lon="0.09804">
+  <name>cabane de aguila</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.914701" lon="1.48804">
+  <name>cabane de la deveze</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.856089" lon="0.247314">
+  <name>cabane auloueilh</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.839122" lon="-0.46111">
+  <name>cabane de peyreget</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.808128" lon="-0.1012">
+  <name>cabane de estom</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.97162" lon="0.08428">
+  <name>courtaou de la lit</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.921389" lon="1.451667">
+  <name>cabane du pont de freychenet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.697616" lon="1.687673">
+  <name>cabane de la jasse des galis</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.703411" lon="1.497273">
+  <name>orri de la coume izourt</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.89975" lon="-0.20505">
+  <name>cabane arriousec</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.853333" lon="0.471666">
+  <name>cabane col de louron ou coume de baque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.885228" lon="0.866374">
+  <name>refuge col de l herbe soulette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.828648" lon="1.004504">
+  <name>cabane clot du lac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.738676" lon="-0.072098">
+  <name>cabane sausse dessus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.915639" lon="1.558118">
+  <name>cabane bladas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.717286" lon="1.669428">
+  <name>[bientôt] Nouvelle cabane de Clarans</name>
+  <extensions>
+    <ogr:description>04/2023 : cabane en cours de réaménagement</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.551111" lon="1.783611">
+  <name>cabane mine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.678384" lon="1.966125">
+  <name>cabane jasse de seys</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.863213" lon="-0.528675">
+  <name>cabane de sauquet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.846608" lon="-0.16739">
+  <name>cabane du marcadau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.741129" lon="1.242737">
+  <name>cabane d arrech</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.84008" lon="0.64959">
+  <name>cabane de ourdies</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.758395" lon="0.486384">
+  <name>cabane d esquierry 1650m</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.682159" lon="1.686021">
+  <name>cabane de senard</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.705" lon="0.246389">
+  <name>refuge de trigoniero plana el cabo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.853368" lon="0.471559">
+  <name>cabane de fousserette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7039" lon="1.30637">
+  <name>refuge de certascan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.55587" lon="0.314645">
+  <name>cabane de llavasar</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.023611" lon="0.043056">
+  <name>cabane du couret</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.555338" lon="2.045552">
+  <name>abri de la jasse de bernardi</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.566515" lon="1.757845">
+  <name>cabane du pla de la vaca morta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.856168" lon="-0.628755">
+  <name>cabane de spelunguette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.797691" lon="1.120181">
+  <name>cabane de l artigues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.01389" lon="0.238888">
+  <name>cabane de cot dessus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.953851" lon="0.034941">
+  <name>refuge d ouscouaou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.682389" lon="1.876331">
+  <name>cabane du ressec du bas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.84611" lon="-0.3293">
+  <name>refuge d arremoulit</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.626352" lon="1.943536">
+  <name>refuge d en beys</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.638167" lon="1.725923">
+  <name>refuge du rulhe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.864722" lon="-0.42722">
+  <name>cabane de magnabaigt</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.872222" lon="-0.451666">
+  <name>cabane de bious oumette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.93113" lon="0.24718">
+  <name>cabane des esclozes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.734434" lon="0.144271">
+  <name>refuge de barroude</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.73251" lon="1.30545">
+  <name>refuge de la hillette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.724722" lon="-0.469444">
+  <name>refuge de embalse de ip</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.82105" lon="0.178033">
+  <name>orri des myrtilles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7813" lon="1.4146">
+  <name>cabane de carol</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.787449" lon="-0.711708">
+  <name>refugio de gabardito</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.78377" lon="0.51271">
+  <name>cabane de baguergue inferieure</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.501346" lon="2.407539">
+  <name>refuge de mariailles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.69964" lon="0.642745">
+  <name>refuge de venasque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.744833" lon="1.357167">
+  <name>cabane de la hille de l etang ars</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.724644" lon="1.571892">
+  <name>cabane de pinardel etang</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.601287" lon="2.052797">
+  <name>cabane de la jasse de ganyades</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.716829" lon="0.681895">
+  <name>cabane de la flache de roumingau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7043" lon="1.3866">
+  <name>cabane de picou stele</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.865144" lon="0.681861">
+  <name>cabane courraus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.534155" lon="2.465248">
+  <name>refuge des cortalets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.671241" lon="1.570345">
+  <name>cabane de peyregrand</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.69209" lon="1.591253">
+  <name>cabane de la unarde</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.773861" lon="0.214611">
+  <name>cabane cortail de prat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7093" lon="1.3749">
+  <name>orry des legunes d en bas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6175" lon="2.049444">
+  <name>refuge de liadura</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0489" lon="-0.35">
+  <name>cabanon de sebouille</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5179" lon="1.7599">
+  <name>cabane de font negra</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.421232" lon="2.37212">
+  <name>cabane de l ouillat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.544722" lon="1.044444">
+  <name>refuge josep maria blanc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.857401" lon="0.881186">
+  <name>refuge forestier onf de la fontaine de l isard</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.885689" lon="-0.298629">
+  <name>refuge de migouelou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.858056" lon="1.488333">
+  <name>cabane de menties</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.68" lon="1.845556">
+  <name>chalet forestier de courtal jouan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.588056" lon="2.051944">
+  <name>cabane de vallserra</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.03385" lon="-0.1606">
+  <name>refuge du col d andorre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.819167" lon="0.908889">
+  <name>refuge de sans</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5017" lon="2.5489">
+  <name>refuge de batere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.01932" lon="-0.65771">
+  <name>cabane de touroun</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.945315" lon="0.053875">
+  <name>cabane d ourrec</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.93243" lon="0.16124">
+  <name>cabane de pene blanque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.98857" lon="-0.90483">
+  <name>cayolar d olhadubi</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.503919" lon="2.444916">
+  <name>refuge arago</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.255797" lon="-1.614954">
+  <name>cabane d usategieta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.995671" lon="0.058344">
+  <name>cabane d ihouerde</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.009966" lon="0.085273">
+  <name>cabane de coumets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.658444" lon="1.965158">
+  <name>cabane d en gaudu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8301" lon="1.0328">
+  <name>refuge du pla de la lau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.823936" lon="-0.13772">
+  <name>cabane pinet lac de gaube</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.01657" lon="-0.63874">
+  <name>cabane d arres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.591732" lon="1.818944">
+  <name>refuge forestier d espousouillette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.607373" lon="1.715578">
+  <name>refugi de juclar</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.70992" lon="-0.045462">
+  <name>cabane des soldats</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.955723" lon="-0.511693">
+  <name>cabane laiterine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.85317" lon="0.58956">
+  <name>cabane de seridet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.809177" lon="-0.588103">
+  <name>cabane de espelunguere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.93091" lon="0.44483">
+  <name>cabane col de l aouet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.885278" lon="1.468611">
+  <name>maison forestiere de sauzet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.834167" lon="-0.599722">
+  <name>cabane de caillaous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.953144" lon="0.758904">
+  <name>cabane de juzet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.835909" lon="-0.598172">
+  <name>cabane de lurbe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.835479" lon="-0.383024">
+  <name>cabane du caillou de soques</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.648944" lon="1.70306">
+  <name>cabane du plat des peyres pla de las peyres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.899722" lon="1.448611">
+  <name>refuge eaux forets du col de port</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.807423" lon="-0.038374">
+  <name>cabane de cestrede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.757098" lon="-0.094015">
+  <name>cabane d ossoue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.457439" lon="2.232397">
+  <name>cabane de bassibes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.737049" lon="0.527647">
+  <name>cabane nouvelle de coume nere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.57401" lon="1.900092">
+  <name>maison des ingenieurs du lanoux</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.729505" lon="0.049233">
+  <name>cabane estaube</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.759365" lon="0.994627">
+  <name>montgarri</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.02" lon="0.048611">
+  <name>cabane noire du cuq cremail</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.702684" lon="1.553247">
+  <name>cabane de neych</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.395515" lon="2.080873">
+  <name>refuge pastoral des planes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.869722" lon="1.458889">
+  <name>cabane de la doule</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.955122" lon="0.693409">
+  <name>refuge du pic du gar</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.690567" lon="2.042438">
+  <name>refuge forestier du laurenti</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.869444" lon="0.633056">
+  <name>cabane de plagnette baren</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.614659" lon="1.770121">
+  <name>abri pedourres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4754" lon="2.4127">
+  <name>abri de pla guillem</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.715682" lon="1.704948">
+  <name>cabane beille den haut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.604613" lon="0.809112">
+  <name>refuge de l estanyet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9156" lon="1.430228">
+  <name>cabane de razels</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.594289" lon="1.756222">
+  <name>refuge de la vesine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.962222" lon="-0.478056">
+  <name>cabane de besse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.618459" lon="1.638781">
+  <name>refuge coms de jan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.72148" lon="1.463951">
+  <name>cabane de prunadiere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.730183" lon="0.55387">
+  <name>mines des crabouiles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7718" lon="-0.1495">
+  <name>les 3 grottes russell maison russell</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7737" lon="-0.1476">
+  <name>grotte paradis</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.608169" lon="1.495258">
+  <name>refuge de l angonella</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.505548" lon="2.431207">
+  <name>cabane jasse cady</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.610556" lon="1.890278">
+  <name>cabane de la coume d anyell</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.773333" lon="1.167778">
+  <name>cabane de auzut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.079882" lon="-0.28601">
+  <name>cabane de tachouere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.640352" lon="1.561314">
+  <name>refuge de rialp</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.724094" lon="0.613216">
+  <name>abri esbas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.895474" lon="0.498184">
+  <name>cabane de saoubette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.43" lon="2.196389">
+  <name>abri etang la caranca</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.741812" lon="0.639745">
+  <name>cabane bargueres de campsaure</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.855556" lon="1.781111">
+  <name>cabane du vacher</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.95743" lon="0.883861">
+  <name>cabane de cornudere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7542" lon="1.8872">
+  <name>cabane sorgeat ex apailladou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.2819" lon="1.6917">
+  <name>cortal dels cortils</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.87062" lon="0.45069">
+  <name>cabane du docteur pic</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.805379" lon="0.989974">
+  <name>cabane de hounta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.872222" lon="0.442222">
+  <name>cabane d arrieu tort</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.786229" lon="-0.030244">
+  <name>cabane de l oule</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.826631" lon="1.015718">
+  <name>cabane du trapech du milieu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.825" lon="1.0105">
+  <name>cabane du trapech du haut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8744" lon="1.1033">
+  <name>cabane du pas de tartet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.83611" lon="-0.029167">
+  <name>cabane d estarous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.854155" lon="0.838104">
+  <name>cabane d uls</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.94511" lon="-0.83461">
+  <name>refuge de belagua</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.885828" lon="0.665814">
+  <name>cabane de contraire</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.309444" lon="1.790556">
+  <name>refige els cortals de l ingla</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.312016" lon="2.644935">
+  <name>refuge bassegoda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.922382" lon="0.750997">
+  <name>refuge de l escalette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.826933" lon="0.968359">
+  <name>cabane arech</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.416772" lon="2.014226">
+  <name>nahuja</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.605318" lon="0.877403">
+  <name>refuge ventosa i calvell</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.734157" lon="0.652642">
+  <name>cabane de campsaure</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8048" lon="0.759">
+  <name>cabane de laujo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.657079" lon="1.879756">
+  <name>cabane de la coume</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9789" lon="-0.4984">
+  <name>cabane cure det cam</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7133" lon="1.6923">
+  <name>cabane piparlan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.861111" lon="0.723888">
+  <name>cabane d herechet ou des rechets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.668722" lon="0.290513">
+  <name>cabane du col de caballos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.661944" lon="1.891667">
+  <name>cabane de en sur</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.855388" lon="-0.468036">
+  <name>cabane col long dayous d en bas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.900556" lon="1.466667">
+  <name>cabane de la labere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.851085" lon="1.431168">
+  <name>cabane col de goulurs</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.976944" lon="-0.943889">
+  <name>cabane d ardane pekoa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.597566" lon="1.429203">
+  <name>refuge baiau josep m montfort</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.704278" lon="0.15662">
+  <name>cabane de barrosa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.852926" lon="0.577871">
+  <name>cabane de antenac inferieur ou seridet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.524044" lon="0.347067">
+  <name>refugio d armena</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.868042" lon="1.725507">
+  <name>cabane coulobre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.448056" lon="2.22222">
+  <name>cabane matutano</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.481" lon="3.0262">
+  <name>barraque de les colomates</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.834444" lon="1.718333">
+  <name>cabane de l estagnole</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.713056" lon="2.018889">
+  <name>cabane de prat de mire</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.595641" lon="1.613134">
+  <name>cabane vall del riu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.72507" lon="1.244564">
+  <name>cabane de marterat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.813496" lon="-0.275867">
+  <name>refuge alphonse xiii</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7717" lon="0.3763">
+  <name>cabane sarrouyes ardounes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7411" lon="1.710556">
+  <name>cabane de mont redon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7258" lon="1.7153">
+  <name>cabane de courtal gelat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.609" lon="0.4311">
+  <name>cabane pardines</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6525" lon="1.3845">
+  <name>cabane de l estany de sotlo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0498" lon="-1.2113">
+  <name>cabane d orgambide</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.710578" lon="0.66703">
+  <name>cabane de la freche</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8607" lon="-0.2286">
+  <name>cabane du lac du plaa du prat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.029444" lon="-1.36">
+  <name>cabane de lindux</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.669993" lon="1.636931">
+  <name>refuge de quioules</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.815151" lon="1.743878">
+  <name>cabane d appy</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9142" lon="-0.2929">
+  <name>cabane de bouleste</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.476382" lon="2.412906">
+  <name>refuge de pla guillem</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.628333" lon="0.719167">
+  <name>refuge de mulleres ou molieres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.499" lon="1.953">
+  <name>abri de nartigues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.861389" lon="1.0839">
+  <name>refuge onf de l etang de bethmale</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.891265" lon="0.199544">
+  <name>cabane de greziolles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8981" lon="1.0833">
+  <name>cabane du col de l arrech de bethmale</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6203" lon="1.43305">
+  <name>cabane de soucarranne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.032262" lon="-1.227288">
+  <name>refuge de azpegi</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.910182" lon="0.213787">
+  <name>cabane de barasse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.896507" lon="0.199561">
+  <name>cabane du laquet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0112" lon="0.2336">
+  <name>cabane des mails</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.783864" lon="0.084641">
+  <name>cabane sausset</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.73225" lon="0.486183">
+  <name>cabane d arrouge</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.907688" lon="-0.71969">
+  <name>cabane de pedain</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.732261" lon="1.627833">
+  <name>cabane de courtal marti</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5664" lon="0.82593">
+  <name>cabane de llubriqeto</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.740858" lon="1.513345">
+  <name>orri pradel</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.980556" lon="-0.915556">
+  <name>cayolar de harpea</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.785924" lon="0.144699">
+  <name>cabane de moune</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.829379" lon="0.569532">
+  <name>cabane de courreau de saint paul oueil est</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.043984" lon="-0.482718">
+  <name>cabane lasbordes ou la herrere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.84142" lon="0.205232">
+  <name>cabane du bastan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.937222" lon="0.419167">
+  <name>cabane de camous montarrouye</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.767539" lon="0.135944">
+  <name>cabane lac de badet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.735" lon="0.5858">
+  <name>cabane de turmech</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.82556" lon="-0.086516">
+  <name>refuge russell</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.913262" lon="0.048907">
+  <name>cabane des toucouets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.65102" lon="1.76216">
+  <name>orri de prat redoun</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.89608" lon="-0.225">
+  <name>cabanes de oelhestre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.878202" lon="-0.640808">
+  <name>cabane de pourcibo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.611389" lon="0.62222">
+  <name>refuge de coronas pescadores vallivierna</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.81812" lon="1.438339">
+  <name>orri des trois seigneurs ou de etang de arbu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.936877" lon="0.163119">
+  <name>cabane d arizes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.991944" lon="0.316667">
+  <name>cabane du col de l oueil lusent</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9163" lon="1.6085">
+  <name>refuge de bartat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.85737" lon="0.5425">
+  <name>cabane de scarauettes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.816072" lon="0.934389">
+  <name>cabane d aoua</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.753611" lon="1.489167">
+  <name>orri de goulier</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.005" lon="0.642222">
+  <name>refuge st martin</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.704202" lon="-0.084711">
+  <name>cabane electricas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7889" lon="0.9266">
+  <name>cabane du port urets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4502" lon="2.9456">
+  <name>barraca forn de calc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.718768" lon="1.166993">
+  <name>cabane des clots de dessus leziou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.730733" lon="0.499757">
+  <name>refuge d espingo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.950164" lon="-0.665602">
+  <name>refuge laberouat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.738376" lon="0.394916">
+  <name>cabane jean forgues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.649722" lon="1.855">
+  <name>cabane de griman</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.83917" lon="0.82755">
+  <name>cabane de aueran</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0461" lon="-0.0882">
+  <name>cabane de ayzi</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.674863" lon="1.870062">
+  <name>cabane d agnelle morto</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.706931" lon="0.444693">
+  <name>cabane pouchergues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.720302" lon="1.759465">
+  <name>cabane de mouscadou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.652847" lon="0.342324">
+  <name>refuge bordes de licierte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.86944" lon="0.633056">
+  <name>cabane de plagnette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.783" lon="1.4248">
+  <name>cabane de carlaute</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.715234" lon="0.427398">
+  <name>abri de la neste de clarabide</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.72101" lon="0.442133">
+  <name>abri de caillauas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.877981" lon="-0.541116">
+  <name>cabane de bendous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.61611" lon="0.990277">
+  <name>refuge mataro</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.723786" lon="0.422151">
+  <name>cabane de la soula</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.710278" lon="1.746712">
+  <name>orri de bretounels</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.745" lon="0.2403">
+  <name>granges du moudang</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.765123" lon="-0.463625">
+  <name>mallata de anayet ou refugio de arroyetas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.596944" lon="0.984166">
+  <name>amitges</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.536458" lon="2.433106">
+  <name>refuge bonne aigue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8225" lon="0.916111">
+  <name>cabane de la plagne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.78661" lon="-0.5287">
+  <name>valle d aragon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.83826" lon="0.643837">
+  <name>cabane du plan de bosc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.726744" lon="1.734166">
+  <name>cabane privee de sauzet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.865931" lon="-0.450679">
+  <name>cabane de bious artigues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.850239" lon="-0.479178">
+  <name>cabane de roumassot</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.694896" lon="-0.106688">
+  <name>refugio de bujaruelo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.73623" lon="1.242404">
+  <name>cabane de crusous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.641389" lon="0.626666">
+  <name>abris du lac de creguena ou gregonio</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.868333" lon="0.6425">
+  <name>cabane du courreau de baren</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0075" lon="0.306667">
+  <name>cabane du col de couradabat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.826667" lon="0.518333">
+  <name>cabane de coume herrere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.985556" lon="0.31583">
+  <name>cabane du col de castillon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.985" lon="0.2925">
+  <name>courtaou de tire moureou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.888333" lon="1.459444">
+  <name>cabane estibat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.65" lon="0.59694">
+  <name>abri de pleta de creguena</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5908" lon="0.681666">
+  <name>cabane de botornas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.714811" lon="0.548685">
+  <name>refuge du maupas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.730086" lon="0.099345">
+  <name>cabane de la vierge</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.871312" lon="0.46243">
+  <name>cabane artigue longue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.923335" lon="1.495003">
+  <name>cabane du col mazel</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.76538" lon="1.413675">
+  <name>refuge de bassies</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.57419" lon="0.0172">
+  <name>albergue anisclo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.678854" lon="0.650082">
+  <name>cabane de la besurta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.834444" lon="0.873333">
+  <name>refuge de l etang d araing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.408631" lon="2.078051">
+  <name>cabane de matte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.86623" lon="-0.173738">
+  <name>refuge de ilheou raymond ritter</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.739586" lon="-0.022548">
+  <name>grange de holle</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.944165" lon="-0.289823">
+  <name>cabane de larue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.755278" lon="-0.479722">
+  <name>cabane vuelta d iserias</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.833872" lon="-0.579772">
+  <name>cabane de lapachouaou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.703504" lon="0.437712">
+  <name>cabane de prat cazeneuve ou aygues tortes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.715208" lon="1.716037">
+  <name>cabane beille den bas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.756407" lon="0.112044">
+  <name>cabane aguilous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.777872" lon="1.438012">
+  <name>cabane col de la crouzette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.627052" lon="0.7637">
+  <name>boca sur hospital de viella</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.741556" lon="-0.03805">
+  <name>cabane de tousaus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.74021" lon="1.684089">
+  <name>cabane mounegou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.69104" lon="-0.039997">
+  <name>abri gaurier</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.66975" lon="1.50543">
+  <name>cabane de petsiguer</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7622" lon="0.0776">
+  <name>cabane de camplong</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.735677" lon="0.113206">
+  <name>cabane des aires</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.813475" lon="0.924813">
+  <name>refuge edf du past</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.53495" lon="2.44016">
+  <name>orri de la casteille</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.852821" lon="1.075495">
+  <name>cabane du col d eliet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.029592" lon="-1.077433">
+  <name>chalet forestier de la soule</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9147" lon="-0.3968">
+  <name>cabane de cezy dite cabane des speleologues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.776389" lon="1.434444">
+  <name>cabane forestiere du col de crouzette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.51561" lon="2.41545">
+  <name>orri de moura</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.842778" lon="1.424167">
+  <name>cabane de goutets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.918611" lon="1.389667">
+  <name>cabane du col de peguere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.838333" lon="1.699167">
+  <name>refuge pla de tabe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8122" lon="0.6403">
+  <name>granges de sarrasans</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.840714" lon="-0.615565">
+  <name>refuge d arlet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.718512" lon="0.007325">
+  <name>cabane plateau de pailla pailha</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.71871" lon="1.1669">
+  <name>cabane des clots de dessus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.683981" lon="0.612144">
+  <name>hospital de benasque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.625094" lon="1.387893">
+  <name>refuge vall ferrera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.680669" lon="0.643408">
+  <name>abri de la besurta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.431111" lon="1.668333">
+  <name>cap de rec</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.319444" lon="1.893333">
+  <name>niu de l aliga</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.339722" lon="1.957222">
+  <name>refuge uec de la molina</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.642814" lon="0.007231">
+  <name>refugio de soaso</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9449" lon="-0.4162">
+  <name>cabane de lacarret</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9441" lon="-0.3939">
+  <name>cabane de la quebotte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9626" lon="-0.3996">
+  <name>cabane laga de baigt</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.762096" lon="0.443898">
+  <name>cabane ourtiga</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.705416" lon="1.636807">
+  <name>cabane pourcel</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.696112" lon="1.406195">
+  <name>cabane de l etang sourd</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.774805" lon="1.328728">
+  <name>cabane de bazets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.56681" lon="0.82627">
+  <name>cabane de wily</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6967" lon="1.9583">
+  <name>coume grande</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.692046" lon="1.717502">
+  <name>cabane de poussiergues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.498292" lon="2.409659">
+  <name>cabane pastoral des mariailles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.84844" lon="-0.491213">
+  <name>refuge d ayous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.719936" lon="0.012339">
+  <name>refuge des espuguettes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.712316" lon="1.682881">
+  <name>cabane artaran</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.835556" lon="0.478056">
+  <name>cabane de conques</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.610833" lon="0.6425">
+  <name>abri de llosas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8946" lon="0.2702">
+  <name>cabane lac arou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.75768" lon="-0.50574">
+  <name>refugio de picaube</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.906457" lon="0.832836">
+  <name>cabane de piejau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.63" lon="0.639166">
+  <name>abris des lacs coronas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.760942" lon="0.734543">
+  <name>uishera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.66069" lon="0.37723">
+  <name>refuge de biados</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.670833" lon="0.55555">
+  <name>cabane de literola</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.75768" lon="-0.50574">
+  <name>refugio de picaube</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.79754" lon="1.07243">
+  <name>refuge des estagnous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.913723" lon="1.466138">
+  <name>cabane de la trincade</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.053306" lon="-0.741788">
+  <name>cabane d auriste</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0587" lon="-0.2002">
+  <name>cabane de marti peyras</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.916411" lon="1.523092">
+  <name>cabane de l homme mort</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.420807" lon="2.749103">
+  <name>refuge salines</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.75019" lon="-0.50172">
+  <name>caseta de la cueva</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.726638" lon="1.626379">
+  <name>cabane balledreyt</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7029" lon="1.4059">
+  <name>orri de pla de nouzere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.855278" lon="1.114722">
+  <name>cabane de tariolle</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9349" lon="0.7102">
+  <name>refuge de plansous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.658009" lon="1.630809">
+  <name>cabane de bela</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.742198" lon="1.272574">
+  <name>cabane de la lacarde</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9568" lon="-0.3593">
+  <name>cabane de bouy</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6335" lon="1.60189">
+  <name>cabane du sal</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.77951" lon="-0.12426">
+  <name>refuge de bayssellance</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.516" lon="1.956">
+  <name>cabane de sant marti d envalls</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6013" lon="1.4695">
+  <name>abri de montmatell</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.678" lon="2.183">
+  <name>refuge pastoral du madres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.745527" lon="-0.092094">
+  <name>cabane de lourdes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.418334" lon="2.104338">
+  <name>cabane culasse villa simon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9116" lon="-0.0079">
+  <name>cabane de nat cot de yeou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.931" lon="-0.396">
+  <name>cabane de lou boucau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8588" lon="-0.2229">
+  <name>cabane de masseys</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7776" lon="0.3119">
+  <name>cabane de hitte longue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0256" lon="-0.64261">
+  <name>cabanes de sutche</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.420278" lon="2.177222">
+  <name>abri coll de nou fonts</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.945331" lon="0.053506">
+  <name>cabane privee d ourrec</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.721303" lon="0.654965">
+  <name>hospice de france</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.881364" lon="-0.198836">
+  <name>cabane barbat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.949722" lon="1.505278">
+  <name>cabane de coumauzil</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.934" lon="-0.391">
+  <name>cabane de pouey</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.011145" lon="0.424265">
+  <name>cabane du pas de teil</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7593" lon="0.35">
+  <name>cabane de bassia sailla</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.881045" lon="0.603651">
+  <name>cabane de esquitade</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.429768" lon="2.168827">
+  <name>orri de l estanyol</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.715405" lon="-0.212234">
+  <name>cabane de yenefrito</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.865868" lon="-0.36684">
+  <name>cabane de buzy lurien</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6689" lon="1.7744">
+  <name>cabane de piedarlau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.655506" lon="2.143535">
+  <name>refuge de becet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7559" lon="0.3648">
+  <name>cabane de bassiouente</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5375" lon="0.253611">
+  <name>cabane de santa isabel</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.45" lon="3.0538">
+  <name>refuge coll de banyuls</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.75409" lon="1.38019">
+  <name>cabane de l etang garbet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9042" lon="-0.0648">
+  <name>cabane de conques viscos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.006" lon="-0.0168">
+  <name>cabane de hautacam</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8623" lon="0.9299">
+  <name>cabane de monteille</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.873558" lon="-0.380745">
+  <name>cabane inferieure du lurien</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.75071" lon="-0.50913">
+  <name>casita blanca</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.697833" lon="0.040298">
+  <name>refuge de tuquerouye</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.476361" lon="1.565062">
+  <name>refuge claror</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7645" lon="1.3424">
+  <name>cabane de guzettou guzet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6942" lon="1.4629">
+  <name>cabane de tignalbu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6662" lon="2.0306">
+  <name>cabane de boutadiol</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9114" lon="-0.007">
+  <name>cabane de hount debat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.863056" lon="1.145833">
+  <name>cabane de la coumiere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9432" lon="0.022">
+  <name>cabane de la petite estibere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.633" lon="1.6018">
+  <name>cabane sous col cebollera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.644" lon="1.9752">
+  <name>cabane de la jasse des espagnols</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.881351" lon="0.597504">
+  <name>cabane de peradoune</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5406" lon="2.00483">
+  <name>abri de la calme nord</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9051" lon="0.0287">
+  <name>cabane de arbeouse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8781" lon="-0.1805">
+  <name>cabanes de arras</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8771" lon="1.353">
+  <name>cabane de claustre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.565914" lon="1.640739">
+  <name>refugi riba escorxada</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.705914" lon="1.189013">
+  <name>mont roig enric pujol</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8003" lon="0.7664">
+  <name>cabane d estanhs ou lac de laujo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8744" lon="1.1033">
+  <name>cabane du pas de tartet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8377" lon="1.0417">
+  <name>cabane de lazies</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7629" lon="0.2955">
+  <name>cabane de aret</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9103" lon="0.0104">
+  <name>cabanes de coumes de port</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.468601" lon="2.259712">
+  <name>cabane col del pal</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6597" lon="0.3199">
+  <name>cabane de formigons</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6348" lon="0.2919">
+  <name>cabane de pardinas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.05909" lon="-0.53836">
+  <name>cabane de serrisse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.594007" lon="1.460592">
+  <name>cabane estany</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7519" lon="1.3241">
+  <name>cabane du col cerda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.695881" lon="0.36124">
+  <name>cabane del plana del puerto de pez</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.478412" lon="1.550231">
+  <name>refugi de prat primer</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.482558" lon="1.642252">
+  <name>cabane setut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.809444" lon="-0.62">
+  <name>cabane de anso</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.65" lon="1.4275">
+  <name>orrys de lagardelle</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8822" lon="1.117">
+  <name>cabane de quillet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.966" lon="0.0019">
+  <name>cabane de layous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6836" lon="0.1452">
+  <name>montarruego barbietos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.64214" lon="0.85174">
+  <name>cabane pontet de rius</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.703206" lon="1.632736">
+  <name>cabane des ludines</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.87832" lon="-0.507493">
+  <name>cabane de la baigt de saint cours</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.64" lon="0.27812">
+  <name>cabane de barleto</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8258" lon="0.9553">
+  <name>abri sous le col arech</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9328" lon="-0.418">
+  <name>cabane de cambeilh</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.52184" lon="2.326402">
+  <name>maison forestiere de fountguere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6175" lon="1.466944">
+  <name>cabane du rat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.728374" lon="1.578543">
+  <name>cabane de la jasse de peyriguels</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8032" lon="1.1123">
+  <name>cabane de arcouzan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.738" lon="1.3162">
+  <name>cabane de lastou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9232" lon="0.0415">
+  <name>cabane eres lagues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.013333" lon="-0.770555">
+  <name>cabane de benou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.51945" lon="1.001276">
+  <name>refuge de colomina</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6667" lon="1.6536">
+  <name>abri de la tosse de riete</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.884167" lon="-0.553888">
+  <name>cabane de rouglan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.445677" lon="2.357183">
+  <name>cabane da silva ou dels clots</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.011475" lon="-0.467502">
+  <name>cabane ibech</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.05554" lon="-0.290103">
+  <name>cabane louscuts</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.874889" lon="-0.335406">
+  <name>cabane d artigue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.039167" lon="-1.170833">
+  <name>cabane d errozate</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.873617" lon="0.481228">
+  <name>refuge du mont ne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8412" lon="-0.526348">
+  <name>cabane gouetsoule</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.980861" lon="-0.915551">
+  <name>abri gnagui</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.86745" lon="0.971093">
+  <name>cabane de l arraing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7278" lon="1.273">
+  <name>abri des laquets de alet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8101" lon="1.1623">
+  <name>cabane forestiere de fonta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6422" lon="1.8958">
+  <name>abri de etang tort</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7385" lon="1.5333">
+  <name>cabane garbie de bresoul</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.894358" lon="-0.34882">
+  <name>cabane de l orri soussoueou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7382" lon="1.5761">
+  <name>cabane de pinardel crete</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8751" lon="-0.6341">
+  <name>cabanes de souperret</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9595" lon="-0.6509">
+  <name>cuyalar de boue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8643" lon="-0.6509">
+  <name>cabane de cuarde</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0191" lon="-0.65357">
+  <name>cabane de ligarce</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9481" lon="-0.6973">
+  <name>cuyalar de lagne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.768889" lon="-0.054722">
+  <name>cabane d aspe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6786" lon="2.0337">
+  <name>cabane de counc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.769167" lon="0.531389">
+  <name>cabane de bargueres du cecire</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.01753" lon="-0.64554">
+  <name>cabane du coum</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.048574" lon="-0.198751">
+  <name>cabane yerse espadre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8658" lon="1.134">
+  <name>cabane de l estagnous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8864" lon="-0.5454">
+  <name>cabane de itchaxe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9524" lon="-0.6911">
+  <name>cabane de lacure</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.781158" lon="1.415436">
+  <name>toue de carol</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9539" lon="-0.4095">
+  <name>cabane de gourziotte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4202" lon="1.7507">
+  <name>barraca dels escaldes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.860984" lon="-0.623656">
+  <name>cabane de ibosque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.848014" lon="-0.621817">
+  <name>cabane de lapassa sous refuge arlet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.666156" lon="0.103344">
+  <name>refuge de la pineta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8859" lon="1.1216">
+  <name>cabane de serre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.410688" lon="2.33979">
+  <name>refugi costabona</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.85941" lon="1.676">
+  <name>cabane des carmilles tartie ou aynat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.58144" lon="1.82943">
+  <name>refuge de aramasses ou cabane a giral</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.848014" lon="-0.621817">
+  <name>cabane de lapassa sous refuge arlet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.63467" lon="0.85466">
+  <name>refuge de la restanca</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.87605" lon="-0.6123">
+  <name>cabane de saoutelle</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8024" lon="-0.5487">
+  <name>cabane de pacheu peyrenere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6986" lon="1.7768">
+  <name>cabane roc de sorgeat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9275" lon="-0.233611">
+  <name>cabane de mauvesi</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8739" lon="1.7037">
+  <name>cabane de torre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8163" lon="-0.5706">
+  <name>cabane de thezy</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.02338" lon="-0.51763">
+  <name>cabane de besur</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.81169" lon="-0.56173">
+  <name>cabane d anglus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.823611" lon="-0.585833">
+  <name>cabane de atsout</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.97484" lon="-0.70777">
+  <name>cabane de camplong</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.89263" lon="-0.6349">
+  <name>cabane d aumet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.385429" lon="2.219052">
+  <name>refuge coma de vaca manelic</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.883081" lon="-0.667217">
+  <name>cabane de bonaris</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8028" lon="-0.5592">
+  <name>cabane d escouret</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.93954" lon="-0.69816">
+  <name>cayolar de anaye</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4767" lon="3.0402">
+  <name>refuge tomy</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8043" lon="-0.5463">
+  <name>centre pastoral de peyrenere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.89128" lon="-0.63451">
+  <name>abri aumet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.902" lon="-0.5274">
+  <name>cabanes de licoue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.832907" lon="0.083829">
+  <name>refuge packe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.97713" lon="-0.56392">
+  <name>cabane de bergout</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8951" lon="-0.5116">
+  <name>cabane de salistre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.02775" lon="-0.66882">
+  <name>cabane de coureyette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.68259" lon="2.253784">
+  <name>cabane col de jau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.85913" lon="-0.70484">
+  <name>refugio de saburcal</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8995" lon="-0.5079">
+  <name>cabane de cap de guerren</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7361" lon="1.2853">
+  <name>cabane etang alet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.71648" lon="0.662475">
+  <name>refuge cabane pesson</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.451667" lon="1.365">
+  <name>refuge de ras de conques</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.88773" lon="-0.71969">
+  <name>serre de ansabe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.85232" lon="-0.51883">
+  <name>cabanes de larry</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.825381" lon="-0.592469">
+  <name>cabane caillabere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.444224" lon="2.119872">
+  <name>refuge de l orry de baix</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.603056" lon="2.362222">
+  <name>refuge belloc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9443" lon="-0.5665">
+  <name>cabane de lheze</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9524" lon="-0.596">
+  <name>cabane de sabas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.656111" lon="2.068611">
+  <name>cabane rieutort</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7459" lon="1.2733">
+  <name>cabane inferieure de lacarde</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.841297" lon="0.019484">
+  <name>cabane de bachebirou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.819675" lon="0.189471">
+  <name>cabane d artigusse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.762736" lon="2.352297">
+  <name>refuge gai sourire</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.671587" lon="2.251609">
+  <name>refuge callau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.821017" lon="1.075151">
+  <name>refuge des espugues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.546667" lon="0.759117">
+  <name>cabane d artigalonga</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9185" lon="-0.5281">
+  <name>cabane de yese</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9362" lon="-0.5493">
+  <name>cabane de narbeze</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9259" lon="-0.5652">
+  <name>cabane lucharry</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.509" lon="2.2557">
+  <name>refuge forestier de argoudeil</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.800347" lon="1.059256">
+  <name>cabane de caoussis</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.828766" lon="0.531139">
+  <name>refuge de courreau de benque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.705211" lon="1.869482">
+  <name>cabane edf</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0142" lon="-0.5743">
+  <name>cabane d ourdinse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.93675" lon="0.031242">
+  <name>cabane de la grande estibere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.451667" lon="2.361389">
+  <name>cabane coulibet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.49946" lon="2.409296">
+  <name>maison forestiere onf de mariailles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.427298" lon="2.35128">
+  <name>abri coma del tech</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.458611" lon="2.425">
+  <name>cabane cums</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0238" lon="-0.5318">
+  <name>cabane du ha</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0152" lon="-0.5852">
+  <name>cabane de casteruch</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.06304" lon="-0.55568">
+  <name>cabane du col d andurte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.466389" lon="2.479722">
+  <name>cabane de la jasse des froncasses</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.830278" lon="1.120278">
+  <name>cabane de lameza</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.877406" lon="0.112639">
+  <name>cabane dets coubous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.85018" lon="-0.608491">
+  <name>cabane d hortassy</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.815237" lon="1.044238">
+  <name>abri de nerech</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.991302" lon="-0.220566">
+  <name>cabane col de bazes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.818196" lon="-0.023882">
+  <name>cabane de litouese</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.826915" lon="1.036792">
+  <name>abri du pla de la lau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.857829" lon="-0.261934">
+  <name>toue labassa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.833695" lon="-0.256575">
+  <name>toue casterie</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4775" lon="2.198889">
+  <name>cabane jaca dets clots</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.701711" lon="-0.495875">
+  <name>cabane d el trapal</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.294103" lon="1.804956">
+  <name>sant jordi font del faig</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.656376" lon="2.153266">
+  <name>abri des anglards</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.933217" lon="0.07499">
+  <name>toue lac bleu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.89093" lon="0.08439">
+  <name>cabanes de camou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.783712" lon="1.107488">
+  <name>cabane d aula</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.84058" lon="1.48528">
+  <name>cabane ressec</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.744675" lon="0.490418">
+  <name>auberge du lac d oo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.72426" lon="1.420726">
+  <name>cabane belcaire</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6775" lon="2.065278">
+  <name>orrie de la bentaillole</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.96458" lon="0.12611">
+  <name>cabane d aouet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.955833" lon="0.440833">
+  <name>cabane col de bas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.96195" lon="0.048505">
+  <name>cabane barraque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.517591" lon="2.524321">
+  <name>cabane pastorale de l estanyol</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.813379" lon="1.058593">
+  <name>cabane de tremul</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.964266" lon="0.156154">
+  <name>cabane lac de binaros</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.852437" lon="-0.148711">
+  <name>le chalet du clot</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0374" lon="-1.2891">
+  <name>cabane izandorre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.853291" lon="-0.098426">
+  <name>refuge de la fruitiere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.934722" lon="0.058056">
+  <name>cabane mourede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.944167" lon="0.114444">
+  <name>cabane lac de peyrelade</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.846882" lon="-0.096023">
+  <name>cabane fruitiere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.757162" lon="0.166088">
+  <name>cabane gela</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.823807" lon="0.505161">
+  <name>cabane espiau inf</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.87648" lon="0.697417">
+  <name>cabane artiguessans</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.844884" lon="1.049495">
+  <name>cabane courille</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.75574" lon="1.209796">
+  <name>cabane douillous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.730946" lon="1.751319">
+  <name>cabane coulmels</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.940556" lon="0.453056">
+  <name>cabane cap nestes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.465916" lon="2.173716">
+  <name>cabane riberole</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.837484" lon="-0.296782">
+  <name>abri michaud</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7291" lon="0.3373">
+  <name>cabane de niscoude</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.66555" lon="0.666388">
+  <name>cabane dels aiguallut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.881167" lon="0.135893">
+  <name>toue de la pegue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699722" lon="1.948333">
+  <name>cabane de llau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.87519" lon="0.57244">
+  <name>cabane de hourdouch</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.618299" lon="0.302701">
+  <name>cabane de bargasera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.86811" lon="-0.4728">
+  <name>cabane de aas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.564338" lon="1.979001">
+  <name>cabane de l estany negre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8309" lon="-0.4712">
+  <name>cabane de la glere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.805617" lon="1.397968">
+  <name>cabane lers</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.702607" lon="1.944687">
+  <name>cabane de esprays d en bas llau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.621071" lon="0.963293">
+  <name>refuge de saboredo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.719683" lon="0.000773">
+  <name>chalet refuge de pailha</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.834729" lon="-0.407543">
+  <name>cabane de pucheoux</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.853817" lon="-0.406577">
+  <name>cabane de saoubiste</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7313" lon="0.325">
+  <name>cabane cortail de peguere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.86426" lon="0.55419">
+  <name>cabane de la serre traversiere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.868888" lon="-0.266504">
+  <name>toue de doumblas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.839271" lon="1.463271">
+  <name>cabane de embanels</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.700179" lon="1.948614">
+  <name>cabane de esprays d en haut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.846418" lon="0.805646">
+  <name>cabane sestagnous ou estagne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0687" lon="-0.6413">
+  <name>cabane de napatch</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.795578" lon="1.737127">
+  <name>abri d appy</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0657" lon="-0.6423">
+  <name>cabane de biscacou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.885666" lon="-0.659394">
+  <name>cabane du penot</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.860818" lon="0.09038">
+  <name>refuge de la glere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.004511" lon="-1.020522">
+  <name>cabane de zazpigain chasseurs</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7219" lon="0.3245">
+  <name>cabane cortal de batoua</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7225" lon="0.43281">
+  <name>couloir de caillauas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9075" lon="-0.6597">
+  <name>cabane de tinicoude</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9051" lon="-0.659">
+  <name>cabane de couyede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.720029" lon="-0.0174">
+  <name>cabane pouey aspe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.841944" lon="0.791944">
+  <name>cabane du courraou gran</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.842778" lon="0.783889">
+  <name>cabane de salontere neuve</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.836832" lon="-0.476446">
+  <name>cabane de la hosse vallee d aspe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8333" lon="-0.4707">
+  <name>cabane de lous quebottes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.679722" lon="0.706111">
+  <name>refuge artiga de lin</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.840504" lon="-0.469268">
+  <name>cap de pount</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.776667" lon="0.83">
+  <name>cabane des artiguetes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.572321" lon="0.948638">
+  <name>refuge de l estany llong</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.641444" lon="1.710379">
+  <name>cabane de garsan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.590556" lon="2.053889">
+  <name>refuge de vallserra</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.768056" lon="0.91">
+  <name>cabane de calhaus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.76693" lon="0.33046">
+  <name>cabane de consaterre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.735343" lon="1.151038">
+  <name>cabane de lauzeron</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.76644" lon="1.412749">
+  <name>orri du pla de la font</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.789149" lon="-0.222473">
+  <name>cabane de bachimana</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.807529" lon="-0.585246">
+  <name>cabane edf d estaens</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.758162" lon="1.135395">
+  <name>cabane de berbegue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.635285" lon="2.173641">
+  <name>cabane de pla de gril coma de pontells</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.858731" lon="1.77194">
+  <name>mon fre de l orri</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.577152" lon="1.964188">
+  <name>abri du lac de trebens</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.719446" lon="1.670287">
+  <name>cabane edf de clarans</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.860071" lon="0.066036">
+  <name>cabane de sardiche</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.64593" lon="1.78118">
+  <name>cabane jasse des llerbes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.685167" lon="1.636382">
+  <name>cabane rieufort de gascous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.701803" lon="2.030387">
+  <name>refuge forestier du fournet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.809755" lon="0.94595">
+  <name>cabane d artignan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.698909" lon="1.716211">
+  <name>orri de beille</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.679246" lon="1.732732">
+  <name>cabane des genibres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.555151" lon="2.059824">
+  <name>abri du pla del buc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.656667" lon="1.448611">
+  <name>orri du carla</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.581368" lon="1.446805">
+  <name>cabane de la coma pedrosa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.603889" lon="1.862778">
+  <name>cabane des besines</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.809722" lon="1.757222">
+  <name>cabane de la jasse de sedar</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.703758" lon="1.64016">
+  <name>orri des ludines</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.712613" lon="1.388088">
+  <name>cabane de mespelat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.860019" lon="0.262256">
+  <name>cabane espigous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7527" lon="0.6492">
+  <name>cabane col de bareges</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.852316" lon="1.063235">
+  <name>cabane campuls</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.856956" lon="1.049335">
+  <name>refuge salvador</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.713611" lon="1.435">
+  <name>cabane montcalm</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9053" lon="0.2617">
+  <name>cabane de l aoubere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.71744" lon="1.569186">
+  <name>cabane du col de bayle</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.322778" lon="1.663611">
+  <name>refuge d estana</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.804188" lon="1.419558">
+  <name>refuge du port de lers</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.959784" lon="-0.694955">
+  <name>cabane d ardinet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.934737" lon="0.436463">
+  <name>cabane d lhet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.858476" lon="0.97405">
+  <name>cabane artigou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.843767" lon="0.961046">
+  <name>cabane du col des cassaings</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.852649" lon="0.959753">
+  <name>cabane roque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.739444" lon="1.130833">
+  <name>refuge du port de salau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.07753" lon="-0.36446">
+  <name>cabane du col deus coigts</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.077225" lon="-0.19686">
+  <name>cabane d isarce</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.723611" lon="1.999167">
+  <name>refuge de l orri</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.945833" lon="-0.141111">
+  <name>cabane de banciole</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.863635" lon="-0.058215">
+  <name>cabane du lac de lagues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.733391" lon="1.992758">
+  <name>cabane col de pailheres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7633" lon="1.5661">
+  <name>salle des fetes de siguer</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.91252" lon="-0.75692">
+  <name>cabane de hoya la solana</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.561204" lon="1.900935">
+  <name>cabane de coma joan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.935155" lon="-0.00515">
+  <name>cabane des sarris</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0647" lon="-0.3315">
+  <name>bergerie de peyre nere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.064067" lon="-0.28984">
+  <name>bergerie de nabails</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.05" lon="-0.297">
+  <name>cabane de la portere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.050278" lon="-0.133333">
+  <name>abri du prat d ourey</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.882751" lon="0.8745">
+  <name>cabane de barguerasses</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7311" lon="1.7078">
+  <name>cabane llegunes gelat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.829895" lon="0.996482">
+  <name>cabane du besset</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.811667" lon="1.009722">
+  <name>cabane esclots</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.936585" lon="-0.016222">
+  <name>cabane d artigares</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.01507" lon="0.21853">
+  <name>cabane du lhiris ancienne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.637076" lon="1.664147">
+  <name>cabane de mirabail</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.663488" lon="2.213831">
+  <name>cabane de la balmette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.658" lon="1.545">
+  <name>cabane de llassies</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.709149" lon="1.956939">
+  <name>orri de la jasse de gaberseil</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.778611" lon="1.648333">
+  <name>cabane de oratori col dolent</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.784444" lon="1.624444">
+  <name>cabane des estanils</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.704722" lon="1.531944">
+  <name>baraquements de gnioure</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.783056" lon="1.384167">
+  <name>cabane de coumebieres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7822" lon="1.387778">
+  <name>cabane ane labeilla</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.709167" lon="1.956944">
+  <name>orri jasse de gaberseille</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.839572" lon="0.198158">
+  <name>cabane de la lude</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.641169" lon="1.919899">
+  <name>cabane eychouze</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.657722" lon="1.939369">
+  <name>cabane de parau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.586653" lon="1.703396">
+  <name>abri de pierres estanys siscarro baix</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.491389" lon="1.892222">
+  <name>abri pastoral el sola del cavaller</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.621126" lon="1.579773">
+  <name>cabane pleta serrera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.553673" lon="1.67888">
+  <name>pla de les pedres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.945" lon="-0.48953">
+  <name>cabane de cujalate</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.953616" lon="0.026142">
+  <name>cabane du picourlet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699587" lon="1.740556">
+  <name>cabane boutas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.464397" lon="1.786122">
+  <name>refugi de malniu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.465" lon="1.816389">
+  <name>refuge de la feixa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.470278" lon="1.843056">
+  <name>refuge forestiers les cases</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.448056" lon="1.835556">
+  <name>refuge forestier de la cabanella</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.448056" lon="1.834722">
+  <name>abri de pierre de la cabanella</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.455286" lon="2.147913">
+  <name>orri dels pastors</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.561553" lon="1.844007">
+  <name>cabane cortal rousso</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.762238" lon="1.512582">
+  <name>abri forestier de nagot</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.857592" lon="0.888568">
+  <name>refuge de la chapelle de l isard</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.725988" lon="1.733265">
+  <name>cabane de sauzet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.904444" lon="0.593333">
+  <name>cabane ouderou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.700226" lon="1.738994">
+  <name>orri de boutas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.741098" lon="-0.588029">
+  <name>cabane de saleras</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.843611" lon="0.503611">
+  <name>cabane de cires</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9806" lon="0.3375">
+  <name>cabane d artigueluz</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.51111" lon="1.94972">
+  <name>cabane de la pleta de les escaldes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.642415" lon="0.059165">
+  <name>mallata la valle font blanca</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.538292" lon="2.459975">
+  <name>cabane cortalets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.778794" lon="1.228308">
+  <name>cabane d ardio</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.724832" lon="1.76679">
+  <name>cabane de tessoula</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.62" lon="0.058611">
+  <name>refuge pastoral de san vicenda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.776612" lon="1.130744">
+  <name>refuge forestier d arreau ou areou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.601389" lon="0.072777">
+  <name>refuge de plana canal</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.028056" lon="0.046944">
+  <name>cabane des courades de bazus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.677155" lon="0.273526">
+  <name>cabane de l embalse d ordizeto</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.862221" lon="1.688508">
+  <name>orri pic de la lauzate</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8983" lon="1.5744">
+  <name>cabane des gardes de traucadou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.68521" lon="2.07679">
+  <name>abri des campeilles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.682956" lon="1.658421">
+  <name>orri des pradettes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.731306" lon="1.776716">
+  <name>cabane bisort</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.781712" lon="1.132894">
+  <name>cabane pastorale d arreau areou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.812778" lon="1.718333">
+  <name>cabane du pas de crabe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.668244" lon="0.282308">
+  <name>refuge d ordizeto ou urdicetou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.668721" lon="0.290511">
+  <name>cabane du col d ordizeto</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.680891" lon="1.321033">
+  <name>cabane de la borda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.815" lon="1.707">
+  <name>refuge forestier de verdun</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.818" lon="1.395">
+  <name>cabane de lamarda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.739877" lon="1.21309">
+  <name>cabane saube</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.571998" lon="1.720605">
+  <name>cabane portella</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.822778" lon="1.7022">
+  <name>cabane du fourquet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.619444" lon="0.630833">
+  <name>abri del ibonet de coronas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.536669" lon="1.967549">
+  <name>refuge de veirat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.599251" lon="1.745689">
+  <name>cabane de sisca</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.669343" lon="1.728332">
+  <name>cabane de rieutort</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6228" lon="0.58982">
+  <name>cabane de quillon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.540719" lon="2.004212">
+  <name>abri telesiege de la calma nord</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.478187" lon="2.198438">
+  <name>cabane des collets jaca dets clots</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7209" lon="0.44323">
+  <name>refuge de caillauas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.672785" lon="2.097911">
+  <name>chalet pastoral du prat baillat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.72024" lon="2.03186">
+  <name>refuge pastoral du riou pla</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9586" lon="0.47722">
+  <name>cabane de la prade</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.728857" lon="2.019905">
+  <name>refuge pastoral de mijanes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.706667" lon="2.173889">
+  <name>cabane bousquet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5232" lon="2.4114">
+  <name>cabane cirerola</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.590136" lon="1.478949">
+  <name>refuge fonts</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.69242" lon="2.02869">
+  <name>orri de bousadus du haut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.67034" lon="2.11144">
+  <name>orri de joucarets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.640917" lon="1.463582">
+  <name>cabane de caraussans</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.818203" lon="1.126888">
+  <name>cabane de la soulas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.750957" lon="1.64369">
+  <name>cabane de tabaniere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.744722" lon="1.218889">
+  <name>cabane des maurets ou maourets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.818056" lon="0.806666">
+  <name>refuge forestier de honderia</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.794" lon="0.87139">
+  <name>refuge de liat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.041534" lon="-1.074724">
+  <name>refuge non garde aterbea</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8299" lon="0.965054">
+  <name>cabane lasplanous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.750278" lon="1.681944">
+  <name>cabane de pierrefitte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.476161" lon="2.181853">
+  <name>cabane d aixeques</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.756028" lon="1.629553">
+  <name>cabane du besset du bas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.792372" lon="0.630272">
+  <name>cabane du herran hosce</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.789722" lon="0.645278">
+  <name>cabane sarrouges ou de la fontaine de sarrouges</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.78683" lon="0.634826">
+  <name>cabane de coum courrau vieil</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.786" lon="0.642">
+  <name>cabane de millourtere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7828" lon="0.6327">
+  <name>cabane de hours</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9511" lon="1.6819">
+  <name>cabane forestiere du pech de foix</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4836" lon="1.6122">
+  <name>cabane estall serrer</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.895278" lon="0.948056">
+  <name>abri de la fontaine de moreres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.970833" lon="0.076389">
+  <name>cabane benaques</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.517022" lon="1.642043">
+  <name>refuge ensagents</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.495003" lon="1.656387">
+  <name>refuge illa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.809444" lon="1.383876">
+  <name>cabane bastard</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.827177" lon="1.398289">
+  <name>cabane rose</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.722212" lon="1.615897">
+  <name>cabane escalier</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.74501" lon="1.6152">
+  <name>cabane du col de sasc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.89611" lon="0.939722">
+  <name>cabane de couledoux</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.900833" lon="0.471389">
+  <name>cabane du pin</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.872222" lon="0.644167">
+  <name>cabane du planet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.961389" lon="0.856444">
+  <name>cabane de roque pi</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.312989" lon="0.619354">
+  <name>refuge du coll de vent</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.701922" lon="0.644993">
+  <name>abri chaudronniers ou de l homme</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.877219" lon="0.881847">
+  <name>cabane aron</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.846013" lon="1.111839">
+  <name>cabane de luzurs</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.841496" lon="0.56308">
+  <name>cabane cap de la coume</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.829647" lon="1.016259">
+  <name>cabane de l artigue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.739722" lon="1.594722">
+  <name>cabane forestiere de gesties</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9381" lon="-0.1283">
+  <name>cabane de la touette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.781354" lon="0.845089">
+  <name>cabane de serra sascorjada</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8914" lon="1.095">
+  <name>cabane de pelates</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8744" lon="1.1033">
+  <name>cabane du pas de tartet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.83579" lon="0.052121">
+  <name>cabane de maucapera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.839559" lon="1.105263">
+  <name>cabane de casabede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.84674" lon="0.050726">
+  <name>cabane peyrahitte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.825171" lon="1.006659">
+  <name>cabane col de part</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.665885" lon="1.747025">
+  <name>cabane de l etang d embizon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.508951" lon="1.783531">
+  <name>cabane campcardos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.800312" lon="0.649374">
+  <name>cabane estiouere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.868306" lon="1.491716">
+  <name>cabane jaude ou de coucougnac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.64669" lon="1.36222">
+  <name>refuge de baborte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.577955" lon="0.774096">
+  <name>cabane de fenerui</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.703" lon="1.6039">
+  <name>refuge des chasseurs de miglos unarde nord est</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.509565" lon="1.931632">
+  <name>cabane de la jaca del pas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.848611" lon="0.844166">
+  <name>cabane superieure d uls</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.639074" lon="2.202823">
+  <name>refuge de nohedes ou de la perdrix</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.860278" lon="1.519722">
+  <name>cabane du col de carlong</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.698056" lon="1.043333">
+  <name>cabane d airoto</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.623" lon="0.4733">
+  <name>cabane du cllot de chill</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.382022" lon="2.078918">
+  <name>refuge du pic de duraneu ou credells</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.377297" lon="1.97767">
+  <name>cabane de la jaca de palau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.224618" lon="2.031894">
+  <name>cabane de las fites</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8783" lon="0.8908">
+  <name>cabane d urduas ou du lac de louch</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.515702" lon="1.95621">
+  <name>cabane st marti de valls</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.54" lon="1.99594">
+  <name>orri de l angoustrine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.377112" lon="2.025663">
+  <name>cabane de les corones</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.885566" lon="0.887867">
+  <name>cabane du taus de la calabasse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.420336" lon="2.022815">
+  <name>refuge pastoral de sainte leocadie</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.778393" lon="0.757306">
+  <name>cabane de l estanh long de vilamos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9271" lon="0.6049">
+  <name>cabane hourmigue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.842339" lon="-0.399437">
+  <name>cabane d arregatiou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.756765" lon="-0.467434">
+  <name>refugio d iserias</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.664444" lon="0.780833">
+  <name>cabane de pontet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.818636" lon="0.465932">
+  <name>cabane du cap de cueu de la coume</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.325912" lon="1.840896">
+  <name>refuge del cortal d en vidal</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.72972" lon="-0.486944">
+  <name>refuge du district forestier de huesca</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.882568" lon="0.777626">
+  <name>cabane fontaine de saudech</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.889423" lon="0.784192">
+  <name>cabane du col d artigascou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.57902" lon="1.44939">
+  <name>refuge de la coma pedrosa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.727473" lon="0.498277">
+  <name>cabane du lac d espingo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.596636" lon="1.703297">
+  <name>refuge de siscaro</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.756389" lon="0.478888">
+  <name>cabane d esquierry 1908m</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.828375" lon="1.802711">
+  <name>cabane jasse pratmau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.940556" lon="0.7425">
+  <name>cabane d arguenos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.958889" lon="0.775">
+  <name>cabane de plaede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.976717" lon="-0.930003">
+  <name>cabane de pista pekoa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.826274" lon="0.679532">
+  <name>cabane de serralonga</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6811" lon="1.170823">
+  <name>refuge de la gola</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.842" lon="0.256">
+  <name>cabane du cap detestes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.665957" lon="1.876765">
+  <name>cabane de la jasse de cizarol</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.749784" lon="-0.072766">
+  <name>cabane de milhas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.712356" lon="0.615027">
+  <name>cabane du cirque de la glere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.621309" lon="1.606638">
+  <name>cabane de la collada de meners</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.825844" lon="1.10769">
+  <name>cabane subera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.3546" lon="2.16">
+  <name>font frede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.672602" lon="-0.382687">
+  <name>refuge de usabas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.808444" lon="1.725378">
+  <name>cabane de senconac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.01058" lon="-1.14354">
+  <name>refuge d egurguy</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.591381" lon="2.304957">
+  <name>refuge rocafumeda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.492985" lon="2.929554">
+  <name>refuge casot del guard</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.826997" lon="1.064342">
+  <name>cabane taus du valier</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.340556" lon="1.954722">
+  <name>refuge ues de la molina pere carne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.636813" lon="1.968337">
+  <name>cabane d en dela</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.48889" lon="2.577222">
+  <name>refuge des vigourats</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.485687" lon="2.413774">
+  <name>orri de la llipodere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.445688" lon="2.353999">
+  <name>orri dels clots</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.99621" lon="-1.10335">
+  <name>el cubo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.96738" lon="-1.00912">
+  <name>cal pelo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8" lon="1.02">
+  <name>cabane trinque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.485026" lon="1.639708">
+  <name>cabane riu dels orris</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.633395" lon="1.511392">
+  <name>cabane arcalis ou pleta castellar</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.724156" lon="1.687802">
+  <name>cabane isarges</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699398" lon="2.036974">
+  <name>cabane bousadus du bas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.934346" lon="0.760641">
+  <name>cabane de larreix</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.245281" lon="1.716205">
+  <name>lluis estasen pedraforca</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.850524" lon="0.906337">
+  <name>cabane escots</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8428" lon="0.2658">
+  <name>cabane de coussitirou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7951" lon="-0.6594">
+  <name>refuge de secus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.596983" lon="1.907333">
+  <name>cabane sola</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.65333" lon="1.963333">
+  <name>abri de gaudu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.499172" lon="1.680715">
+  <name>refuge montmalus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.419788" lon="2.257709">
+  <name>ulldeter</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.686552" lon="0.084221">
+  <name>cabane de la larri</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.971389" lon="0.146944">
+  <name>cabane de conques</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.684722" lon="0.108056">
+  <name>Cabane Gandero de la Estiva</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.912121" lon="0.301137">
+  <name>cabane de la hosse payolle</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.831289" lon="1.91205">
+  <name>refuge de lancise</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.906133" lon="0.239734">
+  <name>cabane plat de gats</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.661667" lon="0.326666">
+  <name>cabane de sallena ou aux epinards sauvages</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.428611" lon="2.337222">
+  <name>refuge de la porteille de rotja</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5198" lon="1.9249">
+  <name>cabane des triadors</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.995278" lon="0.236666">
+  <name>courtaou d ordincede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.996667" lon="0.244722">
+  <name>abri du chanquias</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.896944" lon="0.235555">
+  <name>cabane du lac de montarrouye</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.878199" lon="0.220374">
+  <name>abri du lac de l i</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7363" lon="0.0866">
+  <name>auberge du maillet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9036" lon="-0.7089">
+  <name>abris du plaa d escoueste</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.864" lon="1.4431">
+  <name>cabane du courtal d aroulac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.900556" lon="0.8326">
+  <name>cabane pale grande</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.673707" lon="1.669868">
+  <name>cabane des pradettes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.724341" lon="0.554483">
+  <name>refuge du prat long</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.840244" lon="0.868128">
+  <name>cabane vielle</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0005" lon="0.2385">
+  <name>cabane de banios</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.460819" lon="2.448232">
+  <name>cabane estables</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.841167" lon="0.908611">
+  <name>cabane ourdouas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.86007" lon="0.885881">
+  <name>cabane turmes troumas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8619" lon="0.8789">
+  <name>cabane de loze</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.871" lon="0.853">
+  <name>cabane de peyre nere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6839" lon="0.30106">
+  <name>cabane de la plagne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.840261" lon="0.143555">
+  <name>refuge du lac d aubert</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.662345" lon="1.608002">
+  <name>cabane de la sabine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.041935" lon="-0.484975">
+  <name>cabane de crambots</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.861796" lon="0.857811">
+  <name>cabane des pugues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.895007" lon="0.203389">
+  <name>cabane de caderolles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.406944" lon="1.24222">
+  <name>comes de rubio</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.923611" lon="0.842778">
+  <name>cabane de bazet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.681457" lon="0.025749">
+  <name>abri de l etang glace du mont perdu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.910192" lon="0.213702">
+  <name>cabane de barasse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.673617" lon="0.361314">
+  <name>refuge de tabernes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.96684" lon="-0.137119">
+  <name>cabane de la curadere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8399" lon="0.19599">
+  <name>cabane de l oule</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.724722" lon="-0.461944">
+  <name>refuge du barrage de ip</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.688746" lon="-0.474351">
+  <name>cabane del cubilar de la espata collarada</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.879306" lon="0.866952">
+  <name>cabane loubere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.646944" lon="1.550833">
+  <name>cabane banyell planells de rialp</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.857916" lon="1.708609">
+  <name>cabane de lauzate ou du mt fourcat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.857522" lon="1.707643">
+  <name>cabane de berger du mt fourcat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.622037" lon="0.108195">
+  <name>cabana foratarruego</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6297" lon="1.5373">
+  <name>besali</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.748694" lon="-0.15378">
+  <name>refuge de labassa cerbillonar</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.72178" lon="-0.137139">
+  <name>cabana de ordiso del vado</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.940206" lon="0.851756">
+  <name>cabane de hontau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.811324" lon="0.935419">
+  <name>cabane de la coumeda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.684232" lon="1.651688">
+  <name>orri de quioules</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6508" lon="1.6467">
+  <name>cabane de la rebenne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.622522" lon="1.564112">
+  <name>refuge borda de sorteny</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.975975" lon="0.147023">
+  <name>cabane courbet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.851389" lon="0.804444">
+  <name>cabane melloux</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.731034" lon="1.256939">
+  <name>cabane de bonrepos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.854" lon="1.794938">
+  <name>cabane de la taula</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5447" lon="1.9305">
+  <name>abri de coll roig</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8644" lon="1.728">
+  <name>cabane de prat moussu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.809" lon="0.652">
+  <name>cabane de cueou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.640518" lon="2.032231">
+  <name>cabane jaca de llosa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.662811" lon="0.902686">
+  <name>orri de las fouzes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.71058" lon="1.74714">
+  <name>cabane bretounels</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.804403" lon="0.931683">
+  <name>cabane de urets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.829433" lon="0.569736">
+  <name>cabane courrau d antenac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.697377" lon="-0.500024">
+  <name>refuge de la trapa del mirador</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.717183" lon="-0.525472">
+  <name>canfranc refugio</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.628728" lon="-0.112375">
+  <name>l atalaya</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.579771" lon="0.277149">
+  <name>albergue de sin</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.512172" lon="0.491902">
+  <name>albergue pajaro loco</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.231109" lon="1.566341">
+  <name>gite can cortina</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.722794" lon="0.66412">
+  <name>cabane de roumingau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4819" lon="1.6286">
+  <name>cabane del serrat de la barracota</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.4903" lon="1.6483">
+  <name>cabane estanya</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.68103" lon="1.17125">
+  <name>gola</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.567249" lon="0.370078">
+  <name>cabane del suel de baixada</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.995" lon="0.081667">
+  <name>cabane arrodets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.340556" lon="1.950278">
+  <name>refuge cec de la molina</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.287222" lon="1.885278">
+  <name>refuge de rebost</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.136667" lon="1.762778">
+  <name>rasos de peguera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.417659" lon="1.287222">
+  <name>xalet refugi la basseta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.916348" lon="-0.060399">
+  <name>cabane du boussu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.662222" lon="1.706944">
+  <name>chalet de la clau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.807035" lon="1.779871">
+  <name>cabane du pas du gai</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.74833" lon="1.2325">
+  <name>cabane de courtalis</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.831667" lon="1.052778">
+  <name>cabane d aouen</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.865585" lon="-0.284271">
+  <name>toue de larribet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.736389" lon="0.80833">
+  <name>cabane de plan de naut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.682614" lon="0.731997">
+  <name>cabane d auba</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.838756" lon="0.695278">
+  <name>cabane deth vaquer de saplan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.803942" lon="0.7416">
+  <name>cabane de branya</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.615278" lon="0.768">
+  <name>refuge de conangles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.435586" lon="2.39643">
+  <name>refuge dets forquets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.649637" lon="1.963329">
+  <name>cabane orri vieil</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.886944" lon="0.753611">
+  <name>cabane de l artigue col d esponne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.634" lon="1.3622">
+  <name>cabane de basello bacello</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.968333" lon="0.262778">
+  <name>courtaou de pla</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.923611" lon="0.213888">
+  <name>cabane de beziaou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.839598" lon="-0.03231">
+  <name>cabane edf de badet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.986389" lon="0.269444">
+  <name>artigole de bulan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.704444" lon="2.0025">
+  <name>cabane de bedeillere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8725" lon="-0.228056">
+  <name>toue de cetira</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.833611" lon="0.5">
+  <name>cabane d espiau sup</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.915556" lon="0.448889">
+  <name>cabane de jezeau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.850833" lon="0.665277">
+  <name>cabane de mouscade</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.853611" lon="0.674444">
+  <name>abri de l etang de dessus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.881111" lon="0.678611">
+  <name>cabane du tucoulet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.011944" lon="0.285">
+  <name>courtaou de artigualeou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7425" lon="0.0848">
+  <name>cabane de groutte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0141" lon="0.2218">
+  <name>cabane du lheris</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.807735" lon="-0.099804">
+  <name>refuge d estom</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.725" lon="1.691">
+  <name>angaka village nordique</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8773" lon="0.2319">
+  <name>cabane de lita</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.959" lon="0.4031">
+  <name>cabane laga de haut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.826536" lon="0.90393">
+  <name>cabane bentaillou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.829494" lon="0.576142">
+  <name>cabane cap de salieres villa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.903458" lon="0.836825">
+  <name>cabane de barestet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.019895" lon="0.195305">
+  <name>courtaou du teilhet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.433648" lon="1.535779">
+  <name>refugi roca de pimes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.82598" lon="0.169">
+  <name>chalet hotel du lac d oredon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.85398" lon="1.052149">
+  <name>cabane lee</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7324" lon="1.72171">
+  <name>cabane dedor</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.792897" lon="0.986122">
+  <name>cabane du port d orle refuge pons</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.829237" lon="-0.096192">
+  <name>cabane de pouey caut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.70816" lon="0.29422">
+  <name>hospice du rioumajou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.687333" lon="-0.464265">
+  <name>cabana superior de la espata</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.456614" lon="1.598849">
+  <name>refugi estanys de la pera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.478456" lon="1.747801">
+  <name>engorgs joaquim folch i girona ou d engorgs</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.966" lon="0.175">
+  <name>cabane d aygue rouye</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.754853" lon="1.863262">
+  <name>refuge chioula</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.85807" lon="-0.288819">
+  <name>refuge de larribet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.531111" lon="1.938889">
+  <name>mata negra</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.744272" lon="1.617572">
+  <name>cabane du besset du haut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.713889" lon="0.551111">
+  <name>refuge maupas lhm</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.691269" lon="1.396655">
+  <name>refuge du pinet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6644" lon="-0.3552">
+  <name>refuge furcunfiecho ou del puerto de biescas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7039" lon="0.508">
+  <name>refuge du portillon jean arlaud</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.460637" lon="2.175685">
+  <name>refuge de l orri de riberola</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5578" lon="0.380831">
+  <name>cabane de puzo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.04483" lon="-0.5127">
+  <name>cabane de couyassales</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.04856" lon="-0.52901">
+  <name>cabane de tousset</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.04969" lon="-0.53652">
+  <name>cabane de cardouet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9396" lon="-0.70036">
+  <name>cayolar anaye coum</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7765" lon="1.120863">
+  <name>abri de cour vic</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.590952" lon="0.043785">
+  <name>mallata puertolas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5912" lon="2.01078">
+  <name>cabane pastorale la balmeta nouvelle</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.633895" lon="-0.032342">
+  <name>refuge faja pelay</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7431" lon="1.1359">
+  <name>cabane de berger du port de salau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.765643" lon="0.970949">
+  <name>cabana deth horcalh</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.363" lon="2.165">
+  <name>fonfrede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.782747" lon="0.528997">
+  <name>cabane de pardiac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.804686" lon="-0.395831">
+  <name>cabane dous boues de peyrelue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8155" lon="-0.3966">
+  <name>cabane de peyrelue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8196" lon="-0.4059">
+  <name>cabane de tourmont</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.88583" lon="0.20648">
+  <name>abri sous roche de greziolles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.392766" lon="2.442175">
+  <name>abri pastoral artigues de en cases</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.938918" lon="-0.490935">
+  <name>quebot d isabe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.854822" lon="-0.437458">
+  <name>quebe de moundelhs</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.814025" lon="1.755714">
+  <name>cabane pastorale du gourgot</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.609672" lon="0.028667">
+  <name>mallata sase</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.93476" lon="-0.71959">
+  <name>marmitou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.596452" lon="2.274602">
+  <name>refuge fontfreda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.597367" lon="2.305361">
+  <name>refuge roquefumade</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.625661" lon="2.164727">
+  <name>refuge des estagnols</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.618553" lon="2.159016">
+  <name>orri du pla de l orri</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.214939" lon="1.627715">
+  <name>barraca de la jaca</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.505208" lon="2.39269">
+  <name>orri de rande</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.80702" lon="0.37486">
+  <name>cabane de labatiadere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.73811" lon="1.92407">
+  <name>cabane de cayrol</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7437" lon="1.93227">
+  <name>cabane route du col du pradel</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.74919" lon="1.94023">
+  <name>cabane du col de pradel</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.96253" lon="0.49079">
+  <name>cabane de douly</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.94613" lon="-0.2601">
+  <name>cabane de pourgue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.77568" lon="2.03725">
+  <name>cabane de tourrugue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.73697" lon="0.962169">
+  <name>cabana de gessa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.95816" lon="-0.12246">
+  <name>cabane du turon de bene</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.958951" lon="0.058279">
+  <name>herraou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.951161" lon="1.681525">
+  <name>cabane forestieres de baguillere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.31841" lon="-0.07478">
+  <name>otin ruines</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.31765" lon="-0.07579">
+  <name>refugio norbert nieto otin</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8285" lon="1.0516">
+  <name>cabane de litourneau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.604944" lon="0.057217">
+  <name>orri el carduso</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.612883" lon="0.09825">
+  <name>obsevatorio de aves</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.631766" lon="0.050466">
+  <name>mallata torroquello</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.711778" lon="-0.235132">
+  <name>refugio dera ripera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.751377" lon="-0.211637">
+  <name>cabana de brazato</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.53343" lon="1.08381">
+  <name>refugi de quatrepins</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.529286" lon="0.974286">
+  <name>abri de mariolo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.65784" lon="0.82805">
+  <name>cabana d estanho</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.65571" lon="0.88509">
+  <name>cabana de loseron</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.670111" lon="0.835444">
+  <name>refugi de escunhau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.61762" lon="0.94015">
+  <name>cabana d estanh obago</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5973" lon="1.864768">
+  <name>cabane claude tudon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.30017" lon="-0.28086">
+  <name>refugio del palomar</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.30371" lon="-0.19888">
+  <name>refugio de los fenales</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.70806" lon="-0.28797">
+  <name>refugio de yanel</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.696867" lon="-0.282903">
+  <name>refugio as ruablas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.695055" lon="-0.257097">
+  <name>cabana de sabocos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7702" lon="1.6116">
+  <name>cabane sous les rochers de miglos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.659567" lon="-0.24271">
+  <name>cabana de gavin</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.688075" lon="-0.231035">
+  <name>refugio dero verde</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.696385" lon="-0.208979">
+  <name>refugio del puerto tendenera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.701645" lon="-0.233945">
+  <name>refugio dero cantal valle de ripera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.663495" lon="-0.244141">
+  <name>refugio superior del puerto de gavin</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.565701" lon="0.219633">
+  <name>refugio peguera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.478747" lon="0.299603">
+  <name>refugio de los neis</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.484065" lon="0.249868">
+  <name>refugio del rallero</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.598405" lon="0.179409">
+  <name>refugio buxerbala</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.481988" lon="0.232239">
+  <name>refugio del ostacho</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.719645" lon="-0.255">
+  <name>refugio dera selva panticosa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.497086" lon="0.229166">
+  <name>refugio de ganado</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.539875" lon="0.392633">
+  <name>cabana de la virgen de la plana</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.465641" lon="0.289045">
+  <name>cabana de la soma de la estiba</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.589783" lon="0.411455">
+  <name>cabana de barbarisa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.595017" lon="0.264774">
+  <name>cabana pegueras chardal</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.634559" lon="0.285787">
+  <name>cabane es huertos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.716168" lon="0.212467">
+  <name>cabana de salcorz</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.60787" lon="0.374547">
+  <name>cabana de las pardas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.733887" lon="0.173484">
+  <name>abri de port vieux de bielsa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.725421" lon="0.188278">
+  <name>cabana penna roya</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.627828" lon="0.047828">
+  <name>mallata carduso caprariza</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6168" lon="0.046131">
+  <name>mallata candon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.568722" lon="0.164944">
+  <name>refugio de santa maria</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.904349" lon="-0.36245">
+  <name>cabanes de l ori soussoueou superieur</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.385684" lon="2.220097">
+  <name>orri coma de la vaca</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.780677" lon="-0.380273">
+  <name>arrigal</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.89424" lon="0.53627">
+  <name>cabane de la courbe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.641301" lon="-0.054194">
+  <name>refuge de calcilaruego</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.423045" lon="0.631081">
+  <name>cabana de pega</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.585855" lon="0.036934">
+  <name>orri la estiva mondoto</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.904923" lon="0.066936">
+  <name>cabane de capet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.013457" lon="0.101106">
+  <name>cabane las aygues</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.810569" lon="0.776928">
+  <name>cabana de peirahita</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.807049" lon="0.796453">
+  <name>cabana de betlan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.75695" lon="1.095598">
+  <name>cabana del pletiu d aula</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.735963" lon="0.850599">
+  <name>cabana de salient</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.686492" lon="0.76785">
+  <name>cabana des comets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.698922" lon="0.748935">
+  <name>cabana eth santet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.797482" lon="0.790736">
+  <name>cabana de arbaet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.709248" lon="1.071672">
+  <name>cabana barranc portiero</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.697367" lon="0.692678">
+  <name>cabana dera montanha d aubert</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.682602" lon="0.692678">
+  <name>cabana de pomero</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.712318" lon="1.076044">
+  <name>cabana de portiero</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.68266" lon="0.780126">
+  <name>cabana de pomarola</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.716758" lon="0.759653">
+  <name>cabana dera pleta des anheths</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.708885" lon="0.744168">
+  <name>cabana de geles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.6418" lon="1.294796">
+  <name>cabana de la ribera de boldis</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.432313" lon="1.247029">
+  <name>refugi forestal prat gran</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.3522" lon="1.9118">
+  <name>cabana de la font dels ocells</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.627534" lon="1.210815">
+  <name>cabana de peracalc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.293166" lon="1.905981">
+  <name>xalet refugi del coll de pal</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.324918" lon="1.828659">
+  <name>refugi del serrat de les esposes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.33421" lon="1.851697">
+  <name>refugi d urus pleta dels ordiassos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.631411" lon="1.480256">
+  <name>orris de la coma del forat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.489897" lon="1.426246">
+  <name>refugi de francoli</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.398298" lon="1.190684">
+  <name>cabana de les collades</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.358033" lon="1.192592">
+  <name>cabana de freixa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.481417" lon="1.059183">
+  <name>bordes de llessui</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.497079" lon="1.087459">
+  <name>corral des bous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.472817" lon="1.023212">
+  <name>la cabaneta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.721353" lon="-0.541074">
+  <name>majada de gabardito</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.73754" lon="-0.54912">
+  <name>lecherin bajo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.433483" lon="0.559636">
+  <name>refugio de pastores colladeta duran</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.449852" lon="0.537086">
+  <name>cabana de la muria</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.425052" lon="0.619993">
+  <name>borda de ansuils</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.420097" lon="0.618834">
+  <name>borda de castellano</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.853681" lon="-0.68832">
+  <name>refugio guarrinza la cantina</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.443146" lon="0.501838">
+  <name>refugio de la margalida</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.668148" lon="0.508462">
+  <name>cabana del tormo turmo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.555928" lon="0.437284">
+  <name>cabana de la pala cllots d es pases</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.506778" lon="0.445464">
+  <name>cabana de lleneali resuali</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.554232" lon="0.691524">
+  <name>cabana de la font del bisbe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.566744" lon="0.693909">
+  <name>cabana de menada</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.554737" lon="0.614236">
+  <name>cabana de la roca del turmo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.526024" lon="1.687812">
+  <name>refugi restaurant dels pessons</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.452" lon="1.75">
+  <name>fontbrenella</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8071" lon="1.5599">
+  <name>cabane du col de bene</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8315" lon="1.5521">
+  <name>cabane du pla de faradu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.789655" lon="-0.482258">
+  <name>cabana canal roya lacuart</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.831998" lon="-0.711707">
+  <name>refugio selva de oza</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.784191" lon="-0.68547">
+  <name>cabana de la cuta dios te salve</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.781805" lon="-0.676924">
+  <name>refugio de dios te salve plan d aniz</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.863453" lon="-0.820036">
+  <name>refugio forestal de zuriza</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.830664" lon="-0.628637">
+  <name>cabana de aguas tuertas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.744073" lon="-0.559397">
+  <name>refugio militar lopez huici</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.7584" lon="-0.591196">
+  <name>refugio del cubilar del barranco de iguer</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.763172" lon="-0.622543">
+  <name>refugio de la cueva lizara</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.745637" lon="-0.57608">
+  <name>refugio riguelo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.816503" lon="-0.687865">
+  <name>refugio forestal de acher</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.771098" lon="-0.629136">
+  <name>refugio de ordelca oldecua</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.783294" lon="-0.616879">
+  <name>caseta de los forestales bernera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.779829" lon="-0.660378">
+  <name>refugio del foraton</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.3197" lon="1.7561">
+  <name>barraca de l agre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.3064" lon="1.7492">
+  <name>cabana dels gonec</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.855403" lon="-0.779199">
+  <name>refugio de tacheras taxera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.855125" lon="-0.68536">
+  <name>refugio militar de la mina</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.858115" lon="-0.747397">
+  <name>refugio de chipeta alto</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.815251" lon="-0.778984">
+  <name>refugio de la fuente choza fimia</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.840929" lon="-0.739383">
+  <name>refugio de tortiella</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.892676" lon="-0.782595">
+  <name>cabana del paso del oso</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.89704" lon="-0.796833">
+  <name>abrigo forestal de linza</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.897347" lon="-0.776395">
+  <name>refugio de petrechema</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.859864" lon="-0.763086">
+  <name>refugio faxa catalan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.775815" lon="-0.703266">
+  <name>refugio del monte de la cuta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.655958" lon="-0.377973">
+  <name>majada de juan de freda frea</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.648179" lon="-0.361583">
+  <name>majada de la mallata betes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.646819" lon="-0.388169">
+  <name>refugio de pastores fuente san juan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.637262" lon="-0.402998">
+  <name>refugio el plano campo vicario</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.636058" lon="-0.025781">
+  <name>cabana bosque de las hayas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.976697" lon="-0.930434">
+  <name>cayolar de pista pekoa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.270054" lon="2.211041">
+  <name>refugi sant jordi coll de jou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.508661" lon="2.948989">
+  <name>cabanes de mataporc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.288279" lon="2.285654">
+  <name>refugi montserrat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9216" lon="-0.329">
+  <name>cabane darre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.354472" lon="2.23653">
+  <name>refugio forestal de tregura</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.418702" lon="2.209115">
+  <name>barraca de tirapits</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.389991" lon="2.356648">
+  <name>refugio forestal les saleres de caderget</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.382741" lon="2.172385">
+  <name>refugi forestal les pedrisses</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.307092" lon="2.270866">
+  <name>refugi pla de satlla</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.90363" lon="-0.695654">
+  <name>cabane du pont de lamary</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.316125" lon="1.73445">
+  <name>cortal de l oriol</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.756545" lon="-0.221593">
+  <name>grange brazato</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.441649" lon="1.646628">
+  <name>refugi del pradell</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.423805" lon="1.61918">
+  <name>refugi de prat miro</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.409625" lon="1.606127">
+  <name>barraca de l orri d aristot</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.485654" lon="1.703257">
+  <name>cabana dels esparvers</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.448451" lon="1.701218">
+  <name>barraca de la farga</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.425719" lon="1.656441">
+  <name>refugi prat de la cot</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.716384" lon="-0.15963">
+  <name>cabana de ordiso</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.679299" lon="-0.112309">
+  <name>refugio de facha guasa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.771873" lon="0.47061">
+  <name>serre doumengue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.703254" lon="-0.097276">
+  <name>refugio de la plana de sandaruelo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.658265" lon="-0.06734">
+  <name>refugio carriata</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.616501" lon="0.021635">
+  <name>faja pardina</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.609305" lon="0.017936">
+  <name>refugio de cuello arenas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.580878" lon="0.410861">
+  <name>cabana d els prats</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.691355" lon="-0.15221">
+  <name>refugio de otal</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.776629" lon="-0.644611">
+  <name>refugio de fetas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.552827" lon="0.323378">
+  <name>cabana de baque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.714452" lon="-0.631022">
+  <name>borda las bacias loma la estiva</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.69031" lon="-0.633789">
+  <name>refugio loma de aisa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.612501" lon="0.69775">
+  <name>xalet particular de salenques cap de la vall</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.792314" lon="1.226209">
+  <name>cabane du tuc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.787921" lon="-0.528632">
+  <name>el aguila refugio</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.680929" lon="-0.500812">
+  <name>refugio fuente del paco</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.574811" lon="0.397943">
+  <name>cabana del puerto sahun</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.748545" lon="0.89832">
+  <name>cabana de moredo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.198168" lon="-1.533794">
+  <name>bergerie d arizkun</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.298901" lon="-1.446912">
+  <name>cabane de gainekoborda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.712182" lon="1.386294">
+  <name>cabane artigue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.803914" lon="1.513259">
+  <name>cabane de planel dhers</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.567795" lon="0.392056">
+  <name>refugio marradetas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.906903" lon="-0.366583">
+  <name>cabanes de soussoueou inferieur</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.623349" lon="1.84375">
+  <name>cabane auriol</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.833178" lon="1.028327">
+  <name>cabane de villenave</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.654572" lon="-0.170423">
+  <name>refugio planas d abozo de broto</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.650505" lon="-0.209357">
+  <name>refugio inferior del puerto de yesero</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.661673" lon="-0.207995">
+  <name>refugio superior del puerto de yesero</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.862864" lon="0.692353">
+  <name>cabane artigue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.830639" lon="0.655508">
+  <name>cabane peyrehitte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.817291" lon="0.654169">
+  <name>refuge forestier du cualot</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.823611" lon="0.653333">
+  <name>cabane de plan poune</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.825616" lon="0.633575">
+  <name>cabane de sauneres</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.86389" lon="0.662329">
+  <name>cabane burat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.881617" lon="0.205296">
+  <name>refuge de campana de cloutou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.695866" lon="-0.033254">
+  <name>refuge de la breche de roland ou des sarradets</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.049502" lon="-0.561418">
+  <name>grange la poursiouque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.05114" lon="-0.556354">
+  <name>cabane de salies</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.050549" lon="-0.557508">
+  <name>cabanot de salies</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.846379" lon="-0.773292">
+  <name>refugio de mazandu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.657626" lon="-0.179257">
+  <name>refugio de la faja o de linas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.429503" lon="3.103654">
+  <name>abri de tarabaus</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.465018" lon="2.983926">
+  <name>abri puig de les basses</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.45343" lon="2.917745">
+  <name>abri du coll de l espinas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.212603" lon="1.522835">
+  <name>refugi de l arp</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.087092" lon="1.231429">
+  <name>refugi cortiuda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.29712" lon="1.714104">
+  <name>refugi prat d aguilo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.187137" lon="1.748533">
+  <name>refugi serra d ensija delgado ubeda</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.258012" lon="1.72428">
+  <name>refugi casa del gresolet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.660261" lon="0.524801">
+  <name>cabane de coma</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.618139" lon="0.190298">
+  <name>caseta de montinier</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.816976" lon="-0.287642">
+  <name>refuge respomuso ou piedrafita</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.70185" lon="-0.349309">
+  <name>refugio de las planas del boz de telera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.645474" lon="0.961304">
+  <name>cabana de sendrosa de baish</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.344589" lon="2.057051">
+  <name>refugi pleta de dorria</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.337611" lon="2.111162">
+  <name>refugi corral blanc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.336231" lon="2.192494">
+  <name>refugi pla de l erola ribes altes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.35167" lon="2.112521">
+  <name>barraca de la vaquerissa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.360776" lon="2.103668">
+  <name>barraca de la baga de feliu</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.385771" lon="2.151277">
+  <name>barraca de gombren</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.716947" lon="1.785762">
+  <name>cabane de la jasse de gireys</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.584899" lon="1.803474">
+  <name>cabane forestiere foret domaniale de l hospitalet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.718516" lon="0.764934">
+  <name>cabanas de sorquero</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.365829" lon="2.27209">
+  <name>cabanyes de dalt coma del catllar</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.362825" lon="2.282635">
+  <name>cabanya del ras de catllar</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.009245" lon="0.045512">
+  <name>cabne de bernede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.767718" lon="1.404587">
+  <name>orri du col de las fouzes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.504851" lon="1.117892">
+  <name>cabana dels rasos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.552349" lon="0.370328">
+  <name>cabana ordices ordicez</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.657969" lon="0.986791">
+  <name>cabana pleta del duc</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.834319" lon="-0.594018">
+  <name>cabane de gourgue sec</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.848562" lon="-0.592698">
+  <name>cabane pacheu arlet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.901292" lon="-0.590745">
+  <name>cabane udapet du bas</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.88361" lon="-0.600799">
+  <name>cabane de cayalatte</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.867449" lon="-0.605283">
+  <name>cabane de la trongaillere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.646598" lon="0.492636">
+  <name>abri aigueta de batisielles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.654296" lon="0.50999">
+  <name>cabana de batisielles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.636982" lon="0.455064">
+  <name>cabane de llardaneta</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.640032" lon="0.409316">
+  <name>cabana d els millars millares</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.634764" lon="0.400304">
+  <name>cabanas d els leners</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.428145" lon="2.059454">
+  <name>refugi cami de nuria cortals de rigat maia</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.959477" lon="-0.334085">
+  <name>chalet refuge caf de gourette</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.678444" lon="-0.530991">
+  <name>albergue triton</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.426007" lon="2.39826">
+  <name>refuge les conques canigou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.922166" lon="-0.707496">
+  <name>cabane de lhurs</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.472049" lon="2.507501">
+  <name>cabane de la devesa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.604337" lon="0.184">
+  <name>refugio de la plana tella</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.725728" lon="1.436634">
+  <name>refuge forestier de gaffouil</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.845962" lon="-0.844574">
+  <name>refugio de ezcaurre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.697876" lon="1.575262">
+  <name>cabane de brouquenat d en haut</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.399233" lon="2.328855">
+  <name>refugio forestal jaume farre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.354516" lon="2.326832">
+  <name>orri clot de sant pere</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.387593" lon="2.400299">
+  <name>cabana del roures</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.638197" lon="0.32172">
+  <name>cabane de monzarro</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.725602" lon="1.43531">
+  <name>cabane forestiere de gaffouil garfouil</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.598216" lon="1.450056">
+  <name>cabane de estany forcat</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.598429" lon="1.449123">
+  <name>abri dels estanys forcats</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.750605" lon="0.975477">
+  <name>cabana de parros</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.660656" lon="0.377248">
+  <name>refuge de viados</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.753728" lon="1.531563">
+  <name>refuge du col de grail</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.884679" lon="-0.72624">
+  <name>caseta foya barcal acherito</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.827265" lon="0.084259">
+  <name>cabane de rabiet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.992441" lon="0.336312">
+  <name>cabane du bouchidet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.818148" lon="0.143744">
+  <name>refuge du cap de long</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.66787" lon="0.373562">
+  <name>cabana del sarrau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.681323" lon="0.357828">
+  <name>cabane de culrueba</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.050008" lon="-1.048668">
+  <name>cayolar zingolatze</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.849557" lon="0.774515">
+  <name>cabane du courrau d artigue</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.84385" lon="0.783226">
+  <name>cabane de salountere vieille</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.742293" lon="1.138442">
+  <name>cabane des lannes port de salau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.743636" lon="1.151494">
+  <name>cabane pouill</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.838583" lon="1.583469">
+  <name>cabane de la fontaine saint martin</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.843539" lon="1.781883">
+  <name>cabane de coumayret</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.90295" lon="-0.793622">
+  <name>cabana sobrante de linza</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.904675" lon="-0.778205">
+  <name>cabana de linza</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.863721" lon="-0.695528">
+  <name>refugio las foyas archerito</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.502256" lon="1.863352">
+  <name>cabane serrat del freser</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.796188" lon="0.981432">
+  <name>abri pastoral du ventaillou</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.294075" lon="-1.62781">
+  <name>abri kondendiagako lepoa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.932115" lon="0.417824">
+  <name>cabane de l estaque</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9006" lon="-0.006158">
+  <name>cabane du cot de yeous</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.707515" lon="2.171195">
+  <name>cabane pastorale descouloubre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.663283" lon="0.015053">
+  <name>refuge de goriz</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.833681" lon="0.850132">
+  <name>cabane du cap de la coume</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.669334" lon="0.650812">
+  <name>refuge de la rencluse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.680042" lon="0.408651">
+  <name>cabana anes cruzes agnes cruces</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.662928" lon="0.397702">
+  <name>cabane de basa del clot</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.665523" lon="0.393218">
+  <name>cabane puyarueso</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.518928" lon="2.509223">
+  <name>abri pinatell</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.545263" lon="2.007612">
+  <name>abri de l estany de la pradella</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.621917" lon="2.011142">
+  <name>refuge des camporells</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.958821" lon="-0.70519">
+  <name>cabane du cap de la baitch</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.307243" lon="-1.62897">
+  <name>abri de la rhune</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.71016" lon="0.946445">
+  <name>cabana deth uelh deth garona</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.954931" lon="-0.266675">
+  <name>cabane de saucede clot du laun</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.693981" lon="1.498604">
+  <name>refuge de l etang d izourt</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.658734" lon="0.369619">
+  <name>es plan</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.675479" lon="0.485287">
+  <name>refuge d estos (été)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.596171" lon="0.683256">
+  <name>refuge du cap de llauset</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.898179" lon="-0.799555">
+  <name>refuge de linza</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.658817" lon="1.45821">
+  <name>cabane de lauzes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.968992" lon="0.496488">
+  <name>abri du cimetierre anglo canadien de douly</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.762594" lon="-0.23317">
+  <name>hotel casa de piedra</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.779953" lon="-0.227537">
+  <name>refugio de los ibones de bachimana</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.721795" lon="1.214472">
+  <name>cabane de montareing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.983958" lon="0.151948">
+  <name>courtaou de nourre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.97833" lon="-0.749253">
+  <name>refuge jeandel</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.035686" lon="-0.358761">
+  <name>cabane escalac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.857084" lon="0.652164">
+  <name>cabane salode</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.505262" lon="2.215462">
+  <name>refuge de dona pa</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.850375" lon="0.906169">
+  <name>cabane du col des cos</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.820132" lon="-0.194685">
+  <name>refuge wallon marcadau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.39898" lon="-0.813503">
+  <name>corral d a rabosera</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.426585" lon="3.078662">
+  <name>orri de la font de jordana</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.820092" lon="0.534087">
+  <name>cabane du cap de la prade</name>
+  <extensions>
+  </extensions>
+</wpt>
+</gpx>

@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.6.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="42.426439999999999" minlon="-1.659628000000000" maxlat="43.331111000000000" maxlon="2.864339000000000"/></metadata>                   
+<wpt lat="42.70314" lon="0.79195">
+  <name>(23) Supsa Supermercats Pujol S. L.</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.665123" lon="0.2116">
+  <name>18 Grand-Supermarché Solans</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.665123" lon="0.2116">
+  <name>18 Grand-Supermarché Solans</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.754312" lon="0.049847">
+  <name>16.8 Buvette Les Gloriettes</name>
+  <extensions>
+    <ogr:description>2017-07-27 14:18</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.732904" lon="-0.009554">
+  <name>16 Vival</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.8056304" lon="-0.418564">
+  <name>12 Ventas du Pourtalet</name>
+  <extensions>
+    <ogr:description>Plusieurs ventas pour se ravitailler</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.809837" lon="-0.504387">
+  <name>11.1 Ibones Snack Bar</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.787973" lon="-0.530399">
+  <name>11 Supermercado Azon</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.803241" lon="-0.558844">
+  <name>10.8 Cheese for sale</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.897673" lon="-0.716195">
+  <name>9 Cheese if shepherd nearby</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.934072" lon="-0.63505">
+  <name>8.6 Chez Maud&amp;David</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.331111" lon="-1.659628">
+  <name>1.5 Departure Venta Yasola</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.282765" lon="-1.632268">
+  <name>2 Restaurante Lizuniaga</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.260759" lon="-1.619486">
+  <name>2.2 VENTA LIZARIETA</name>
+  <extensions>
+    <ogr:description>Attention aux plats trop gras !</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="43.143781" lon="-1.518995">
+  <name>3 Bar-Restaurante Eguzkialde</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.142413" lon="-1.521011">
+  <name>3 DIA Elizondo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.094869" lon="-1.425409">
+  <name>4 Auberge Erreka Gorri</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.096209" lon="-1.426028">
+  <name>4 Bar restaurant Alfaro Ostatua</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.0825513" lon="-1.4353994">
+  <name>4 Hôtel Restaurant Aldudes St Sylvestre</name>
+  <extensions>
+    <ogr:description>Très bon restaurant</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="43.094034" lon="-1.425272">
+  <name>4 Fromagerie des Aldudes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.04441" lon="-1.074031">
+  <name>5.8 Kayolar</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.036736" lon="-1.074741">
+  <name>5.8 Restaurant Chalet Pedro Iraty</name>
+  <extensions>
+    <ogr:description>Water faucet inside</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="43.04862" lon="-1.073093">
+  <name>5.8 Snack Bar Chalet de Cize</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.038494" lon="-1.026611">
+  <name>6 Restaurant Iraty</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.663943" lon="0.9806">
+  <name>25 Cap del Port</name>
+  <extensions>
+    <ogr:description>Good restaurant bar when open !</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.707391" lon="0.902708">
+  <name>(25) SUPERMERCADO SOL Y NIEVE</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699917" lon="0.930842">
+  <name>(25) Supermercat Carles</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.715593" lon="1.449674">
+  <name>29 Marc Holiday Village</name>
+  <extensions>
+    <ogr:description>Good place to mail food resupply</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.629076" lon="1.497956">
+  <name>30.2 Restaurant Planells</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.5795381" lon="1.6422489">
+  <name>31.5 Bcp commerces Soldeu</name>
+  <extensions>
+    <ogr:description>Grosse zone commerciale de Soldeu, ouverte toute l'année</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.601782" lon="1.687655">
+  <name>31.5 Restaurant l'Ovella Negra</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.542446" lon="1.733018">
+  <name>32? Supermercat Central III (Pas de la Case)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.589683" lon="1.799617">
+  <name>33bis Le Fournil De Louise</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.588491" lon="1.798482">
+  <name>33bis Hospicerie</name>
+  <extensions>
+    <ogr:description>Epicerie limitée</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.56044" lon="1.996889">
+  <name>34 Les Bones Hores</name>
+  <extensions>
+    <ogr:description>Good place to eat</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.515217" lon="2.061509">
+  <name>34.8 Casino supermarché</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.503258" lon="2.077459">
+  <name>34.8 Utile Superette </name>
+  <extensions>
+    <ogr:description>Very practical Resupply</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.474347" lon="2.080151">
+  <name>35 L'Épicerie d'Eyne</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.473447" lon="2.669635">
+  <name>39 Vival</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.427196" lon="2.265382">
+  <name>36 Cafeteria Vallter 2000</name>
+  <extensions>
+    <ogr:description>Better option than Ulldeterr refuge</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.42644" lon="2.264269">
+  <name>36 Vallter Foodtruck</name>
+  <extensions>
+    <ogr:description>Better than refuge Uldeterr</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.427196" lon="2.265382">
+  <name>36 Cafeteria Vallter 2000</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.461467" lon="2.864339">
+  <name>40.3 Centre comercial Tramuntana</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.9504146" lon="-0.6658309">
+  <name>(8.5) Centre de l'Abérouat (annuel)</name>
+  <extensions>
+  </extensions>
+</wpt>
+</gpx>

@@ -1,0 +1,1761 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.6.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="42.417758999999997" minlon="-1.701880000000000" maxlat="43.310130999999998" maxlon="3.088452000000000"/></metadata>                   
+<wpt lat="42.666854" lon="0.310649">
+  <name>Source eau ferrugineuse</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699209" lon="1.274538">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.620344" lon="0.831051">
+  <name>very good spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.622011" lon="0.904682">
+  <name>spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.697482" lon="1.040268">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.715025" lon="1.129728">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.716202" lon="1.125542">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.688366" lon="1.021728">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.711074" lon="1.13914">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.641525" lon="0.971688">
+  <name>stream parking</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.707349" lon="1.194023">
+  <name>springs</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.705659" lon="1.193353">
+  <name>lake exit water</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.62838" lon="0.960505">
+  <name>stream crossing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.684976" lon="1.02019">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.691221" lon="1.026047">
+  <name>spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.621274" lon="0.910229">
+  <name>creek</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.65054" lon="0.973878">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.653761" lon="0.9753">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.631068" lon="0.848866">
+  <name>small stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.63267" lon="0.965315">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.605038" lon="0.663984">
+  <name>small stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.62342" lon="0.887321">
+  <name>lake outlet</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.625106" lon="0.844032">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.631219" lon="0.851967">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.705816" lon="1.067325">
+  <name>stream crossing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.629005" lon="0.775089">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.622246" lon="0.839531">
+  <name>spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.628769" lon="0.778549">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.705394" lon="1.211668">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.61991" lon="0.834103">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.592585" lon="0.726643">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.598082" lon="0.682706">
+  <name>streams</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.630746" lon="0.787956">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.596161" lon="0.736168">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.600364" lon="0.765106">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.597476" lon="0.74463">
+  <name>springs</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.596186" lon="0.733852">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.60558" lon="0.668916">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.589897" lon="0.702619">
+  <name>stream crossing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.589111" lon="0.707734">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.60857" lon="0.641571">
+  <name>creek access</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.631605" lon="0.786865">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.612127" lon="0.615764">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.604824" lon="0.653459">
+  <name>creek</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.607105" lon="0.646834">
+  <name>creek crossing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.310131" lon="-1.70188">
+  <name>2017-07-12 sources d'eau à potabiliser</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.591398" lon="0.699147">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.715511" lon="1.127569">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.598094" lon="0.680232">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.708171" lon="1.144998">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.630474" lon="0.937238">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.610603" lon="0.620461">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.607456" lon="0.767469">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.597126" lon="0.741211">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.704672" lon="1.065347">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.605341" lon="0.76801">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.631576" lon="0.963752">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.623506" lon="0.822432">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.707067" lon="1.192479">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.596837" lon="0.738681">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.705778" lon="1.207334">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.697396" lon="1.186981">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.620924" lon="1.579832">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.62267" lon="0.916905">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.631247" lon="0.850404">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.708802" lon="1.142549">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699165" lon="1.260706">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.706072" lon="1.052557">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.704971" lon="1.213661">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.704943" lon="1.212585">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.64566" lon="1.493534">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.24701" lon="-1.595143">
+  <name>2017-07-13 Fontaine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.70239" lon="1.337431">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.714403" lon="1.435452">
+  <name>Creek</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.712391" lon="1.432445">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.707658" lon="1.453263">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.628313" lon="1.538684">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.600922" lon="1.943656">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.617335" lon="1.617781">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.184617" lon="-1.537437">
+  <name>2017-07-13 Fontaine bivouac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.615507" lon="1.621613">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.613217" lon="1.693976">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.616347" lon="1.650862">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.618335" lon="1.641262">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.599488" lon="1.853181">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.615565" lon="1.655574">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.461824" lon="2.910292">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.28265" lon="-1.632901">
+  <name>2017-07-13 Fontaine Lizuniaga</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.600676" lon="1.85877">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.628843" lon="0.782944">
+  <name>small spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.465131" lon="2.914586">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.604949" lon="1.876803">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.426035" lon="2.786197">
+  <name>Fountain</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.2546" lon="-1.602881">
+  <name>2017-07-13 Fontaine Usoen Ithurria</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.249479" lon="-1.599833">
+  <name>2017-07-13 robinet d'eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.276548" lon="-1.636391">
+  <name>2017-07-13 Robinet eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.301442" lon="-1.67595">
+  <name>2017-07-13 source1</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.298466" lon="-1.634678">
+  <name>2017-07-13 source2</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.170593" lon="-1.534002">
+  <name>2017-07-14 09:00 Robinet eau &amp; table picnic</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.117873" lon="-1.50256">
+  <name>2017-07-14 11:12 Fontaine1</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.101345" lon="-1.496029">
+  <name>2017-07-14 12:02 Fontaine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.094414" lon="-1.483297">
+  <name>2017-07-14 13:07 Robinet Casa Pablo</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.091854" lon="-1.397112">
+  <name>2017-07-15 11 Source faible</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.047009" lon="-1.371282">
+  <name>2017-07-15 13:07 robinets eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.032392" lon="-1.2271">
+  <name>2017-07-15 18:53 fontaine et refuge Azpegi</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.026815" lon="-1.112043">
+  <name>2017-07-16 15:46 Source tuyau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.036566" lon="-1.034826">
+  <name>2017-07-17 08:38 Eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.024436" lon="-1.035822">
+  <name>2017-07-17 11:05 robinet eau maison Arratzolatzé</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.018616" lon="-1.044129">
+  <name>2017-07-17 11:40 Source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.014501" lon="-1.039162">
+  <name>2017-07-17 11:52 Source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.965059" lon="-0.93792">
+  <name>2017-07-17 19:37 robinet derrière bergerie</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.950181" lon="-0.86328">
+  <name>2017-07-18 11:25 Eau source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.94537" lon="-0.850914">
+  <name>2017-07-18 11:49 Abreuvoir tuyau eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.957283" lon="-0.800736">
+  <name>2017-07-18 13:07 Bar Restaurant</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.958801" lon="-0.705287">
+  <name>2017-07-19 10:51 Eau cabane de Baigt</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.939536" lon="-0.677682">
+  <name>2017-07-19 13:39 source d'eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.909256" lon="-0.678204">
+  <name>2017-07-19 15:21 gros tuyau eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.89784" lon="-0.716567">
+  <name>2017-07-19 20:02 Eau bergerie d'Ansabère</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.856162" lon="-0.640119">
+  <name>2017-07-20 15:08 source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.823384" lon="-0.585676">
+  <name>2017-07-21 09 fontaine bergerie</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.799982" lon="-0.538353">
+  <name>2017-07-21 12:04 tuyau eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.821913" lon="-0.502846">
+  <name>2017-07-22 10:22 Source captée</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.840753" lon="-0.469736">
+  <name>2017-07-22 12:26 Eau cabane de Pount</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.834879" lon="-0.43347">
+  <name>2017-07-22 16:01 Fontaine eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.814997" lon="-0.222289">
+  <name>2017-07-24 16:06 Sources</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.775852" lon="-0.117852">
+  <name>2017-07-25 16:45 sources</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.754671" lon="-0.095411">
+  <name>2017-07-26 07:54 source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.741279" lon="-0.03758">
+  <name>2017-07-26 10:18 tuyau eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.721917" lon="0.000381">
+  <name>2017-07-27 08:31 Fontaine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.723716" lon="0.04569">
+  <name>2017-07-27 12:23 source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.734072" lon="0.046232">
+  <name>2017-07-27 12:47 Source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.75842" lon="0.097879">
+  <name>2017-07-28 10:22 Fontaine des Colombes</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.758713" lon="0.105102">
+  <name>2017-07-28 11:00 Sources</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.726572" lon="0.150218">
+  <name>2017-07-28 18:39 source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.676773" lon="0.24808">
+  <name>2017-07-29 10:50 tuyau d'eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.670964" lon="0.288192">
+  <name>2017-07-29 13:27 source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.655732" lon="0.336137">
+  <name>2017-07-29 16:26 tuyau eau abreuvoir</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.652161" lon="0.349845">
+  <name>2017-07-29 17:04 Tuyau eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.69703" lon="0.407184">
+  <name>2017-07-30 13:13 sources</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.702923" lon="0.436718">
+  <name>2017-07-30 18:34 tuyau eau Caseneuve</name>
+  <extensions>
+    <ogr:description>Suivre sentier partant de la cabane de Caseneuve vers les rochers et la source</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.690042" lon="0.556272">
+  <name>2017-08-01 13:35 sources</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.684927" lon="0.584327">
+  <name>2017-08-01 14:54 source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.664906" lon="0.669343">
+  <name>2017-08-01 20:29 Source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.627026" lon="0.76417">
+  <name>2017-08-03 07:42 Fontaine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.631302" lon="0.866606">
+  <name>2017-08-04 07:26 Source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.680563" lon="1.013098">
+  <name>2017-08-05 12:31 source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.70702" lon="1.061072">
+  <name>2017-08-06 11:42 Source de la rivière</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.707424" lon="1.062125">
+  <name>2017-08-06 11:46 Sources</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.696664" lon="1.168649">
+  <name>2017-08-07 13:48 sources</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.684559" lon="1.243734">
+  <name>2017-08-08 11:38 Robinet eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.712685" lon="1.38774">
+  <name>2017-08-09 14:38 tuyau eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.710228" lon="1.42468">
+  <name>2017-08-09 15:59 robinet eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.694173" lon="1.463028">
+  <name>2017-08-10 11:16 fontaine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.629184" lon="1.537223">
+  <name>2017-08-11 20:17 Cabane + fontaine Besali</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.618537" lon="1.638792">
+  <name>2017-08-12 20:00 Fontaine Cabaña Coms de Jan</name>
+  <extensions>
+    <ogr:description>No water fountain on August 2020</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.451083" lon="2.106097">
+  <name>2017-08-16 16:57 source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.418522" lon="2.225818">
+  <name>2017-08-17 11:28 source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.474388" lon="2.409986">
+  <name>2017-08-17 19:24 source moitié tarie</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.498393" lon="2.409735">
+  <name>2017-08-18 08:35 Fontaine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.503838" lon="2.445165">
+  <name>2017-08-18 10:13 Fontaine Cabane Arago</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.511667" lon="2.460393">
+  <name>2017-08-18 11:20 Fontaine Nostra</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.51889" lon="2.508964">
+  <name>Water at Pinateil Hut</name>
+  <extensions>
+    <ogr:description>Very weak by mid August 2020</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.493935" lon="2.636128">
+  <name>2017-08-19 13:36 Tuyau eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.421475" lon="2.747744">
+  <name>2017-08-20 16:58 Fontaine eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.478452" lon="2.951746">
+  <name>2017-08-21 17:54 Fontaine Pla Tagnarede</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.484025" lon="3.088452">
+  <name>2017-08-22 15:58 Fontaine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.02641" lon="-1.0351">
+  <name>170717 Abreuvoir de Lapatignégagne</name>
+  <extensions>
+    <ogr:gx_media_links>https://lh3.googleusercontent.com/umsh/AN6v0v67s4zu0jhgHEvOi2bIqYgpR2djdRclSViKHMSOzTO1VycPlEm5myMxyuCjOXSoL6f77LjGP4v5xBRq19CqXEdxd9GsPamcuvD__1Olx6SLKfSsd7G6kqKEQ7FCsZ4hx4E4ggBZshkdO5TpMUip8rE9jGtNyEhp3tBD_5nyIk29wFcK2sOrXfpb6TVPsnJdvxSH98uSCHiprFwmXJEto27kf0PRmkNfaWBkxsqs4GxFek42V42OJlUf1fi19KjxTjTqwWbBivlj1aFRWrqNjueS5vAQlRp3QcEZVwd24Sp25kixUMKgQDMfFNX78CtI6H8dlqED6oBG_kQw34Pf_W56RY2GLNHtFzeijbbLAXfImgw7twvhh82ZRR_JLGrt0pQBtQ57FRAGYyLuYhpqF4dUPagVQT7Btzi1</ogr:gx_media_links>
+  </extensions>
+</wpt>
+<wpt lat="43.04689" lon="-1.26484">
+  <name>Fontaine de Roland</name>
+  <extensions>
+    <ogr:gx_media_links>https://lh3.googleusercontent.com/umsh/AN6v0v67s4zu0jhgHEvOi2bIqYgpR2djdRclSViKHMSOzTO1VycPlEm5myMxyuCjOXSoL6f77LjGP4v5xBRq19CqXEdxd9GsPamcuvD__1Olx6SLKfSsd7G6kqKEQ7FCsZ4hx4E4ggBZshkdO5TpMUip8rE9jGtNyEhp3tBD_5nyIk29wFcK2sOrXfpb6TVPsnJdvxSH98uSCHiprFwmXJEto27kf0PRmkNfaWBkxsqs4GxFek42V42OJlUf1fi19KjxTjTqwWbBivlj1aFRWrqNjueS5vAQlRp3QcEZVwd24Sp25kixUMKgQDMfFNX78CtI6H8dlqED6oBG_kQw34Pf_W56RY2GLNHtFzeijbbLAXfImgw7twvhh82ZRR_JLGrt0pQBtQ57FRAGYyLuYhpqF4dUPagVQT7Btzi1</ogr:gx_media_links>
+  </extensions>
+</wpt>
+<wpt lat="42.834771" lon="-0.317331">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.788536" lon="-0.137166">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.785854" lon="-0.133575">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.793728" lon="-0.172734">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.790676" lon="-0.138822">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.768735" lon="-0.119264">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.789756" lon="-0.145837">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.765197" lon="-0.112551">
+  <name>Source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.789686" lon="-0.148962">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.75523" lon="-0.095354">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.81119" lon="-0.251413">
+  <name>steam crossing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.807809" lon="-0.182011">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.812265" lon="-0.259604">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.820672" lon="-0.303937">
+  <name>Source ?</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.840254" lon="-0.371484">
+  <name>several small streams up to here</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.816833" lon="-0.212468">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.791737" lon="-0.160119">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.797852" lon="-0.534352">
+  <name>ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.819102" lon="-0.30012">
+  <name>eau de captage</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.803402" lon="-0.546124">
+  <name>eau tuyau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.80243" lon="-0.55947">
+  <name>ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.838411" lon="-0.455454">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.831396" lon="-0.315799">
+  <name>spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.824603" lon="-0.581842">
+  <name>ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.889189" lon="-0.709724">
+  <name>tent site water</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.816977" lon="-0.28793">
+  <name>Fontaine au refuge</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.80385" lon="-0.560678">
+  <name>ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.876939" lon="-0.707116">
+  <name>small spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.892355" lon="-0.715689">
+  <name>ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.013261" lon="-1.03817">
+  <name>ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.912033" lon="-0.672377">
+  <name>Gaves, tables et bancs ; parking. Bivouac ?</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.023921" lon="-1.144066">
+  <name>Bivouac rivière</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.795873" lon="-0.524812">
+  <name>Fontaine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.043786" lon="-1.183897">
+  <name>Source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.040028" lon="-1.057376">
+  <name>Bivouac pelouse ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.942333" lon="-0.689004">
+  <name>tuyau abreuvoir</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.873979" lon="-0.67608">
+  <name>Petit ruisseau Bivouac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.077747" lon="-1.387235">
+  <name>surplus captage eau (fiable ?) - Bivouac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.267926" lon="-1.629791">
+  <name>ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.95693" lon="-0.701782">
+  <name>ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.892283" lon="-0.715388">
+  <name>Source et Bivouac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.94829" lon="-0.692238">
+  <name>ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.890509" lon="-0.711297">
+  <name>Bivouac eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.894444" lon="-0.717923">
+  <name>ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.093838" lon="-1.402817">
+  <name>Source ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.09847" lon="-1.430614">
+  <name>Fontaine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.096824" lon="-1.457066">
+  <name>eau Bivouac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.037006" lon="-1.074813">
+  <name>Chalet Pedro bar restaurant robinet eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.038647" lon="-1.178077">
+  <name>ruisseau abreuvoir</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.021786" lon="-1.33057">
+  <name>ruisseau propre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.955794" lon="-0.699641">
+  <name>Water</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.035383" lon="-1.165582">
+  <name>ruisseau propre</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.04019" lon="-1.183951">
+  <name>Rivière</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.741955" lon="-0.060905">
+  <name>Source</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.741886" lon="-0.05776">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.098492" lon="-1.427759">
+  <name>Fontaine</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.040436" lon="-1.192685">
+  <name>ruisseau à filtrer</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.749546" lon="-0.09186">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.887876" lon="-0.708527">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.097919" lon="-1.492847">
+  <name>eau bivouac</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.738805" lon="-0.018986">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.952241" lon="-0.712819">
+  <name>Eau névé (Juillet)</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.833728" lon="-0.448222">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.736971" lon="-0.070582">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.952279" lon="-0.690453">
+  <name>Ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.814604" lon="-0.504166">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.814254" lon="-0.281238">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.905546" lon="-0.691115">
+  <name>Rivière</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.832024" lon="-0.314301">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.813006" lon="-0.229335">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.796053" lon="-0.173851">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.73798" lon="0.139592">
+  <name>Source de la Barroude</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.813835" lon="-0.269865">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.777845" lon="-0.121849">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.790282" lon="-0.142757">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.756377" lon="0.110208">
+  <name>Stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.815212" lon="-0.21871">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.818847" lon="-0.19648">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.837654" lon="-0.314491">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.816321" lon="-0.203009">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.814258" lon="-0.190146">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.831989" lon="-0.493225">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.838208" lon="-0.403666">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.834073" lon="-0.415821">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.822318" lon="-0.504828">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.837646" lon="-0.386165">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.510612" lon="2.523953">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.844594" lon="-0.350546">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.811038" lon="-0.585232">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.796679" lon="-0.556526">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.855815" lon="-0.646571">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.834843" lon="-0.486045">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.744776" lon="-0.091206">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.878563" lon="-0.709326">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.599487" lon="1.941049">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.841392" lon="-0.469539">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.809334" lon="-0.188119">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.419129" lon="2.7806">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.420291" lon="2.24966">
+  <name>Spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.802373" lon="-0.175848">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.598003" lon="1.923509">
+  <name>Stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.606645" lon="0.636486">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.466131" lon="2.871449">
+  <name>Fountain</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.517109" lon="2.501222">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.433667" lon="2.715842">
+  <name>weak spring in August 2020</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.433008" lon="2.717369">
+  <name>weak spring in August 2020</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.513239" lon="2.525427">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.517994" lon="2.524466">
+  <name>Fountain at Estanyol</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.438523" lon="2.810106">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.608836" lon="0.642519">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.514009" lon="2.514839">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.518147" lon="2.488358">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.522153" lon="2.489881">
+  <name>spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.511303" lon="2.549322">
+  <name>springs below trail</name>
+  <extensions>
+    <ogr:description>But cow dung...</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.517345" lon="2.509359">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.519134" lon="2.48673">
+  <name>stream crossing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.542198" lon="2.038023">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.600768" lon="1.953761">
+  <name>Stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.594472" lon="1.966602">
+  <name>stream crossing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.583824" lon="1.991776">
+  <name>Stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.533682" lon="2.454372">
+  <name>Spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.599367" lon="1.95749">
+  <name>many streams</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.606238" lon="1.906244">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.508253" lon="2.453938">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.608362" lon="1.886624">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.610274" lon="1.89406">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.50357" lon="2.43845">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.599951" lon="1.915528">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.515942" lon="2.518981">
+  <name>spring below trail</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.576992" lon="1.993727">
+  <name>Spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.494624" lon="2.411171">
+  <name>creek access</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.499377" lon="2.4389">
+  <name>spring pipe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.506781" lon="2.079782">
+  <name>Water Faucet by Boulodrome</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.428517" lon="2.320113">
+  <name>Weak spring but steady
+Below trail ; Kerns</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.418771" lon="2.227152">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.429907" lon="2.270723">
+  <name>good stream here
+dry below</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.46101" lon="2.0912">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.485856" lon="2.412144">
+  <name>stream from spring above</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.427762" lon="2.32336">
+  <name>Springs below trail</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.498858" lon="2.430329">
+  <name>stream with pipe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.602479" lon="1.864708">
+  <name>creek access</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.417759" lon="2.22321">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.608804" lon="1.883954">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.599017" lon="1.82423">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.458316" lon="2.095951">
+  <name>streams water channel</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.598125" lon="1.837582">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.473123" lon="2.08119">
+  <name>Fountains</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.591112" lon="1.809505">
+  <name>small waterfall</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.590396" lon="1.80803">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.606289" lon="1.712914">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.60663" lon="1.707812">
+  <name>weak stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.604518" lon="1.780636">
+  <name>spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.592661" lon="1.811374">
+  <name>waterfall</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.594453" lon="1.787266">
+  <name>Steam crossing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.447686" lon="2.694697">
+  <name>no public water at Can Felix !</name>
+  <extensions>
+    <ogr:description>The owners probably took over control of the spring (illegally...)</ogr:description>
+  </extensions>
+</wpt>
+<wpt lat="42.610774" lon="1.777042">
+  <name>spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.425906" lon="2.14029">
+  <name>stream spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.616898" lon="1.739988">
+  <name>spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.589641" lon="1.783729">
+  <name>creek access</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.633312" lon="1.528389">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.618409" lon="1.764005">
+  <name>weak stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.628927" lon="1.54875">
+  <name>spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.499521" lon="2.439512">
+  <name>Stream Crossing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.647186" lon="1.495083">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.619885" lon="1.588352">
+  <name>stream crossing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.881091" lon="-0.70631">
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.942635" lon="-0.679363">
+  <name>Ruisseau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.633221" lon="1.513344">
+  <name>creek access</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.904261" lon="-0.706424">
+  <name>Eau</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.629708" lon="0.961853">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.615877" lon="1.625005">
+  <name>spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.628586" lon="1.547402">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.615518" lon="1.654542">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.675133" lon="1.476878">
+  <name>water limited tent sites</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.70859" lon="1.373607">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.706662" lon="1.295142">
+  <name>stream crossing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.703486" lon="1.359141">
+  <name>stream access spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.664837" lon="1.487361">
+  <name>water pipe</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.707322" lon="1.342735">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.634828" lon="1.516819">
+  <name>stream crossing</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.699496" lon="1.233842">
+  <name>creek access</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.700479" lon="1.227989">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.705468" lon="1.289947">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.701508" lon="1.225381">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.695609" lon="1.256791">
+  <name>creek access</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.618045" lon="1.59825">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.70543" lon="1.33956">
+  <name>spring</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.697981" lon="1.271456">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.706236" lon="1.339896">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.698611" lon="1.257313">
+  <name>creek access</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.612318" lon="1.694119">
+  <name>Stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.653469" lon="1.500879">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.714132" lon="1.132212">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.712589" lon="1.402769">
+  <name>creek access</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.703126" lon="1.147779">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="43.036469" lon="-1.074924">
+  <name>Creek</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="42.698316" lon="1.234869">
+  <name>stream</name>
+  <extensions>
+  </extensions>
+</wpt>
+</gpx>
